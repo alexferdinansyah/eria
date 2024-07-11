@@ -17,13 +17,13 @@
 <body>
 
     <div class="navbar">
-        <div class="nav-logo">
-            <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="">
-        </div>
+        <a href="/" class="nav-logo">
+                <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="">
+        </a>
         <div class="nav-menus">
             <ul>
-                <li><a href="#">PROGRAMMES</a></li>
-                <li><a href="#">PUBLICATIONS</a></li>
+                <li><a href="/program">PROGRAMMES</a></li>
+                <li><a href="/publications">PUBLICATIONS</a></li>
                 <li><a href="#">UPDATES</a></li>
                 <li><a href="#">EVENTS</a></li>
                 <li>
@@ -52,6 +52,7 @@
     </div>
     
     <?= $this->renderSection('content') ?>
+    
 </body>
 
 </html>
