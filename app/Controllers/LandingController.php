@@ -19,4 +19,8 @@ class LandingController extends BaseController
     public function publications(){
         return view('landingpage/publications');   
     }
+
+    public function updates(){
+        return view('landingpage/updates');   
+    }
 }

@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
 }
 
-:root{
+:root {
     --blue: #103979;
 }
 
@@ -119,11 +119,9 @@ body {
     margin-left: 20%;
 }
 
-/************************************************ Update News ************************************************/
+/************************************************ card updates ************************************************/
 
-/************************************************ Update News ************************************************/
-
-.header{
+.header {
     width: 100vw;
     background-color: var(--blue);
     padding-left: 50px;
@@ -137,10 +135,12 @@ body {
 .grid-item {
     padding: 20px;
 }
+
 .grid-item img {
     max-width: 100%;
     height: auto;
 }
+
 .grid-item a {
     margin-top: 10px;
     text-decoration: none;
@@ -158,30 +158,30 @@ body {
 }
 
 .carousel-item {
-    background-color: var(--blue); 
-    color: white; 
+    background-color: var(--blue);
+    color: white;
 }
 
-.contain{
+.contain {
     width: 80%;
     height: 100%;
 }
 
-.contain > img{
+.contain>img {
     width: 300px;
     height: 380px;
 }
 
-.sec-pub{
+.sec-pub {
     margin-left: 30px;
     margin-right: 30px;
 }
 
-.h1-pub{
+.h1-pub {
     color: var(--blue);
 }
 
-.line{
+.line {
     width: 100%;
     height: 1px;
     background-color: black;
@@ -189,23 +189,52 @@ body {
 }
 
 
-.card-par > .card-child{
+.card-par>.card-child {
     display: flex;
     width: 650px;
     padding: 20px;
 }
 
-.card-child img{
+.card-child img {
     border: black solid 2px;
 }
 
-.desc{
+.desc {
     padding: 8px;
 }
 
-.load-btn{
+.load-btn {
     background-color: var(--blue);
     border: white solid 1px;
     color: white;
     padding: 12px;
+}
+
+/************************************************ Update News ************************************************/
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subtitle {
+    font-weight: 400;
+    color: white;
+}
+
+.page-content .card img {
+    width: 100%;
+    height: auto;
+}
+
+.page-content .card-description {
+    font-size: 14px;
+}
+
+@media (min-width: 992px) {
+    .page-content .col-lg-4 {
+        max-width: 33.3333%;
+    }
 }
