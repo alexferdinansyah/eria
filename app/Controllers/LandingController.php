@@ -29,4 +29,12 @@ class LandingController extends BaseController
     public function news(){
         return view('landingpage/news');   
     }
+
+    public function updates(){
+        return view('landingpage/updates');   
+    }
+
+    public function events(){
+        return view('landingpage/events');   
+    }
 }
