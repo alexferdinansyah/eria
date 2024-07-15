@@ -13,7 +13,7 @@
                         <a href="#" class="btn btn-outline-light">Read More</a>
                     </div>
                     <div class="col-md-6">
-                        <img src="<?= base_url('assets/images/flags.jpeg') ?>" class="d-block w-100" alt="Slide 1">
+                        <img src="<?= base_url('assets/images/flags.jpeg') ?>" class="img-fluid " alt="Slide 1">
                     </div>
                 </div>
             </div>
@@ -26,8 +26,8 @@
                             It seeks to engage a wider audience to contribute to the End-Term Review of the AEC Blueprint 2025 and the development of the AEC Community Vision 2045 and its Strategic Plan.</p>
                         <a href="#" class="btn btn-outline-light">Read More</a>
                     </div>
-                    <div class="col-md-6">
-                        <img src="<?= base_url('assets/images/web-link.jpg') ?>" class="d-block w-100" alt="Slide 2">
+                    <div class="col-md-6 h-100 d-flex align-items-center">
+                        <img src="<?= base_url('assets/images/web-link.jpg') ?>" class="img-fluid" alt="Slide 2">
                     </div>
                 </div>
             </div>

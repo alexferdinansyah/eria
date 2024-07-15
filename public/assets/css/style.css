@@ -80,12 +80,16 @@ body {
 }
 
 .search-btn {
+    background-color: var(--blue);
+    color: white;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
     border-radius: 0;
 }
+
 
 .search-btn i {
     margin-right: 5px;
@@ -98,7 +102,7 @@ body {
 } */
 
 .slider-description {
-    background-color: #29017f;
+    background-color: var(--blue);
     color: #ffffff;
 }
 
@@ -128,6 +132,11 @@ body {
     color: white;
     font-size: 40px;
     /* font-weight: ; */
+}
+
+.sec{
+    font-size: 26px;
+    line-height: 10px;
 }
 
 .grid-item {
@@ -204,4 +213,42 @@ body {
     border: white solid 1px;
     color: white;
     padding: 12px;
+}
+
+.pd{
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.pd .pd-content{
+    width: 80%;
+    background-color: lightgray;
+    color: var(--blue);
+    margin: 12px;
+    padding: 8px;
+}
+
+.pd-p{
+    width: 80%;
+    text-indent: 40px;
+}
+
+.col-pd p{
+    color: gray;
+}
+
+.pd img:first-child{
+    width: 80%;
+    border: black solid 1px ;
+    height: auto;
+}
+
+.pd-parent{
+    display: flex;
+}
+
+.pd-item{
+    width: 50%;
+    height: auto;
+    background-color: red;
 }

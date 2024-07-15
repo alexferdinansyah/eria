@@ -16,7 +16,17 @@ class LandingController extends BaseController
         return view('landingpage/program');   
     }
 
+    public function programDetail($id){
+        $data;
+        $data["id"] = $id;
+        return view('landingpage/programDetail', $data);   
+    }
+
     public function publications(){
         return view('landingpage/publications');   
+    }
+
+    public function news(){
+        return view('landingpage/news');   
     }
 }
