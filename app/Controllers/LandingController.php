@@ -23,4 +23,8 @@ class LandingController extends BaseController
     public function updates(){
         return view('landingpage/updates');   
     }
+
+    public function events(){
+        return view('landingpage/events');   
+    }
 }

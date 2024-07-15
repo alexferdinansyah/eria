@@ -11,3 +11,5 @@ $routes->get('/program/(:num)', 'ProgramController::getId/$1');
 $routes->get('/publications', 'LandingController::publications');
 
 $routes->get('/updates', 'LandingController::updates');
+
+$routes->get('/events', 'LandingController::events');

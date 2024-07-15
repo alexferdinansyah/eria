@@ -18,106 +18,87 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="d-flex flex-wrap">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <img src="<?= base_url('assets/images/prime-minister.jpg') ?>" alt="">
-                            <div class="card-body">
-                                <div class="card-items">
-                                    <small class="text-uppercase bg-primary p-2">News</small>
+                <div class="d-flex flex-wrap justify-content-between">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="<?= base_url('assets/images/prime-minister.jpg') ?>" class="card-img-top" alt="">
+                                <div class="card-description">
+                                    <small class="text-uppercase bg-primary p-2 news-badge">News</small>
                                     <h5 class="card-title my-2">
                                         ERIA President Pays Courtesy visit to Cambodia's Deputy Prime Minister and Minister of Economy and Finance
                                     </h5>
-                                </div>
-                                <div class="card-description" style="font-size: 14px;">
-                                    <p>
-                                        <strong>Phnom Penh, 4 July 2024:&nbsp;</strong>ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.
-                                    </p>
+                                    <p class="card-subtitle"><strong>Phnom Penh, 4 July 2024:&nbsp;</strong>ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <img src="<?= base_url('assets/images/eria-president.jpg') ?>" alt="">
-                            <div class="card-body">
-                                <div class="card-items">
-                                    <small class="text-uppercase bg-primary p-2">News</small>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="">
+                                <div class="card-description">
+                                    <small class="text-uppercase bg-primary p-2 news-badge">News</small>
                                     <h5 class="card-title my-2">
-                                        ERIA Introduces Study on Crop Burning Reduction and Regional Workshop at 31st ASWGC Meeting
+                                        ERIA President Pays Courtesy visit to Cambodia's Deputy Prime Minister and Minister of Economy and Finance
                                     </h5>
-                                </div>
-                                <div class="card-description" style="font-size: 14px;">
-                                    <p><strong>Siem Reap, 3-5 July 2024:</strong>&nbsp;The Kingdom of Cambodia's Ministry of Agriculture, Forestry and Fisheries hosted the 31st Meeting of the ASEAN Sectoral Working Group on Crops (ASWGC) in Siem Reap...</p>
+                                    <p class="card-subtitle"><strong>Phnom Penh, 4 July 2024:&nbsp;</strong>ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <img src="<?= base_url('assets/images/eria-president.jpg') ?>" alt="">
-                            <div class="card-body">
-                                <div class="card-items">
-                                    <small class="text-uppercase bg-primary p-2">News</small>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="<?= base_url('assets/images/prime-minister.jpg') ?>" class="card-img-top" alt="">
+                                <div class="card-description">
+                                    <small class="text-uppercase bg-primary p-2 news-badge">News</small>
                                     <h5 class="card-title my-2">
-                                        ERIA Introduces Study on Crop Burning Reduction and Regional Workshop at 31st ASWGC Meeting
+                                        ERIA President Pays Courtesy visit to Cambodia's Deputy Prime Minister and Minister of Economy and Finance
                                     </h5>
-                                </div>
-                                <div class="card-description" style="font-size: 14px;">
-                                    <p><strong>Siem Reap, 3-5 July 2024:</strong>&nbsp;The Kingdom of Cambodia's Ministry of Agriculture, Forestry and Fisheries hosted the 31st Meeting of the ASEAN Sectoral Working Group on Crops (ASWGC) in Siem Reap...</p>
+                                    <p class="card-subtitle"><strong>Phnom Penh, 4 July 2024:&nbsp;</strong>ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <img src="<?= base_url('assets/images/eria-president.jpg') ?>" alt="">
-                            <div class="card-body">
-                                <div class="card-items">
-                                    <small class="text-uppercase bg-primary p-2">News</small>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="<?= base_url('assets/images/prime-minister.jpg') ?>" class="card-img-top" alt="">
+                                <div class="card-description">
+                                    <small class="text-uppercase bg-primary p-2 news-badge">News</small>
                                     <h5 class="card-title my-2">
-                                        ERIA Introduces Study on Crop Burning Reduction and Regional Workshop at 31st ASWGC Meeting
+                                        ERIA President Pays Courtesy visit to Cambodia's Deputy Prime Minister and Minister of Economy and Finance
                                     </h5>
-                                </div>
-                                <div class="card-description" style="font-size: 14px;">
-                                    <p><strong>Siem Reap, 3-5 July 2024:</strong>&nbsp;The Kingdom of Cambodia's Ministry of Agriculture, Forestry and Fisheries hosted the 31st Meeting of the ASEAN Sectoral Working Group on Crops (ASWGC) in Siem Reap...</p>
+                                    <p class="card-subtitle"><strong>Phnom Penh, 4 July 2024:&nbsp;</strong>ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <img src="<?= base_url('assets/images/eria-president.jpg') ?>" alt="">
-                            <div class="card-body">
-                                <div class="card-items">
-                                    <small class="text-uppercase bg-primary p-2">News</small>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="<?= base_url('assets/images/prime-minister.jpg') ?>" class="card-img-top" alt="">
+                                <div class="card-description">
+                                    <small class="text-uppercase bg-primary p-2 news-badge">News</small>
                                     <h5 class="card-title my-2">
-                                        ERIA Introduces Study on Crop Burning Reduction and Regional Workshop at 31st ASWGC Meeting
+                                        ERIA President Pays Courtesy visit to Cambodia's Deputy Prime Minister and Minister of Economy and Finance
                                     </h5>
-                                </div>
-                                <div class="card-description" style="font-size: 14px;">
-                                    <p><strong>Siem Reap, 3-5 July 2024:</strong>&nbsp;The Kingdom of Cambodia's Ministry of Agriculture, Forestry and Fisheries hosted the 31st Meeting of the ASEAN Sectoral Working Group on Crops (ASWGC) in Siem Reap...</p>
+                                    <p class="card-subtitle"><strong>Phnom Penh, 4 July 2024:&nbsp;</strong>ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <img src="<?= base_url('assets/images/eria-president.jpg') ?>" alt="">
-                            <div class="card-body">
-                                <div class="card-items">
-                                    <small class="text-uppercase bg-primary p-2">News</small>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper">
+                                <img src="<?= base_url('assets/images/prime-minister.jpg') ?>" class="card-img-top" alt="">
+                                <div class="card-description">
+                                    <small class="text-uppercase bg-primary p-2 news-badge">News</small>
                                     <h5 class="card-title my-2">
-                                        ERIA Introduces Study on Crop Burning Reduction and Regional Workshop at 31st ASWGC Meeting
+                                        ERIA President Pays Courtesy visit to Cambodia's Deputy Prime Minister and Minister of Economy and Finance
                                     </h5>
-                                </div>
-                                <div class="card-description" style="font-size: 14px;">
-                                    <p><strong>Siem Reap, 3-5 July 2024:</strong>&nbsp;The Kingdom of Cambodia's Ministry of Agriculture, Forestry and Fisheries hosted the 31st Meeting of the ASEAN Sectoral Working Group on Crops (ASWGC) in Siem Reap...</p>
+                                    <p class="card-subtitle"><strong>Phnom Penh, 4 July 2024:&nbsp;</strong>ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
                                 </div>
                             </div>
                         </div>

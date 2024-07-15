@@ -25,7 +25,7 @@
                 <li><a href="/program">PROGRAMMES</a></li>
                 <li><a href="/publications">PUBLICATIONS</a></li>
                 <li><a href="/updates">UPDATES</a></li>
-                <li><a href="#">EVENTS</a></li>
+                <li><a href="/events">EVENTS</a></li>
                 <li>
                     <button class="btn btn-primary btn-search" data-bs-toggle="modal" data-bs-target="#searchModal">
                         <i class="fas fa-search"></i>
