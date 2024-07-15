@@ -11,4 +11,12 @@ class LandingController extends BaseController
     {
         return view('landingpage/landingpage');
     }
+
+    public function program(){
+        return view('landingpage/program');   
+    }
+
+    public function publications(){
+        return view('landingpage/publications');   
+    }
 }

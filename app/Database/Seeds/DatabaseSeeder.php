@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         $programCount = $this->db->table('programs')->countAllResults();
         if ($programCount > 0) {
             // If not empty, truncate the tables
+            $this->db->table('news')->truncate();
             $this->db->table('programs')->truncate();
             $this->db->table('articles')->truncate();
             $this->db->table('publications')->truncate();
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->db->query('SET FOREIGN_KEY_CHECKS = 1');
 
         $this->call('ProgramSeeder');
+        $this->call('NewsSeeder');
         $this->call('ArticleSeeder');
         $this->call('PublicationSeeder');
     }
