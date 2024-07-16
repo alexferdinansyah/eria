@@ -17,7 +17,7 @@ class LandingController extends BaseController
     }
 
     public function programDetail($id){
-        $data;
+        // $data;
         $data["id"] = $id;
         return view('landingpage/programDetail', $data);   
     }
@@ -31,7 +31,7 @@ class LandingController extends BaseController
     }
 
     public function updates(){
-        return view('landingpage/updates');   
+        return view('landingpage/news');   
     }
 
     public function events(){
