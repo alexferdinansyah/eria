@@ -68,7 +68,9 @@
         <div class="card-child col">
             <img src="https://www.eria.org//caching/uploads/publications/policy-recommendation-to-achieve-a-carbon-neutral-economy--the-case-of-corporate-governance-and-carbon-performance-in-malaysia-s-smart-cities.webp" alt="">
             <div class="desc">
-                <h3>Policy Recommendation to Achieve a Carbon-Neutral Economy: The Case of Corporate Governance and Carbon Performance in Malaysia’s Smart Cities</h3>
+                <h3>
+                    <a href="/publications/details/1">Policy Recommendation to Achieve a Carbon-Neutral Economy: The Case of Corporate Governance and Carbon Performance in Malaysia’s Smart Cities</a>
+                </h3>
                 <p>11 Juli 2024</p>
                 <p>Editor(s)/Author(s) :</p>
                 <p>Siti Indati Mustapa, Noor Raida Abd Rahman, Amar Hisham Jaaffar, Nor Salwati Othman, Syarifah Mardhiah Syed Salim</p>
@@ -77,7 +79,9 @@
         <div class="card-child col">
             <img src="https://www.eria.org//caching/uploads/publications/policy-recommendation-to-achieve-a-carbon-neutral-economy--the-case-of-corporate-governance-and-carbon-performance-in-malaysia-s-smart-cities.webp" alt="">
             <div class="desc">
-                <h3>Policy Recommendation to Achieve a Carbon-Neutral Economy: The Case of Corporate Governance and Carbon Performance in Malaysia’s Smart Cities</h3>
+                <h3>
+                    <a href="/publications/details/1">Policy Recommendation to Achieve a Carbon-Neutral Economy: The Case of Corporate Governance and Carbon Performance in Malaysia’s Smart Cities</a>
+                </h3>
                 <p>11 Juli 2024</p>
                 <p>Editor(s)/Author(s) :</p>
                 <p>Siti Indati Mustapa, Noor Raida Abd Rahman, Amar Hisham Jaaffar, Nor Salwati Othman, Syarifah Mardhiah Syed Salim</p>
@@ -86,7 +90,9 @@
         <div class="card-child col">
             <img src="https://www.eria.org//caching/uploads/publications/policy-recommendation-to-achieve-a-carbon-neutral-economy--the-case-of-corporate-governance-and-carbon-performance-in-malaysia-s-smart-cities.webp" alt="">
             <div class="desc">
-                <h3>Policy Recommendation to Achieve a Carbon-Neutral Economy: The Case of Corporate Governance and Carbon Performance in Malaysia’s Smart Cities</h3>
+                <h3>
+                    <a href="/publications/details/1">Policy Recommendation to Achieve a Carbon-Neutral Economy: The Case of Corporate Governance and Carbon Performance in Malaysia’s Smart Cities</a>
+                </h3>
                 <p>11 Juli 2024</p>
                 <p>Editor(s)/Author(s) :</p>
                 <p>Siti Indati Mustapa, Noor Raida Abd Rahman, Amar Hisham Jaaffar, Nor Salwati Othman, Syarifah Mardhiah Syed Salim</p>
@@ -95,7 +101,9 @@
         <div class="card-child col">
             <img src="https://www.eria.org//caching/uploads/publications/policy-recommendation-to-achieve-a-carbon-neutral-economy--the-case-of-corporate-governance-and-carbon-performance-in-malaysia-s-smart-cities.webp" alt="">
             <div class="desc">
-                <h3>Policy Recommendation to Achieve a Carbon-Neutral Economy: The Case of Corporate Governance and Carbon Performance in Malaysia’s Smart Cities</h3>
+                <h3>
+                    <a href="/publications/details/1">Policy Recommendation to Achieve a Carbon-Neutral Economy: The Case of Corporate Governance and Carbon Performance in Malaysia’s Smart Cities</a>
+                </h3>
                 <p>11 Juli 2024</p>
                 <p>Editor(s)/Author(s) :</p>
                 <p>Siti Indati Mustapa, Noor Raida Abd Rahman, Amar Hisham Jaaffar, Nor Salwati Othman, Syarifah Mardhiah Syed Salim</p>
@@ -104,7 +112,9 @@
         <div class="card-child">
             <img src="https://www.eria.org//caching/uploads/publications/study-on-the-possibility-of-promoting-quantitative-evaluation-indicators-for-strengthening-energy-resilience-in-the-east-asia-region.webp" alt="">
             <div class="desc">
-                <h3>Policy Recommendation to Achieve a Carbon-Neutral Economy: The Case of Corporate Governance and Carbon Performance in Malaysia’s Smart Cities</h3>
+                <h3>
+                    <a href="/publications/details/1">Policy Recommendation to Achieve a Carbon-Neutral Economy: The Case of Corporate Governance and Carbon Performance in Malaysia’s Smart Cities</a>
+                </h3>
                 <p>11 Juli 2024</p>
                 <p>Editor(s)/Author(s) :</p>
                 <p>Siti Indati Mustapa, Noor Raida Abd Rahman, Amar Hisham Jaaffar, Nor Salwati Othman, Syarifah Mardhiah Syed Salim</p>
