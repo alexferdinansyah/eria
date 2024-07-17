@@ -228,8 +228,12 @@ body {
     width: 80%;
     background-color: lightgray;
     color: var(--blue);
-    margin: 12px;
-    padding: 8px;
+    margin: 16px;
+    padding: 12px;
+}
+
+.pd-content > p{
+    line-height: 10px;
 }
 
 .pd-p{
@@ -241,7 +245,12 @@ body {
     color: gray;
 }
 
-.pd img:first-child{
+.pd-img{
+    width: 300px;
+    height: auto;
+}
+
+.pd > img:first-child{
     width: 80%;
     border: black solid 1px ;
     height: auto;
@@ -249,15 +258,19 @@ body {
 
 .pd-parent{
     display: flex;
+    margin-top: 50px;
 }
 
 .pd-item{
     width: 50%;
-    height: auto;
-    background-color: red;
 }
 
-/************************************************ Update News ************************************************/
+.pd-item:nth-child(2){
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+
 .page-content {
     margin: 20px;
 }
@@ -351,10 +364,21 @@ body {
 }
 
 
-/************************************************ Update News ************************************************/
 .nav-pills .nav-link {
     border-radius: 0;
 }
 .nav-item {
     flex: 1;
 }
+
+.pd-one{
+    display: flex;
+    gap: 10px;
+}
+
+.pd-two p:nth-child(2n-1) {
+    font-size: 18px;
+    color: var(--blue);
+    font-weight: bold;
+}
+
