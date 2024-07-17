@@ -136,7 +136,7 @@ body {
     /* font-weight: ; */
 }
 
-.sec{
+.sec {
     font-size: 26px;
     line-height: 10px;
 }
@@ -212,6 +212,11 @@ body {
     padding: 8px;
 }
 
+.desc a{
+    color: var(--blue);
+    text-decoration: none;
+}
+
 .load-btn {
     background-color: var(--blue);
     border: white solid 1px;
@@ -219,45 +224,58 @@ body {
     padding: 12px;
 }
 
-.pd{
+.pd {
     margin-top: 20px;
     flex-direction: column;
 }
 
-.pd .pd-content{
+.pd .pd-content {
     width: 80%;
     background-color: lightgray;
     color: var(--blue);
-    margin: 12px;
-    padding: 8px;
+    margin: 16px;
+    padding: 12px;
 }
 
-.pd-p{
+.pd-content > p{
+    line-height: 10px;
+}
+
+.pd-p {
     width: 80%;
     text-indent: 40px;
 }
 
-.col-pd p{
+.col-pd p {
     color: gray;
 }
 
-.pd img:first-child{
+.pd-img{
+    width: 300px;
+    height: auto;
+}
+
+.pd > img:first-child {
     width: 80%;
-    border: black solid 1px ;
+    border: black solid 1px;
     height: auto;
 }
 
-.pd-parent{
+.pd-parent {
     display: flex;
+    margin-top: 50px;
 }
 
-.pd-item{
+.pd-item {
     width: 50%;
-    height: auto;
-    background-color: red;
 }
 
-/************************************************ Update News ************************************************/
+.pd-item:nth-child(2){
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+
 .page-content {
     margin: 20px;
 }
@@ -357,4 +375,80 @@ body {
 }
 .nav-item {
     flex: 1;
+}
+
+.pd-one{
+    display: flex;
+    gap: 10px;
+}
+
+.pd-two p:nth-child(2n-1) {
+    font-size: 18px;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+/************************************************ Events ************************************************/
+.events {
+    margin-top: 10%;
+    margin-left: 9%;
+}
+
+.switch-container {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    background-color: #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.switch-container input[type="radio"] {
+    display: none;
+}
+
+.switch-label {
+    padding: 15px 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1;
+    transition: color 0.3s;
+}
+
+.switch-selection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--blue);
+    transition: left 0.3s, width 0.3s;
+}
+
+#upcoming:checked~.switch-selection {
+    left: 0;
+    width: calc(55% / 1);
+}
+
+#past-events:checked~.switch-selection {
+    left: calc(55% / 1);
+    width: calc(100% / 2);
+}
+
+#upcoming:checked~.switch-label-left,
+#past-events:checked~.switch-label-right {
+    color: white;
+}
+
+#upcoming:checked~.switch-label-right,
+#past-events:checked~.switch-label-left {
+    color: black;
+}
+
+.divider {
+    margin-top: 20px;
+    margin-left: 9%;
+    border-top: 2px solid #ccc;
+    width: 83%;
 }
