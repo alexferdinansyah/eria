@@ -136,7 +136,7 @@ body {
     /* font-weight: ; */
 }
 
-.sec{
+.sec {
     font-size: 26px;
     line-height: 10px;
 }
@@ -219,12 +219,12 @@ body {
     padding: 12px;
 }
 
-.pd{
+.pd {
     margin-top: 20px;
     flex-direction: column;
 }
 
-.pd .pd-content{
+.pd .pd-content {
     width: 80%;
     background-color: lightgray;
     color: var(--blue);
@@ -236,12 +236,12 @@ body {
     line-height: 10px;
 }
 
-.pd-p{
+.pd-p {
     width: 80%;
     text-indent: 40px;
 }
 
-.col-pd p{
+.col-pd p {
     color: gray;
 }
 
@@ -250,18 +250,18 @@ body {
     height: auto;
 }
 
-.pd > img:first-child{
+.pd > img:first-child {
     width: 80%;
-    border: black solid 1px ;
+    border: black solid 1px;
     height: auto;
 }
 
-.pd-parent{
+.pd-parent {
     display: flex;
     margin-top: 50px;
 }
 
-.pd-item{
+.pd-item {
     width: 50%;
 }
 
@@ -364,6 +364,7 @@ body {
 }
 
 
+/************************************************ Update News ************************************************/
 .nav-pills .nav-link {
     border-radius: 0;
 }

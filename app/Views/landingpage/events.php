@@ -8,26 +8,75 @@
     </div>
 </section>
 
-<div class="container mt-5">
-    <ul class="nav nav-pills mb-3 d-flex" id="pills-tab" role="tablist">
-        <li class="nav-item text-center" role="presentation">
-            <button class="upcoming-btn h-100 text-center nav-link border-0 py-3 px-4 active show" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Upcoming Events</button>
-        </li>
-        <li class="nav-item text-center" role="presentation">
-            <button class="past-btn h-100 text-center nav-link border-0 py-3 px-4" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Past Events</button>
-        </li>
-    </ul>
-
-    <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-            <h4>Upcoming Events</h4>
-            <p>Content for upcoming events goes here.</p>
-        </div>
-        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-            <h4>Past Events</h4>
-            <p>Content for past events goes here.</p>
-        </div>
+<div class="events">
+    <div class="switch-container">
+        <input type="radio" id="upcoming" name="switch" checked>
+        <label for="upcoming" class="switch-label switch-label-left">UPCOMING EVENTS</label>
+        <input type="radio" id="past-events" name="switch">
+        <label for="past-events" class="switch-label switch-label-right">PAST EVENTS</label>
+        <div class="switch-selection"></div>
     </div>
 </div>
+
+<div class="divider"></div>
+
+<section class="container my-5" style="margin: 8%;">
+    <div class="row">
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20150119/eria_capacity-building_phnom-penh_jan-19-20-cropped.jpg" alt="Capacity Building">
+            <a href="#">ERIA Capacity Building Seminar in Cambodia - Remaining Challenge for ASEAN Economic Community 2015</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="Capacity Building">
+            <a href="#"> Regional Knowledge Centre for Marine Plastic Debris                                    </a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/news/20240708/eria-president-pays-courtesy-visit-to-cambodia-s-deputy-prime-minister-and-minister-of-economy-and-finance.webp" alt="Capacity Building">
+            <a href="#">Capacity Building Programme</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="Capacity Building">
+            <a href="#">Capacity Building Programme</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="Capacity Building">
+            <a href="#">Capacity Building Programme</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="Capacity Building">
+            <a href="#">Capacity Building Programme</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="Capacity Building">
+            <a href="#">Capacity Building Programme</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="Capacity Building">
+            <a href="#">Capacity Building Programme</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="Capacity Building">
+            <a href="#">Capacity Building Programme</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+    </div>
+</section>
 
 <?= $this->endSection(); ?>
