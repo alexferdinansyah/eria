@@ -76,7 +76,7 @@
     </div>
 
 <!---------------------------------------------------------- UPDATE NEWS ---------------------------------------------------------->
-<div class="page-content mt-3 pt-1">
+<div class="page-content mt-3 mb-5 pt-1" style="padding-left: 34px;">
     <div class="container1">
         <div class="row mb-3">
             <div class="col-md-12">
@@ -84,66 +84,49 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8">
-                <div class="d-flex flex-wrap">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <img src="<?= base_url('assets/images/prime-minister.jpg') ?>" alt="">
-                            <div class="card-body">
-                                <div class="card-items">
-                                    <small class="text-uppercase bg-primary p-2">News</small>
-                                    <h5 class="card-title my-2">
-                                        ERIA President Pays Courtesy visit to Cambodia's Deputy Prime Minister and Minister of Economy and Finance
-                                    </h5>
-                                </div>
-                                <div class="card-description" style="font: size 14px;">
-                                    <p>
-                                        <strong>Phnom Penh, 4 July 2024:&nbsp;</strong>ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col">
+                <div class="d-flex flex-wrap" style="gap:50px;">
+                    <div class="card" style="width: 28rem;">
+                    <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
+                        <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
+                    </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="card">
-                            <img src="<?= base_url('assets/images/eria-president.jpg') ?>" alt="">
-                            <div class="card-body">
-                                <div class="card-items">
-                                    <small class="text-uppercase bg-primary p-2">News</small>
-                                    <h5 class="card-title my-2">
-                                        ERIA Introduces Study on Crop Burning Reduction and Regional Workshop at 31st ASWGC Meeting
-                                    </h5>
-                                </div>
-                                <div class="card-description" style="font: size 14px;">
-                                    <p><strong>Siem Reap, 3-5 July 2024:</strong>&nbsp;The Kingdom of Cambodia's Ministry of Agriculture, Forestry and Fisheries hosted the 31st Meeting of the ASEAN Sectoral Working Group on Crops (ASWGC) in Siem Reap...</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="card" style="width: 28rem;">
+                    <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
+                        <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
+                    </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="card">
-                            <img src="<?= base_url('assets/images/eria-president.jpg') ?>" alt="">
-                            <div class="card-body">
-                                <div class="card-items">
-                                    <small class="text-uppercase bg-primary p-2">News</small>
-                                    <h5 class="card-title my-2">
-                                        ERIA Introduces Study on Crop Burning Reduction and Regional Workshop at 31st ASWGC Meeting
-                                    </h5>
-                                </div>
-                                <div class="card-description" style="font: size 14px;">
-                                    <p><strong>Siem Reap, 3-5 July 2024:</strong>&nbsp;The Kingdom of Cambodia's Ministry of Agriculture, Forestry and Fisheries hosted the 31st Meeting of the ASEAN Sectoral Working Group on Crops (ASWGC) in Siem Reap...</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="card" style="width: 28rem;">
+                    <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
+                        <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
                     </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
         
     </div>
 </div>
+
+<!-- Copyrights -->
+
+<div class="copyrights w-100 mb-5 px-5">
+    <div class="copyrights-wrapper border-top pt-2 d-flex align-items-center gap-2">
+        <p>Copyrights &copy 2023 ERIA. All rights reserved, a collaboration with</p>
+        <img src="<?= base_url('assets/images/logoui.png') ?>" alt="" style="width : 30px; height:40px;">
+    </div>
+</div>
+
+
 <?= $this->endSection(); ?>
 
 <?= $this->section('script') ?>
