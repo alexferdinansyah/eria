@@ -8,8 +8,13 @@
             <div class="carousel-item active">
                 <div class="row">
                     <div class="col-md-6 slider-description">
-                        <h2>ERIA Supports ASEAN Chairmanship</h2>
-                        <p>ERIA collaborates closely with the ASEAN Member State holding the Chairmanship to design and deliver Priority Economic Deliverables, providing essential support in this process.</p>
+                        <h2>ASEAN ALTERNATIVE VEHICLE TECHNOLOGY PORTAL</h2>
+                        <p>An online data of ASEAN new & alternative vehicle technology
+                            with the main objective of providing comprehensive information
+                            on the current situation of alternative vehicle technology
+                            development in 10 ASEAN member states to open public and to
+                            regularly produce ASEAN Vehicle Technology Outlook
+                        </p>
                         <a href="#" class="btn btn-outline-light">Read More</a>
                     </div>
                     <div class="col-md-6">
@@ -20,10 +25,13 @@
             <div class="carousel-item">
                 <div class="row">
                     <div class="col-md-6 slider-description">
-                        <h2>Participate in the ASEAN Economic Community Post-2025 Survey!</h2>
-                        <p>ERIA in collaboration with the ASEAN Secretariat has developed a survey focusing on AEC Aspects of Post-2025 Vision. This survey,
-                            supported by Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ), aims to capture the general sentiments and perspectives of ASEAN stakeholders.
-                            It seeks to engage a wider audience to contribute to the End-Term Review of the AEC Blueprint 2025 and the development of the AEC Community Vision 2045 and its Strategic Plan.</p>
+                        <h2>ASEAN ALTERNATIVE VEHICLE TECHNOLOGY PORTAL</h2>
+                        <p>An online data of ASEAN new & alternative vehicle technology
+                            with the main objective of providing comprehensive information
+                            on the current situation of alternative vehicle technology
+                            development in 10 ASEAN member states to open public and to
+                            regularly produce ASEAN Vehicle Technology Outlook
+                        </p>
                         <a href="#" class="btn btn-outline-light">Read More</a>
                     </div>
                     <div class="col-md-6 h-100 d-flex align-items-center">
@@ -46,47 +54,42 @@
 
 <!----------------------------------------------------CHARTS---------------------------------------------------------->
 
-<!-- <div class="mt-5" style="width: 100%;">
-        <div class="row">
-            <div class="col-md-12 d-flex gap-2 justify-content-center">
-                <button class="btn btn-primary" id="showVolume">Show Volume</button>
-                <button class="btn btn-primary" id="showDemography">Show Demography</button>
-            </div>
-        </div>
-        <div class="row mt-1 d-flex justify-content-center">
-            <div class="col-md-8 w-100 p-5">
-            <div id="volumeContent" class="content-pane" style="width:100%;">
-                    <h4>Volume Section</h4>
-                    <div class="volumewrapper d-flex justify-content-center" style="gap: 40px; height:300px;">
-                    <div id="volumedonut1" class="chartdiv"></div>
-                    <div id="volumedonut2" class="chartdiv"></div>
-                    </div>
-                </div>
-                <div id="demographyContent" class="content-pane" style="display: none; width:100%;">
-                    <h4>Demography Section</h4>
-                    <div class="demowrapper d-flex justify-content-evenly" style="gap: 40px; height:300px;">
-                    <div id="barchart" class="chartdiv"></div>
-                    <div class="chartdiv" id="linechart"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
+<div class="mt-5 d-flex" style="width: 100%; margin-bottom:30px; flex-direction: column; ">
+    <div class="card-drop dropdown-card d-flex align-items-center  flex-column">
+    <div class="dropdown-title w-50" style="padding-left: 20px;">
+        <h3>Roads : Report by country</h3>
+    </div>
+    <div class="dropdown-container w-50">
 
-<!-- DROPDOWN VEHICLES -->
-
-    <div class="dropdown-section mt-5 w-100 d-flex justify-content-center">
-        <div class="dropdown-wrapper w-20">
-            <div class="section-title"></div>
-            <div>b</div>
+    <div class="logo-wrapper d-flex p-0" style="flex-direction:column; align-items: center; gap: 10px;">
+    <img src="<?= base_url('assets/images/road.png') ?>" alt="Logo" class="dropdown-logo" style="width: 100px; height:100px;">    
+    <h6 class="p-0">ROAD</h6>
+    </div>
+    <div class="select-wrapper">
+                <p>View interractive infographics containing up-to-date statistics on infrastructures and fleet data for road vehicles, private and comercial</p>
+                <p class="mt-1">Available for all ASEAN countries</p>
+            <select class="dropdown-country transparent-dropdown" style="width: 300px; border-color: blue;">
+                <option value="country">CHOOSE COUNTRY</option>
+                <option value="Brunei Darussalam">Brunei Darussalam</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Kamboja">Kamboja</option>
+                <option value="Laos">Laos</option>
+                <option value="Malaysia">Malaysia</option>
+                <!-- Add more options as needed -->
+            </select>
+            </div>
+            <!-- <button class="search-btn">Search</button> -->
         </div>
     </div>
+
+</div>
+
 
 
 <!-- ASEAN MAP -->
 
-<div class="mt-5 w-100 d-flex justify-content-center mb-5">
-    <div class="d-flex justify-content-center" style="height: 400px; width: 60%;">
+<div class="mt-3 w-100 d-flex justify-content-center" style="margin-bottom: 70px;">
+    <div class="d-flex justify-content-center" style="height: 430px; width: 80%;">
         <img src="<?= base_url('assets/images/asean-map.png') ?>" class="img-fluid w-100 h-100">
     </div>
 </div>
@@ -104,33 +107,33 @@
             <div class="col">
                 <div class="d-flex flex-wrap" style="gap:50px;">
                     <div class="card" style="width: 28rem;">
-                    <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
-                        <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
-                    </div>
-                    </div>
-
-                    <div class="card" style="width: 28rem;">
-                    <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
-                        <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
-                    </div>
+                        <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
+                            <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
+                        </div>
                     </div>
 
                     <div class="card" style="width: 28rem;">
-                    <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
-                        <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
+                        <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
+                            <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
+                        </div>
                     </div>
+
+                    <div class="card" style="width: 28rem;">
+                        <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
+                            <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
+                        </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>
 
@@ -156,405 +159,141 @@
 <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 <script>
-am5.ready(function() {
-var root = am5.Root.new("barchart");
-root.setThemes([
-  am5themes_Animated.new(root)
-]);
-var chart = root.container.children.push(am5xy.XYChart.new(root, {
-  panX: true,
-  panY: true,
-  wheelX: "panX",
-  wheelY: "zoomX",
-  pinchZoomX: true,
-  paddingLeft:0,
-  paddingRight:1
-}));
+    var ctxDonut1 = document.getElementById('volumedonut1').getContext('2d');
 
-// Add cursor
-// https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
-var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
-cursor.lineY.set("visible", false);
+    // Define the data for your dataset
+    var dataDonut1 = {
+        labels: ['BEV', 'PHEV', 'H2', 'LPG', 'CNG', 'LNG'],
+        datasets: [{
+            label: 'Donut Chart 1',
+            backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)'],
+            borderColor: 'rgb(255, 255, 255)',
+            data: [70, 20, 10]
+        }]
+    };
 
+    // Configuration options
+    var optionsDonut1 = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2);
+                    }
+                }
+            }
+        }
+    };
 
-// Create axes
-// https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-var xRenderer = am5xy.AxisRendererX.new(root, { 
-  minGridDistance: 30, 
-  minorGridEnabled: true
-});
-
-xRenderer.labels.template.setAll({
-  rotation: -90,
-  centerY: am5.p50,
-  centerX: am5.p100,
-  paddingRight: 15
-});
-
-xRenderer.grid.template.setAll({
-  location: 1
-})
-
-var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-  maxDeviation: 0.3,
-  categoryField: "country",
-  renderer: xRenderer,
-  tooltip: am5.Tooltip.new(root, {})
-}));
-
-var yRenderer = am5xy.AxisRendererY.new(root, {
-  strokeOpacity: 0.1
-})
-
-var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-  maxDeviation: 0.3,
-  renderer: yRenderer
-}));
-
-// Create series
-// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-var series = chart.series.push(am5xy.ColumnSeries.new(root, {
-  name: "Series 1",
-  xAxis: xAxis,
-  yAxis: yAxis,
-  valueYField: "value",
-  sequencedInterpolation: true,
-  categoryXField: "country",
-  tooltip: am5.Tooltip.new(root, {
-    labelText: "{valueY}"
-  })
-}));
-
-series.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5, strokeOpacity: 0 });
-series.columns.template.adapters.add("fill", function (fill, target) {
-  return chart.get("colors").getIndex(series.columns.indexOf(target));
-});
-
-series.columns.template.adapters.add("stroke", function (stroke, target) {
-  return chart.get("colors").getIndex(series.columns.indexOf(target));
-});
+    // Create the chart
+    var myDonutChart1 = new Chart(ctxDonut1, {
+        type: 'doughnut',
+        data: dataDonut1,
+        options: optionsDonut1
+    });
 
 
-// Set data
-var data = [{
-  country: "USA",
-  value: 2025
-}, {
-  country: "China",
-  value: 1882
-}, {
-  country: "Japan",
-  value: 1809
-}, {
-  country: "Germany",
-  value: 1322
-}, {
-  country: "UK",
-  value: 1122
-}, {
-  country: "France",
-  value: 1114
-}, {
-  country: "India",
-  value: 984
-}, {
-  country: "Spain",
-  value: 711
-}, {
-  country: "Netherlands",
-  value: 665
-}, {
-  country: "South Korea",
-  value: 443
-}, {
-  country: "Canada",
-  value: 441
-}];
-
-xAxis.data.setAll(data);
-series.data.setAll(data);
 
 
-// Make stuff animate on load
-// https://www.amcharts.com/docs/v5/concepts/animations/
-series.appear(1000);
-chart.appear(1000, 100);
 
-}); // end am5.ready()
-</script>
-<script>
-am4core.ready(function() {
-am4core.useTheme(am4themes_animated);
-var chart1 = am4core.create("volumedonut2", am4charts.PieChart3D);
-chart1.hiddenState.properties.opacity = 0; // this creates initial fade-in
-chart1.data = [
-  {
-    country: "Lithuania",
-    litres: 501.9
-  },
-  {
-    country: "Czech Republic",
-    litres: 301.9
-  },
-  {
-    country: "Ireland",
-    litres: 201.1
-  },
-  {
-    country: "Germany",
-    litres: 165.8
-  },
-  {
-    country: "Australia",
-    litres: 139.9
-  },
-  {
-    country: "Austria",
-    litres: 128.3
-  },
-  {
-    country: "UK",
-    litres: 99
-  },
-  {
-    country: "Belgium",
-    litres: 60
-  },
-  {
-    country: "The Netherlands",
-    litres: 50
-  }
-];
-chart1.innerRadius = 100;
-var series1 = chart1.series.push(new am4charts.PieSeries3D());
-series1.dataFields.value = "litres";
-series1.dataFields.category = "country";
+    var ctxDonut2 = document.getElementById('volumedonut2').getContext('2d');
 
+    // Define the data for your dataset
+    var dataDonut2 = {
+        labels: ['BEV', 'PHEV'],
+        datasets: [{
+            label: 'Donut Chart 2',
+            backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)'],
+            borderColor: 'rgb(255, 255, 255)',
+            data: [20, 80]
+        }]
+    };
 
-var chart2 = am4core.create("volumedonut1", am4charts.PieChart3D);
-chart2.hiddenState.properties.opacity = 0; // this creates initial fade-in
-chart2.data = [
-  {
-    country: "Lithuania",
-    litres: 501.9
-  },
-  {
-    country: "Czech Republic",
-    litres: 301.9
-  },
-  {
-    country: "Ireland",
-    litres: 201.1
-  },
-  {
-    country: "Germany",
-    litres: 165.8
-  },
-  {
-    country: "Australia",
-    litres: 139.9
-  },
-  {
-    country: "Austria",
-    litres: 128.3
-  },
-  {
-    country: "UK",
-    litres: 99
-  },
-  {
-    country: "Belgium",
-    litres: 60
-  },
-  {
-    country: "The Netherlands",
-    litres: 50
-  }
-];
-chart2.innerRadius = 100;
-var series2 = chart2.series.push(new am4charts.PieSeries3D());
-series2.dataFields.value = "litres";
-series2.dataFields.category = "country";
+    // Configuration options
+    var optionsDonut2 = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2);
+                    }
+                }
+            }
+        }
+    };
 
-}); // end am4core.ready()
+    // Create the chart
+    var myDonutChart2 = new Chart(ctxDonut2, {
+        type: 'doughnut',
+        data: dataDonut2,
+        options: optionsDonut2
+    });
 </script>
 
 <script>
-am5.ready(function() {
-
-// Create root element
-// https://www.amcharts.com/docs/v5/getting-started/#Root_element
-var root = am5.Root.new("linechart");
-
-const myTheme = am5.Theme.new(root);
-
-myTheme.rule("AxisLabel", ["minor"]).setAll({
-  dy:1
-});
-
-myTheme.rule("AxisLabel").setAll({
-  fontSize:"0.9em"
-});
+    // Get the context of the canvas element we want to select
+    var ctxBar = document.getElementById('demobar').getContext('2d');
+    var ctxLine = document.getElementById('demoline').getContext('2d');
 
 
-// Set themes
-// https://www.amcharts.com/docs/v5/concepts/themes/
-root.setThemes([
-  am5themes_Animated.new(root),
-  myTheme,
-  am5themes_Responsive.new(root)
-]);
+    // Define the data for your dataset
+    var dataBar = {
+        labels: ['2020', '2021', '2022', '2023', '2024'],
+        datasets: [{
+            label: 'Sample Dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [10, 20, 30, 40, 50, 60, 70]
+        }]
+    };
 
+    var dataLine = {
+        labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
+        datasets: [{
+            label: 'Dataset 1',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [60, 20, 60, 20, 60, 20, 80]
+        }, {
+            label: 'Dataset 2',
+            backgroundColor: 'rgb(54, 162, 235)',
+            borderColor: 'rgb(54, 162, 235)',
+            data: [50, 10, 50, 10, 50, 10, 70]
+        }]
+    };
 
-// Create chart
-// https://www.amcharts.com/docs/v5/charts/xy-chart/
-var chart = root.container.children.push(am5xy.XYChart.new(root, {
-  wheelX: "panX",
-  wheelY: "zoomX",
-  pinchZoomX: true,
-  paddingLeft: 0
-}));
+    // Configuration options
+    var options = {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    };
 
+    // Create the charts
+    var chartBar = new Chart(ctxBar, {
+        type: 'bar',
+        data: dataBar,
+        options: options
+    });
 
-// Add cursor
-// https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
-var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
-  behavior: "none"
-}));
-cursor.lineY.set("visible", false);
-
-
-// Generate random data
-var date = new Date();
-date.setHours(0, 0, 0, 0);
-var value = 100;
-
-function generateData() {
-  value = Math.round((Math.random() * 10 - 5) + value);
-  am5.time.add(date, "day", 1);
-  return {
-    date: date.getTime(),
-    value: value
-  };
-}
-
-function generateDatas(count) {
-  var data = [];
-  for (var i = 0; i < count; ++i) {
-    data.push(generateData());
-  }
-  return data;
-}
-
-
-// Create axes
-// https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
-  maxDeviation: 0.2,
-  baseInterval: {
-    timeUnit: "day",
-    count: 1
-  },
-  renderer: am5xy.AxisRendererX.new(root, {
-    minorGridEnabled: true,
-    minorLabelsEnabled: true
-  }),
-  tooltip: am5.Tooltip.new(root, {})
-}));
-
-xAxis.set("minorDateFormats", {
-  "day":"dd",
-  "month":"MMM"
-});
-
-var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-  renderer: am5xy.AxisRendererY.new(root, {
-    pan: "zoom"
-  })
-}));
-
-
-// Add series
-// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-var series = chart.series.push(am5xy.LineSeries.new(root, {
-  name: "Series",
-  xAxis: xAxis,
-  yAxis: yAxis,
-  valueYField: "value",
-  valueXField: "date",
-  tooltip: am5.Tooltip.new(root, {
-    labelText: "{valueY}"
-  })
-}));
-
-series.bullets.push(function() {
-  var graphics = am5.Circle.new(root, {
-    radius: 4,
-    interactive: true,
-    cursorOverStyle: "ns-resize",
-    stroke: series.get("stroke"),
-    fill: am5.color(0xffffff)
-  });
-
-  return am5.Bullet.new(root, {
-    sprite: graphics
-  });
-});
-
-// Add scrollbar
-// https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
-// chart.set("scrollbarX", am5.Scrollbar.new(root, {
-//   orientation: "horizontal"
-// }));
-
-// manipulating with mouse code
-var isDown = false;
-
-// register down
-chart.plotContainer.events.on("pointerdown", function() {
-  isDown = true;
-})
-// register up
-chart.plotContainer.events.on("globalpointerup", function() {
-  isDown = false;
-})
-
-chart.plotContainer.events.on("globalpointermove", function(e) {
-  // if pointer is down
-  if (isDown) {
-    // get tooltip data item 
-    var tooltipDataItem = series.get("tooltipDataItem");
-    if (tooltipDataItem) {
-      if (e.originalEvent) {
-
-        var position = yAxis.coordinateToPosition(chart.plotContainer.toLocal(e.point).y);
-        var value = yAxis.positionToValue(position);
-        // need to set bot working and original value
-        tooltipDataItem.set("valueY", value);
-        tooltipDataItem.set("valueYWorking", value);
-      }
-    }
-  }
-})
-
-// chart.plotContainer.children.push(am5.Label.new(root, {
-//   x: am5.p100,
-//   centerX: am5.p100,
-//   text: "Click and move mouse anywhere on plot area to change the graph"
-// }))
-
-// Set data
-var data = generateDatas(40);
-series.data.setAll(data);
-
-
-// Make stuff animate on load
-// https://www.amcharts.com/docs/v5/concepts/animations/
-series.appear(1000);
-chart.appear(1000, 100);
-
-}); // end am5.ready()
+    var chartLine = new Chart(ctxLine, {
+        type: 'line',
+        data: dataLine,
+        options: options
+    });
 </script>
+
 <script>
     $(document).ready(function() {
         // Show Volume section
@@ -562,7 +301,7 @@ chart.appear(1000, 100);
             $('#demographyContent').hide(); // Hide Demography section
             $('#volumeContent').show(); // Show Volume section
         });
-        
+
         // Show Demography section
         $('#showDemography').on('click', function() {
             $('#volumeContent').hide(); // Hide Volume section
