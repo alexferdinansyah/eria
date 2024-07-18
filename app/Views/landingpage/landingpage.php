@@ -55,12 +55,8 @@
 <!----------------------------------------------------CHARTS---------------------------------------------------------->
 
 <div class="mt-5 d-flex" style="width: 100%; margin-bottom:30px; flex-direction: column; ">
-    <div class="card-drop dropdown-card d-flex align-items-center  flex-column">
-    <div class="dropdown-title w-50" style="padding-left: 20px;">
-        <h3>Roads : Report by country</h3>
-    </div>
+    <div class="card-drop dropdown-card d-flex justify-content-center">
     <div class="dropdown-container w-50">
-
     <div class="logo-wrapper d-flex p-0" style="flex-direction:column; align-items: center; gap: 10px;">
     <img src="<?= base_url('assets/images/road.png') ?>" alt="Logo" class="dropdown-logo" style="width: 100px; height:100px;">    
     <h6 class="p-0">ROAD</h6>
@@ -88,8 +84,8 @@
 
 <!-- ASEAN MAP -->
 
-<div class="mt-3 w-100 d-flex justify-content-center" style="margin-bottom: 70px;">
-    <div class="d-flex justify-content-center" style="height: 430px; width: 80%;">
+<div class="mt-5 w-100 d-flex justify-content-center" style="margin-bottom: 40px;">
+    <div class="d-flex justify-content-center" style="height: 400px; width: 70%;">
         <img src="<?= base_url('assets/images/asean-map.png') ?>" class="img-fluid w-100 h-100">
     </div>
 </div>
