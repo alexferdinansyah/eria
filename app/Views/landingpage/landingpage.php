@@ -55,12 +55,30 @@
 <!----------------------------------------------------CHARTS---------------------------------------------------------->
 
 <div class="mt-5" style="width: 100%;">
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-md-12 d-flex gap-2 justify-content-center">
             <button class="btn btn-primary" id="showVolume">Show Volume</button>
             <button class="btn btn-primary" id="showDemography">Show Demography</button>
         </div>
+    </div> -->
+
+    <div class="card-drop dropdown-card">
+        <div class="dropdown-container">
+            <img src="<?= base_url('assets/images/road.png') ?>" alt="Logo" class="dropdown-logo">
+            <select class="dropdown-country transparent-dropdown">
+                <option value="country">CHOOSE COUNTRY</option>
+                <option value="Brunei Darussalam">Brunei Darussalam</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Kamboja">Kamboja</option>
+                <option value="Laos">Laos</option>
+                <option value="Malaysia">Malaysia</option>
+                <!-- Add more options as needed -->
+            </select>
+            <button class="search-btn">Search</button>
+        </div>
     </div>
+
+
     <div class="row mt-1 d-flex justify-content-center">
         <div class="col-md-8 w-100 p-5">
             <div id="volumeContent" class="content-pane" style="width:100%;">

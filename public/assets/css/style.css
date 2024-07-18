@@ -123,6 +123,88 @@ body {
     margin-left: 20%;
 }
 
+/************************************************ chart (dropdown) ************************************************/
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.dropdown-logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-country {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: none;
+}
+
+.dropdown-arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+}
+
+.transparent-dropdown {
+    background: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+@media (min-width: 768px) {
+    .dropdown-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .dropdown-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .dropdown-country {
+        width: 100%;
+    }
+}
+
 /************************************************ card updates ************************************************/
 
 .header {
@@ -212,7 +294,7 @@ body {
     padding: 8px;
 }
 
-.desc a{
+.desc a {
     color: var(--blue);
     text-decoration: none;
 }
@@ -237,7 +319,7 @@ body {
     padding: 12px;
 }
 
-.pd-content > p{
+.pd-content>p {
     line-height: 10px;
 }
 
@@ -250,12 +332,12 @@ body {
     color: gray;
 }
 
-.pd-img{
+.pd-img {
     width: 300px;
     height: auto;
 }
 
-.pd > img:first-child {
+.pd>img:first-child {
     width: 80%;
     border: black solid 1px;
     height: auto;
@@ -270,7 +352,7 @@ body {
     width: 50%;
 }
 
-.pd-item:nth-child(2){
+.pd-item:nth-child(2) {
     display: flex;
     align-items: end;
     flex-direction: column;
@@ -365,11 +447,12 @@ body {
 .nav-pills .nav-link {
     border-radius: 0;
 }
+
 .nav-item {
     flex: 1;
 }
 
-.pd-one{
+.pd-one {
     display: flex;
     gap: 10px;
 }
