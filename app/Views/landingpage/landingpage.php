@@ -61,6 +61,24 @@
     <div class="row mt-1 d-flex justify-content-center">
         <div class="col-md-8 w-100 p-5">
             <div id="volumeContent" class="content-pane" style="width:100%;">
+                    <!-- Content for Demography -->
+                    <h4>Volume Section</h4>
+                    <div class="volumewrapper d-flex justify-content-center" style="gap: 40px; height:300px;">
+                    <div id="volumedonut1" class="chartdiv"></div>
+                    <div id="volumedonut2" class="chartdiv"></div>
+                    </div>
+                </div>
+                <div id="demographyContent" class="content-pane" style="display: none; width:100%;">
+                    <!-- Content for Demography -->
+                    <h4>Demography Section</h4>
+                    <div class="demowrapper d-flex justify-content-evenly" style="gap: 40px; height:300px;">
+                    <div id="barchart" class="chartdiv"></div>
+                    <div class="chartdiv" id="linechart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
                 <!-- Content for Demography -->
                 <h4>Volume Section</h4>
                 <div class="volumewrapper d-flex justify-content-evenly" style="gap: 40px; height:300px;">
@@ -81,7 +99,7 @@
 </div>
 
 <!---------------------------------------------------------- UPDATE NEWS ---------------------------------------------------------->
-<div class="page-content mt-3 pt-1">
+<div class="page-content mt-3 mb-5 pt-1" style="padding-left: 34px;">
     <div class="container1">
         <div class="row mb-3">
             <div class="col-md-12">
@@ -89,159 +107,148 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8">
-                <div class="d-flex flex-wrap">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <img src="<?= base_url('assets/images/prime-minister.jpg') ?>" alt="">
-                            <div class="card-body">
-                                <div class="card-items">
-                                    <small class="text-uppercase bg-primary p-2">News</small>
-                                    <h5 class="card-title my-2">
-                                        ERIA President Pays Courtesy visit to Cambodia's Deputy Prime Minister and Minister of Economy and Finance
-                                    </h5>
-                                </div>
-                                <div class="card-description" style="font: size 14px;">
-                                    <p>
-                                        <strong>Phnom Penh, 4 July 2024:&nbsp;</strong>ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col">
+                <div class="d-flex flex-wrap" style="gap:50px;">
+                    <div class="card" style="width: 28rem;">
+                    <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
+                        <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
+                    </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="card">
-                            <img src="<?= base_url('assets/images/eria-president.jpg') ?>" alt="">
-                            <div class="card-body">
-                                <div class="card-items">
-                                    <small class="text-uppercase bg-primary p-2">News</small>
-                                    <h5 class="card-title my-2">
-                                        ERIA Introduces Study on Crop Burning Reduction and Regional Workshop at 31st ASWGC Meeting
-                                    </h5>
-                                </div>
-                                <div class="card-description" style="font: size 14px;">
-                                    <p><strong>Siem Reap, 3-5 July 2024:</strong>&nbsp;The Kingdom of Cambodia's Ministry of Agriculture, Forestry and Fisheries hosted the 31st Meeting of the ASEAN Sectoral Working Group on Crops (ASWGC) in Siem Reap...</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="card" style="width: 28rem;">
+                    <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
+                        <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
+                    </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="card">
-                            <img src="<?= base_url('assets/images/eria-president.jpg') ?>" alt="">
-                            <div class="card-body">
-                                <div class="card-items">
-                                    <small class="text-uppercase bg-primary p-2">News</small>
-                                    <h5 class="card-title my-2">
-                                        ERIA Introduces Study on Crop Burning Reduction and Regional Workshop at 31st ASWGC Meeting
-                                    </h5>
-                                </div>
-                                <div class="card-description" style="font: size 14px;">
-                                    <p><strong>Siem Reap, 3-5 July 2024:</strong>&nbsp;The Kingdom of Cambodia's Ministry of Agriculture, Forestry and Fisheries hosted the 31st Meeting of the ASEAN Sectoral Working Group on Crops (ASWGC) in Siem Reap...</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="card" style="width: 28rem;">
+                    <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
+                        <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
                     </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
 
     </div>
 </div>
+
+<!-- Copyrights -->
+
+<div class="copyrights w-100 mb-5 px-5">
+    <div class="copyrights-wrapper border-top pt-2 d-flex align-items-center gap-2">
+        <p>Copyrights &copy 2023 ERIA. All rights reserved, a collaboration with</p>
+        <img src="<?= base_url('assets/images/logoui.png') ?>" alt="" style="width : 30px; height:40px;">
+    </div>
+</div>
+
+
 <?= $this->endSection(); ?>
 
 <?= $this->section('script') ?>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 <script>
-    var ctxDonut1 = document.getElementById('volumedonut1').getContext('2d');
+ var ctxDonut1 = document.getElementById('volumedonut1').getContext('2d');
 
-    // Define the data for your dataset
-    var dataDonut1 = {
-        labels: ['BEV', 'PHEV', 'H2', 'LPG', 'CNG', 'LNG'],
-        datasets: [{
-            label: 'Donut Chart 1',
-            backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)'],
-            borderColor: 'rgb(255, 255, 255)',
-            data: [70, 20, 10]
-        }]
-    };
+// Define the data for your dataset
+var dataDonut1 = {
+    labels: ['BEV', 'PHEV', 'H2', 'LPG', 'CNG', 'LNG'],
+    datasets: [{
+        label: 'Donut Chart 1',
+        backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)'],
+        borderColor: 'rgb(255, 255, 255)',
+        data: [70, 20, 10]
+    }]
+};
 
-    // Configuration options
-    var optionsDonut1 = {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-            tooltip: {
-                callbacks: {
-                    label: function(tooltipItem) {
-                        return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2);
-                    }
+// Configuration options
+var optionsDonut1 = {
+    responsive: true,
+    plugins: {
+        legend: {
+            position: 'top',
+        },
+        tooltip: {
+            callbacks: {
+                label: function(tooltipItem) {
+                    return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2);
                 }
             }
         }
-    };
+    }
+};
 
-    // Create the chart
-    var myDonutChart1 = new Chart(ctxDonut1, {
-        type: 'doughnut',
-        data: dataDonut1,
-        options: optionsDonut1
-    });
-
-
-
+// Create the chart
+var myDonutChart1 = new Chart(ctxDonut1, {
+    type: 'doughnut',
+    data: dataDonut1,
+    options: optionsDonut1
+});
 
 
-    var ctxDonut2 = document.getElementById('volumedonut2').getContext('2d');
 
-    // Define the data for your dataset
-    var dataDonut2 = {
-        labels: ['BEV', 'PHEV'],
-        datasets: [{
-            label: 'Donut Chart 2',
-            backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)'],
-            borderColor: 'rgb(255, 255, 255)',
-            data: [20, 80]
-        }]
-    };
 
-    // Configuration options
-    var optionsDonut2 = {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-            tooltip: {
-                callbacks: {
-                    label: function(tooltipItem) {
-                        return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2);
-                    }
+
+var ctxDonut2 = document.getElementById('volumedonut2').getContext('2d');
+
+// Define the data for your dataset
+var dataDonut2 = {
+    labels: ['BEV', 'PHEV'],
+    datasets: [{
+        label: 'Donut Chart 2',
+        backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)'],
+        borderColor: 'rgb(255, 255, 255)',
+        data: [20, 80]
+    }]
+};
+
+// Configuration options
+var optionsDonut2 = {
+    responsive: true,
+    plugins: {
+        legend: {
+            position: 'top',
+        },
+        tooltip: {
+            callbacks: {
+                label: function(tooltipItem) {
+                    return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2);
                 }
             }
         }
-    };
+    }
+};
 
-    // Create the chart
-    var myDonutChart2 = new Chart(ctxDonut2, {
-        type: 'doughnut',
-        data: dataDonut2,
-        options: optionsDonut2
-    });
+// Create the chart
+var myDonutChart2 = new Chart(ctxDonut2, {
+    type: 'doughnut',
+    data: dataDonut2,
+    options: optionsDonut2
+});
 </script>
+
 <script>
-    // Get the context of the canvas element we want to select
-    var ctxBar = document.getElementById('demobar').getContext('2d');
-    var ctxLine = document.getElementById('demoline').getContext('2d');
+        // Get the context of the canvas element we want to select
+        var ctxBar = document.getElementById('demobar').getContext('2d');
+        var ctxLine = document.getElementById('demoline').getContext('2d');
 
 
-    // Define the data for your dataset
-    var dataBar = {
+        // Define the data for your dataset
+        var dataBar = {
         labels: ['2020', '2021', '2022', '2023', '2024'],
         datasets: [{
             label: 'Sample Dataset',
@@ -288,7 +295,7 @@
         data: dataLine,
         options: options
     });
-</script>
+    </script>
 
 <script>
     $(document).ready(function() {

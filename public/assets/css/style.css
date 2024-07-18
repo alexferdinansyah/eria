@@ -276,19 +276,11 @@ body {
     flex-direction: column;
 }
 
-.page-content {
-    margin: 20px;
-}
 
 .page-content .card {
     margin-bottom: 20px;
     overflow: hidden;
     position: relative;
-}
-
-.page-content .card-body {
-    padding: 20px;
-    display: none;
 }
 
 .page-content .card img {
@@ -324,12 +316,12 @@ body {
 }
 
 .page-content .card-title {
-    margin: 10px 0;
+    /* margin: 10px 0; */
     position: relative;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    color: white;
+    /* background: rgba(0, 0, 0, 0.7); */
+    /* padding: 10px; */
+    color: rgb(83, 83, 83);
 }
 
 .page-content .card-subtitle {
