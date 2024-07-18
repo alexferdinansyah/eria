@@ -58,17 +58,17 @@
             <div id="volumeContent" class="content-pane" style="width:100%;">
                     <!-- Content for Demography -->
                     <h4>Volume Section</h4>
-                    <div class="volumewrapper d-flex justify-content-evenly" style="gap: 40px; height:300px;">
-                    <canvas id="volumedonut1" style="max-width: 45%; height: 110px;"></canvas>
-                    <canvas id="volumedonut2" style="max-width: 45%; height: 110px;"></canvas>
+                    <div class="volumewrapper d-flex justify-content-center" style="gap: 40px; height:300px;">
+                    <div id="volumedonut1" class="chartdiv"></div>
+                    <div id="volumedonut2" class="chartdiv"></div>
                     </div>
                 </div>
                 <div id="demographyContent" class="content-pane" style="display: none; width:100%;">
                     <!-- Content for Demography -->
                     <h4>Demography Section</h4>
                     <div class="demowrapper d-flex justify-content-evenly" style="gap: 40px; height:300px;">
-                    <canvas id="demobar" style="max-width: 45%; height: 110px;"></canvas>
-                    <canvas id="demoline" style="max-width: 45%; height: 110px;"></canvas>
+                    <div id="barchart" class="chartdiv"></div>
+                    <div class="chartdiv" id="linechart"></div>
                     </div>
                 </div>
             </div>
@@ -130,144 +130,414 @@
 <?= $this->endSection(); ?>
 
 <?= $this->section('script') ?>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 <script>
- var ctxDonut1 = document.getElementById('volumedonut1').getContext('2d');
+am5.ready(function() {
+var root = am5.Root.new("barchart");
+root.setThemes([
+  am5themes_Animated.new(root)
+]);
+var chart = root.container.children.push(am5xy.XYChart.new(root, {
+  panX: true,
+  panY: true,
+  wheelX: "panX",
+  wheelY: "zoomX",
+  pinchZoomX: true,
+  paddingLeft:0,
+  paddingRight:1
+}));
 
-// Define the data for your dataset
-var dataDonut1 = {
-    labels: ['BEV', 'PHEV', 'H2', 'LPG', 'CNG', 'LNG'],
-    datasets: [{
-        label: 'Donut Chart 1',
-        backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)'],
-        borderColor: 'rgb(255, 255, 255)',
-        data: [70, 20, 10]
-    }]
-};
+// Add cursor
+// https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+cursor.lineY.set("visible", false);
 
-// Configuration options
-var optionsDonut1 = {
-    responsive: true,
-    plugins: {
-        legend: {
-            position: 'top',
-        },
-        tooltip: {
-            callbacks: {
-                label: function(tooltipItem) {
-                    return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2);
-                }
-            }
-        }
-    }
-};
 
-// Create the chart
-var myDonutChart1 = new Chart(ctxDonut1, {
-    type: 'doughnut',
-    data: dataDonut1,
-    options: optionsDonut1
+// Create axes
+// https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+var xRenderer = am5xy.AxisRendererX.new(root, { 
+  minGridDistance: 30, 
+  minorGridEnabled: true
+});
+
+xRenderer.labels.template.setAll({
+  rotation: -90,
+  centerY: am5.p50,
+  centerX: am5.p100,
+  paddingRight: 15
+});
+
+xRenderer.grid.template.setAll({
+  location: 1
+})
+
+var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+  maxDeviation: 0.3,
+  categoryField: "country",
+  renderer: xRenderer,
+  tooltip: am5.Tooltip.new(root, {})
+}));
+
+var yRenderer = am5xy.AxisRendererY.new(root, {
+  strokeOpacity: 0.1
+})
+
+var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+  maxDeviation: 0.3,
+  renderer: yRenderer
+}));
+
+// Create series
+// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+  name: "Series 1",
+  xAxis: xAxis,
+  yAxis: yAxis,
+  valueYField: "value",
+  sequencedInterpolation: true,
+  categoryXField: "country",
+  tooltip: am5.Tooltip.new(root, {
+    labelText: "{valueY}"
+  })
+}));
+
+series.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5, strokeOpacity: 0 });
+series.columns.template.adapters.add("fill", function (fill, target) {
+  return chart.get("colors").getIndex(series.columns.indexOf(target));
+});
+
+series.columns.template.adapters.add("stroke", function (stroke, target) {
+  return chart.get("colors").getIndex(series.columns.indexOf(target));
 });
 
 
+// Set data
+var data = [{
+  country: "USA",
+  value: 2025
+}, {
+  country: "China",
+  value: 1882
+}, {
+  country: "Japan",
+  value: 1809
+}, {
+  country: "Germany",
+  value: 1322
+}, {
+  country: "UK",
+  value: 1122
+}, {
+  country: "France",
+  value: 1114
+}, {
+  country: "India",
+  value: 984
+}, {
+  country: "Spain",
+  value: 711
+}, {
+  country: "Netherlands",
+  value: 665
+}, {
+  country: "South Korea",
+  value: 443
+}, {
+  country: "Canada",
+  value: 441
+}];
+
+xAxis.data.setAll(data);
+series.data.setAll(data);
 
 
+// Make stuff animate on load
+// https://www.amcharts.com/docs/v5/concepts/animations/
+series.appear(1000);
+chart.appear(1000, 100);
 
-var ctxDonut2 = document.getElementById('volumedonut2').getContext('2d');
-
-// Define the data for your dataset
-var dataDonut2 = {
-    labels: ['BEV', 'PHEV'],
-    datasets: [{
-        label: 'Donut Chart 2',
-        backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)'],
-        borderColor: 'rgb(255, 255, 255)',
-        data: [20, 80]
-    }]
-};
-
-// Configuration options
-var optionsDonut2 = {
-    responsive: true,
-    plugins: {
-        legend: {
-            position: 'top',
-        },
-        tooltip: {
-            callbacks: {
-                label: function(tooltipItem) {
-                    return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2);
-                }
-            }
-        }
-    }
-};
-
-// Create the chart
-var myDonutChart2 = new Chart(ctxDonut2, {
-    type: 'doughnut',
-    data: dataDonut2,
-    options: optionsDonut2
-});
+}); // end am5.ready()
 </script>
 <script>
-        // Get the context of the canvas element we want to select
-        var ctxBar = document.getElementById('demobar').getContext('2d');
-        var ctxLine = document.getElementById('demoline').getContext('2d');
+am4core.ready(function() {
+am4core.useTheme(am4themes_animated);
+var chart1 = am4core.create("volumedonut2", am4charts.PieChart3D);
+chart1.hiddenState.properties.opacity = 0; // this creates initial fade-in
+chart1.data = [
+  {
+    country: "Lithuania",
+    litres: 501.9
+  },
+  {
+    country: "Czech Republic",
+    litres: 301.9
+  },
+  {
+    country: "Ireland",
+    litres: 201.1
+  },
+  {
+    country: "Germany",
+    litres: 165.8
+  },
+  {
+    country: "Australia",
+    litres: 139.9
+  },
+  {
+    country: "Austria",
+    litres: 128.3
+  },
+  {
+    country: "UK",
+    litres: 99
+  },
+  {
+    country: "Belgium",
+    litres: 60
+  },
+  {
+    country: "The Netherlands",
+    litres: 50
+  }
+];
+chart1.innerRadius = 100;
+var series1 = chart1.series.push(new am4charts.PieSeries3D());
+series1.dataFields.value = "litres";
+series1.dataFields.category = "country";
 
 
-        // Define the data for your dataset
-        var dataBar = {
-        labels: ['2020', '2021', '2022', '2023', '2024'],
-        datasets: [{
-            label: 'Sample Dataset',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [10, 20, 30, 40, 50, 60, 70]
-        }]
-    };
+var chart2 = am4core.create("volumedonut1", am4charts.PieChart3D);
+chart2.hiddenState.properties.opacity = 0; // this creates initial fade-in
+chart2.data = [
+  {
+    country: "Lithuania",
+    litres: 501.9
+  },
+  {
+    country: "Czech Republic",
+    litres: 301.9
+  },
+  {
+    country: "Ireland",
+    litres: 201.1
+  },
+  {
+    country: "Germany",
+    litres: 165.8
+  },
+  {
+    country: "Australia",
+    litres: 139.9
+  },
+  {
+    country: "Austria",
+    litres: 128.3
+  },
+  {
+    country: "UK",
+    litres: 99
+  },
+  {
+    country: "Belgium",
+    litres: 60
+  },
+  {
+    country: "The Netherlands",
+    litres: 50
+  }
+];
+chart2.innerRadius = 100;
+var series2 = chart2.series.push(new am4charts.PieSeries3D());
+series2.dataFields.value = "litres";
+series2.dataFields.category = "country";
 
-    var dataLine = {
-        labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
-        datasets: [{
-            label: 'Dataset 1',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [60, 20, 60, 20, 60, 20, 80]
-        }, {
-            label: 'Dataset 2',
-            backgroundColor: 'rgb(54, 162, 235)',
-            borderColor: 'rgb(54, 162, 235)',
-            data: [50, 10, 50, 10, 50, 10, 70]
-        }]
-    };
+}); // end am4core.ready()
+</script>
 
-    // Configuration options
-    var options = {
-        responsive: true,
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    };
+<script>
+am5.ready(function() {
 
-    // Create the charts
-    var chartBar = new Chart(ctxBar, {
-        type: 'bar',
-        data: dataBar,
-        options: options
-    });
+// Create root element
+// https://www.amcharts.com/docs/v5/getting-started/#Root_element
+var root = am5.Root.new("linechart");
 
-    var chartLine = new Chart(ctxLine, {
-        type: 'line',
-        data: dataLine,
-        options: options
-    });
-    </script>
+const myTheme = am5.Theme.new(root);
 
+myTheme.rule("AxisLabel", ["minor"]).setAll({
+  dy:1
+});
+
+myTheme.rule("AxisLabel").setAll({
+  fontSize:"0.9em"
+});
+
+
+// Set themes
+// https://www.amcharts.com/docs/v5/concepts/themes/
+root.setThemes([
+  am5themes_Animated.new(root),
+  myTheme,
+  am5themes_Responsive.new(root)
+]);
+
+
+// Create chart
+// https://www.amcharts.com/docs/v5/charts/xy-chart/
+var chart = root.container.children.push(am5xy.XYChart.new(root, {
+  wheelX: "panX",
+  wheelY: "zoomX",
+  pinchZoomX: true,
+  paddingLeft: 0
+}));
+
+
+// Add cursor
+// https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+  behavior: "none"
+}));
+cursor.lineY.set("visible", false);
+
+
+// Generate random data
+var date = new Date();
+date.setHours(0, 0, 0, 0);
+var value = 100;
+
+function generateData() {
+  value = Math.round((Math.random() * 10 - 5) + value);
+  am5.time.add(date, "day", 1);
+  return {
+    date: date.getTime(),
+    value: value
+  };
+}
+
+function generateDatas(count) {
+  var data = [];
+  for (var i = 0; i < count; ++i) {
+    data.push(generateData());
+  }
+  return data;
+}
+
+
+// Create axes
+// https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
+  maxDeviation: 0.2,
+  baseInterval: {
+    timeUnit: "day",
+    count: 1
+  },
+  renderer: am5xy.AxisRendererX.new(root, {
+    minorGridEnabled: true,
+    minorLabelsEnabled: true
+  }),
+  tooltip: am5.Tooltip.new(root, {})
+}));
+
+xAxis.set("minorDateFormats", {
+  "day":"dd",
+  "month":"MMM"
+});
+
+var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+  renderer: am5xy.AxisRendererY.new(root, {
+    pan: "zoom"
+  })
+}));
+
+
+// Add series
+// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+var series = chart.series.push(am5xy.LineSeries.new(root, {
+  name: "Series",
+  xAxis: xAxis,
+  yAxis: yAxis,
+  valueYField: "value",
+  valueXField: "date",
+  tooltip: am5.Tooltip.new(root, {
+    labelText: "{valueY}"
+  })
+}));
+
+series.bullets.push(function() {
+  var graphics = am5.Circle.new(root, {
+    radius: 4,
+    interactive: true,
+    cursorOverStyle: "ns-resize",
+    stroke: series.get("stroke"),
+    fill: am5.color(0xffffff)
+  });
+
+  return am5.Bullet.new(root, {
+    sprite: graphics
+  });
+});
+
+// Add scrollbar
+// https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
+// chart.set("scrollbarX", am5.Scrollbar.new(root, {
+//   orientation: "horizontal"
+// }));
+
+// manipulating with mouse code
+var isDown = false;
+
+// register down
+chart.plotContainer.events.on("pointerdown", function() {
+  isDown = true;
+})
+// register up
+chart.plotContainer.events.on("globalpointerup", function() {
+  isDown = false;
+})
+
+chart.plotContainer.events.on("globalpointermove", function(e) {
+  // if pointer is down
+  if (isDown) {
+    // get tooltip data item 
+    var tooltipDataItem = series.get("tooltipDataItem");
+    if (tooltipDataItem) {
+      if (e.originalEvent) {
+
+        var position = yAxis.coordinateToPosition(chart.plotContainer.toLocal(e.point).y);
+        var value = yAxis.positionToValue(position);
+        // need to set bot working and original value
+        tooltipDataItem.set("valueY", value);
+        tooltipDataItem.set("valueYWorking", value);
+      }
+    }
+  }
+})
+
+// chart.plotContainer.children.push(am5.Label.new(root, {
+//   x: am5.p100,
+//   centerX: am5.p100,
+//   text: "Click and move mouse anywhere on plot area to change the graph"
+// }))
+
+// Set data
+var data = generateDatas(40);
+series.data.setAll(data);
+
+
+// Make stuff animate on load
+// https://www.amcharts.com/docs/v5/concepts/animations/
+series.appear(1000);
+chart.appear(1000, 100);
+
+}); // end am5.ready()
+</script>
 <script>
     $(document).ready(function() {
         // Show Volume section

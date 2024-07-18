@@ -19,6 +19,11 @@
             border: 1px solid #ccc;
             margin-top: 10px;
         }
+
+        .chartdiv {
+  width: 50%;
+  height: 300px;
+}   
     </style>
     
 </head>
