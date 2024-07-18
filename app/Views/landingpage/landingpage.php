@@ -46,7 +46,7 @@
 
 <!----------------------------------------------------CHARTS---------------------------------------------------------->
 
-<div class="mt-5" style="width: 100%;">
+<!-- <div class="mt-5" style="width: 100%;">
         <div class="row">
             <div class="col-md-12 d-flex gap-2 justify-content-center">
                 <button class="btn btn-primary" id="showVolume">Show Volume</button>
@@ -56,7 +56,6 @@
         <div class="row mt-1 d-flex justify-content-center">
             <div class="col-md-8 w-100 p-5">
             <div id="volumeContent" class="content-pane" style="width:100%;">
-                    <!-- Content for Demography -->
                     <h4>Volume Section</h4>
                     <div class="volumewrapper d-flex justify-content-center" style="gap: 40px; height:300px;">
                     <div id="volumedonut1" class="chartdiv"></div>
@@ -64,7 +63,6 @@
                     </div>
                 </div>
                 <div id="demographyContent" class="content-pane" style="display: none; width:100%;">
-                    <!-- Content for Demography -->
                     <h4>Demography Section</h4>
                     <div class="demowrapper d-flex justify-content-evenly" style="gap: 40px; height:300px;">
                     <div id="barchart" class="chartdiv"></div>
@@ -73,7 +71,26 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+<!-- DROPDOWN VEHICLES -->
+
+    <div class="dropdown-section mt-5 w-100 d-flex justify-content-center">
+        <div class="dropdown-wrapper w-20">
+            <div class="section-title"></div>
+            <div>b</div>
+        </div>
     </div>
+
+
+<!-- ASEAN MAP -->
+
+<div class="mt-5 w-100 d-flex justify-content-center mb-5">
+    <div class="d-flex justify-content-center" style="height: 400px; width: 60%;">
+        <img src="<?= base_url('assets/images/asean-map.png') ?>" class="img-fluid w-100 h-100">
+    </div>
+</div>
+
 
 <!---------------------------------------------------------- UPDATE NEWS ---------------------------------------------------------->
 <div class="page-content mt-3 mb-5 pt-1" style="padding-left: 34px;">
@@ -130,7 +147,7 @@
 <?= $this->endSection(); ?>
 
 <?= $this->section('script') ?>
-<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<!-- <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -554,5 +571,5 @@ chart.appear(1000, 100);
             // Show Demography section
         });
     });
-</script>
+</script> -->
 <?= $this->endSection(); ?>
