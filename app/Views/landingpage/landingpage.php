@@ -25,10 +25,13 @@
             <div class="carousel-item">
                 <div class="row">
                     <div class="col-md-6 slider-description">
-                        <h2>Participate in the ASEAN Economic Community Post-2025 Survey!</h2>
-                        <p>ERIA in collaboration with the ASEAN Secretariat has developed a survey focusing on AEC Aspects of Post-2025 Vision. This survey,
-                            supported by Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ), aims to capture the general sentiments and perspectives of ASEAN stakeholders.
-                            It seeks to engage a wider audience to contribute to the End-Term Review of the AEC Blueprint 2025 and the development of the AEC Community Vision 2045 and its Strategic Plan.</p>
+                        <h2>ASEAN ALTERNATIVE VEHICLE TECHNOLOGY PORTAL</h2>
+                        <p>An online data of ASEAN new & alternative vehicle technology
+                            with the main objective of providing comprehensive information
+                            on the current situation of alternative vehicle technology
+                            development in 10 ASEAN member states to open public and to
+                            regularly produce ASEAN Vehicle Technology Outlook
+                        </p>
                         <a href="#" class="btn btn-outline-light">Read More</a>
                     </div>
                     <div class="col-md-6 h-100 d-flex align-items-center">
@@ -61,41 +64,41 @@
     <div class="row mt-1 d-flex justify-content-center">
         <div class="col-md-8 w-100 p-5">
             <div id="volumeContent" class="content-pane" style="width:100%;">
-                    <!-- Content for Demography -->
-                    <h4>Volume Section</h4>
-                    <div class="volumewrapper d-flex justify-content-center" style="gap: 40px; height:300px;">
-                    <div id="volumedonut1" class="chartdiv"></div>
-                    <div id="volumedonut2" class="chartdiv"></div>
-                    </div>
-                </div>
-                <div id="demographyContent" class="content-pane" style="display: none; width:100%;">
-                    <!-- Content for Demography -->
-                    <h4>Demography Section</h4>
-                    <div class="demowrapper d-flex justify-content-evenly" style="gap: 40px; height:300px;">
-                    <div id="barchart" class="chartdiv"></div>
-                    <div class="chartdiv" id="linechart"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
                 <!-- Content for Demography -->
                 <h4>Volume Section</h4>
-                <div class="volumewrapper d-flex justify-content-evenly" style="gap: 40px; height:300px;">
-                    <canvas id="volumedonut1" style="max-width: 45%; height: 110px;"></canvas>
-                    <canvas id="volumedonut2" style="max-width: 45%; height: 110px;"></canvas>
+                <div class="volumewrapper d-flex justify-content-center" style="gap: 40px; height:300px;">
+                    <div id="volumedonut1" class="chartdiv"></div>
+                    <div id="volumedonut2" class="chartdiv"></div>
                 </div>
             </div>
             <div id="demographyContent" class="content-pane" style="display: none; width:100%;">
                 <!-- Content for Demography -->
                 <h4>Demography Section</h4>
                 <div class="demowrapper d-flex justify-content-evenly" style="gap: 40px; height:300px;">
-                    <canvas id="demobar" style="max-width: 45%; height: 110px;"></canvas>
-                    <canvas id="demoline" style="max-width: 45%; height: 110px;"></canvas>
+                    <div id="barchart" class="chartdiv"></div>
+                    <div class="chartdiv" id="linechart"></div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<!-- Content for Demography -->
+<h4>Volume Section</h4>
+<div class="volumewrapper d-flex justify-content-evenly" style="gap: 40px; height:300px;">
+    <canvas id="volumedonut1" style="max-width: 45%; height: 110px;"></canvas>
+    <canvas id="volumedonut2" style="max-width: 45%; height: 110px;"></canvas>
+</div>
+</div>
+<div id="demographyContent" class="content-pane" style="display: none; width:100%;">
+    <!-- Content for Demography -->
+    <h4>Demography Section</h4>
+    <div class="demowrapper d-flex justify-content-evenly" style="gap: 40px; height:300px;">
+        <canvas id="demobar" style="max-width: 45%; height: 110px;"></canvas>
+        <canvas id="demoline" style="max-width: 45%; height: 110px;"></canvas>
+    </div>
+</div>
+</div>
+</div>
 </div>
 
 <!---------------------------------------------------------- UPDATE NEWS ---------------------------------------------------------->
@@ -110,29 +113,29 @@
             <div class="col">
                 <div class="d-flex flex-wrap" style="gap:50px;">
                     <div class="card" style="width: 28rem;">
-                    <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
-                        <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
-                    </div>
-                    </div>
-
-                    <div class="card" style="width: 28rem;">
-                    <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
-                        <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
-                    </div>
+                        <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
+                            <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
+                        </div>
                     </div>
 
                     <div class="card" style="width: 28rem;">
-                    <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
-                        <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
+                        <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
+                            <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
+                        </div>
                     </div>
+
+                    <div class="card" style="width: 28rem;">
+                        <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
+                            <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
+                        </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -162,93 +165,93 @@
 <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 <script>
- var ctxDonut1 = document.getElementById('volumedonut1').getContext('2d');
+    var ctxDonut1 = document.getElementById('volumedonut1').getContext('2d');
 
-// Define the data for your dataset
-var dataDonut1 = {
-    labels: ['BEV', 'PHEV', 'H2', 'LPG', 'CNG', 'LNG'],
-    datasets: [{
-        label: 'Donut Chart 1',
-        backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)'],
-        borderColor: 'rgb(255, 255, 255)',
-        data: [70, 20, 10]
-    }]
-};
+    // Define the data for your dataset
+    var dataDonut1 = {
+        labels: ['BEV', 'PHEV', 'H2', 'LPG', 'CNG', 'LNG'],
+        datasets: [{
+            label: 'Donut Chart 1',
+            backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)'],
+            borderColor: 'rgb(255, 255, 255)',
+            data: [70, 20, 10]
+        }]
+    };
 
-// Configuration options
-var optionsDonut1 = {
-    responsive: true,
-    plugins: {
-        legend: {
-            position: 'top',
-        },
-        tooltip: {
-            callbacks: {
-                label: function(tooltipItem) {
-                    return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2);
+    // Configuration options
+    var optionsDonut1 = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2);
+                    }
                 }
             }
         }
-    }
-};
+    };
 
-// Create the chart
-var myDonutChart1 = new Chart(ctxDonut1, {
-    type: 'doughnut',
-    data: dataDonut1,
-    options: optionsDonut1
-});
-
+    // Create the chart
+    var myDonutChart1 = new Chart(ctxDonut1, {
+        type: 'doughnut',
+        data: dataDonut1,
+        options: optionsDonut1
+    });
 
 
 
 
-var ctxDonut2 = document.getElementById('volumedonut2').getContext('2d');
 
-// Define the data for your dataset
-var dataDonut2 = {
-    labels: ['BEV', 'PHEV'],
-    datasets: [{
-        label: 'Donut Chart 2',
-        backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)'],
-        borderColor: 'rgb(255, 255, 255)',
-        data: [20, 80]
-    }]
-};
+    var ctxDonut2 = document.getElementById('volumedonut2').getContext('2d');
 
-// Configuration options
-var optionsDonut2 = {
-    responsive: true,
-    plugins: {
-        legend: {
-            position: 'top',
-        },
-        tooltip: {
-            callbacks: {
-                label: function(tooltipItem) {
-                    return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2);
+    // Define the data for your dataset
+    var dataDonut2 = {
+        labels: ['BEV', 'PHEV'],
+        datasets: [{
+            label: 'Donut Chart 2',
+            backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)'],
+            borderColor: 'rgb(255, 255, 255)',
+            data: [20, 80]
+        }]
+    };
+
+    // Configuration options
+    var optionsDonut2 = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2);
+                    }
                 }
             }
         }
-    }
-};
+    };
 
-// Create the chart
-var myDonutChart2 = new Chart(ctxDonut2, {
-    type: 'doughnut',
-    data: dataDonut2,
-    options: optionsDonut2
-});
+    // Create the chart
+    var myDonutChart2 = new Chart(ctxDonut2, {
+        type: 'doughnut',
+        data: dataDonut2,
+        options: optionsDonut2
+    });
 </script>
 
 <script>
-        // Get the context of the canvas element we want to select
-        var ctxBar = document.getElementById('demobar').getContext('2d');
-        var ctxLine = document.getElementById('demoline').getContext('2d');
+    // Get the context of the canvas element we want to select
+    var ctxBar = document.getElementById('demobar').getContext('2d');
+    var ctxLine = document.getElementById('demoline').getContext('2d');
 
 
-        // Define the data for your dataset
-        var dataBar = {
+    // Define the data for your dataset
+    var dataBar = {
         labels: ['2020', '2021', '2022', '2023', '2024'],
         datasets: [{
             label: 'Sample Dataset',
@@ -295,7 +298,7 @@ var myDonutChart2 = new Chart(ctxDonut2, {
         data: dataLine,
         options: options
     });
-    </script>
+</script>
 
 <script>
     $(document).ready(function() {
