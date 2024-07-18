@@ -27,7 +27,7 @@ class LandingController extends BaseController
     }
 
     public function publicationDetail($id){
-        $data;
+        // $data;
         $data["id"] = $id;
         return view('landingpage/publicationDetail', $data);  
     }
