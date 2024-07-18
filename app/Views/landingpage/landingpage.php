@@ -9,46 +9,20 @@
                 <div class="row">
                     <div class="col-md-6 slider-description">
                         <h2>ASEAN ALTERNATIVE VEHICLE TECHNOLOGY PORTAL</h2>
-                        <p>An online data of ASEAN new & alternative vehicle technology
+                        <p style="text-align: justify;">An online data of ASEAN new & alternative vehicle technology
                             with the main objective of providing comprehensive information
                             on the current situation of alternative vehicle technology
                             development in 10 ASEAN member states to open public and to
                             regularly produce ASEAN Vehicle Technology Outlook
                         </p>
-                        <a href="#" class="btn btn-outline-light">Read More</a>
                     </div>
                     <div class="col-md-6">
                         <img src="<?= base_url('assets/images/flags.jpeg') ?>" class="img-fluid " alt="Slide 1">
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-md-6 slider-description">
-                        <h2>ASEAN ALTERNATIVE VEHICLE TECHNOLOGY PORTAL</h2>
-                        <p>An online data of ASEAN new & alternative vehicle technology
-                            with the main objective of providing comprehensive information
-                            on the current situation of alternative vehicle technology
-                            development in 10 ASEAN member states to open public and to
-                            regularly produce ASEAN Vehicle Technology Outlook
-                        </p>
-                        <a href="#" class="btn btn-outline-light">Read More</a>
-                    </div>
-                    <div class="col-md-6 h-100 d-flex align-items-center">
-                        <img src="<?= base_url('assets/images/web-link.jpg') ?>" class="img-fluid" alt="Slide 2">
-                    </div>
-                </div>
-            </div>
-
+           
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 </div>
 
