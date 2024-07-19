@@ -108,13 +108,13 @@ body {
 
 .slider-description h2 {
     font-size: 2rem;
-    margin-left: 15%;
+    margin-left: 8%;
     padding: 5%;
 }
 
 .slider-description p {
     font-size: 1.2rem;
-    margin-left: 20%;
+    margin-left: 12%;
     margin-top: 2%;
 }
 
@@ -124,18 +124,77 @@ body {
 }
 
 /************************************************ chart (dropdown) ************************************************/
+.container {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Flexbox for desktop view */
+@media (min-width: 992px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .img-container {
+        order: 1;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .dropdown-card {
+        order: 2;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .dropdown-container {
+        width: 75%;
+    }
+}
+
+/* Flexbox for mobile view */
+@media (max-width: 991px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .img-container,
+    .dropdown-card {
+        width: 100%;
+    }
+
+    .img-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .dropdown-container {
+        width: 90%;
+    }
+}
+
 .dropdown-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
     padding: 20px;
 }
 
 .dropdown-logo {
     width: 40px;
     height: auto;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .dropdown-wrapper {
@@ -152,7 +211,6 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     background: transparent;
-    background-image: none;
 }
 
 .dropdown-arrow {
@@ -191,13 +249,7 @@ body {
 
 @media (max-width: 767px) {
     .dropdown-container {
-        flex-direction: column;
         align-items: center;
-    }
-
-    .dropdown-logo {
-        margin-right: 0;
-        margin-bottom: 10px;
     }
 
     .dropdown-country {
