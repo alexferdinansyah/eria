@@ -26,7 +26,7 @@
     </div>
 </div>
 
-<!---------------------------------------------------- COUNTRY MAP ---------------------------------------------------------->
+<!----------------------------------------------------CHARTS---------------------------------------------------------->
 <div class="container mt-5 d-flex flex-column align-items-center">
     <div class="d-flex flex-column flex-lg-row w-100 align-items-center justify-content-center">
         <div class="img-container">
@@ -96,7 +96,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
