@@ -527,3 +527,50 @@ body {
     border-top: 2px solid #ccc;
     width: 83%;
 }
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 20px 100px;
+    color: white;
+    background-color: var(--blue);
+    width: 100%;
+    
+}
+
+.banner img{
+    width: 80px;
+    border: solid white 1px;
+    height: auto;
+}
+
+.content-summary{
+    padding-top: 20px;
+    padding-left: 100px;
+}
+
+.summary-par{
+    padding-right: 80px;    
+    /* background-color: gray; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-sum{
+    display: flex;
+    gap: 20px;
+}
+
+.container-sum p:first-child{
+    font-weight: 600;
+}
+
+.container-sum p:last-child{
+    color: grey;
+    line-height: 0;
+}
+
+.img-map{
+    width: 400px;
+}

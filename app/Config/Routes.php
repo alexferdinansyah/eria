@@ -16,3 +16,6 @@ $routes->get('/news', 'LandingController::news');
 $routes->get('/updates', 'LandingController::updates');
 
 $routes->get('/events', 'LandingController::events');
+
+$routes->get('/summary/(:segment)', 'LandingController::summary/$1');
+
