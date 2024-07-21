@@ -40,14 +40,18 @@
                     <div class="logo-dropdown d-flex align-items-center">
                         <img src="<?= base_url('assets/images/road.png') ?>" alt="Logo" class="dropdown-logo">
                         <div class="dropdown-wrapper">
-                            <select class="dropdown-country transparent-dropdown">
-                                <option value="country">CHOOSE COUNTRY</option>
-                                <option value="Brunei Darussalam">Brunei Darussalam</option>
+                            <select class="dropdown-country transparent-dropdown" id="asean-dropdown" onchange="redirectToSummary()">
+                                <option disabled hidden selected value="country">CHOOSE COUNTRY</option>
+                                <option value="Brunei">Brunei</option>
+                                <option value="Cambodia">Cambodia</option>
                                 <option value="Indonesia">Indonesia</option>
-                                <option value="Kamboja">Kamboja</option>
                                 <option value="Laos">Laos</option>
                                 <option value="Malaysia">Malaysia</option>
-                                <!-- Add more options as needed -->
+                                <option value="Myanmar">Myanmar</option>
+                                <option value="Philippines">Philippines</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="Vietnam">Vietnam</option>
                             </select>
                             <div class="dropdown-arrow">&#9662;</div> <!-- Dropdown arrow -->
                         </div>
@@ -59,46 +63,84 @@
 </div>
 
 <!---------------------------------------------------------- UPDATE NEWS ---------------------------------------------------------->
-<div class="page-content mt-3 mb-5 pt-1" style="padding-left: 34px;">
-    <div class="container1">
-        <div class="row mb-3">
-            <div class="col-md-12">
-                <h3>Updates</h3>
-            </div>
+<h3 style="margin-left:100px;">Updates</h3>
+<section class="container my-5">
+    <div class="row">
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20150119/eria_capacity-building_phnom-penh_jan-19-20-cropped.jpg" alt="Capacity Building">
+            <a href="#">ERIA Capacity Building Seminar in Cambodia - Remaining Challenge for ASEAN Economic Community 2015</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="d-flex flex-wrap" style="gap:50px;">
-                    <div class="card" style="width: 28rem;">
-                        <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
-                            <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
-                        </div>
-                    </div>
-
-                    <div class="card" style="width: 28rem;">
-                        <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
-                            <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
-                        </div>
-                    </div>
-
-                    <div class="card" style="width: 28rem;">
-                        <img src="<?= base_url('assets/images/eria-president.jpg') ?>" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">ERIA Partners with Nomura Research Institute Singapore and the Cyber Civilization Research Center to Enhance Cyber Security in</h5>
-                            <p class="card-text">Jakarta, 11 July 2024: Dr Giulia Ajmone Marsan, ERIA's Head of Startups and Inclusion, has been appointed as one of the four experts to lead the development of a study on ASEAN+3 startup...</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="Capacity Building">
+            <a href="#"> Regional Knowledge Centre for Marine Plastic Debris                                    </a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
         </div>
-
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/news/20240708/eria-president-pays-courtesy-visit-to-cambodia-s-deputy-prime-minister-and-minister-of-economy-and-finance.webp" alt="Capacity Building">
+            <a href="#">Capacity Building Programme</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="Capacity Building">
+            <a href="#">Capacity Building Programme</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="Capacity Building">
+            <a href="#">Capacity Building Programme</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="Capacity Building">
+            <a href="#">Capacity Building Programme</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="Capacity Building">
+            <a href="#">Capacity Building Programme</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="Capacity Building">
+            <a href="#">Capacity Building Programme</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
+        <div class="col-md-4 grid-item">
+            <img src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="Capacity Building">
+            <a href="#">Capacity Building Programme</a>
+            <p style="margin-bottom:0;">12 Juli 2024</p>
+            <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
+        </div>
     </div>
-</div>
+</section>
+
+<!---------------------------------------------------------- CHART SECTION  ---------------------------------------------------------->
+<section class="chart-container">
+    <div class="chart-wrap">
+    <canvas id="myChart1"></canvas>
+    </div>
+
+    <div class="chart-wrap">
+    <canvas id="myChart2"></canvas>
+    </div>
+
+    <div class="chart-wrap">
+    <canvas id="myChart3"></canvas>
+    </div>
+
+    <div class="chart-wrap">
+    <canvas id="myChart4"></canvas>
+    </div>
+</section>
 
 <!-- Copyrights -->
 
@@ -112,166 +154,5 @@
 
 <?= $this->endSection(); ?>
 
-<?= $this->section('script') ?>
-<!-- <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-<script>
-    var ctxDonut1 = document.getElementById('volumedonut1').getContext('2d');
-
-    // Define the data for your dataset
-    var dataDonut1 = {
-        labels: ['BEV', 'PHEV', 'H2', 'LPG', 'CNG', 'LNG'],
-        datasets: [{
-            label: 'Donut Chart 1',
-            backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)'],
-            borderColor: 'rgb(255, 255, 255)',
-            data: [70, 20, 10]
-        }]
-    };
-
-    // Configuration options
-    var optionsDonut1 = {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-            tooltip: {
-                callbacks: {
-                    label: function(tooltipItem) {
-                        return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2);
-                    }
-                }
-            }
-        }
-    };
-
-    // Create the chart
-    var myDonutChart1 = new Chart(ctxDonut1, {
-        type: 'doughnut',
-        data: dataDonut1,
-        options: optionsDonut1
-    });
 
 
-
-
-
-    var ctxDonut2 = document.getElementById('volumedonut2').getContext('2d');
-
-    // Define the data for your dataset
-    var dataDonut2 = {
-        labels: ['BEV', 'PHEV'],
-        datasets: [{
-            label: 'Donut Chart 2',
-            backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(153, 102, 255)'],
-            borderColor: 'rgb(255, 255, 255)',
-            data: [20, 80]
-        }]
-    };
-
-    // Configuration options
-    var optionsDonut2 = {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-            tooltip: {
-                callbacks: {
-                    label: function(tooltipItem) {
-                        return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2);
-                    }
-                }
-            }
-        }
-    };
-
-    // Create the chart
-    var myDonutChart2 = new Chart(ctxDonut2, {
-        type: 'doughnut',
-        data: dataDonut2,
-        options: optionsDonut2
-    });
-</script>
-
-<script>
-    // Get the context of the canvas element we want to select
-    var ctxBar = document.getElementById('demobar').getContext('2d');
-    var ctxLine = document.getElementById('demoline').getContext('2d');
-
-
-    // Define the data for your dataset
-    var dataBar = {
-        labels: ['2020', '2021', '2022', '2023', '2024'],
-        datasets: [{
-            label: 'Sample Dataset',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [10, 20, 30, 40, 50, 60, 70]
-        }]
-    };
-
-    var dataLine = {
-        labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
-        datasets: [{
-            label: 'Dataset 1',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [60, 20, 60, 20, 60, 20, 80]
-        }, {
-            label: 'Dataset 2',
-            backgroundColor: 'rgb(54, 162, 235)',
-            borderColor: 'rgb(54, 162, 235)',
-            data: [50, 10, 50, 10, 50, 10, 70]
-        }]
-    };
-
-    // Configuration options
-    var options = {
-        responsive: true,
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    };
-
-    // Create the charts
-    var chartBar = new Chart(ctxBar, {
-        type: 'bar',
-        data: dataBar,
-        options: options
-    });
-
-    var chartLine = new Chart(ctxLine, {
-        type: 'line',
-        data: dataLine,
-        options: options
-    });
-</script>
-
-<script>
-    $(document).ready(function() {
-        // Show Volume section
-        $('#showVolume').on('click', function() {
-            $('#demographyContent').hide(); // Hide Demography section
-            $('#volumeContent').show(); // Show Volume section
-        });
-
-        // Show Demography section
-        $('#showDemography').on('click', function() {
-            $('#volumeContent').hide(); // Hide Volume section
-            $('#demographyContent').show();
-
-            // Show Demography section
-        });
-    });
-</script> -->
-<?= $this->endSection(); ?>

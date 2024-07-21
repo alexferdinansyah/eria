@@ -13,31 +13,31 @@
         <section class="container-sum">
             <div>
                 <p>Population</p>
-                <p>Population</p>
+                <p><?= $population?></p>
             </div>
             <div>
                 <p>Total Land Area</p>
-                <p>Total Land Area</p>
+                <p><?= $ttlland ?></p>
             </div>
             <div>
                 <p>Total Highway Area</p>
-                <p>Total Highway Area</p>
+                <p><?= $totalHighway ?></p>
             </div>
         </section>
         <section class="container-sum">
             <div>
                 <p>GDP Per Capita (Current US$)</p>
-                <p>Total Land Area</p>
+                <p><?= $GDP ?></p>
             </div>
             <div>
                 <p>Purchasing Power Parity (PPP)</p>
-                <p>Total Highway Area</p>
+                <p><?= $PPP ?></p>
             </div>
         </section>
         <section class="container-sum">
             <div>
                 <p>GDP Per Capita Purchasing Power Parity (PPP)</p>
-                <p>Total Land Area</p>
+                <p><?= $GDPppp ?></p>
             </div>
         </section>
     
@@ -46,4 +46,27 @@
 
 </div>
 
+<!-- <a href="https://docs.google.com/spreadsheets/d/1zucgTdbeN9ZbrUcYMu2R_LXtSobx1saYwAXdEbz79Qg/export?format=xlsx">Download</a> -->
+<section class="chart-container">
+    <div class="chart-wrap">
+    <canvas id="myChart1"></canvas>
+    </div>
+
+    <div class="chart-wrap">
+    <canvas id="myChart2"></canvas>
+    </div>
+
+    <div class="chart-wrap">
+    <canvas id="myChart3"></canvas>
+    </div>
+
+    <div class="chart-wrap">
+    <canvas id="myChart4"></canvas>
+    </div>
+</section>
+
+
+<?= $this->endSection(); ?>
+
+<?= $this->section('script') ?>
 <?= $this->endSection(); ?>

@@ -68,7 +68,18 @@
     <?= $this->renderSection('content') ?>
 
     <?= $this->renderSection('script') ?>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
+    <script>
+        function redirectToSummary() {
+            const dropdown = document.getElementById("asean-dropdown");
+            const selectedCountry = dropdown.value;
+            if (selectedCountry) {
+                window.location.href = `/summary/${selectedCountry}`;
+            }
+        }
+    </script>
+    <script src="<?= base_url('assets/javascripts/script.js') ?>"></script>
 </body>
 
 </html>

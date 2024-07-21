@@ -47,6 +47,21 @@ class LandingController extends BaseController
     public function summary($nat){
         $data["nation"] = $nat;
 
+        if($nat === "Indonesia"){
+            $data["population"] = "275,773,800";
+            $data["ttlland"] = "1,892,556";
+            $data["totalHighway"] = "548,097";
+            $data["GDP"] = "4,778";
+            $data["PPP"] = "19,588,089,9";
+            $data["GDPppp"] = "12,410";
+        }else{
+            $data["population"] = "N/a";
+            $data["ttlland"] = "N/a";
+            $data["totalHighway"] = "N/a";
+            $data["GDP"] = "N/a";
+            $data["PPP"] = "N/a";
+            $data["GDPppp"] = "N/a";
+        }
         return view('/landingpage/summary', $data);
 
     }
