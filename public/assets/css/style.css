@@ -258,7 +258,24 @@ body {
 }
 
 /************************************************ card updates ************************************************/
+.page-content {
+    padding-left: 34px;
+}
 
+.custom-card {
+    width: 100%;
+    max-width: 28rem;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .d-flex.flex-wrap.gap-3 {
+        gap: 50px;
+    }
+}
+
+
+/************************************************ card updates ************************************************/
 .header {
     width: 100vw;
     background-color: var(--blue);
