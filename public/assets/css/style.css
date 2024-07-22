@@ -687,16 +687,16 @@ body {
 .img-map {
     width: 400px;
 }
-
-.chart-container {
-    display: flex;
+/* 
+.chart-container{
+    display: flex;   
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 100px;
-    padding: 100px;
-}
+} */
 
-.chart-wrap {
+/* .chart-wrap{
     width: 500px;
-}
+} */
+
