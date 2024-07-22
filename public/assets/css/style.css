@@ -165,17 +165,11 @@ body {
     .select-wrapper {
         display: flex;
         align-items: flex-start;
-        /* Align items to the left */
     }
 
     .dropdown-logo {
         width: 80px;
-        /* Adjust the logo size */
         height: auto;
-    }
-
-    .ml-3 {
-        margin-left: 15px;
     }
 
     .dropdown-content {
@@ -183,6 +177,10 @@ body {
         align-items: center;
         margin-top: 0;
         width: 100%;
+    }
+
+    .ml-3 {
+        margin-left: 15px;
     }
 
     .dropdown-country {
@@ -196,9 +194,15 @@ body {
         margin-left: 0;
         width: calc(100% - 35px);
     }
+
+    .dropdown-logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: reltive;
+    }
 }
 
-/* Flexbox for mobile view */
 @media (max-width: 991px) {
     .container {
         flex-direction: column;
@@ -222,7 +226,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        position: relative;
+        position: reltive;
     }
 
     .dropdown-title {
@@ -687,6 +691,7 @@ body {
 .img-map {
     width: 400px;
 }
+
 /* 
 .chart-container{
     display: flex;   
@@ -699,4 +704,3 @@ body {
 /* .chart-wrap{
     width: 500px;
 } */
-
