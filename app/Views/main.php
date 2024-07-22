@@ -40,11 +40,11 @@
                 <li><a href="/publications">PUBLICATIONS</a></li>
                 <li><a href="/news">UPDATES</a></li>
                 <li><a href="/events">EVENTS</a></li>
-                <li>
+                <!-- <li>
                     <button class="btn btn-primary btn-search" data-bs-toggle="modal" data-bs-target="#searchModal">
                         <i class="fas fa-search"></i>
                     </button>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
