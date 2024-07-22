@@ -129,14 +129,6 @@
 </section>
 
 <!---------------------------------------------------------- CHART SECTION  ---------------------------------------------------------->
-<section class="chart-container p-3 mb-5">
-    <div class="chart-wrap row-gap-3 column-gap-2 gap-0 row row-cols-2 justify-content-md-evenly">
-    <div class="chartdiv" id="linechart1"></div>
-    <div class="chartdiv" id="linechart2"></div>
-    <div class="chartdiv" id="linechart3"></div>
-    <div id="donutchart" class="chartdiv"></div>
-    </div>
-</section>
 
 <!-- Copyrights -->
 

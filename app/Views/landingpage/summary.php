@@ -48,11 +48,23 @@
 
 <!-- <a href="https://docs.google.com/spreadsheets/d/1zucgTdbeN9ZbrUcYMu2R_LXtSobx1saYwAXdEbz79Qg/export?format=xlsx">Download</a> -->
 <section class="chart-container p-3 mb-5">
-    <div class="chart-wrap row-gap-3 column-gap-2 gap-0 row row-cols-2 justify-content-md-evenly">
-    <div class="chartdiv" id="linechart1"></div>
-    <div class="chartdiv" id="linechart2"></div>
-    <div class="chartdiv" id="linechart3"></div>
-    <div id="donutchart" class="chartdiv"></div>
+    <div class="chart-wrap row-gap-3 column-gap-2 gap-0 row row-cols-1 justify-content-md-evenly">
+    <div class="volume d-flex flex-column">
+    <a href="https://docs.google.com/spreadsheets/d/1zucgTdbeN9ZbrUcYMu2R_LXtSobx1saYwAXdEbz79Qg/export?format=xlsx&gid=0"><button style="width: 12%; margin-bottom: 30px; margin-left: 30px;" class="btn btn-primary">Download Volume</button>
+    </a>
+    <div class="volume-chart-wrapper d-flex justify-content-evenly">
+        <div class="chartdiv" id="linechart1"></div>
+        <div class="chartdiv" id="linechart2"></div>
+        </div>
+    </div>
+    <div class="demograpy d-flex flex-column">
+    <a href="https://docs.google.com/spreadsheets/d/1zucgTdbeN9ZbrUcYMu2R_LXtSobx1saYwAXdEbz79Qg/export?format=xlsx&gid=11352702"><button style="width: 14%; margin-bottom: 30px; margin-left: 30px; margin-top: 20px;" class="btn btn-primary">Download Demography</button>
+    </a>
+    <div class="demography-chart-wrapper d-flex justify-content-evenly">
+        <div class="chartdiv" id="linechart3"></div>
+        <div id="donutchart" class="chartdiv"></div>
+        </div>
+    </div>
     </div>
 </section>
 
