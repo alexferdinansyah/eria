@@ -176,17 +176,13 @@ body {
 
     .ml-3 {
         margin-left: 15px;
-        /* Margin between logo and text */
     }
 
     .dropdown-content {
         display: flex;
         align-items: center;
-        /* Center align dropdown vertically */
         margin-top: 0;
-        /* Remove the margin-top */
         width: 100%;
-        /* Make dropdown-content full width */
     }
 
     .dropdown-country {
@@ -198,17 +194,7 @@ body {
         -moz-appearance: none;
         background: transparent;
         margin-left: 0;
-        /* Align dropdown to the left */
         width: calc(100% - 35px);
-        /* Adjust the width to be full width minus the arrow width */
-    }
-
-    .dropdown-arrow {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        pointer-events: none;
     }
 }
 

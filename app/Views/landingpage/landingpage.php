@@ -35,7 +35,7 @@
         <div class="card-drop dropdown-card d-flex justify-content-center">
             <div class="dropdown-container">
                 <div class="select-wrapper d-flex align-items-center">
-                    <div class="dropdown-logo-container">
+                    <div class="d-flex justify-content-center flex-column align-items-center">
                         <img src="<?= base_url('assets/images/road.png') ?>" alt="Logo" class="dropdown-logo">
                         <h4 class="dropdown-title">Road</h4>
                     </div>
@@ -56,11 +56,9 @@
                                 <option value="Thailand">Thailand</option>
                                 <option value="Vietnam">Vietnam</option>
                             </select>
-                            <div class="dropdown-arrow">&#9662;</div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
