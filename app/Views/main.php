@@ -21,8 +21,8 @@
         }
 
         .chartdiv {
-  width: 50%;
-  height: 300px;
+  width: 45%;
+  height: 320px;
 }   
     </style>
     
@@ -68,14 +68,21 @@
     <?= $this->renderSection('content') ?>
 
     <?= $this->renderSection('script') ?>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>  
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
     <script>
         function redirectToSummary() {
             const dropdown = document.getElementById("asean-dropdown");
             const selectedCountry = dropdown.value;
             if (selectedCountry) {
-                window.location.href = `/summary/${selectedCountry}`;
+                window.location.href 
+                = `/summary/${selectedCountry}`;
             }
         }
     </script>

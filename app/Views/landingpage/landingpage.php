@@ -124,21 +124,12 @@
 </section>
 
 <!---------------------------------------------------------- CHART SECTION  ---------------------------------------------------------->
-<section class="chart-container">
-    <div class="chart-wrap">
-    <canvas id="myChart1"></canvas>
-    </div>
-
-    <div class="chart-wrap">
-    <canvas id="myChart2"></canvas>
-    </div>
-
-    <div class="chart-wrap">
-    <canvas id="myChart3"></canvas>
-    </div>
-
-    <div class="chart-wrap">
-    <canvas id="myChart4"></canvas>
+<section class="chart-container p-3 mb-5">
+    <div class="chart-wrap row-gap-3 column-gap-2 gap-0 row row-cols-2 justify-content-md-evenly">
+    <div class="chartdiv" id="linechart1"></div>
+    <div class="chartdiv" id="linechart2"></div>
+    <div class="chartdiv" id="linechart3"></div>
+    <div id="donutchart" class="chartdiv"></div>
     </div>
 </section>
 
