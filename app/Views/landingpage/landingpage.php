@@ -34,15 +34,17 @@
         </div>
         <div class="card-drop dropdown-card d-flex justify-content-center">
             <div class="dropdown-container">
-                <div class="select-wrapper d-flex align-items-center">
+                <div class="select-wrapper d-flex">
                     <div class="dropdown-logo-container">
                         <img src="<?= base_url('assets/images/road.png') ?>" alt="Logo" class="dropdown-logo">
                         <h4 class="dropdown-title">Road</h4>
                     </div>
                     <div class="ml-3">
-                        <p class="mb-0">View interactive infographics containing up-to-date statistics on infrastructures and fleet data for road vehicles, private and commercial</p>
+                        <p class="mb-0" style="text-align: justify;">View interactive infographics containing up-to-date statistics on infrastructures and fleet data for road vehicles, private and commercial</p>
                         <p class="mt-1 mb-0">Available for all ASEAN countries</p>
-                        <div class="dropdown-content mt-3">
+                    </div>
+                </div>
+                <div class="dropdown-content mt-1" style="width: 100%;">
                             <select class="dropdown-country transparent-dropdown" id="asean-dropdown" onchange="redirectToSummary()">
                                 <option disabled hidden selected value="country">CHOOSE COUNTRY</option>
                                 <option value="Brunei">Brunei</option>
@@ -57,8 +59,6 @@
                                 <option value="Vietnam">Vietnam</option>
                             </select>
                         </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

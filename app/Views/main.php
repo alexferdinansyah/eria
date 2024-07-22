@@ -22,7 +22,7 @@
 
         .chartdiv {
   width: 45%;
-  height: 320px;
+  height: 340px;
 }   
     </style>
     

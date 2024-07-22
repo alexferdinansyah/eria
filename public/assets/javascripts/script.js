@@ -125,6 +125,65 @@
 // });
 
 
+// Donut
+
+am4core.ready(function() {
+
+  // Themes begin
+  am4core.useTheme(am4themes_animated);
+  // Themes end
+
+  
+  
+  var chart = am4core.create("donutchart", am4charts.PieChart3D);
+  chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+  
+  // chart.legend = new am4charts.Legend();
+  
+  chart.data = [
+    {
+      data: "ICE",
+      litres: 894164
+    },
+    {
+      data: "HEV",
+      litres: 0
+    },
+    {
+      data: "BEV",
+      litres: 0
+    },
+    {
+      data: "PHEV",
+      litres: 0
+    },
+    {
+      data: "NER CAR SUM",
+      litres: 894164
+
+    },
+    {
+      data: "STOCK / UIO",
+      litres: 894164
+
+    },
+  ];
+  
+  chart.innerRadius = 100;
+  
+  var series = chart.series.push(new am4charts.PieSeries3D());
+  series.dataFields.value = "litres";
+  series.dataFields.category = "data";
+  
+  }); // end am4core.ready()
+
+
+  
+
+// LINE 1
+
+
+
 am5.ready(function() {
 
   // Create root element
@@ -149,7 +208,7 @@ am5.ready(function() {
     pinchZoomX:true
   }));
   
-  chart.get("colors").set("step", 3);
+  chart.get("colors").set("step", 6);
   
   
   // Add cursor
@@ -163,7 +222,7 @@ am5.ready(function() {
   var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
     maxDeviation: 0.3,
     baseInterval: {
-      timeUnit: "day",
+      timeUnit: "year",
       count: 1
     },
     renderer: am5xy.AxisRendererX.new(root, { minorGridEnabled: true }),
@@ -178,237 +237,204 @@ am5.ready(function() {
   
   // Add series
   // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-  var series = chart.series.push(am5xy.LineSeries.new(root, {
+  var series1 = chart.series.push(am5xy.LineSeries.new(root, {
     name: "Series 1",
     xAxis: xAxis,
     yAxis: yAxis,
-    valueYField: "value1",
+    valueYField: "HEV",
     valueXField: "date",
     tooltip: am5.Tooltip.new(root, {
-      labelText: "{valueX}: {valueY}\n{previousDate}: {value2}"
+      labelText: "HEV : {valueY} | Year : {valueX}"
     })
   }));
   
-  series.strokes.template.setAll({
+  series1.strokes.template.setAll({
     strokeWidth: 2
   });
   
-  series.get("tooltip").get("background").set("fillOpacity", 0.5);
+  series1.get("tooltip").get("background").set("fillOpacity", 0.5);
   
+
   var series2 = chart.series.push(am5xy.LineSeries.new(root, {
-    name: "Series 2",
+    name: "PHEV",
     xAxis: xAxis,
     yAxis: yAxis,
-    valueYField: "value2",
-    valueXField: "date"
+    valueYField: "PHEV",
+    valueXField: "date",
+    tooltip: am5.Tooltip.new(root, {
+      labelText: "PHEV : {valueY}  | Year : {valueX}"
+    })
   }));
+  
   series2.strokes.template.setAll({
-    strokeDasharray: [2, 2],
     strokeWidth: 2
   });
   
+  series2.get("tooltip").get("background").set("fillOpacity", 0.5);
+
+  
+  var series3 = chart.series.push(am5xy.LineSeries.new(root, {
+    name: "ICE",
+    xAxis: xAxis,
+    yAxis: yAxis,
+    valueYField: "ICE",
+    valueXField: "date",
+    tooltip: am5.Tooltip.new(root, {
+      labelText: "ICE : {valueY}  | Year : {valueX}"
+    })
+  }));
+  
+  series3.strokes.template.setAll({
+    strokeWidth: 2
+  });
+  
+  series3.get("tooltip").get("background").set("fillOpacity", 0.5);
+
+
+  var series4 = chart.series.push(am5xy.LineSeries.new(root, {
+    name: "BEV",
+    xAxis: xAxis,
+    yAxis: yAxis,
+    valueYField: "BEV",
+    valueXField: "date",
+    tooltip: am5.Tooltip.new(root, {
+      labelText: "BEV : {valueY}  | Year : {valueX}"
+    })
+  }));
+  
+  series4.strokes.template.setAll({
+    strokeWidth: 2
+  });
+  
+  series4.get("tooltip").get("background").set("fillOpacity", 0.5);
+  
+  var series5 = chart.series.push(am5xy.LineSeries.new(root, {
+    name: "NEWCARSUM",
+    xAxis: xAxis,
+    yAxis: yAxis,
+    valueYField: "NEWCARSUM",
+    valueXField: "date",
+    tooltip: am5.Tooltip.new(root, {
+      labelText: "NEW CAR SUM : {valueY}  | Year : {valueX}"
+    })
+  }));
+  
+  series5.strokes.template.setAll({
+    strokeWidth: 2
+  });
+  
+  series5.get("tooltip").get("background").set("fillOpacity", 0.5);
+
+
+  var series6 = chart.series.push(am5xy.LineSeries.new(root, {
+    name: "STOCK",
+    xAxis: xAxis,
+    yAxis: yAxis,
+    valueYField: "STOCK",
+    valueXField: "date",
+    tooltip: am5.Tooltip.new(root, {
+      labelText: "STOCK / UIO : {valueY}  | Year : {valueX}"
+    })
+  }));
+  
+  series6.strokes.template.setAll({
+    strokeWidth: 2
+  });
+  
+  series6.get("tooltip").get("background").set("fillOpacity", 0.5);
+
+
+
+
   // Set date fields
   // https://www.amcharts.com/docs/v5/concepts/data/#Parsing_dates
   root.dateFormatter.setAll({
-    dateFormat: "yyyy-MM-dd",
+    dateFormat: "yyyy",
     dateFields: ["valueX"]
   });
   
   
   // Set data
   var data = [{
-    date: new Date(2019, 5, 12).getTime(),
-    value1: 50,
-    value2: 48,
-    previousDate: new Date(2019, 5, 5)
+    date: new Date(2011, 5, 12).getTime(),
+    HEV: 0,
+    ICE: 894164,
+    PHEV: 0,
+    BEV: 0,
+    NEWCARSUM : 1111111,
+    STOCK : 1111111,
   }, {
-    date: new Date(2019, 5, 13).getTime(),
-    value1: 53,
-    value2: 51,
-    previousDate: "2019-05-06"
+    date: new Date(2012, 5, 13).getTime(),
+    HEV: 0,
+    ICE: 1116230,
+    PHEV: 0,
+    BEV: 0,
+    NEWCARSUM : 2222222,
+    STOCK : 2222222,
   }, {
-    date: new Date(2019, 5, 14).getTime(),
-    value1: 56,
-    value2: 58,
-    previousDate: "2019-05-07"
+    date: new Date(2013, 5, 14).getTime(),
+    HEV: 0,
+    ICE: 1229811,
+    PHEV: 0,
+    BEV: 0,
+    NEWCARSUM : 33333333,
+    STOCK : 3333333,
   }, {
-    date: new Date(2019, 5, 15).getTime(),
-    value1: 52,
-    value2: 53,
-    previousDate: "2019-05-08"
+    date: new Date(2014, 5, 15).getTime(),
+    HEV: 0,
+    ICE: 1208028,
+    PHEV: 0,
+    BEV: 0,
+    NEWCARSUM : 4444444,
+    STOCK : 44444444,
   }, {
-    date: new Date(2019, 5, 16).getTime(),
-    value1: 48,
-    value2: 44,
-    previousDate: "2019-05-09"
+    date: new Date(2015, 5, 16).getTime(),
+    HEV: 0,
+    ICE: 1013518,
+    PHEV: 0,
+    BEV: 0,
+    NEWCARSUM : 55555555,
+    STOCK : 5555555,
   }, {
-    date: new Date(2019, 5, 17).getTime(),
-    value1: 47,
-    value2: 42,
-    previousDate: "2019-05-10"
+    date: new Date(2016, 5, 17).getTime(),
+    HEV: 0,
+    ICE: 1062694,
+    PHEV: 0,
+    BEV: 0,
+    NEWCARSUM : 66666666,
+    STOCK : 6666666,
   }, {
-    date: new Date(2019, 5, 18).getTime(),
-    value1: 59,
-    value2: 55,
-    previousDate: "2019-05-11"
+    date: new Date(2017, 5, 18).getTime(),
+    HEV: 0,
+    ICE: 1077364,
+    PHEV: 0,
+    BEV: 0,
+    NEWCARSUM : 77777777,
+    STOCK : 7777777,
   }]
   
-  series.data.setAll(data);
+  series1.data.setAll(data);
   series2.data.setAll(data);
+  series3.data.setAll(data);
+  series4.data.setAll(data);
+  series5.data.setAll(data);
+  series6.data.setAll(data);
+  
   
   
   // Make stuff animate on load
   // https://www.amcharts.com/docs/v5/concepts/animations/
-  series.appear(1000);
+  series1.appear(1000);
   series2.appear(1000);
+  series3.appear(1000);
+  series4.appear(1000);
+  series5.appear(1000);
+  series6.appear(1000);
   chart.appear(1000, 100);
   
   }); // end am5.ready()
 
 // line2
-
-am5.ready(function() {
-
-  // Create root element
-  // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-  var root = am5.Root.new("linechart2");
-  
-  
-  // Set themes
-  // https://www.amcharts.com/docs/v5/concepts/themes/
-  root.setThemes([
-    am5themes_Animated.new(root)
-  ]);
-  
-  
-  // Create chart
-  // https://www.amcharts.com/docs/v5/charts/xy-chart/
-  var chart = root.container.children.push(am5xy.XYChart.new(root, {
-    panX: true,
-    panY: true,
-    wheelX: "panX",
-    wheelY: "zoomX",
-    pinchZoomX:true
-  }));
-  
-  chart.get("colors").set("step", 3);
-  
-  
-  // Add cursor
-  // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
-  var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
-  cursor.lineY.set("visible", false);
-  
-  
-  // Create axes
-  // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-  var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
-    maxDeviation: 0.3,
-    baseInterval: {
-      timeUnit: "day",
-      count: 1
-    },
-    renderer: am5xy.AxisRendererX.new(root, { minorGridEnabled: true }),
-    tooltip: am5.Tooltip.new(root, {})
-  }));
-  
-  var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-    maxDeviation: 0.3,
-    renderer: am5xy.AxisRendererY.new(root, {})
-  }));
-  
-  
-  // Add series
-  // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-  var series = chart.series.push(am5xy.LineSeries.new(root, {
-    name: "Series 1",
-    xAxis: xAxis,
-    yAxis: yAxis,
-    valueYField: "value1",
-    valueXField: "date",
-    tooltip: am5.Tooltip.new(root, {
-      labelText: "{valueX}: {valueY}\n{previousDate}: {value2}"
-    })
-  }));
-  
-  series.strokes.template.setAll({
-    strokeWidth: 2
-  });
-  
-  series.get("tooltip").get("background").set("fillOpacity", 0.5);
-  
-  var series2 = chart.series.push(am5xy.LineSeries.new(root, {
-    name: "Series 2",
-    xAxis: xAxis,
-    yAxis: yAxis,
-    valueYField: "value2",
-    valueXField: "date"
-  }));
-  series2.strokes.template.setAll({
-    strokeDasharray: [2, 2],
-    strokeWidth: 2
-  });
-  
-  // Set date fields
-  // https://www.amcharts.com/docs/v5/concepts/data/#Parsing_dates
-  root.dateFormatter.setAll({
-    dateFormat: "yyyy-MM-dd",
-    dateFields: ["valueX"]
-  });
-  
-  
-  // Set data
-  var data = [{
-    date: new Date(2019, 5, 12).getTime(),
-    value1: 50,
-    value2: 48,
-    previousDate: new Date(2019, 5, 5)
-  }, {
-    date: new Date(2019, 5, 13).getTime(),
-    value1: 53,
-    value2: 51,
-    previousDate: "2019-05-06"
-  }, {
-    date: new Date(2019, 5, 14).getTime(),
-    value1: 56,
-    value2: 58,
-    previousDate: "2019-05-07"
-  }, {
-    date: new Date(2019, 5, 15).getTime(),
-    value1: 52,
-    value2: 53,
-    previousDate: "2019-05-08"
-  }, {
-    date: new Date(2019, 5, 16).getTime(),
-    value1: 48,
-    value2: 44,
-    previousDate: "2019-05-09"
-  }, {
-    date: new Date(2019, 5, 17).getTime(),
-    value1: 47,
-    value2: 42,
-    previousDate: "2019-05-10"
-  }, {
-    date: new Date(2019, 5, 18).getTime(),
-    value1: 59,
-    value2: 55,
-    previousDate: "2019-05-11"
-  }]
-  
-  series.data.setAll(data);
-  series2.data.setAll(data);
-  
-  
-  // Make stuff animate on load
-  // https://www.amcharts.com/docs/v5/concepts/animations/
-  series.appear(1000);
-  series2.appear(1000);
-  chart.appear(1000, 100);
-  
-  }); // end am5.ready()
-
-
-// line 3
 
 am5.ready(function() {
 
@@ -448,7 +474,7 @@ am5.ready(function() {
   var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
     maxDeviation: 0.3,
     baseInterval: {
-      timeUnit: "day",
+      timeUnit: "year",
       count: 1
     },
     renderer: am5xy.AxisRendererX.new(root, { minorGridEnabled: true }),
@@ -464,13 +490,13 @@ am5.ready(function() {
   // Add series
   // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
   var series = chart.series.push(am5xy.LineSeries.new(root, {
-    name: "Series 1",
+    name: "TOTAL HEIGHWAY LENGTH",
     xAxis: xAxis,
     yAxis: yAxis,
     valueYField: "value1",
     valueXField: "date",
     tooltip: am5.Tooltip.new(root, {
-      labelText: "{valueX}: {valueY}\n{previousDate}: {value2}"
+      labelText: "{valueX}: {valueY}"
     })
   }));
   
@@ -495,123 +521,182 @@ am5.ready(function() {
   // Set date fields
   // https://www.amcharts.com/docs/v5/concepts/data/#Parsing_dates
   root.dateFormatter.setAll({
-    dateFormat: "yyyy-MM-dd",
+    dateFormat: "yyyy",
     dateFields: ["valueX"]
   });
   
   
   // Set data
   var data = [{
-    date: new Date(2019, 5, 12).getTime(),
-    value1: 50,
-    value2: 48,
-    previousDate: new Date(2019, 5, 5)
+    date: new Date(2011, 5, 12).getTime(),
+    value1: 492398,
   }, {
-    date: new Date(2019, 5, 13).getTime(),
-    value1: 53,
-    value2: 51,
-    previousDate: "2019-05-06"
+    date: new Date(2012, 5, 13).getTime(),
+    value1: 501969,
   }, {
-    date: new Date(2019, 5, 14).getTime(),
-    value1: 56,
-    value2: 58,
-    previousDate: "2019-05-07"
+    date: new Date(2013, 5, 14).getTime(),
+    value1: 508000    ,
   }, {
-    date: new Date(2019, 5, 15).getTime(),
-    value1: 52,
-    value2: 53,
-    previousDate: "2019-05-08"
+    date: new Date(2014, 5, 15).getTime(),
+    value1: 517753,
   }, {
-    date: new Date(2019, 5, 16).getTime(),
-    value1: 48,
-    value2: 44,
-    previousDate: "2019-05-09"
+    date: new Date(2015, 5, 16).getTime(),
+    value1: 529073    ,
   }, {
-    date: new Date(2019, 5, 17).getTime(),
-    value1: 47,
-    value2: 42,
-    previousDate: "2019-05-10"
+    date: new Date(2016, 5, 17).getTime(),
+    value1: 537838
+    ,
   }, {
-    date: new Date(2019, 5, 18).getTime(),
-    value1: 59,
-    value2: 55,
-    previousDate: "2019-05-11"
+    date: new Date(2017, 5, 18).getTime(),
+    value1: 539353
+    ,
   }]
   
   series.data.setAll(data);
   series2.data.setAll(data);
   
-  
+
   // Make stuff animate on load
   // https://www.amcharts.com/docs/v5/concepts/animations/
   series.appear(1000);
   series2.appear(1000);
   chart.appear(1000, 100);
   
-  }); // end am5.ready()
+  }); 
 
 
+// line 3
 
+am5.ready(function() {
 
-// Donut
-
-am4core.ready(function() {
-
-  // Themes begin
-  am4core.useTheme(am4themes_animated);
-  // Themes end
+  // Create root element
+  // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+  var root = am5.Root.new("linechart2");
   
-  var chart = am4core.create("donutchart", am4charts.PieChart3D);
-  chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
   
-  // chart.legend = new am4charts.Legend();
+  // Set themes
+  // https://www.amcharts.com/docs/v5/concepts/themes/
+  root.setThemes([
+    am5themes_Animated.new(root)
+  ]);
   
-  chart.data = [
-    {
-      country: "Lithuania",
-      litres: 501.9
-    },
-    {
-      country: "Czech Republic",
-      litres: 301.9
-    },
-    {
-      country: "Ireland",
-      litres: 201.1
-    },
-    {
-      country: "Germany",
-      litres: 165.8
-    },
-    {
-      country: "Australia",
-      litres: 139.9
-    },
-    {
-      country: "Austria",
-      litres: 128.3
-    },
-    {
-      country: "UK",
-      litres: 99
-    },
-    {
-      country: "Belgium",
-      litres: 60
-    },
-    {
-      country: "The Netherlands",
-      litres: 50
-    }
-  ];
   
-  chart.innerRadius = 100;
+  // Create chart
+  // https://www.amcharts.com/docs/v5/charts/xy-chart/
+  var chart = root.container.children.push(am5xy.XYChart.new(root, {
+    panX: true,
+    panY: true,
+    wheelX: "panX",
+    wheelY: "zoomX",
+    pinchZoomX:true
+  }));
   
-  var series = chart.series.push(new am4charts.PieSeries3D());
-  series.dataFields.value = "litres";
-  series.dataFields.category = "country";
+  chart.get("colors").set("step", 3);
   
-  }); // end am4core.ready()
+  
+  // Add cursor
+  // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+  var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+  cursor.lineY.set("visible", false);
+  
+  
+  // Create axes
+  // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+  var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
+    maxDeviation: 0.3,
+    baseInterval: {
+      timeUnit: "year",
+      count: 1
+    },
+    renderer: am5xy.AxisRendererX.new(root, { minorGridEnabled: true }),
+    tooltip: am5.Tooltip.new(root, {})
+  }));
+  
+  var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+    maxDeviation: 0.3,
+    renderer: am5xy.AxisRendererY.new(root, {})
+  }));
+  
+  
+  // Add series
+  // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+  var series = chart.series.push(am5xy.LineSeries.new(root, {
+    name: "POPULATION",
+    xAxis: xAxis,
+    yAxis: yAxis,
+    valueYField: "value1",
+    valueXField: "date",
+    tooltip: am5.Tooltip.new(root, {
+      labelText: "{valueX}: {valueY}"
+    })
+  }));
+  
+  series.strokes.template.setAll({
+    strokeWidth: 2
+  });
+  
+  series.get("tooltip").get("background").set("fillOpacity", 0.5);
+  
+  var series2 = chart.series.push(am5xy.LineSeries.new(root, {
+    name: "Series 2",
+    xAxis: xAxis,
+    yAxis: yAxis,
+    valueYField: "value2",
+    valueXField: "date"
+  }));
+  series2.strokes.template.setAll({
+    strokeDasharray: [2, 2],
+    strokeWidth: 2
+  });
+  
+  // Set date fields
+  // https://www.amcharts.com/docs/v5/concepts/data/#Parsing_dates
+  root.dateFormatter.setAll({
+    dateFormat: "yyyy",
+    dateFields: ["valueX"]
+  });
+  
+  
+  // Set data
+  var data = [{
+    date: new Date(2011, 5, 12).getTime(),
+    value1: 241911000,
+  }, {
+    date: new Date(2012, 5, 13).getTime(),
+    value1: 245425000
+    ,
+  }, {
+    date: new Date(2013, 5, 14).getTime(),
+    value1: 248818000
+    ,
+  }, {
+    date: new Date(2014, 5, 15).getTime(),
+    value1: 252165000
+    ,
+  }, {
+    date: new Date(2015, 5, 16).getTime(),
+    value1: 255462000
+    ,
+  }, {
+    date: new Date(2016, 5, 17).getTime(),
+    value1: 258705000
 
+    ,
+  }, {
+    date: new Date(2017, 5, 18).getTime(),
+    value1: 261891000
 
+    ,
+  }]
   
+  series.data.setAll(data);
+  series2.data.setAll(data);
+  
+
+  // Make stuff animate on load
+  // https://www.amcharts.com/docs/v5/concepts/animations/
+  series.appear(1000);
+  series2.appear(1000);
+  chart.appear(1000, 100);
+  
+  }); 

@@ -54,16 +54,16 @@
     </a>
     <div class="volume-chart-wrapper d-flex justify-content-evenly">
         <div class="chartdiv" id="linechart1"></div>
-        <div class="chartdiv" id="linechart2"></div>
+        <div id="donutchart" class="chartdiv"></div>
         </div>
     </div>
     <div class="demograpy d-flex flex-column">
     <a href="https://docs.google.com/spreadsheets/d/1zucgTdbeN9ZbrUcYMu2R_LXtSobx1saYwAXdEbz79Qg/export?format=xlsx&gid=11352702"><button style="width: 14%; margin-bottom: 30px; margin-left: 30px; margin-top: 20px;" class="btn btn-primary">Download Demography</button>
     </a>
     <div class="demography-chart-wrapper d-flex justify-content-evenly">
-        <div class="chartdiv" id="linechart3"></div>
-        <div id="donutchart" class="chartdiv"></div>
-        </div>
+    <div class="chartdiv" id="linechart3" ></div>
+    <div class="chartdiv" id="linechart2"></div>
+    </div>
     </div>
     </div>
 </section>
