@@ -667,13 +667,6 @@ body {
     /* padding-left: 100px; */
 }
 
-.summary-par {
-    margin-left: 20px;
-    /* padding-right: 80px; */
-    /* background-color: gray; */
-    display: flex;
-    /* justify-content: space-between; */
-}
 
 .container-sum {
     display: flex;
@@ -690,7 +683,7 @@ body {
 }
 
 .img-map {
-    width: 400px;
+    width: 300px;
 }
 
 /* 
@@ -705,9 +698,4 @@ body {
 /* .chart-wrap{
     width: 500px;
 } */
-
-.chartdiv{
-    /* background-color: #0056b3;     */
-    flex: 1;
-}
 

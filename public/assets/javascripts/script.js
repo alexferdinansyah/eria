@@ -1,5 +1,5 @@
-  const ctx1 = document.getElementById('myChart1');
-  const ctx2 = document.getElementById('myChart2');
+  const ctx1 = document.getElementById('myChart2');
+  const ctx2 = document.getElementById('myChart1');
   const ctx3 = document.getElementById('myChart3');
   const ctx4 = document.getElementById('myChart4');
 
@@ -90,7 +90,7 @@ new Chart(ctx3, {
 new Chart(ctx4, {
   type: 'doughnut',
   data: {
-    labels: ['VOL ICE', 'VOL HEV', 'VOL BEV', 'VOL PHEV', 'VOL NEW CAR SUM', 'VOL STOCK / UIO'],
+    labels: ['ICE', 'HEV', 'BEV', 'PHEV', 'NEW CAR SUM', 'STOCK / UIO'],
     datasets: [{
       label: '2022 Data',
       data: [1032603, 5100, 10327, 10, 1048040, 12250892],

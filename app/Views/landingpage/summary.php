@@ -48,9 +48,9 @@
 </div> -->
 
 <div class="row">
-    <div class="col-md-8 d-flex">
+    <div class="summary-wrapper">
         <!-- summary -->
-        <div class="summary-par">
+        <div class="summary-par grid row row-cols-3 justify-content-center gap-0 column-gap-3 row-gap-3 mb-4">
             <div class="content-summary">
                 <h2>Summary</h2>
                 <section class="container-sum">
@@ -83,27 +83,24 @@
                         <p><?= $GDPppp ?></p>
                     </div>
                 </section>
-            
-                </div>
-                <img class="img-map" src="<?= base_url('assets/images/asean-map.png') ?>" alt="">
-                </div>
             </div> 
-
+            <img class="img-map" style="width: 400px;" src="<?= base_url('assets/images/asean-map.png') ?>" alt="">
             <div class="col-md-4 d-flex">
                 <canvas class="chartdiv d-flex" id="myChart1"></canvas>
             </div>
+            <div class="d-flex" style="width: 35%;">
+                <canvas class="chartdiv" id="myChart2" style=" height: 100px;" ></canvas>
+            </div>
+            <div class="d-flex" style="width: 35%;">
+                <canvas class="chartdiv" id="myChart3"  style=" height: 100px;" ></canvas>
+            </div>
+            <div class="d-flex" style="width: 25%;">
+                <canvas class="chartdiv" id="myChart4"></canvas>
+            </div>
+        </div>
+        </div>
 </div>
-<div class="row">
-    <div class="col-md-4 d-flex">
-        <canvas id="myChart2" class="chartdiv"></canvas>
-    </div>
-    <div class="col-md-4 d-flex">
-        <canvas class="chartdiv" id="myChart3" ></canvas>
-    </div>
-    <div class="col-md-4 d-flex">
-        <canvas class="chartdiv" id="myChart4"></canvas>
-    </div>
-</div>
+
 
 <?= $this->endSection(); ?>
 
