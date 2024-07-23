@@ -150,7 +150,8 @@
 <div class="copyrights w-100 mb-5 px-5">
     <div class="copyrights-wrapper border-top pt-2 d-flex align-items-center gap-2">
         <p>Copyrights &copy 2023 ERIA. All rights reserved, a collaboration with</p>
-        <img src="<?= base_url('assets/images/logoui.png') ?>" alt="" style="width : 30px; height:40px;">
+        <!-- <img src="<?= base_url('assets/images/logoui.png') ?>" alt="" style="width : 30px; height:40px;"> -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbenGFnJYutrNs4Pvs_4DwyaEta3k3y4IHqw&s" alt="" width="30">
     </div>
 </div>
 
