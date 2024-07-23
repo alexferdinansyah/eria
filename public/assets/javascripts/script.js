@@ -361,56 +361,68 @@ am5.ready(function() {
     ICE: 894164,
     PHEV: 0,
     BEV: 0,
-    NEWCARSUM : 1111111,
-    STOCK : 1111111,
+    NEWCARSUM : 894164
+    ,
+    STOCK : 894164
+    ,
   }, {
     date: new Date(2012, 5, 13).getTime(),
     HEV: 0,
     ICE: 1116230,
     PHEV: 0,
     BEV: 0,
-    NEWCARSUM : 2222222,
-    STOCK : 2222222,
+    NEWCARSUM : 1116230
+    ,
+    STOCK : 2010394
+    ,
   }, {
     date: new Date(2013, 5, 14).getTime(),
     HEV: 0,
     ICE: 1229811,
     PHEV: 0,
     BEV: 0,
-    NEWCARSUM : 33333333,
-    STOCK : 3333333,
+    NEWCARSUM : 1229811
+    ,
+    STOCK : 3240205
+    ,
   }, {
     date: new Date(2014, 5, 15).getTime(),
     HEV: 0,
     ICE: 1208028,
     PHEV: 0,
     BEV: 0,
-    NEWCARSUM : 4444444,
-    STOCK : 44444444,
+    NEWCARSUM : 1208028,
+    STOCK : 4448233
+    ,
   }, {
     date: new Date(2015, 5, 16).getTime(),
     HEV: 0,
     ICE: 1013518,
     PHEV: 0,
     BEV: 0,
-    NEWCARSUM : 55555555,
-    STOCK : 5555555,
+    NEWCARSUM : 1013518
+    ,
+    STOCK : 5461751,
   }, {
     date: new Date(2016, 5, 17).getTime(),
     HEV: 0,
     ICE: 1062694,
     PHEV: 0,
     BEV: 0,
-    NEWCARSUM : 66666666,
-    STOCK : 6666666,
+    NEWCARSUM : 1062694
+    ,
+    STOCK : 6524445
+    ,
   }, {
     date: new Date(2017, 5, 18).getTime(),
     HEV: 0,
     ICE: 1077364,
     PHEV: 0,
     BEV: 0,
-    NEWCARSUM : 77777777,
-    STOCK : 7777777,
+    NEWCARSUM : 1077364
+    ,
+    STOCK : 7601809
+    ,
   }]
   
   series1.data.setAll(data);
