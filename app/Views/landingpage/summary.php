@@ -85,44 +85,28 @@
                 </section>
             </div> 
             <img class="img-map" style="width: 400px;" src="<?= base_url('assets/images/asean-map.png') ?>" alt="">
-            
+            <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
+                <canvas class="chartdiv d-flex" id="myChart1"></canvas>
+                <button class="btn btn-primary w-25" type="submit">Download</button>
+            </div>
+            <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
+                <canvas class="chartdiv" id="myChart2" ></canvas>
+                <button class="btn btn-primary w-25" type="submit">Download</button>
+
+            </div>
+            <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
+                <canvas class="chartdiv" id="myChart3" ></canvas>
+                <button class="btn btn-primary w-25" type="submit">Download</button>
+
+            </div>
+            <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+            <div class="d-flex" style="width: 300px;">
+                <canvas class="chartdiv" id="myChart4"></canvas>
+            </div>
+            <button class="btn btn-primary w-25" type="submit">Download</button>
+
+            </div>
         </div>
-
-        <!-- all chart -->
-         <div style="padding:20px;">
-             <button class="btn btn-primary">Download Demograpy</button>
-             <div class="row">
-                 <div class="col">
-                     <div style=": 90%;">
-                     <canvas class="chartdiv" id="myChart1"></canvas>
-                 </div>
-                 
-             </div>
-                 <div class="col">
-                     <div style=": 90%;">
-                         <canvas class="chartdiv" id="myChart2" ></canvas>
-                     </div>
-                 </div>
-             </div>
- 
-             <button style="margin-top:50px;" class="btn btn-primary">Download Volume</button>
- 
-             <div class="row">
-                 <div class="col">
-                     <div style=": 90%;">
-                         <canvas class="chartdiv" id="myChart3" ></canvas>
-                     </div>
-                 </div>
-                 <div class="col">
-                     <div class="donut-wrapper d-flex justify-content-center" style=": 90%;">
-                         <div style="width: 300px;">
-                             <canvas class="chartdiv" id="myChart4"></canvas>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-
         </div>
 </div>
 
