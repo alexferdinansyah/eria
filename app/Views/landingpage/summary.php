@@ -50,7 +50,7 @@
 <div class="row">
     <div class="summary-wrapper">
         <!-- summary -->
-        <div class="summary-par grid row row-cols-3 justify-content-center gap-0 column-gap-3 row-gap-3 mb-4">
+        <div class="summary-par grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
             <div class="content-summary">
                 <h2>Summary</h2>
                 <section class="container-sum">
@@ -85,17 +85,19 @@
                 </section>
             </div> 
             <img class="img-map" style="width: 400px;" src="<?= base_url('assets/images/asean-map.png') ?>" alt="">
-            <div class="col-md-4 d-flex">
+            <div class="d-flex" style="width: 40%;">
                 <canvas class="chartdiv d-flex" id="myChart1"></canvas>
             </div>
-            <div class="d-flex" style="width: 35%;">
-                <canvas class="chartdiv" id="myChart2" style=" height: 100px;" ></canvas>
+            <div class="d-flex" style="width: 40%;">
+                <canvas class="chartdiv" id="myChart2" ></canvas>
             </div>
-            <div class="d-flex" style="width: 35%;">
-                <canvas class="chartdiv" id="myChart3"  style=" height: 100px;" ></canvas>
+            <div class="d-flex" style="width: 40%;">
+                <canvas class="chartdiv" id="myChart3" ></canvas>
             </div>
-            <div class="d-flex" style="width: 25%;">
+            <div class="donut-wrapper d-flex justify-content-center" style="width: 40%;">
+            <div class="d-flex" style="width: 300px;">
                 <canvas class="chartdiv" id="myChart4"></canvas>
+            </div>
             </div>
         </div>
         </div>
