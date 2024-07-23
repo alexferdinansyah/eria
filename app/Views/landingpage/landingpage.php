@@ -47,16 +47,16 @@
                 <div class="dropdown-content mt-1" style="width: 100%;">
                             <select class="dropdown-country transparent-dropdown" id="asean-dropdown" onchange="redirectToSummary()">
                                 <option disabled hidden selected value="country">CHOOSE COUNTRY</option>
-                                <option value="Brunei">Brunei</option>
-                                <option value="Cambodia">Cambodia</option>
-                                <option value="Indonesia">Indonesia</option>
-                                <option value="Laos">Laos</option>
-                                <option value="Malaysia">Malaysia</option>
-                                <option value="Myanmar">Myanmar</option>
-                                <option value="Philippines">Philippines</option>
-                                <option value="Singapore">Singapore</option>
-                                <option value="Thailand">Thailand</option>
-                                <option value="Vietnam">Vietnam</option>
+                                <option value="brunei">Brunei</option>
+                                <option value="cambodia">Cambodia</option>
+                                <option value="indonesia">Indonesia</option>
+                                <option value="laos">Laos</option>
+                                <option value="malaysia">Malaysia</option>
+                                <option value="myanmar">Myanmar</option>
+                                <option value="philippines">Philippines</option>
+                                <option value="singapore">Singapore</option>
+                                <option value="thailand">Thailand</option>
+                                <option value="vietnam">Vietnam</option>
                             </select>
                         </div>
             </div>
