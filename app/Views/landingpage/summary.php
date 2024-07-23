@@ -90,18 +90,18 @@
             </div> 
 
             <div class="col-md-4 d-flex">
-                <div class="chartdiv d-flex" id="linechart1"></div>
+                <canvas class="chartdiv d-flex" id="myChart1"></canvas>
             </div>
 </div>
 <div class="row">
     <div class="col-md-4 d-flex">
-        <div id="donutchart" class="chartdiv"></div>
+        <canvas id="myChart2" class="chartdiv"></canvas>
     </div>
     <div class="col-md-4 d-flex">
-        <div class="chartdiv" id="linechart3" ></div>
+        <canvas class="chartdiv" id="myChart3" ></canvas>
     </div>
     <div class="col-md-4 d-flex">
-        <div class="chartdiv" id="linechart2"></div>
+        <canvas class="chartdiv" id="myChart4"></canvas>
     </div>
 </div>
 
