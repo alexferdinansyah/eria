@@ -127,23 +127,7 @@
 </section>
 
 <!---------------------------------------------------------- CHART SECTION  ---------------------------------------------------------->
-<section class="chart-container">
-    <div class="chart-wrap">
-        <canvas id="myChart1"></canvas>
-    </div>
 
-    <div class="chart-wrap">
-        <canvas id="myChart2"></canvas>
-    </div>
-
-    <div class="chart-wrap">
-        <canvas id="myChart3"></canvas>
-    </div>
-
-    <div class="chart-wrap">
-        <canvas id="myChart4"></canvas>
-    </div>
-</section>
 
 <!-- Copyrights -->
 

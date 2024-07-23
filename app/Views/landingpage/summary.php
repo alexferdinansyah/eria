@@ -48,7 +48,7 @@
 </div> -->
 
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-8 d-flex">
         <!-- summary -->
         <div class="summary-par">
             <div class="content-summary">
@@ -87,20 +87,20 @@
                 </div>
                 <img class="img-map" src="<?= base_url('assets/images/asean-map.png') ?>" alt="">
                 </div>
-            </div>
+            </div> 
 
-            <div class="col-md-4">
+            <div class="col-md-4 d-flex">
                 <div class="chartdiv d-flex" id="linechart1"></div>
             </div>
 </div>
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 d-flex">
         <div id="donutchart" class="chartdiv"></div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 d-flex">
         <div class="chartdiv" id="linechart3" ></div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 d-flex">
         <div class="chartdiv" id="linechart2"></div>
     </div>
 </div>

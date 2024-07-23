@@ -21,8 +21,8 @@
         }
 
         .chartdiv {
-  width: 45%;
-  height: 340px;
+  width: 30%;
+  height: 300px;
 }   
     </style>
     
