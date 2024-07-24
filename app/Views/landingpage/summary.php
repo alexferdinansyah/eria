@@ -87,25 +87,33 @@
             <img class="img-map" style="width: 400px;" src="<?= base_url('assets/images/asean-map.png') ?>" alt="">
             <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
                 <canvas class="chartdiv d-flex" id="myChart1"></canvas>
-                <a href="https://docs.google.com/spreadsheets/d/1l2afioZk2yxbVV1zXOJlS4cRaP4ND0YMoCDfw5RK5v4/export?format=xlsx&gid=1808680143"><button class="btn btn-primary w-25" type="submit">Download</button>
+                <button class="btn btn-primary download-button" id="download-button" type="submit">
+                <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/1t5RNIe_V2H7XqJ1L6qlbt1cTd1FBpudnHoA55iWWK-k/export?format=xlsx">Download
                 </a>
+                </button>
             </div>
             <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
                 <canvas class="chartdiv" id="myChart2" ></canvas>
-                <a href="https://docs.google.com/spreadsheets/d/1l2afioZk2yxbVV1zXOJlS4cRaP4ND0YMoCDfw5RK5v4/export?format=xlsx&gid=1808680143"><button class="btn btn-primary w-25" type="submit">Download</button>
+                <button class="btn btn-primary download-button" id="download-button" type="submit">
+                <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/1t5RNIe_V2H7XqJ1L6qlbt1cTd1FBpudnHoA55iWWK-k/export?format=xlsx">Download
                 </a>
+                </button>
             </div>
             <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
                 <canvas class="chartdiv" id="myChart3" ></canvas>
-                <a href="https://docs.google.com/spreadsheets/d/1l2afioZk2yxbVV1zXOJlS4cRaP4ND0YMoCDfw5RK5v4/export?format=xlsx&gid=658392206"><button class="btn btn-primary w-25" type="submit">Download</button>
+                <button class="btn btn-primary download-button" id="download-button" type="submit">
+                <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
                 </a>
+                </button>
             </div>
             <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
             <div class="d-flex" style="width: 300px;">
                 <canvas class="chartdiv" id="myChart4"></canvas>
             </div>
-                <a href="https://docs.google.com/spreadsheets/d/1l2afioZk2yxbVV1zXOJlS4cRaP4ND0YMoCDfw5RK5v4/export?format=xlsx&gid=658392206"><button class="btn btn-primary w-25" type="submit">Download</button>
+            <button class="btn btn-primary download-button" id="download-button" type="submit">
+                <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
                 </a>
+                </button>
             </div>
         </div>
         </div>
