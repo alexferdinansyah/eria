@@ -7,13 +7,14 @@ function getLocationFromUrl() {
 
 
   const route = getLocationFromUrl();
-  
   console.log(route);
   
   const ctx1 = document.getElementById('myChart2');
   const ctx2 = document.getElementById('myChart1');
   const ctx3 = document.getElementById('myChart3');
   const ctx4 = document.getElementById('myChart4');
+
+  const myButton = document.querySelectorAll('#download-button');
 
   if(route == 'indonesia'){
     new Chart(ctx1, {
@@ -137,6 +138,10 @@ function getLocationFromUrl() {
       }
     });
   }else{
+
+    myButton.forEach(myButton => myButton.disabled = true);
+
+
     new Chart(ctx1, {
       type: 'line',
       data: {
