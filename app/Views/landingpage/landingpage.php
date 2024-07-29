@@ -45,20 +45,20 @@
                     </div>
                 </div>
                 <div class="dropdown-content mt-1" style="width: 100%;">
-                            <select class="dropdown-country transparent-dropdown" id="asean-dropdown" onchange="redirectToSummary()">
-                                <option disabled hidden selected value="country">CHOOSE COUNTRY</option>
-                                <option value="brunei">Brunei</option>
-                                <option value="cambodia">Cambodia</option>
-                                <option value="indonesia">Indonesia</option>
-                                <option value="laos">Laos</option>
-                                <option value="malaysia">Malaysia</option>
-                                <option value="myanmar">Myanmar</option>
-                                <option value="philippines">Philippines</option>
-                                <option value="singapore">Singapore</option>
-                                <option value="thailand">Thailand</option>
-                                <option value="vietnam">Vietnam</option>
-                            </select>
-                        </div>
+                    <select class="dropdown-country" id="asean-dropdown" onchange="redirectToSummary()">
+                        <option disabled hidden selected value="country">CHOOSE COUNTRY</option>
+                        <option value="brunei">Brunei</option>
+                        <option value="cambodia">Cambodia</option>
+                        <option value="indonesia">Indonesia</option>
+                        <option value="laos">Laos</option>
+                        <option value="malaysia">Malaysia</option>
+                        <option value="myanmar">Myanmar</option>
+                        <option value="philippines">Philippines</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="thailand">Thailand</option>
+                        <option value="vietnam">Vietnam</option>
+                    </select>
+                </div>
             </div>
         </div>
     </div>
@@ -139,6 +139,5 @@
         <a style="text-decoration: none;" target="_blank" href="https://ui.ac.id">Universitas Indonesia (ui.ac.id)</a>
     </div>
 </div>
-
 
 <?= $this->endSection(); ?>

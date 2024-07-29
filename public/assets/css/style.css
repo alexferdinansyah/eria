@@ -187,9 +187,6 @@ body {
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 4px;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
         background: transparent;
         margin-left: 0;
         width: calc(100% - 35px);
@@ -267,19 +264,6 @@ body {
 .dropdown-wrapper {
     position: relative;
     display: inline-block;
-}
-
-.search-btn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.search-btn:hover {
-    background-color: #0056b3;
 }
 
 .transparent-dropdown {
@@ -698,4 +682,3 @@ body {
 /* .chart-wrap{
     width: 500px;
 } */
-

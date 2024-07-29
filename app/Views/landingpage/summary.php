@@ -4,7 +4,7 @@
 
 <div class="banner">
     <h2><?= ucwords($nation) ?></h2>
-    <img src="<?= base_url('assets/images/nations/flags/'.$nation.".svg"); ?>" alt="">
+    <img src="<?= base_url('assets/images/nations/flags/' . $nation . ".svg"); ?>" alt="">
 </div>
 
 <!-- summary -->
@@ -14,7 +14,7 @@
         <section class="container-sum">
             <div>
                 <p>Population</p>
-                <p><?= $population?></p>
+                <p><?= $population ?></p>
             </div>
             <div>
                 <p>Total Land Area</p>
@@ -56,7 +56,7 @@
                 <section class="container-sum">
                     <div>
                         <p>Population</p>
-                        <p><?= $population?></p>
+                        <p><?= $population ?></p>
                     </div>
                     <div>
                         <p>Total Land Area</p>
@@ -83,40 +83,40 @@
                         <p><?= $GDPppp ?></p>
                     </div>
                 </section>
-            </div> 
-            <img class="img-map" style="width: 400px;" src="<?= base_url('assets/images/asean-map.png') ?>" alt="">
+            </div>`
+            <img class="img-map" style="width: 400px;" src="<?= base_url('assets/images/nations/maps/'  . $nation . ".png") ?>" alt="">
             <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
                 <canvas class="chartdiv d-flex" id="myChart1"></canvas>
                 <button class="btn btn-primary download-button" id="download-button" type="submit">
-                <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/1t5RNIe_V2H7XqJ1L6qlbt1cTd1FBpudnHoA55iWWK-k/export?format=xlsx">Download
-                </a>
+                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/1t5RNIe_V2H7XqJ1L6qlbt1cTd1FBpudnHoA55iWWK-k/export?format=xlsx">Download
+                    </a>
                 </button>
             </div>
             <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
-                <canvas class="chartdiv" id="myChart2" ></canvas>
+                <canvas class="chartdiv" id="myChart2"></canvas>
                 <button class="btn btn-primary download-button" id="download-button" type="submit">
-                <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/1t5RNIe_V2H7XqJ1L6qlbt1cTd1FBpudnHoA55iWWK-k/export?format=xlsx">Download
-                </a>
+                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/1t5RNIe_V2H7XqJ1L6qlbt1cTd1FBpudnHoA55iWWK-k/export?format=xlsx">Download
+                    </a>
                 </button>
             </div>
             <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
-                <canvas class="chartdiv" id="myChart3" ></canvas>
+                <canvas class="chartdiv" id="myChart3"></canvas>
                 <button class="btn btn-primary download-button" id="download-button" type="submit">
-                <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
-                </a>
+                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
+                    </a>
                 </button>
             </div>
             <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
-            <div class="d-flex" style="width: 300px;">
-                <canvas class="chartdiv" id="myChart4"></canvas>
-            </div>
-            <button class="btn btn-primary download-button" id="download-button" type="submit">
-                <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
-                </a>
+                <div class="d-flex" style="width: 300px;">
+                    <canvas class="chartdiv" id="myChart4"></canvas>
+                </div>
+                <button class="btn btn-primary download-button" id="download-button" type="submit">
+                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
+                    </a>
                 </button>
             </div>
         </div>
-        </div>
+    </div>
 </div>
 
 
@@ -124,7 +124,6 @@
 
 <?= $this->section('script') ?>
 <?= $this->endSection(); ?>
-
 
 <!-- all chart -->
 <section class="chart-container p-3 mb-5">
