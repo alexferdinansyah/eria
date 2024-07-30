@@ -21,18 +21,18 @@
         }
 
         .chartdiv {
-  width: 30%;
-  height: 300px;
-}   
+            width: 30%;
+            height: 300px;
+        }
     </style>
-    
+
 </head>
 
 <body>
 
     <div class="navbar">
         <a href="/" class="nav-logo">
-                <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="">
+            <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="">
         </a>
         <div class="nav-menus">
             <ul>
@@ -64,29 +64,76 @@
             </div>
         </div>
     </div>
-    
+
     <?= $this->renderSection('content') ?>
 
     <?= $this->renderSection('script') ?>
-<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>  
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
     <script>
         function redirectToSummary() {
             const dropdown = document.getElementById("asean-dropdown");
             const selectedCountry = dropdown.value;
             if (selectedCountry) {
-                window.location.href 
-                = `/summary/${selectedCountry}`;
+                window.location.href = `/summary/${selectedCountry}`;
             }
         }
     </script>
     <script src="<?= base_url('assets/javascripts/script.js') ?>"></script>
+
+    <!------------------------------------------------------------ FOOTER ------------------------------------------------------------>
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-lg-8">
+                    <div class="custom-footer-content">
+                        <h2 class="h5">
+                            <a href="#" class="custom-footer-link">
+                                European Alternative Fuels Observatory
+                            </a>
+                        </h2>
+                        <p>This site is managed by: Directorate-General for Mobility and Transport</p>
+                        <hr class="custom-divider">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="logo-container d-flex align-items-center justify-content-lg-end">
+                                    <div class="logo1 me-3">
+                                        <a href="#" class="d-block" aria-label="Home - European Commission">
+                                            <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="#" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <div class="logo2">
+                                        <a href="#" class="d-block" aria-label="Home - European Commission">
+                                            <img src="<?= base_url('assets/images/logoui.png') ?>" alt="#" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <div class="footer-links">
+                                    <ul class="list-unstyled d-flex flex-column m-0">
+                                        <li class="mb-2"><a href="https://commission.europa.eu/languages-our-websites_en" class="custom-footer-link">Languages on our websites</a></li>
+                                        <li class="mb-2"><a href="https://commission.europa.eu/cookies_en" class="custom-footer-link">Cookies</a></li>
+                                        <li class="mb-2"><a href="https://commission.europa.eu/privacy-policy_en" class="custom-footer-link">Privacy policy</a></li>
+                                        <li class="mb-2"><a href="https://commission.europa.eu/legal-notice_en" class="custom-footer-link">Legal notice</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
 </body>
 
 </html>

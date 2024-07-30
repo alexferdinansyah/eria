@@ -126,18 +126,7 @@
     </div>
 </section>
 
-<!---------------------------------------------------------- CHART SECTION  ---------------------------------------------------------->
+<!---------------------------------------------------------- FOOTER  ---------------------------------------------------------->
 
-
-<!-- Copyrights -->
-
-<div class="copyrights w-100 mb-5 px-5">
-    <div class="copyrights-wrapper border-top pt-2 d-flex align-items-center gap-2">
-        <p class="m-0">Copyrights &copy 2023 ERIA. All rights reserved, a collaboration with</p>
-        <!-- <img src="<?= base_url('assets/images/logoui.png') ?>" alt="" style="width : 30px; height:40px;"> -->
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbenGFnJYutrNs4Pvs_4DwyaEta3k3y4IHqw&s" alt="" width="20px">
-        <a style="text-decoration: none;" target="_blank" href="https://ui.ac.id">Universitas Indonesia (ui.ac.id)</a>
-    </div>
-</div>
 
 <?= $this->endSection(); ?>
