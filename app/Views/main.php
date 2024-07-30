@@ -115,25 +115,22 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 d-none d-lg-block">
-                                <div class="footer-links">
-                                    <ul class="list-unstyled d-flex flex-column m-0">
-                                        <li class="mb-2"><a href="https://commission.europa.eu/languages-our-websites_en" class="custom-footer-link">Languages on our websites</a></li>
-                                        <li class="mb-2"><a href="https://commission.europa.eu/cookies_en" class="custom-footer-link">Cookies</a></li>
-                                        <li class="mb-2"><a href="https://commission.europa.eu/privacy-policy_en" class="custom-footer-link">Privacy policy</a></li>
-                                        <li class="mb-2"><a href="https://commission.europa.eu/legal-notice_en" class="custom-footer-link">Legal notice</a></li>
-                                    </ul>
-                                </div>
+                        </div>
+                        <div class="col-lg-4 d-none d-lg-block">
+                            <div class="footer-links">
+                                <ul class="list-unstyled d-flex flex-column m-0">
+                                    <li class="mb-2"><a href="https://commission.europa.eu/languages-our-websites_en" class="custom-footer-link">Languages on our websites</a></li>
+                                    <li class="mb-2"><a href="https://commission.europa.eu/cookies_en" class="custom-footer-link">Cookies</a></li>
+                                    <li class="mb-2"><a href="https://commission.europa.eu/privacy-policy_en" class="custom-footer-link">Privacy policy</a></li>
+                                    <li class="mb-2"><a href="https://commission.europa.eu/legal-notice_en" class="custom-footer-link">Legal notice</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </footer>
-
 </body>
 
 </html>
