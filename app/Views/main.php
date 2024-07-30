@@ -100,32 +100,32 @@
                         </h2>
                         <p>This site is managed by: Directorate-General for Mobility and Transport</p>
                         <hr class="custom-divider">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="logo-container d-flex align-items-center justify-content-lg-end">
-                                    <div class="logo1 me-3">
-                                        <a href="#" class="d-block" aria-label="Home - European Commission">
-                                            <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="#" class="img-fluid">
-                                        </a>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="logo-container d-flex align-items-center justify-content-lg-end">
+                                        <div class="logo1 me-3">
+                                            <a href="#" class="d-block" aria-label="Home - European Commission">
+                                                <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="#" class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="logo2">
+                                            <a href="#" class="d-block" aria-label="Home - European Commission">
+                                                <img src="<?= base_url('assets/images/logoui.png') ?>" alt="#" class="img-fluid">
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="logo2">
-                                        <a href="#" class="d-block" aria-label="Home - European Commission">
-                                            <img src="<?= base_url('assets/images/logoui.png') ?>" alt="#" class="img-fluid">
-                                        </a>
+                                </div>
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="footer-links">
+                                        <ul class="list-unstyled d-flex flex-column m-0">
+                                            <li class="mb-2"><a href="https://commission.europa.eu/languages-our-websites_en" class="custom-footer-link">Languages on our websites</a></li>
+                                            <li class="mb-2"><a href="https://commission.europa.eu/cookies_en" class="custom-footer-link">Cookies</a></li>
+                                            <li class="mb-2"><a href="https://commission.europa.eu/privacy-policy_en" class="custom-footer-link">Privacy policy</a></li>
+                                            <li class="mb-2"><a href="https://commission.europa.eu/legal-notice_en" class="custom-footer-link">Legal notice</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 d-none d-lg-block">
-                            <div class="footer-links">
-                                <ul class="list-unstyled d-flex flex-column m-0">
-                                    <li class="mb-2"><a href="https://commission.europa.eu/languages-our-websites_en" class="custom-footer-link">Languages on our websites</a></li>
-                                    <li class="mb-2"><a href="https://commission.europa.eu/cookies_en" class="custom-footer-link">Cookies</a></li>
-                                    <li class="mb-2"><a href="https://commission.europa.eu/privacy-policy_en" class="custom-footer-link">Privacy policy</a></li>
-                                    <li class="mb-2"><a href="https://commission.europa.eu/legal-notice_en" class="custom-footer-link">Legal notice</a></li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
