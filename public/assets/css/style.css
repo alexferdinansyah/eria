@@ -728,6 +728,7 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 
 .logo1,
@@ -737,7 +738,7 @@ body {
 
 .custom-footer img {
     max-width: 50%;
-    height: 50%;
+    height: auto;
 }
 
 .custom-divider {
@@ -762,13 +763,15 @@ body {
 
     .logo-container {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         gap: 1rem;
     }
 
     .footer-links {
         display: flex;
+        flex-direction: column;
         align-items: flex-end;
+        margin-left: 2rem;
     }
 
     .footer-links ul {
