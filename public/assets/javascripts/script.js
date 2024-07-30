@@ -1,63 +1,146 @@
 function getLocationFromUrl() {
-  // Assuming the URL is like http://example.com/location/indonesia
   const path = window.location.pathname;
   const parts = path.split('/');
   return parts[parts.length - 1];
 }
 
+function makeChart(element, type, data){
+    new Chart(element, {
+      type: type,
+      data: data,
+      options: {
+        scales: {
+          x: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  }
 
   const route = getLocationFromUrl();
   console.log(route);
   
+  // 2x2 chart summary element
   const ctx1 = document.getElementById('myChart2');
   const ctx2 = document.getElementById('myChart1');
   const ctx3 = document.getElementById('myChart3');
   const ctx4 = document.getElementById('myChart4');
 
-  const myButton = document.querySelectorAll('#download-button');
+  // bar chart element
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+  const bar4 = document.getElementById('bar4');
+  const bar5 = document.getElementById('bar5');
+  const bar6 = document.getElementById('bar6');
 
+  const myButton = document.querySelectorAll('#download-button');
+  
+  // bar chart data
+  let volICE = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+          label: 'VOL ICE',
+          data: [894164, 1116230, 1229811, 1208028, 1013518, 1062694, 1077364, 1151308, 1029775, 531175, 884009, 1032603, 0],
+          backgroundColor: "rgba(255, 0, 0, 0.8)",
+          borderColor: "rgba(255, 0, 0, 1)",
+          borderWidth: 1
+      }]
+  };
+
+  let volHEV = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+          label: 'VOL HEV',
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 331, 1108, 2473, 5100, 0],
+          backgroundColor: "rgba(255, 127, 0, 0.8)",
+          borderColor: "rgba(255, 127, 0, 1)",
+          borderWidth: 1
+      }]
+  };
+
+  let volBEV = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+          label: 'VOL BEV',
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 118, 685, 10327, 0],
+          backgroundColor: "rgba(0, 255, 0, 0.8)",
+          borderColor: "rgba(0, 255, 0, 1)",
+          borderWidth: 1
+      }]
+  };
+
+  let volPHEV = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+          label: 'VOL PHEV',
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 20, 6, 35, 10, 0],
+          backgroundColor: "rgba(255, 255, 0, 0.8)",
+          borderColor: "rgba(255, 255, 0, 1)",
+          borderWidth: 1
+      }]
+  };
+
+  let volNewCarSum = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+          label: 'VOL NEW CAR SUM',
+          data: [894164, 1116230, 1229811, 1208028, 1013518, 1062694, 1077364, 1151308, 1030126, 532407, 887202, 1048040, 0],
+          backgroundColor: "rgba(0, 0, 255, 0.8)",
+          borderColor: "rgba(0, 0, 255, 1)",
+          borderWidth: 1
+      }]
+  };
+
+  let volStockUIO = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+          label: 'VOL STOCK / UIO',
+          data: [894164, 2010394, 3240205, 4448233, 5461751, 6524445, 7601809, 8753117, 9783243, 10315650, 11202852, 12250892, 0],
+          backgroundColor: "rgba(75, 0, 130, 0.8)",
+          borderColor: "rgba(75, 0, 130, 1)",
+          borderWidth: 1
+      }]
+  };
+
+  makeChart(bar1, 'bar', volICE)
+  makeChart(bar2, 'bar', volHEV)
+  makeChart(bar3, 'bar', volBEV)
+  makeChart(bar4, 'bar', volPHEV)
+  makeChart(bar5, 'bar', volNewCarSum)
+  makeChart(bar6, 'bar', volStockUIO)
+
+
+  // IF INDONESIA
   if(route == 'indonesia'){
-    new Chart(ctx1, {
-      type: 'line',
-      data: {
-        labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-        datasets: [{
-          label: 'Total Highway Length',
-          data: [492398,501969,508000,517753, 529073,537838,539353,542310,544474,548366,546116,548097],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          x: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
+    let chart1Data = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+        label: 'Total Highway Length',
+        data: [492398,501969,508000,517753, 529073,537838,539353,542310,544474,548366,546116,548097],
+        backgroundColor: "rgba(75, 0, 130, 0.8)",
+        borderColor: "rgba(75, 0, 130, 1)",
+        borderWidth: 1
+      }]
+    }
     
-    new Chart(ctx2, {
-      type: 'line',
-      data: {
-        labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-        datasets: [{
-          label: 'Population',
-          data: [241911000, 245425000, 248818000, 252165000, 255462000,  258705000, 261891000, 264161600, 266911900,  270203917,  272682500, 275773800, 278696200          ],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          x: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
+    makeChart(ctx1, 'line', chart1Data);
     
-    new Chart(ctx3, {
-      type: 'line',
-      data: {
+    let chart2Data = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+        label: 'Population',
+        data: [241911000, 245425000, 248818000, 252165000, 255462000,  258705000, 261891000, 264161600, 266911900,  270203917,  272682500, 275773800, 278696200],
+        backgroundColor: "rgba(75, 0, 130, 0.8)",
+        borderColor: "rgba(75, 0, 130, 1)",
+        borderWidth: 1
+      }]
+    }
+
+    makeChart(ctx2, 'line', chart2Data);
+
+    let chart3Data = {
         labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
         datasets: [
         {
@@ -90,179 +173,127 @@ function getLocationFromUrl() {
           data: [894164,2010394,3240205,4448233,5461751,6524445,7601809,8753117,9783243,10315650,11202852,12250892],
           borderWidth: 1
         },
-    ]
-      },
-      options: {
-        scales: {
-          x: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
+      ] 
+    };
     
-    new Chart(ctx4, {
-      type: 'doughnut',
-      data: {
-        labels: ['ICE', 'HEV', 'BEV', 'PHEV', 'NEW CAR SUM', 'STOCK / UIO'],
-        datasets: [{
-          label: '2022 Data',
-          data: [1032603, 5100, 10327, 10, 1048040, 12250892],
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(255, 205, 86, 0.2)'
-          ],
-          borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)',
-            'rgba(255, 205, 86, 1)'
-          ],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          title: {
-            display: true,
-            text: 'Donut Chart for 2022 Data'
-          }
-        }
-      }
-    });
-  }else{
 
+    // makeChart(ctx3, 'line', chart3Data)
+
+    let chart4Data = {
+      labels: ['ICE', 'HEV', 'BEV', 'PHEV', 'NEW CAR SUM', 'STOCK / UIO'],
+      datasets: [{
+        label: '2022 Data',
+        data: [1032603, 5100, 10327, 10, 1048040, 12250892],
+        backgroundColor: [
+          'rgba(255, 0, 0, 0.8)',    // Red //
+          'rgba(255, 127, 0, 0.8)',  // Orange
+          'rgba(0, 255, 0, 0.8)',    // Green
+          'rgba(255, 255, 0, 0.8)',  // Yellow
+          'rgba(0, 0, 255, 0.8)',    // Blue //
+          'rgba(75, 0, 130, 0.8)'    // Indigo //
+      ],
+      borderColor: [
+          'rgba(255, 0, 0, 1)',
+          'rgba(255, 127, 0, 1)',
+          'rgba(255, 255, 0, 1)',
+          'rgba(0, 255, 0, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(75, 0, 130, 1)'
+      ],
+        borderWidth: 1
+      }]
+    };
+
+    makeChart(ctx4,'doughnut' ,chart4Data)
+
+  }else{
     myButton.forEach(myButton => myButton.disabled = true);
 
+    // blank data chart 2x2
+    let chart1data = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+        label: 'Total Highway Length',
+        data: [],
+        borderWidth: 1
+      }]
+    };
 
-    new Chart(ctx1, {
-      type: 'line',
-      data: {
-        labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-        datasets: [{
-          label: 'Total Highway Length',
-          data: [],
-          borderWidth: 1
-        }]
+    let chart2data = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+        label: 'Population',
+        data: [],
+        borderWidth: 1
+      }]
+    };
+
+    let chart3data = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+      datasets: [
+      {
+        label: 'VOL ICE',
+        data: [],
+        borderWidth: 1
       },
-      options: {
-        scales: {
-          x: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-    
-    new Chart(ctx2, {
-      type: 'line',
-      data: {
-        labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-        datasets: [{
-          label: 'Population',
-          data: [],
-          borderWidth: 1
-        }]
+      {
+        label: 'VOL HEV',
+        data: [],
+        borderWidth: 1
       },
-      options: {
-        scales: {
-          x: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-    
-    new Chart(ctx3, {
-      type: 'line',
-      data: {
-        labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
-        datasets: [
-        {
-          label: 'VOL ICE',
-          data: [],
-          borderWidth: 1
-        },
-        {
-          label: 'VOL HEV',
-          data: [],
-          borderWidth: 1
-        },
-        {
-          label: 'VOL BEV',
-          data: [],
-          borderWidth: 1
-        },
-        {
-          label: 'VOL PHEV',
-          data: [],
-          borderWidth: 1
-        },
-        {
-          label: 'VOL NEW CAR SUM',
-          data: [],
-          borderWidth: 1
-        },
-        {
-          label: 'VOL STOCK / UIO',
-          data: [],
-          borderWidth: 1
-        },
+      {
+        label: 'VOL BEV',
+        data: [],
+        borderWidth: 1
+      },
+      {
+        label: 'VOL PHEV',
+        data: [],
+        borderWidth: 1
+      },
+      {
+        label: 'VOL NEW CAR SUM',
+        data: [],
+        borderWidth: 1
+      },
+      {
+        label: 'VOL STOCK / UIO',
+        data: [],
+        borderWidth: 1
+      },
     ]
-      },
-      options: {
-        scales: {
-          x: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-    
-    new Chart(ctx4, {
-      type: 'doughnut',
-      data: {
-        labels: ['ICE', 'HEV', 'BEV', 'PHEV', 'NEW CAR SUM', 'STOCK / UIO'],
-        datasets: [{
-          label: '2022 Data',
-          data: [],
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(255, 205, 86, 0.2)'
-          ],
-          borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)',
-            'rgba(255, 205, 86, 1)'
-          ],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          title: {
-            display: true,
-            text: 'Donut Chart for 2022 Data'
-          }
-        }
-      }
-    });
   }
+
+  let chart4data = {
+    labels: ['ICE', 'HEV', 'BEV', 'PHEV', 'NEW CAR SUM', 'STOCK / UIO'],
+    datasets: [{
+      label: '2022 Data',
+      data: [],
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)',
+        'rgba(255, 205, 86, 0.2)'
+      ],
+      borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+        'rgba(255, 205, 86, 1)'
+      ],
+      borderWidth: 1
+    }]
+  };
+
+    makeChart(ctx1, 'line', chart1data)
+    makeChart(ctx2, 'line', chart2data)
+    makeChart(ctx3, 'line', chart3data)
+    makeChart(ctx4, 'doughnut', chart4data)    
+}
 
 // Donut
 

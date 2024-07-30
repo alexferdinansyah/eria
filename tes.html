@@ -1,273 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AmCharts Example</title>
-  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/plugins/Exporting.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/plugins/Regressions.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2x2 Charts Layout</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .chart-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 640px; /* Adjust width as needed */
+        }
+        .chart-container > div {
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
+        canvas {
+            border: 1px solid #ddd;
+        }
+        button {
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-        <div style="width: 500px; height: 200px;" id="chartdiv1"></div>
-        <div style="width: 500px; height: 200px;" id="chartdiv2"></div>
-        <div style="width: 500px; height: 200px;" id="chartdiv3"></div>
-        <div style="width: 500px; height: 200px;" id="chartdiv4"></div>
-  <script>
-    // Line Chart for Total Highway Length
-am5.ready(function() {
-  var root = am5.Root.new("chartdiv1");
+    <div class="chart-container">
+        <div>
+            <canvas id="chart1"></canvas>
+            <button onclick="downloadChart('chart1', 'chart1.png')">Download Chart 1</button>
+        </div>
+        <div>
+            <canvas id="chart2"></canvas>
+            <button onclick="downloadChart('chart2', 'chart2.png')">Download Chart 2</button>
+        </div>
+        <div>
+            <canvas id="chart3"></canvas>
+            <button onclick="downloadChart('chart3', 'chart3.png')">Download Chart 3</button>
+        </div>
+        <div>
+            <canvas id="chart4"></canvas>
+            <button onclick="downloadChart('chart4', 'chart4.png')">Download Chart 4</button>
+        </div>
+    </div>
+    
+    <button id="all-downloads">Download All Charts as PNG</button>
 
-  var chart = root.container.children.push(am5xy.XYChart.new(root, {
-    panX: true,
-    panY: true,
-    wheelX: "panX",
-    wheelY: "zoomX",
-    pinchZoomX:true
-  }));
+    <script>
+        function createChart(ctx, data, colors) {
+            return new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May'],
+                    datasets: [{
+                        label: 'Sales',
+                        data: data,
+                        backgroundColor: colors.map(color => color.replace('0.2', '0.2')), // Wave effect
+                        borderColor: colors.map(color => color.replace('0.2', '1')),
+                        borderWidth: 2,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
 
-  var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-    categoryField: "year",
-    renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 30 })
-  }));
+        const charts = [
+            createChart(document.getElementById('chart1').getContext('2d'), [20, 30, 25, 35, 40], ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)']),
+            createChart(document.getElementById('chart2').getContext('2d'), [30, 25, 35, 40, 50], ['rgba(255, 159, 64, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(75, 192, 192, 0.2)']),
+            createChart(document.getElementById('chart3').getContext('2d'), [15, 30, 25, 40, 45], ['rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)']),
+            createChart(document.getElementById('chart4').getContext('2d'), [25, 35, 30, 50, 55], ['rgba(54, 162, 235, 0.2)', 'rgba(255, 99, 132, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 206, 86, 0.2)'])
+        ];
 
-  var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-    renderer: am5xy.AxisRendererY.new(root, {})
-  }));
+        function downloadChart(chartId, filename) {
+            const canvas = document.getElementById(chartId).toDataURL('image/png');
+            const link = document.createElement('a');
+            link.href = canvas;
+            link.download = filename;
+            link.click();
+        }
 
-  var series = chart.series.push(am5xy.LineSeries.new(root, {
-    name: "Total Highway Length",
-    xAxis: xAxis,
-    yAxis: yAxis,
-    valueYField: "length",
-    categoryXField: "year",
-    tooltip: am5.Tooltip.new(root, { labelText: "{valueY}" })
-  }));
+        function downloadCombinedCharts(selector, filename) {
+            const allButtons = document.querySelectorAll('button');
+            allButtons.forEach(button => button.style.display = 'none'); // Hide all buttons
 
-  xAxis.data.setAll([
-    { year: '2011', length: 492398 },
-    { year: '2012', length: 501969 },
-    { year: '2013', length: 508000 },
-    { year: '2014', length: 517753 },
-    { year: '2015', length: 529073 },
-    { year: '2016', length: 537838 },
-    { year: '2017', length: 539353 },
-    { year: '2018', length: 542310 },
-    { year: '2019', length: 544474 },
-    { year: '2020', length: 548366 },
-    { year: '2021', length: 546116 },
-    { year: '2022', length: 548097 },
-    { year: '2023', length: null }
-  ]);
+            html2canvas(document.querySelector(selector)).then(canvas => {
+                const link = document.createElement('a');
+                link.href = canvas.toDataURL('image/png');
+                link.download = filename;
+                link.click();
 
-  series.data.setAll([
-    { year: '2011', length: 492398 },
-    { year: '2012', length: 501969 },
-    { year: '2013', length: 508000 },
-    { year: '2014', length: 517753 },
-    { year: '2015', length: 529073 },
-    { year: '2016', length: 537838 },
-    { year: '2017', length: 539353 },
-    { year: '2018', length: 542310 },
-    { year: '2019', length: 544474 },
-    { year: '2020', length: 548366 },
-    { year: '2021', length: 546116 },
-    { year: '2022', length: 548097 },
-    { year: '2023', length: null }
-  ]);
-});
+                // Show buttons again
+                allButtons.forEach(button => button.style.display = '');
+            });
+        }
 
-// Line Chart for Population
-am5.ready(function() {
-  var root = am5.Root.new("chartdiv2");
-
-  var chart = root.container.children.push(am5xy.XYChart.new(root, {
-    panX: true,
-    panY: true,
-    wheelX: "panX",
-    wheelY: "zoomX",
-    pinchZoomX:true
-  }));
-
-  var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-    categoryField: "year",
-    renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 30 })
-  }));
-
-  var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-    renderer: am5xy.AxisRendererY.new(root, {})
-  }));
-
-  var series = chart.series.push(am5xy.LineSeries.new(root, {
-    name: "Population",
-    xAxis: xAxis,
-    yAxis: yAxis,
-    valueYField: "population",
-    categoryXField: "year",
-    tooltip: am5.Tooltip.new(root, { labelText: "{valueY}" })
-  }));
-
-  xAxis.data.setAll([
-    { year: '2011', population: 241911000 },
-    { year: '2012', population: 245425000 },
-    { year: '2013', population: 248818000 },
-    { year: '2014', population: 252165000 },
-    { year: '2015', population: 255462000 },
-    { year: '2016', population: 258705000 },
-    { year: '2017', population: 261891000 },
-    { year: '2018', population: 264161600 },
-    { year: '2019', population: 266911900 },
-    { year: '2020', population: 270203917 },
-    { year: '2021', population: 272682500 },
-    { year: '2022', population: 275773800 },
-    { year: '2023', population: 278696200 }
-  ]);
-
-  series.data.setAll([
-    { year: '2011', population: 241911000 },
-    { year: '2012', population: 245425000 },
-    { year: '2013', population: 248818000 },
-    { year: '2014', population: 252165000 },
-    { year: '2015', population: 255462000 },
-    { year: '2016', population: 258705000 },
-    { year: '2017', population: 261891000 },
-    { year: '2018', population: 264161600 },
-    { year: '2019', population: 266911900 },
-    { year: '2020', population: 270203917 },
-    { year: '2021', population: 272682500 },
-    { year: '2022', population: 275773800 },
-    { year: '2023', population: 278696200 }
-  ]);
-});
-
-// Line Chart for Various Volumes
-am5.ready(function() {
-  var root = am5.Root.new("chartdiv3");
-
-  var chart = root.container.children.push(am5xy.XYChart.new(root, {
-    panX: true,
-    panY: true,
-    wheelX: "panX",
-    wheelY: "zoomX",
-    pinchZoomX:true
-  }));
-
-  var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-    categoryField: "year",
-    renderer: am5xy.AxisRendererX.new(root, { minGridDistance: 30 })
-  }));
-
-  var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-    renderer: am5xy.AxisRendererY.new(root, {})
-  }));
-
-  var series1 = chart.series.push(am5xy.LineSeries.new(root, {
-    name: "VOL ICE",
-    xAxis: xAxis,
-    yAxis: yAxis,
-    valueYField: "vol_ice",
-    categoryXField: "year",
-    tooltip: am5.Tooltip.new(root, { labelText: "{valueY}" })
-  }));
-
-  var series2 = chart.series.push(am5xy.LineSeries.new(root, {
-    name: "VOL HEV",
-    xAxis: xAxis,
-    yAxis: yAxis,
-    valueYField: "vol_hev",
-    categoryXField: "year",
-    tooltip: am5.Tooltip.new(root, { labelText: "{valueY}" })
-  }));
-
-  var series3 = chart.series.push(am5xy.LineSeries.new(root, {
-    name: "VOL BEV",
-    xAxis: xAxis,
-    yAxis: yAxis,
-    valueYField: "vol_bev",
-    categoryXField: "year",
-    tooltip: am5.Tooltip.new(root, { labelText: "{valueY}" })
-  }));
-
-  var series4 = chart.series.push(am5xy.LineSeries.new(root, {
-    name: "VOL PHEV",
-    xAxis: xAxis,
-    yAxis: yAxis,
-    valueYField: "vol_phev",
-    categoryXField: "year",
-    tooltip: am5.Tooltip.new(root, { labelText: "{valueY}" })
-  }));
-
-  var series5 = chart.series.push(am5xy.LineSeries.new(root, {
-    name: "VOL NEW CAR SUM",
-    xAxis: xAxis,
-    yAxis: yAxis,
-    valueYField: "vol_new_car_sum",
-    categoryXField: "year",
-    tooltip: am5.Tooltip.new(root, { labelText: "{valueY}" })
-  }));
-
-  var series6 = chart.series.push(am5xy.LineSeries.new(root, {
-    name: "VOL STOCK / UIO",
-    xAxis: xAxis,
-    yAxis: yAxis,
-    valueYField: "vol_stock",
-    categoryXField: "year",
-    tooltip: am5.Tooltip.new(root, { labelText: "{valueY}" })
-  }));
-
-  var data = [
-    { year: '2011', vol_ice: 894164, vol_hev: 0, vol_bev: 0, vol_phev: 0, vol_new_car_sum: 894164, vol_stock: 894164 },
-    { year: '2012', vol_ice: 1116230, vol_hev: 0, vol_bev: 0, vol_phev: 0, vol_new_car_sum: 1116230, vol_stock: 2010394 },
-    { year: '2013', vol_ice: 1229811, vol_hev: 0, vol_bev: 0, vol_phev: 0, vol_new_car_sum: 1229811, vol_stock: 3240205 },
-    { year: '2014', vol_ice: 1208028, vol_hev: 0, vol_bev: 0, vol_phev: 0, vol_new_car_sum: 1208028, vol_stock: 4448233 },
-    { year: '2015', vol_ice: 1013518, vol_hev: 0, vol_bev: 0, vol_phev: 0, vol_new_car_sum: 1013518, vol_stock: 5461751 },
-    { year: '2016', vol_ice: 1062694, vol_hev: 0, vol_bev: 0, vol_phev: 0, vol_new_car_sum: 1062694, vol_stock: 6524445 },
-    { year: '2017', vol_ice: 1077364, vol_hev: 0, vol_bev: 0, vol_phev: 0, vol_new_car_sum: 1077364, vol_stock: 7601809 },
-    { year: '2018', vol_ice: 1151308, vol_hev: 0, vol_bev: 0, vol_phev: 0, vol_new_car_sum: 1151308, vol_stock: 8753117 },
-    { year: '2019', vol_ice: 1029775, vol_hev: 331, vol_bev: 0, vol_phev: 20, vol_new_car_sum: 1030126, vol_stock: 9783243 },
-    { year: '2020', vol_ice: 531175, vol_hev: 1108, vol_bev: 118, vol_phev: 6, vol_new_car_sum: 532407, vol_stock: 10315650 },
-    { year: '2021', vol_ice: 884009, vol_hev: 2473, vol_bev: 685, vol_phev: 35, vol_new_car_sum: 887202, vol_stock: 11202852 },
-    { year: '2022', vol_ice: 1032603, vol_hev: 5100, vol_bev: 10327, vol_phev: 10, vol_new_car_sum: 1048040, vol_stock: 12250892 }
-  ];
-
-  series1.data.setAll(data);
-  series2.data.setAll(data);
-  series3.data.setAll(data);
-  series4.data.setAll(data);
-  series5.data.setAll(data);
-  series6.data.setAll(data);
-});
-
-// Doughnut Chart for 2022 Data
-am5.ready(function() {
-  var root = am5.Root.new("chartdiv4");
-
-  var chart = root.container.children.push(am5percent.PieChart.new(root, {
-    endAngle: 270
-  }));
-
-  var series = chart.series.push(am5percent.PieSeries.new(root, {
-    valueField: "value",
-    categoryField: "category",
-    radius: am5.percent(70),
-    innerRadius: am5.percent(40)
-  }));
-
-  series.data.setAll([
-    { category: "VOL ICE", value: 1032603 },
-    { category: "VOL HEV", value: 5100 },
-    { category: "VOL BEV", value: 10327 },
-    { category: "VOL PHEV", value: 10 },
-    { category: "VOL NEW CAR SUM", value: 1048040 },
-    { category: "VOL STOCK / UIO", value: 12250892 }
-  ]);
-
-  series.appear(1000, 100);
-});
-
-  </script>
+        document.getElementById('all-downloads').addEventListener('click', function() {
+            downloadCombinedCharts('.chart-container', 'all-charts.png');
+        });
+    </script>
 </body>
 </html>

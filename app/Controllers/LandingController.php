@@ -47,7 +47,7 @@ class LandingController extends BaseController
     public function summary($nat){
         $data["nation"] = $nat;
 
-        if($nat === "Indonesia"){
+        if($nat === "indonesia"){
             $data["population"] = "275,773,800";
             $data["ttlland"] = "1,892,556";
             $data["totalHighway"] = "548,097";
