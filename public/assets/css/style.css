@@ -734,6 +734,7 @@ body {
 .logo1,
 .logo2 {
     margin: 0;
+    background-color: green;
 }
 
 .custom-footer img {
