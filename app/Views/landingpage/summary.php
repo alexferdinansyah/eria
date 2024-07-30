@@ -85,6 +85,8 @@
                 </section>
             </div>`
             <img class="img-map" style="width: 400px;" src="<?= base_url('assets/images/nations/maps/'  . $nation . ".png") ?>" alt="">
+
+            <!-- chart top -->
             <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
                 <canvas class="chartdiv d-flex" id="myChart1"></canvas>
                 <button class="btn btn-primary download-button" id="download-button" type="submit">
@@ -99,13 +101,6 @@
                     </a>
                 </button>
             </div>
-            <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
-                <canvas class="chartdiv" id="myChart3"></canvas>
-                <button class="btn btn-primary download-button" id="download-button" type="submit">
-                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
-                    </a>
-                </button>
-            </div>
             <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
                 <div class="d-flex" style="width: 300px;">
                     <canvas class="chartdiv" id="myChart4"></canvas>
@@ -115,6 +110,63 @@
                     </a>
                 </button>
             </div>
+
+            <!-- bar chart -->
+            <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+                <div class="d-flex" style="width: 400px;">
+                    <canvas class="chartdiv" id="bar1"></canvas>
+                </div>
+                <button class="btn btn-primary download-button" id="download-button" type="submit">
+                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
+                    </a>
+                </button>
+            </div>
+            <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+                <div class="d-flex" style="width: 400px;">
+                    <canvas class="chartdiv" id="bar2"></canvas>
+                </div>
+                <button class="btn btn-primary download-button" id="download-button" type="submit">
+                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
+                    </a>
+                </button>
+            </div>
+            <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+                <div class="d-flex" style="width: 400px;">
+                    <canvas class="chartdiv" id="bar3"></canvas>
+                </div>
+                <button class="btn btn-primary download-button" id="download-button" type="submit">
+                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
+                    </a>
+                </button>
+            </div>
+            <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+                <div class="d-flex" style="width: 400px;">
+                    <canvas class="chartdiv" id="bar4"></canvas>
+                </div>
+                <button class="btn btn-primary download-button" id="download-button" type="submit">
+                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
+                    </a>
+                </button>
+            </div>
+            <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+                <div class="d-flex" style="width: 400px;">
+                    <canvas class="chartdiv" id="bar5"></canvas>
+                </div>
+                <button class="btn btn-primary download-button" id="download-button" type="submit">
+                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
+                    </a>
+                </button>
+            </div>
+            <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+                <div class="d-flex" style="width: 400px;">
+                    <canvas class="chartdiv" id="bar6"></canvas>
+                </div>
+                <button class="btn btn-primary download-button" id="download-button" type="submit">
+                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
+                    </a>
+                </button>
+            </div>
+            
         </div>
     </div>
 </div>
