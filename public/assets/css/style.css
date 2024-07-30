@@ -708,6 +708,7 @@ body {
 .custom-footer-content h2,
 .custom-footer-content p {
     margin: 0;
+    margin-bottom: 5px;
 }
 
 .custom-footer a.custom-footer-link {
@@ -729,10 +730,10 @@ body {
     align-items: center;
 }
 
-/* .logo1,
+.logo1,
 .logo2 {
     margin: 0;
-} */
+}
 
 .custom-footer img {
     max-width: 50%;
