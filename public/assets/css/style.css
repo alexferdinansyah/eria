@@ -14,7 +14,7 @@ body {
 
 .navbar {
     width: 100%;
-    height: 80px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,16 +22,29 @@ body {
 }
 
 .nav-logo {
-    width: 35%;
-    height: 70%;
+    /* background-color: #007bff; */
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    /* width: 35%; */
+    height: 100%;
     display: flex;
     justify-content: center;
     padding: 0;
+    margin-left: 120px;
+    padding-top: 20px;
 }
 
 .nav-logo img {
-    width: 25%;
+    /* background-color: red; */
+    width: 70%;
     height: 100%;
+}
+
+.nav-logo p{
+    font-size: 12px;
+    width: 150px;
 }
 
 .nav-menus {
@@ -565,6 +578,19 @@ body {
     gap: 10px;
 }
 
+.pd-two > button{
+    margin-top: 20px;
+    float: right;
+    color: var(--blue);
+    background-color: transparent;
+    font-weight: bold;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 2px var(--blue) solid;
+}
+
 .pd-two p:nth-child(2n-1) {
     font-size: 18px;
     color: var(--blue);
@@ -844,4 +870,27 @@ body {
 
 .pgd-content .col-md-6 p{
     color: grey;
+}
+
+.cos-dropdown-menu {
+    visibility: hidden;
+    display: flex;
+    flex-wrap: wrap;    
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 280px;    
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-con{
+    position: relative;
+}
+
+.dropdown-con:hover .cos-dropdown-menu{
+    visibility: visible;
 }
