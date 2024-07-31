@@ -1,28 +1,45 @@
-<!-- <?= $id ?> -->
 <?= $this->extend('main') ?>
 
 <?= $this->section('content') ?>
-<div class="container pd d-flex justify-content-center align-items-center">
-    <img src="https://www.eria.org//uploads/articles/20150119/eria_capacity-building_phnom-penh_jan-19-20-cropped.jpg" alt="Capacity Building">
-    <section class="pd-content">
-        <h2>Developing the ASEAN Schedule of Non-Conforming Measures under ATISA: Negative List Approach Focusing on the Financial Services Sector</h1>
-        <p>Date:</p>
-        <p>15 Juni 2024</p>
-        <div class="pd-parent">
-            <div class="pd-item">
-                <p>Share Article:</p>
-                <img src="<?= base_url('assets/images/icons/facebook.png') ?>" alt="">
-                <img src="<?= base_url('assets/images/icons/twitter.png') ?>" alt="">
-                <img src="<?= base_url('assets/images/icons/linkedin.png') ?>" alt="">
-            </div>
-            <div class="pd-item">
-                <p>Print Article:</p>
-                <img src="<?= base_url('assets/images/icons/printer.png') ?>" alt="">
-            </div>
+<header class="header">
+    <p>ASEAN/East Asia NTM Database</p>
+</header>
+
+<div class="progDCon">
+    <div class="allProg">
+        <h3>Programmes</h3>
+        <a href="">program 1</a>
+        <a class="active" href="">program 2</a>
+        <a href="">program 3</a>
+        <a href="">program 4</a>
+        <a href="">program 5</a>
+        <a href="">program 6</a>
+        <a href="">program 7</a>
+        <a href="">program 8</a>
+        <a href="">program 9</a>
+        <a href="">program 10</a>
+    </div>
+    <div class="pgd-content">
+        <p>ERIA, in collaboration with the United Nations Conference on Trade and Development (UNCTAD), collected and classified non-tariff measures (NTMs) in the ten ASEAN countries (Brunei Darussalam, Cambodia, Indonesia, Lao PDR, Malaysia, Myanmar, the Philippines, Singapore, Thailand, and Viet Nam). Both organisations worked on all regulations and official documents including international conventions adopted by countries which were in effect as of March 2018. </p>
+        <p>Data collection consists of two phases: The first database released in January 2016, and the updated database completed in early 2019. Both phases are accompanied by analytical reports.</p>
+        <p>The project aims to (i) collect, validate, and store NTM data from official sources; (ii) improve the general understanding of these measures and their impact on world trade; and (iii) provide insights on NTMs in ten countries. </p>
+
+        <hr>
+
+        <h3>Related articles</h3>
+        <div class="row">
+            <a href="" class="col-md-6">
+                <img class="img-thumbnail" src="https://www.eria.org//uploads/articles/20150119/eria_capacity-building_phnom-penh_jan-19-20-cropped.jpg" alt="">
+                <h5>ERIA Capacity Building Seminar in Cambodia - Remaining Challenge for ASEAN Economic Community 2015</h5>
+                <p>31 July 2024</p>
+            </a href="">
+            <a href="" class="col-md-6">
+                <img class="img-thumbnail" src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="">
+                <h5>ERIA Capacity Building Seminar in Cambodia - Remaining Challenge for ASEAN Economic Community 2015</h5>
+                <p>31 July 2024</p>
+            </a href="">
         </div>
-    </section>
-    <p class="pd-p">Siem Reap, 11-12 June 2024: Financial services, a priority sector for growth in Cambodia, are one of the sector-specific annexes in the ASEAN Trade in Services Agreement (ATISA) that came into force in 2021. A major feature of ATISA is the revamping of market access from a positive to a negative-list scheduling approach. Under the agreement, Cambodia has 13 years to complete its negative list and schedule of non-conforming measures (NCMs) from their current AFAS Schedules of Commitments.</p>
-    <p class="pd-p">Siem Reap, 11-12 June 2024: Financial services, a priority sector for growth in Cambodia, are one of the sector-specific annexes in the ASEAN Trade in Services Agreement (ATISA) that came into force in 2021. A major feature of ATISA is the revamping of market access from a positive to a negative-list scheduling approach. Under the agreement, Cambodia has 13 years to complete its negative list and schedule of non-conforming measures (NCMs) from their current AFAS Schedules of Commitments.</p>
+    </div>
 </div>
 
 

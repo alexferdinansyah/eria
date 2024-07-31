@@ -328,15 +328,22 @@ body {
     padding: 20px;
 }
 
+.grid-item a{
+    text-decoration: none;
+}
+
 .grid-item img {
     max-width: 100%;
     height: auto;
 }
 
-.grid-item a {
-    margin-top: 10px;
+.grid-item p{
     text-decoration: none;
     color: black;
+}
+
+.grid-item p:nth-child(2) {
+    margin-top: 10px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -414,7 +421,7 @@ body {
 
 .pd .pd-content {
     width: 80%;
-    background-color: lightgray;
+    background-color: #f8f8f8;
     color: var(--blue);
     margin: 16px;
     padding: 12px;
@@ -782,4 +789,59 @@ body {
     .footer-links ul li {
         margin-left: 1rem;
     }
+}
+
+
+/****************************************************************** program details ******************************************************************/
+.progDCon{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    padding-left:120px;
+}
+
+.progDCon h3{
+    color: var(--blue);
+}
+
+.allProg{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+    width: 30%;
+    background-color: #f3f8fc;
+}
+
+.allProg > a{
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: large;
+}
+
+.allProg > a.active{
+    background-color: var(--blue);
+    color: white;
+}
+
+
+.pgd-content{
+    width: 70%;
+    padding-right: 100px;
+}
+
+.pgd-content > p{
+    font-size: 18px;
+}
+
+.pgd-content a{
+    text-decoration: none;
+    color: black;
+}
+
+.pgd-content .col-md-6 p{
+    color: grey;
 }
