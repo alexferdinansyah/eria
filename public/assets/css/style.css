@@ -760,25 +760,38 @@ body {
 
 .logo-container {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo {
+    margin: 0;
+    display: flex;
     align-items: center;
 }
 
-.logo1,
-.logo2 {
-    margin: 0;
-    background-color: green;
+.logo-description {
+    color: #ffffff;
+    font-size: 0.875rem;
+    max-width: 200px;
+    /* Adjust as needed */
 }
 
 .custom-footer img {
-    max-width: 50%;
-    height: 50%;
+    max-width: 100px;
+    height: auto;
+}
+
+.custom-logo {
+    width: 100px;
+    height: auto;
 }
 
 .custom-divider {
     border: 0;
     border-top: 1px solid #ffffff;
     margin: 20px 0;
-    width: 225%;
+    width: 150%;
 }
 
 @media (min-width: 992px) {
@@ -791,18 +804,21 @@ body {
     .col-lg-8 {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
     }
 
     .logo-container {
         display: flex;
-        align-items: flex-end;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 1rem;
     }
 
     .footer-links {
         display: flex;
-        align-items: flex-end;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 28%;
     }
 
     .footer-links ul {
@@ -816,7 +832,6 @@ body {
         margin-left: 1rem;
     }
 }
-
 
 /****************************************************************** program details ******************************************************************/
 .progDCon{

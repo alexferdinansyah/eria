@@ -108,42 +108,49 @@
                     <div class="custom-footer-content">
                         <h2 class="h5">
                             <a href="#" class="custom-footer-link">
-                                European Alternative Fuels Observatory
+                                Asean Alternative Vehicle Technology Portal
                             </a>
                         </h2>
-                        <p>This site is managed by: Directorate-General for Mobility and Transport</p>
+                        <p>An online data of ASEAN new & alternative vehicle technology with the main objective of providing comprehensive
+                            information on the current situation of alternative vehicle technology development in 10 ASEAN member states
+                            to open public and to regularly produce ASEAN Vehicle Technology Outlook</p>
                         <hr class="custom-divider">
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <div class="logo-container d-flex align-items-center justify-content-lg-end">
-                                        <div class="logo1 me-3">
-                                            <a href="#" class="d-block" aria-label="Home - European Commission">
-                                                <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="#" class="img-fluid">
-                                            </a>
-                                        </div>
-                                        <div class="logo2">
-                                            <a href="#" class="d-block" aria-label="Home - European Commission">
-                                                <img src="<?= base_url('assets/images/logoui.png') ?>" alt="#" class="img-fluid">
-                                            </a>
-                                        </div>
+                        <p class="copy" style="margin-bottom: 20px; margin-top: -20px;">Copyrights © 2023 ERIA. All rights reserved</p>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="logo-container d-flex align-items-center justify-content-lg-end">
+                                    <div class="logo d-flex align-items-center mb-3">
+                                        <a href="#" class="d-block" aria-label="Home - European Commission">
+                                            <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="Logo ERIA" class="img-fluid custom-logo">
+                                        </a>
+                                        <span class="logo-description ms-3">ERIA Logo: This represents the Economic Research Institute for ASEAN and East Asia.</span>
                                     </div>
-                                </div>
-                                <div class="col-lg-4 d-none d-lg-block">
-                                    <div class="footer-links">
-                                        <ul class="list-unstyled d-flex flex-column m-0">
-                                            <li class="mb-2"><a href="https://commission.europa.eu/languages-our-websites_en" class="custom-footer-link">Languages on our websites</a></li>
-                                            <li class="mb-2"><a href="https://commission.europa.eu/cookies_en" class="custom-footer-link">Cookies</a></li>
-                                            <li class="mb-2"><a href="https://commission.europa.eu/privacy-policy_en" class="custom-footer-link">Privacy policy</a></li>
-                                            <li class="mb-2"><a href="https://commission.europa.eu/legal-notice_en" class="custom-footer-link">Legal notice</a></li>
-                                        </ul>
+                                    <div class="logo d-flex align-items-center">
+                                        <p class="ms-3">a collaboration with</p>
+                                        <a href="#" class="d-block" aria-label="Home - European Commission">
+                                            <img src="<?= base_url('assets/images/logoui.png') ?>" alt="Logo UI" class="img-fluid custom-logo">
+                                        </a>
+                                        <span class="logo-description ms-3">UI Logo: This represents the University of Indonesia, a partner institution.</span>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <div class="footer-links">
+                                    <ul class="list-unstyled d-flex flex-column m-0">
+                                        <li class="mb-2"><a href="https://commission.europa.eu/languages-our-websites_en" class="custom-footer-link">Languages on our websites</a></li>
+                                        <li class="mb-2"><a href="https://commission.europa.eu/cookies_en" class="custom-footer-link">Cookies</a></li>
+                                        <li class="mb-2"><a href="https://commission.europa.eu/privacy-policy_en" class="custom-footer-link">Privacy policy</a></li>
+                                        <li class="mb-2"><a href="https://commission.europa.eu/legal-notice_en" class="custom-footer-link">Legal notice</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
