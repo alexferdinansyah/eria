@@ -727,18 +727,30 @@ body {
 
 .logo-container {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.logo1,
-.logo2 {
+.logo {
     margin: 0;
-    background-color: green;
+    display: flex;
+    align-items: center;
+}
+
+.logo-description {
+    color: #ffffff;
+    font-size: 0.875rem;
+    max-width: 200px;
+    /* Adjust as needed */
 }
 
 .custom-footer img {
-    max-width: 50%;
+    max-width: 100px;
+    height: auto;
+}
+
+.custom-logo {
+    width: 100px;
     height: auto;
 }
 
@@ -746,7 +758,7 @@ body {
     border: 0;
     border-top: 1px solid #ffffff;
     margin: 20px 0;
-    width: 225%;
+    width: 150%;
 }
 
 @media (min-width: 992px) {
@@ -759,20 +771,21 @@ body {
     .col-lg-8 {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
     }
 
     .logo-container {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 1rem;
     }
 
     .footer-links {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        margin-left: 2rem;
+        justify-content: flex-end;
+        height: 28%;
     }
 
     .footer-links ul {
