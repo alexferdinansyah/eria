@@ -112,8 +112,8 @@
                                         </a>
                                         <span class="logo-description ms-3">ERIA Logo: This represents the Economic Research Institute for ASEAN and East Asia.</span>
                                     </div>
+                                    <p class="ms-3">a collaboration with</p>
                                     <div class="logo d-flex align-items-center">
-                                        <p class="ms-3">a collaboration with</p>
                                         <a href="#" class="d-block" aria-label="Home - European Commission">
                                             <img src="<?= base_url('assets/images/logoui.png') ?>" alt="Logo UI" class="img-fluid custom-logo">
                                         </a>
@@ -137,7 +137,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
