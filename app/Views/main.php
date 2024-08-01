@@ -106,15 +106,13 @@
                 <div class="col-lg-8">
                     <div class="custom-footer-content">
                         <h2 class="h5">
-                            <a href="#" class="custom-footer-link">
-                                Asean Alternative Vehicle Technology Portal
-                            </a>
+                            <p>Asean Alternative Vehicle Technology Portal</p>
                         </h2>
                         <p>An online data of ASEAN new & alternative vehicle technology with the main objective of providing comprehensive
                             information on the current situation of alternative vehicle technology development in 10 ASEAN member states
                             to open public and to regularly produce ASEAN Vehicle Technology Outlook</p>
                         <hr class="custom-divider">
-                        <p class="copy" style="margin-bottom: 20px; margin-top: -20px;">Copyrights © 2023 ERIA. All rights reserved</p>
+                        <p class="copy" style="margin-bottom: 20px; margin-top: -20px;">Copyrights © 2023 ERIA. All rights reserved.</p>
                         <div class="row">
                             <div class="col-lg-8">
                                 <div class="logo-container d-flex align-items-center justify-content-lg-end">
