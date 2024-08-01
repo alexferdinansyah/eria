@@ -8,16 +8,13 @@
 <div class="progDCon">
     <div class="allProg">
         <h3>Programmes</h3>
-        <a href="">program 1</a>
-        <a class="active" href="">program 2</a>
+        <a href="">1. Alternative Fuel</a>
+        <a class="active" href="">2. Vehicle Types</a>
         <a href="">program 3</a>
         <a href="">program 4</a>
         <a href="">program 5</a>
         <a href="">program 6</a>
         <a href="">program 7</a>
-        <a href="">program 8</a>
-        <a href="">program 9</a>
-        <a href="">program 10</a>
     </div>
     <div class="pgd-content">
         <p>ERIA, in collaboration with the United Nations Conference on Trade and Development (UNCTAD), collected and classified non-tariff measures (NTMs) in the ten ASEAN countries (Brunei Darussalam, Cambodia, Indonesia, Lao PDR, Malaysia, Myanmar, the Philippines, Singapore, Thailand, and Viet Nam). Both organisations worked on all regulations and official documents including international conventions adopted by countries which were in effect as of March 2018. </p>

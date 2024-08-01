@@ -33,8 +33,7 @@
     <div class="navbar">
         <a href="/" class="nav-logo">
             <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="">
-            <p>Economic Research Institute
-            for ASEAN and East Asia</p>
+            <p>ASEAN Alternative Vehicle Technology Portal</p>
         </a>
         <div class="nav-menus">
             <ul>
@@ -121,7 +120,7 @@
                                 <div class="logo-container d-flex align-items-center justify-content-lg-end">
                                     <div class="logo d-flex align-items-center mb-3">
                                         <a href="#" class="d-block" aria-label="Home - European Commission">
-                                            <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="Logo ERIA" class="img-fluid custom-logo">
+                                            <img src="<?= base_url('assets/images/logo-eria-white.png') ?>" alt="Logo ERIA" class="img-fluid custom-logo">
                                         </a>
                                         <span class="logo-description ms-3">ERIA Logo: This represents the Economic Research Institute for ASEAN and East Asia.</span>
                                     </div>

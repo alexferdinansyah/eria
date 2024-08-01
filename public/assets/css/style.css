@@ -684,6 +684,17 @@ body {
     /* padding-left: 100px; */
 }
 
+.acc{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.acc-wrap{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+
+}
 
 .container-sum {
     display: flex;
@@ -852,6 +863,7 @@ body {
     gap: 12px;
     padding: 24px;
     width: 30%;
+    height: fit-content;
     background-color: #f3f8fc;
 }
 
