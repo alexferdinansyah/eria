@@ -22,42 +22,42 @@
 
 <section class="container my-5" style="margin: 8%;">
     <div class="row">
-        <div class="col-md-4 grid-item">
+        <a href="#" style="text-decoration:none;" class="col-md-4 grid-item">
             <img src="<?= base_url('assets/images/events/good_regulator.jpeg') ?>" alt="Capacity Building" style="width: 400px; height:220px;">
-            <a href="#">ERIA Capacity Building Seminar in Cambodia - Remaining Challenge for ASEAN Economic Community 2015</a>
+            <p>ERIA Capacity Building Seminar in Cambodia - Remaining Challenge for ASEAN Economic Community 2015</p>
             <p style="margin-bottom:0;">12 Juli 2024</p>
             <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
-        </div>
-        <div class="col-md-4 grid-item">
+        </a>
+        <a href="#" style="text-decoration:none;" class="col-md-4 grid-item">
             <img src="<?= base_url('assets/images/events/private_sector.png') ?>" alt="Capacity Building" style="width: 400px; height:220px;">
-            <a href="#"> Regional Knowledge Centre for Marine Plastic Debris                                    </a>
+            <p> Regional Knowledge Centre for Marine Plastic Debris                                    </p>
             <p style="margin-bottom:0;">12 Juli 2024</p>
             <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
-        </div>
-        <div class="col-md-4 grid-item">
+        </a>
+        <a href="#" style="text-decoration:none;" class="col-md-4 grid-item">
             <img src="<?= base_url('assets/images/events/startup_kuala_lumpur.png') ?>" alt="Capacity Building" style="width: 400px; height:220px;">
-            <a href="#">Capacity Building Programme</a>
+            <p>Capacity Building Programme</p>
             <p style="margin-bottom:0;">12 Juli 2024</p>
             <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
-        </div>
-        <div class="col-md-4 grid-item">
+        </a>
+        <a href="#" style="text-decoration:none;" class="col-md-4 grid-item">
             <img src="<?= base_url('assets/images/events/good_regulator.jpeg') ?>" alt="Capacity Building" style="width: 400px; height:220px;">
-            <a href="#">ERIA Capacity Building Seminar in Cambodia - Remaining Challenge for ASEAN Economic Community 2015</a>
+            <p>ERIA Capacity Building Seminar in Cambodia - Remaining Challenge for ASEAN Economic Community 2015</p>
             <p style="margin-bottom:0;">12 Juli 2024</p>
             <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
-        </div>
-        <div class="col-md-4 grid-item">
+        </a>
+        <a href="#" style="text-decoration:none;" class="col-md-4 grid-item">
             <img src="<?= base_url('assets/images/events/private_sector.png') ?>" alt="Capacity Building" style="width: 400px; height:220px;">
-            <a href="#"> Regional Knowledge Centre for Marine Plastic Debris                                    </a>
+            <p> Regional Knowledge Centre for Marine Plastic Debris                                    </p>
             <p style="margin-bottom:0;">12 Juli 2024</p>
             <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
-        </div>
-        <div class="col-md-4 grid-item">
+        </a>
+        <a href="#" style="text-decoration:none;" class="col-md-4 grid-item">
             <img src="<?= base_url('assets/images/events/startup_kuala_lumpur.png') ?>" alt="Capacity Building" style="width: 400px; height:220px;">
-            <a href="#">Capacity Building Programme</a>
+            <p>Capacity Building Programme</p>
             <p style="margin-bottom:0;">12 Juli 2024</p>
             <p class="news-p" >Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
-        </div>
+        </a>
        
     </div>
 </section>

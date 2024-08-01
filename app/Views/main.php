@@ -33,10 +33,22 @@
     <div class="navbar">
         <a href="/" class="nav-logo">
             <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="">
+            <p>ASEAN Alternative Vehicle Technology Portal</p>
         </a>
         <div class="nav-menus">
             <ul>
-                <li><a href="/program">PROGRAMMES</a></li>
+                <li class="dropdown-con">
+                    <a href="/program">PROGRAMMES</a>
+                    <ul class="cos-dropdown-menu">
+                        <li><a href="#">ASEAN/EAST ASIA NTM DATABASE 1</a></li>
+                        <li><a href="#">ASEAN/EAST ASIA NTM DATABASE 2</a></li>
+                        <li><a href="#">ASEAN/EAST ASIA NTM DATABASE 3</a></li>
+                        <li><a href="#">ASEAN/EAST ASIA NTM DATABASE 4</a></li>
+                        <li><a href="#">Sub Program 5</a></li>
+                        <li><a href="#">Sub Program 6</a></li>
+                        <li><a href="#">Sub Program 7</a></li>
+                    </ul>
+                </li>
                 <li><a href="/publications">PUBLICATIONS</a></li>
                 <li><a href="/news">UPDATES</a></li>
                 <li><a href="/events">EVENTS</a></li>
@@ -108,7 +120,7 @@
                                 <div class="logo-container d-flex align-items-center justify-content-lg-end">
                                     <div class="logo d-flex align-items-center mb-3">
                                         <a href="#" class="d-block" aria-label="Home - European Commission">
-                                            <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="Logo ERIA" class="img-fluid custom-logo">
+                                            <img src="<?= base_url('assets/images/logo-eria-white.png') ?>" alt="Logo ERIA" class="img-fluid custom-logo">
                                         </a>
                                         <span class="logo-description ms-3">ERIA Logo: This represents the Economic Research Institute for ASEAN and East Asia.</span>
                                     </div>

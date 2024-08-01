@@ -172,6 +172,51 @@
 </div>
 
 
+<!-- data source -->
+<table>
+    <tr>
+        <th>Index</th>
+        <th>Data</th>
+        <th>Source</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Population</td>
+        <td>
+            <a href="https://sumsel.bps.go.id/indicator/12/573/4/jumlah-penduduk-menurut-provinsi.html">Source 1</a><br>
+            <a href="https://jatim.bps.go.id/indicator/12/114/2/jumlah-penduduk-menurut-provinsi-di-indonesia.html">Source 2</a><br>
+            <a href="https://jatim.bps.go.id/indicator/12/114/1/jumlah-penduduk-menurut-provinsi-di-indonesia.html">Source 3</a><br>
+            <a href="https://sulut.bps.go.id/indicator/12/958/1/jumlah-penduduk-menurut-provinsi-di-indonesia.html">Source 4</a><br>
+            <a href="https://www.bps.go.id/id/statistics-table/2/MTk3NSMy/jumlah-penduduk-pertengahan-tahun--ribu-jiwa-.html">Source 5</a>
+        </td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Total Land Area</td>
+        <td><a href="https://data.worldbank.org/indicator/AG.LND.TOTL.K2?locations=ID&start=2011">Source</a></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Total Road Length</td>
+        <td><a href="https://www.bps.go.id/en/statistics-table/2/NTAjMg==/length-of-road-by-level-of-government-responsibility--km-.html">Source</a></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>GDP per Capita (Current US$)</td>
+        <td><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?end=2022&locations=ID&start=2011&view=chart">Source</a></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Purchasing Power Parity (PPP)</td>
+        <td><a href="https://satudata.kemendag.go.id/data-informasi/perdagangan-dalam-negeri/produk-domestik-bruto">Source</a></td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>GDP per Capita, Purchasing Power Parity (PPP)</td>
+        <td><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=ID&start=2011">Source</a></td>
+    </tr>
+</table>
+
 <?= $this->endSection(); ?>
 
 <?= $this->section('script') ?>
