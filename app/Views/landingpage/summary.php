@@ -173,49 +173,44 @@
 
 
 <!-- data source -->
-<table>
-    <tr>
-        <th>Index</th>
-        <th>Data</th>
-        <th>Source</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Population</td>
-        <td>
-            <a href="https://sumsel.bps.go.id/indicator/12/573/4/jumlah-penduduk-menurut-provinsi.html">Source 1</a><br>
-            <a href="https://jatim.bps.go.id/indicator/12/114/2/jumlah-penduduk-menurut-provinsi-di-indonesia.html">Source 2</a><br>
-            <a href="https://jatim.bps.go.id/indicator/12/114/1/jumlah-penduduk-menurut-provinsi-di-indonesia.html">Source 3</a><br>
-            <a href="https://sulut.bps.go.id/indicator/12/958/1/jumlah-penduduk-menurut-provinsi-di-indonesia.html">Source 4</a><br>
-            <a href="https://www.bps.go.id/id/statistics-table/2/MTk3NSMy/jumlah-penduduk-pertengahan-tahun--ribu-jiwa-.html">Source 5</a>
-        </td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Total Land Area</td>
-        <td><a href="https://data.worldbank.org/indicator/AG.LND.TOTL.K2?locations=ID&start=2011">Source</a></td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Total Road Length</td>
-        <td><a href="https://www.bps.go.id/en/statistics-table/2/NTAjMg==/length-of-road-by-level-of-government-responsibility--km-.html">Source</a></td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>GDP per Capita (Current US$)</td>
-        <td><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?end=2022&locations=ID&start=2011&view=chart">Source</a></td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td>Purchasing Power Parity (PPP)</td>
-        <td><a href="https://satudata.kemendag.go.id/data-informasi/perdagangan-dalam-negeri/produk-domestik-bruto">Source</a></td>
-    </tr>
-    <tr>
-        <td>6</td>
-        <td>GDP per Capita, Purchasing Power Parity (PPP)</td>
-        <td><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=ID&start=2011">Source</a></td>
-    </tr>
-</table>
+ <h2>Data Source</h2>
+<ol type="A">
+    <li>Population
+        <ol>
+            <li><a href="https://sumsel.bps.go.id/indicator/12/573/4/jumlah-penduduk-menurut-provinsi.html">https://sumsel.bps.go.id/indicator/12/573/4/jumlah-penduduk-menurut-provinsi.html</a></li>
+            <li><a href="https://jatim.bps.go.id/indicator/12/114/2/jumlah-penduduk-menurut-provinsi-di-indonesia.html">https://jatim.bps.go.id/indicator/12/114/2/jumlah-penduduk-menurut-provinsi-di-indonesia.html</a></li>
+            <li><a href="https://jatim.bps.go.id/indicator/12/114/1/jumlah-penduduk-menurut-provinsi-di-indonesia.html">https://jatim.bps.go.id/indicator/12/114/1/jumlah-penduduk-menurut-provinsi-di-indonesia.html</a></li>
+            <li><a href="https://sulut.bps.go.id/indicator/12/958/1/jumlah-penduduk-menurut-provinsi-di-indonesia.html">https://sulut.bps.go.id/indicator/12/958/1/jumlah-penduduk-menurut-provinsi-di-indonesia.html</a></li>
+            <li><a href="https://www.bps.go.id/id/statistics-table/2/MTk3NSMy/jumlah-penduduk-pertengahan-tahun--ribu-jiwa-.html">https://www.bps.go.id/id/statistics-table/2/MTk3NSMy/jumlah-penduduk-pertengahan-tahun--ribu-jiwa-.html</a></li>
+        </ol>
+    </li>
+    <li>Total Land Area
+        <ol>
+            <li><a href="https://data.worldbank.org/indicator/AG.LND.TOTL.K2?locations=ID&start=2011">https://data.worldbank.org/indicator/AG.LND.TOTL.K2?locations=ID&start=2011</a></li>
+        </ol>
+    </li>
+    <li>Total Road Length
+        <ol>
+            <li><a href="https://www.bps.go.id/en/statistics-table/2/NTAjMg==/length-of-road-by-level-of-government-responsibility--km-.html">https://www.bps.go.id/en/statistics-table/2/NTAjMg==/length-of-road-by-level-of-government-responsibility--km-.html</a></li>
+        </ol>
+    </li>
+    <li>GDP per Capita (Current US$)
+        <ol>
+            <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?end=2022&locations=ID&start=2011&view=chart">https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?end=2022&locations=ID&start=2011&view=chart</a></li>
+        </ol>
+    </li>
+    <li>Purchasing Power Parity (PPP)
+        <ol>
+            <li><a href="https://satudata.kemendag.go.id/data-informasi/perdagangan-dalam-negeri/produk-domestik-bruto">https://satudata.kemendag.go.id/data-informasi/perdagangan-dalam-negeri/produk-domestik-bruto</a></li>
+        </ol>
+    </li>
+    <li>GDP per Capita, Purchasing Power Parity (PPP)
+        <ol>
+            <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=ID&start=2011">https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=ID&start=2011</a></li>
+        </ol>
+    </li>
+</ol>
+
 
 <?= $this->endSection(); ?>
 
