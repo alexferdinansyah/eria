@@ -122,14 +122,21 @@
                                         <a href="#" class="d-block" aria-label="Home - European Commission">
                                             <img src="<?= base_url('assets/images/logo-eria-white.png') ?>" alt="Logo ERIA" class="img-fluid custom-logo">
                                         </a>
-                                        <span class="logo-description ms-3">ERIA Logo: This represents the Economic Research Institute for ASEAN and East Asia.</span>
+                                        <div class="logo-description ms-3">
+                                            <a href="https://www.eria.org" target="_blank">ERIA</a>
+                                            <div>This represents the Economic Research Institute for ASEAN and East Asia.</div>
+                                        </div>
+
                                     </div>
-                                    <p class="ms-3">a collaboration with</p>
+                                    <p class="ms-3" style="width: 100%;">a collaboration with</p>
                                     <div class="logo d-flex align-items-center">
                                         <a href="#" class="d-block" aria-label="Home - European Commission">
                                             <img src="<?= base_url('assets/images/logoui.png') ?>" alt="Logo UI" class="img-fluid custom-logo">
                                         </a>
-                                        <span class="logo-description ms-3">UI Logo: This represents the University of Indonesia, a partner institution.</span>
+                                        <div class="logo-description ms-3">
+                                            <a href="https://www.ui.ac.id" target="_blank">Universitas Indonesia</a>
+                                            <div>This represents the University of Indonesia, a partner institution.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

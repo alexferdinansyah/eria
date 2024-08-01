@@ -42,7 +42,7 @@ body {
     height: 100%;
 }
 
-.nav-logo p{
+.nav-logo p {
     font-size: 12px;
     width: 150px;
 }
@@ -341,7 +341,7 @@ body {
     padding: 20px;
 }
 
-.grid-item a{
+.grid-item a {
     text-decoration: none;
 }
 
@@ -350,7 +350,7 @@ body {
     height: auto;
 }
 
-.grid-item p{
+.grid-item p {
     text-decoration: none;
     color: black;
 }
@@ -578,7 +578,7 @@ body {
     gap: 10px;
 }
 
-.pd-two > button{
+.pd-two>button {
     margin-top: 20px;
     float: right;
     color: var(--blue);
@@ -684,12 +684,12 @@ body {
     /* padding-left: 100px; */
 }
 
-.acc{
+.acc {
     margin-top: 100px;
     text-align: center;
 }
 
-.acc-wrap{
+.acc-wrap {
     padding-left: 20px;
     padding-top: 20px;
     padding-right: 20px;
@@ -842,22 +842,30 @@ body {
     .footer-links ul li {
         margin-left: 1rem;
     }
+
+    .logo-description a {
+        color: white;
+    }
+
+    .logo-description a:hover {
+        color: #ddd;
+    }
 }
 
 /****************************************************************** program details ******************************************************************/
-.progDCon{
+.progDCon {
     display: flex;
     gap: 20px;
     width: 100%;
     padding: 20px;
-    padding-left:120px;
+    padding-left: 120px;
 }
 
-.progDCon h3{
+.progDCon h3 {
     color: var(--blue);
 }
 
-.allProg{
+.allProg {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -867,7 +875,7 @@ body {
     background-color: #f3f8fc;
 }
 
-.allProg > a{
+.allProg>a {
     padding: 12px;
     text-decoration: none;
     color: black;
@@ -875,38 +883,38 @@ body {
     font-size: large;
 }
 
-.allProg > a.active{
+.allProg>a.active {
     background-color: var(--blue);
     color: white;
 }
 
 
-.pgd-content{
+.pgd-content {
     width: 70%;
     padding-right: 100px;
 }
 
-.pgd-content > p{
+.pgd-content>p {
     font-size: 18px;
 }
 
-.pgd-content a{
+.pgd-content a {
     text-decoration: none;
     color: black;
 }
 
-.pgd-content .col-md-6 p{
+.pgd-content .col-md-6 p {
     color: grey;
 }
 
 .cos-dropdown-menu {
     visibility: hidden;
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
     position: absolute;
     top: 50px;
     left: 0;
-    width: 280px;    
+    width: 280px;
     background-color: white;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -914,10 +922,10 @@ body {
     margin: 0;
 }
 
-.dropdown-con{
+.dropdown-con {
     position: relative;
 }
 
-.dropdown-con:hover .cos-dropdown-menu{
+.dropdown-con:hover .cos-dropdown-menu {
     visibility: visible;
 }
