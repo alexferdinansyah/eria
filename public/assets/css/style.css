@@ -784,8 +784,8 @@ body {
 .logo-description {
     color: #ffffff;
     font-size: 0.875rem;
-    max-width: 200px;
-    /* Adjust as needed */
+    /* max-width: 200px; */
+    padding-left: 15%;
 }
 
 .custom-footer img {
@@ -829,7 +829,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        height: 28%;
+        height: 5%;
     }
 
     .footer-links ul {
@@ -840,7 +840,7 @@ body {
     }
 
     .footer-links ul li {
-        margin-left: 1rem;
+        margin-left: 6rem;
     }
 
     .logo-description a {
