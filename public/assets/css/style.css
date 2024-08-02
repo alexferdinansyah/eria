@@ -710,8 +710,9 @@ body {
     line-height: 0;
 }
 
-.img-map {
-    width: 300px;
+img.img-map {
+    width: 400px;
+    margin-top: 30px;
 }
 
 /* 
@@ -928,4 +929,15 @@ body {
 
 .dropdown-con:hover .cos-dropdown-menu {
     visibility: visible;
+}
+
+.data-s{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+}
+
+li > a {
+    text-decoration: none;
+    color: rgb(165, 165, 165);
 }

@@ -30,7 +30,7 @@
 <div class="container mt-5 d-flex flex-column align-items-center">
     <div class="d-flex flex-column flex-lg-row w-100 align-items-center justify-content-center">
         <div class="img-container">
-            <img src="<?= base_url('assets/images/asean-map.png') ?>" class="img-fluid" alt="ASEAN Map">
+            <img src="<?= base_url('assets/images/AseanMap.svg') ?>" class="img-fluid" alt="ASEAN Map">
         </div>
         <div class="card-drop dropdown-card d-flex justify-content-center">
             <div class="dropdown-container">
