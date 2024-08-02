@@ -7,50 +7,11 @@
     <img src="<?= base_url('assets/images/nations/flags/' . $nation . ".svg"); ?>" alt="">
 </div>
 
-<!-- summary -->
-<!-- <div class="summary-par">
-    <div class="content-summary">
-        <h2>Summary</h2>
-        <section class="container-sum">
-            <div>
-                <p>Population</p>
-                <p><?= $population ?></p>
-            </div>
-            <div>
-                <p>Total Land Area</p>
-                <p><?= $ttlland ?></p>
-            </div>
-            <div>
-                <p>Total Highway Area</p>
-                <p><?= $totalHighway ?></p>
-            </div>
-        </section>
-        <section class="container-sum">
-            <div>
-                <p>GDP Per Capita (Current US$)</p>
-                <p><?= $GDP ?></p>
-            </div>
-            <div>
-                <p>Purchasing Power Parity (PPP)</p>
-                <p><?= $PPP ?></p>
-            </div>
-        </section>
-        <section class="container-sum">
-            <div>
-                <p>GDP Per Capita Purchasing Power Parity (PPP)</p>
-                <p><?= $GDPppp ?></p>
-            </div>
-        </section>
-    
-    </div>
-    <img class="img-map" src="<?= base_url('assets/images/asean-map.png') ?>" alt="">
-
-</div> -->
 
 <div class="row">
     <div class="summary-wrapper">
         <!-- summary -->
-        <div class="summary-par grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
+        <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
             <div class="content-summary">
                 <h2>Summary</h2>
                 <section class="container-sum">
@@ -83,88 +44,51 @@
                         <p><?= $GDPppp ?></p>
                     </div>
                 </section>
-            </div>`
-            <img class="img-map" style="width: 400px;" src="<?= base_url('assets/images/nations/maps/'  . $nation . ".png") ?>" alt="">
+            </div>
+            <img class="img-map" src="<?= base_url('assets/images/nations/maps/'  . $nation . ".svg") ?>" alt="">
 
             <!-- chart top -->
             <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
                 <canvas class="chartdiv d-flex" id="myChart1"></canvas>
-                <button class="btn btn-primary download-button" id="download-button" type="submit">
-                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/1t5RNIe_V2H7XqJ1L6qlbt1cTd1FBpudnHoA55iWWK-k/export?format=xlsx">Download
-                    </a>
-                </button>
             </div>
             <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
                 <canvas class="chartdiv" id="myChart2"></canvas>
-                <button class="btn btn-primary download-button" id="download-button" type="submit">
-                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/1t5RNIe_V2H7XqJ1L6qlbt1cTd1FBpudnHoA55iWWK-k/export?format=xlsx">Download
-                    </a>
-                </button>
             </div>
-            <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+            <div class="d-flex align-items-center gap-2" style="width: 40%;">
                 <div class="d-flex" style="width: 300px;">
                     <canvas class="chartdiv" id="myChart4"></canvas>
                 </div>
-                <button class="btn btn-primary download-button" id="download-button" type="submit">
-                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
-                    </a>
-                </button>
+                <ul>
+                    <li>VOL ICE : 1032603</li>
+                    <li>VOL HEV : 5100</li>
+                    <li>VOL BEV : 10327</li>
+                    <li>VOL PHEV : 10</li>
+                    <li>VOL NEW CAR SUM : 1048040</li>
+                    <li>VOL STOCK / UIO : 12250892</li>
+                </ul>
             </div>
 
             <!-- bar chart -->
-            <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
-                <div class="d-flex" style="width: 400px;">
-                    <canvas class="chartdiv" id="bar1"></canvas>
-                </div>
-                <button class="btn btn-primary download-button" id="download-button" type="submit">
-                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
-                    </a>
-                </button>
+            <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+                <canvas class="chartdiv" id="bar1"></canvas>
             </div>
-            <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
-                <div class="d-flex" style="width: 400px;">
-                    <canvas class="chartdiv" id="bar2"></canvas>
-                </div>
-                <button class="btn btn-primary download-button" id="download-button" type="submit">
-                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
-                    </a>
-                </button>
+            <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+                <canvas class="chartdiv" id="bar2"></canvas>
             </div>
-            <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
-                <div class="d-flex" style="width: 400px;">
-                    <canvas class="chartdiv" id="bar3"></canvas>
-                </div>
-                <button class="btn btn-primary download-button" id="download-button" type="submit">
-                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
-                    </a>
-                </button>
+            <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+                <canvas class="chartdiv" id="bar3"></canvas>
             </div>
-            <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
-                <div class="d-flex" style="width: 400px;">
-                    <canvas class="chartdiv" id="bar4"></canvas>
-                </div>
-                <button class="btn btn-primary download-button" id="download-button" type="submit">
-                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
-                    </a>
-                </button>
+            <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+                <canvas class="chartdiv" id="bar4"></canvas>
             </div>
-            <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
-                <div class="d-flex" style="width: 400px;">
-                    <canvas class="chartdiv" id="bar5"></canvas>
-                </div>
-                <button class="btn btn-primary download-button" id="download-button" type="submit">
-                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
-                    </a>
-                </button>
+            <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+                <canvas class="chartdiv" id="bar5"></canvas>
             </div>
-            <div class="donut-wrapper d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
-                <div class="d-flex" style="width: 400px;">
-                    <canvas class="chartdiv" id="bar6"></canvas>
-                </div>
-                <button class="btn btn-primary download-button" id="download-button" type="submit">
-                    <a id="download-anchor" style="text-decoration: none; color: white;" href="https://docs.google.com/spreadsheets/d/16vJ-yPXdmrbPcR8ufsCAVT6nekNPe2pTiy-vC3uZ0cc/export?format=xlsx">Download
-                    </a>
-                </button>
+            <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+                <canvas class="chartdiv" id="bar6"></canvas>
+            </div>
+            
+            <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
             </div>
             
         </div>
@@ -173,7 +97,8 @@
 
 
 <!-- data source -->
- <h2>Data Source</h2>
+<div class="data-s">
+<p>Data Source</p>
 <ol type="A">
     <li>Population
         <ol>
@@ -210,6 +135,7 @@
         </ol>
     </li>
 </ol>
+</div>
 
 
 <?= $this->endSection(); ?>
