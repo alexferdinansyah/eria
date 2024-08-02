@@ -7,14 +7,10 @@
 
 <div class="progDCon">
     <div class="allProg">
-        <h3>Programmes</h3>
-        <a href="">1. Alternative Fuel</a>
-        <a class="active" href="">2. Vehicle Types</a>
-        <a href="">program 3</a>
-        <a href="">program 4</a>
-        <a href="">program 5</a>
-        <a href="">program 6</a>
-        <a href="">program 7</a>
+        <h3>Updates</h3>
+        <a id="progDetail1" href="">1. Alternative Fuel</a>
+        <a id="progDetail2" href="">2. Vehicle Types</a>
+        <a id="progDetail3" href="">3. Recharging System</a>
     </div>
     <div class="pgd-content">
         <p>ERIA, in collaboration with the United Nations Conference on Trade and Development (UNCTAD), collected and classified non-tariff measures (NTMs) in the ten ASEAN countries (Brunei Darussalam, Cambodia, Indonesia, Lao PDR, Malaysia, Myanmar, the Philippines, Singapore, Thailand, and Viet Nam). Both organisations worked on all regulations and official documents including international conventions adopted by countries which were in effect as of March 2018. </p>
@@ -39,5 +35,14 @@
     </div>
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const programId = urlParams.get('program');
+        if (programId) {
+            document.getElementById(`progDetail${programId.slice(-1)}`).classList.add('active');
+        }
+    });
+</script>
 
 <?= $this->endSection(); ?>

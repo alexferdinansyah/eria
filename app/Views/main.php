@@ -29,7 +29,6 @@
 </head>
 
 <body>
-
     <div class="navbar">
         <a href="/" class="nav-logo">
             <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="">
@@ -37,26 +36,17 @@
         </a>
         <div class="nav-menus">
             <ul>
+                <li><a href="/program"">PROGRAMMES</a></li>
+                <li><a href=" /publications">PUBLICATIONS</a></li>
                 <li class="dropdown-con">
-                    <a href="/program">PROGRAMMES</a>
+                    <a href="/news">UPDATES</a>
                     <ul class="cos-dropdown-menu">
-                        <li><a href="#">ASEAN/EAST ASIA NTM DATABASE 1</a></li>
-                        <li><a href="#">ASEAN/EAST ASIA NTM DATABASE 2</a></li>
-                        <li><a href="#">ASEAN/EAST ASIA NTM DATABASE 3</a></li>
-                        <li><a href="#">ASEAN/EAST ASIA NTM DATABASE 4</a></li>
-                        <li><a href="#">Sub Program 5</a></li>
-                        <li><a href="#">Sub Program 6</a></li>
-                        <li><a href="#">Sub Program 7</a></li>
+                        <li><a href="#" id="program1">ALTERNATIVE FUEL</a></li>
+                        <li><a href="#" id="program2">VEHICLE TYPES</a></li>
+                        <li><a href="#" id="program3">RECHARGING SYSTEM</a></li>
                     </ul>
                 </li>
-                <li><a href="/publications">PUBLICATIONS</a></li>
-                <li><a href="/news">UPDATES</a></li>
                 <li><a href="/events">EVENTS</a></li>
-                <!-- <li>
-                    <button class="btn btn-primary btn-search" data-bs-toggle="modal" data-bs-target="#searchModal">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </li> -->
             </ul>
         </div>
     </div>
@@ -153,5 +143,18 @@
         </div>
     </footer>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const programLinks = document.querySelectorAll('.cos-dropdown-menu a');
+        programLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const programId = this.id;
+                window.location.href = `/program/details?program=${programId}`;
+            });
+        });
+    });
+</script>
 
 </html>
