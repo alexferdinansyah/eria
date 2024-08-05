@@ -41,11 +41,12 @@
                 <li class="dropdown-con">
                     <a href="/news">UPDATES</a>
                     <ul class="cos-dropdown-menu">
-                        <li><a href="#" id="program1">ALTERNATIVE FUEL</a></li>
-                        <li><a href="#" id="program2">VEHICLE TYPES</a></li>
-                        <li><a href="#" id="program3">RECHARGING SYSTEM</a></li>
+                        <li><a href="<?= base_url('programDetail/alternative-fuel') ?>" id="program1">ALTERNATIVE FUEL</a></li>
+                        <li><a href="/programDetail/vehicle-types" id="program2">VEHICLE TYPES</a></li>
+                        <li><a href="/programDetail/recharging-system" id="program3">RECHARGING SYSTEM</a></li>
                     </ul>
                 </li>
+
                 <li><a href="/events">EVENTS</a></li>
             </ul>
         </div>

@@ -12,13 +12,39 @@ class LandingController extends BaseController
         return view('landingpage/landingpage');
     }
 
-    public function program(){
-        return view('landingpage/program');   
+    public function program()
+    {
+        return view('landingpage/program');
     }
 
-    public function programDetail(){
-        return view('landingpage/programDetail');
+    // public function programDetail(){
+    //     return view('landingpage/programDetail');
+    // }
+
+    public function programDetail($programId = null)
+    {
+        $data = [];
+        switch ($programId) {
+            case 'alternative-fuel':
+                $data['title'] = 'Alternative Fuel';
+                $data['content'] = 'Content for Alternative Fuel.';
+                break;
+            case 'vehicle-types':
+                $data['title'] = 'Vehicle Types';
+                $data['content'] = 'Content for Vehicle Types.';
+                break;
+            case 'recharging-system':
+                $data['title'] = 'Recharging System';
+                $data['content'] = 'Content for Recharging System.';
+                break;
+            default:
+                $data['title'] = 'Program Detail';
+                $data['content'] = 'Default content.';
+                break;
+        }
+        return view('landingpage/programDetail', $data);
     }
+
 
     // public function programDetail($id){
     //     // $data;
@@ -26,43 +52,50 @@ class LandingController extends BaseController
     //     return view('landingpage/programDetail', $data);   
     // }
 
-    public function publications(){
-        return view('landingpage/publications');   
+    public function publications()
+    {
+        return view('landingpage/publications');
     }
 
-    public function publicationDetail($id){
+    public function publicationDetail($id)
+    {
         // $data;
         $data["id"] = $id;
-        return view('landingpage/publicationDetail', $data);  
+        return view('landingpage/publicationDetail', $data);
     }
 
-    public function news(){
-        return view('landingpage/news');   
+    public function news()
+    {
+        return view('landingpage/news');
     }
 
-    public function newsDetail(){
-        return view('landingpage/newsDetail');   
+    public function newsDetail()
+    {
+        return view('landingpage/newsDetail');
     }
 
-    public function updates(){
-        return view('landingpage/news');   
+    public function updates()
+    {
+        return view('landingpage/news');
     }
 
-    public function events(){
-        return view('landingpage/events');   
+    public function events()
+    {
+        return view('landingpage/events');
     }
 
-    public function summary($nat){
+    public function summary($nat)
+    {
         $data["nation"] = $nat;
 
-        if($nat === "indonesia"){
+        if ($nat === "indonesia") {
             $data["population"] = "275,773,800";
             $data["ttlland"] = "1,892,556";
             $data["totalHighway"] = "548,097";
             $data["GDP"] = "4,778";
             $data["PPP"] = "19,588,089,9";
             $data["GDPppp"] = "12,410";
-        }else{
+        } else {
             $data["population"] = "N/a";
             $data["ttlland"] = "N/a";
             $data["totalHighway"] = "N/a";
@@ -71,6 +104,5 @@ class LandingController extends BaseController
             $data["GDPppp"] = "N/a";
         }
         return view('/landingpage/summary', $data);
-
     }
 }
