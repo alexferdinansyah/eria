@@ -17,7 +17,10 @@
         <?php foreach ($objectsArray as $object) : ?>
             <?= $object->title ?>
             <?= $object->desc ?>
+            <?= $object->title ?>
+            <p><?= $object->desc  ?></p>
         <?php endforeach; ?>
+
         <hr>
         <h3>Related articles</h3>
         <div class="row">

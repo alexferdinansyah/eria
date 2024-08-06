@@ -22,8 +22,8 @@ function makeChart(element, type, data){
   console.log(route);
   
   // 2x2 chart summary element
-  const ctx1 = document.getElementById('myChart2');
-  const ctx2 = document.getElementById('myChart1');
+  const ctx1 = document.getElementById('myChart1');
+  const ctx2 = document.getElementById('myChart2');
   const ctx3 = document.getElementById('myChart3');
   const ctx4 = document.getElementById('myChart4');
 
@@ -49,11 +49,11 @@ function makeChart(element, type, data){
       }]
   };
 
-  let blankData = {
+  let volICEBlank = {
       labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
       datasets: [{
           label: 'VOL ICE',
-          data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          data: [],
           backgroundColor: "rgba(255, 0, 0, 0.8)",
           borderColor: "rgba(255, 0, 0, 1)",
           borderWidth: 1
@@ -71,11 +71,33 @@ function makeChart(element, type, data){
       }]
   };
 
+  let volHEVBlank = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+          label: 'VOL HEV',
+          data: [],
+          backgroundColor: "rgba(255, 127, 0, 0.8)",
+          borderColor: "rgba(255, 127, 0, 1)",
+          borderWidth: 1
+      }]
+  };
+
   let volBEV = {
       labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
       datasets: [{
           label: 'VOL BEV',
           data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 118, 685, 10327, 0],
+          backgroundColor: "rgba(0, 255, 0, 0.8)",
+          borderColor: "rgba(0, 255, 0, 1)",
+          borderWidth: 1
+      }]
+  };
+
+  let volBEVBlank = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+          label: 'VOL BEV',
+          data: [],
           backgroundColor: "rgba(0, 255, 0, 0.8)",
           borderColor: "rgba(0, 255, 0, 1)",
           borderWidth: 1
@@ -93,6 +115,17 @@ function makeChart(element, type, data){
       }]
   };
 
+  let volPHEVBlank = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+          label: 'VOL PHEV',
+          data: [],
+          backgroundColor: "rgba(255, 255, 0, 0.8)",
+          borderColor: "rgba(255, 255, 0, 1)",
+          borderWidth: 1
+      }]
+  };
+
   let volNewCarSum = {
       labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
       datasets: [{
@@ -104,11 +137,33 @@ function makeChart(element, type, data){
       }]
   };
 
+  let volNewCarSumBlank = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+          label: 'VOL NEW CAR SUM',
+          data: [],
+          backgroundColor: "rgba(0, 0, 255, 0.8)",
+          borderColor: "rgba(0, 0, 255, 1)",
+          borderWidth: 1
+      }]
+  };
+
   let volStockUIO = {
       labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
       datasets: [{
           label: 'VOL STOCK / UIO',
-          data: [894164, 2010394, 3240205, 4448233, 5461751, 6524445, 7601809, 8753117, 9783243, 10315650, 11202852, 12250892, 0],
+          data: [894164,2010394,3240205,4448233,5461751,6524445,7601809,8753117,9783243,10315650,11202852,12250892],
+          backgroundColor: "rgba(75, 0, 130, 0.8)",
+          borderColor: "rgba(75, 0, 130, 1)",
+          borderWidth: 1
+      }]
+  };
+
+  let volStockUIOBlank = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+          label: 'VOL STOCK / UIO',
+          data: [],
           backgroundColor: "rgba(75, 0, 130, 0.8)",
           borderColor: "rgba(75, 0, 130, 1)",
           borderWidth: 1
@@ -178,7 +233,6 @@ function makeChart(element, type, data){
         },
       ] 
     };
-    
 
     // makeChart(ctx3, 'line', chart3Data)
 
@@ -217,12 +271,12 @@ function makeChart(element, type, data){
     makeChart(bar6, 'bar', volStockUIO)
   }else{
     myButton.forEach(myButton => myButton.disabled = true);
-    makeChart(bar1, 'bar', blankData)
-    makeChart(bar2, 'bar', blankData)
-    makeChart(bar3, 'bar', blankData)
-    makeChart(bar4, 'bar', blankData)
-    makeChart(bar5, 'bar', blankData)
-    makeChart(bar6, 'bar', blankData)
+    makeChart(bar1, 'bar', volICEBlank)
+    makeChart(bar2, 'bar', volHEVBlank)
+    makeChart(bar3, 'bar', volBEVBlank)
+    makeChart(bar4, 'bar', volPHEVBlank)
+    makeChart(bar5, 'bar', volNewCarSumBlank)
+    makeChart(bar6, 'bar', volStockUIOBlank)
     
     // blank data chart 2x2
     let chart1data = {
@@ -230,6 +284,8 @@ function makeChart(element, type, data){
       datasets: [{
         label: 'Total Highway Length',
         data: [],
+        backgroundColor: "rgba(75, 0, 130, 0.8)",
+        borderColor: "rgba(75, 0, 130, 1)",
         borderWidth: 1
       }]
     };
@@ -239,6 +295,8 @@ function makeChart(element, type, data){
       datasets: [{
         label: 'Population',
         data: [],
+        backgroundColor: "rgba(75, 0, 130, 0.8)",
+        borderColor: "rgba(75, 0, 130, 1)",
         borderWidth: 1
       }]
     };
@@ -285,21 +343,21 @@ function makeChart(element, type, data){
       label: '2022 Data',
       data: [],
       backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
-        'rgba(255, 205, 86, 0.2)'
-      ],
-      borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)',
-        'rgba(255, 205, 86, 1)'
-      ],
+        'rgba(255, 0, 0, 0.8)',    // Red //
+        'rgba(255, 127, 0, 0.8)',  // Orange
+        'rgba(0, 255, 0, 0.8)',    // Green
+        'rgba(255, 255, 0, 0.8)',  // Yellow
+        'rgba(0, 0, 255, 0.8)',    // Blue //
+        'rgba(75, 0, 130, 0.8)'    // Indigo //
+    ],
+    borderColor: [
+        'rgba(255, 0, 0, 1)',
+        'rgba(255, 127, 0, 1)',
+        'rgba(255, 255, 0, 1)',
+        'rgba(0, 255, 0, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(75, 0, 130, 1)'
+    ],
       borderWidth: 1
     }]
   };
