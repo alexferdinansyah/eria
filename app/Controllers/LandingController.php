@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
+use stdClass;
 
 class LandingController extends BaseController
 {
@@ -21,38 +22,81 @@ class LandingController extends BaseController
     //     return view('landingpage/programDetail');
     // }
 
+    // public function programDetail($programId = null)
+    // {
+    //     $data = [];
+    //     $data['slug'] = $programId;
+    //     switch ($programId) {
+    //         case 'alternative-fuel':
+    //             $data['title'] = 'Alternative Fuel';
+    //             $data['content'] = 'Alternative fuels are those fuels or power sources which serve, 
+    //             at least partly, as a substitute for fossil oil sources in the transport sector.';
+    //             break;
+    //         case 'vehicle-types':
+    //             $data['title'] = 'Vehicle Types';
+    //             $data['content'] = 'Content for Vehicle Types.';
+    //             break;
+    //         case 'recharging-system':
+    //             $data['title'] = 'Recharging System';
+    //             $data['content'] = 'Content for Recharging System.';
+    //             break;
+    //         default:
+    //             $data['title'] = 'Program Detail';
+    //             $data['content'] = 'Default content.';
+    //             break;
+    //     }
+
+    //     return view('landingpage/programDetail', $data);
+    // }
+
     public function programDetail($programId = null)
     {
-        $data = [];
-        $data['slug'] = $programId;
+        $objectsArray = [];
+
         switch ($programId) {
             case 'alternative-fuel':
-                $data['title'] = 'Alternative Fuel';
-                $data['content'] = 'Alternative fuels are those fuels or power sources which serve, 
+                $object1 = new stdClass();
+                $object1->title = 'Alternative Fuel';
+                $object1->desc = 'Alternative fuels are those fuels or power sources which serve, 
                 at least partly, as a substitute for fossil oil sources in the transport sector.';
+                $object2 = new stdClass();
+                $object2->title = 'Definitions';
+                $object3 = new stdClass();
+                $object3->title = 'Definitions';
+                $object3->desc = '“Alternative fuels” means fuels or power sources that serve, at least partly, 
+                as a substitute for fossil oil sources in the energy supply to transport and which have the potential 
+                to contribute to its decarbonisation and enhance the environmental performance of the transport sector.';
+                $objectsArray[] = $object1;
+                // $objectsArray[] = $object2;
+                // $objectsArray[] = $object3;
                 break;
-            case 'vehicle-types':
-                $data['title'] = 'Vehicle Types';
-                $data['content'] = 'Content for Vehicle Types.';
-                break;
-            case 'recharging-system':
-                $data['title'] = 'Recharging System';
-                $data['content'] = 'Content for Recharging System.';
-                break;
+
+                // case 'vehicle-types':
+                //     $object2 = new stdClass();
+                //     $object2->title = 'Vehicle Types';
+                //     $object2->desc = '<b>Content for Vehicle Types.</b>';
+                //     $objectsArray[] = $object2;
+                //     break;
+
+                // case 'recharging-system':
+                //     $object3 = new stdClass();
+                //     $object3->title = 'Recharging System';
+                //     $object3->desc = '<b>Content for Recharging System.</b>';
+                //     $objectsArray[] = $object3;
+                //     break;
+
             default:
-                $data['title'] = 'Program Detail';
-                $data['content'] = 'Default content.';
+                $defaultObject = new stdClass();
+                $defaultObject->title = 'Program Detail';
+                $defaultObject->desc = '<b>Default content.</b>';
+                $objectsArray[] = $defaultObject;
                 break;
         }
+        $data['objectsArray'] = $objectsArray;
+        $data['slug'] = $programId;
 
         return view('landingpage/programDetail', $data);
     }
-
-    // public function programDetail($id){
-    //     // $data;
-    //     $data["id"] = $id;
-    //     return view('landingpage/programDetail', $data);   
-    // }
 
     public function publications()
     {

@@ -7,14 +7,17 @@
 
 <div class="progDCon">
     <div class="allProg">
-        
+
         <h3>UPDATES</h3>
         <a id="progDetail1" class="<?= $slug == 'alternative-fuel' ? 'active' : '' ?>" href="<?= base_url('programDetail/alternative-fuel') ?>">1. Alternative Fuel</a>
         <a id="progDetail2" class="<?= $slug == 'vehicle-types' ? 'active' : '' ?>" href="<?= base_url('programDetail/vehicle-types') ?>">2. Vehicle Types</a>
         <a id="progDetail3" class="<?= $slug == 'recharging-system' ? 'active' : '' ?>" href="<?= base_url('programDetail/recharging-system') ?>">3. Recharging System</a>
     </div>
     <div class="pgd-content">
-        <p><?= esc($content) ?></p>
+        <?php foreach ($objectsArray as $object) : ?>
+            <h1><?= $object->title ?></h1>
+            <p><?= $object->desc ?></p>
+        <?php endforeach; ?>
         <hr>
         <h3>Related articles</h3>
         <div class="row">
