@@ -15,8 +15,8 @@
     </div>
     <div class="pgd-content">
         <?php foreach ($objectsArray as $object) : ?>
-            <h1><?= $object->title ?></h1>
-            <p><?= $object->desc ?></p>
+            <?= $object->title ?>
+            <?= $object->desc ?>
         <?php endforeach; ?>
         <hr>
         <h3>Related articles</h3>
