@@ -15,9 +15,10 @@
     </div>
     <div class="pgd-content">
         <?php foreach ($objectsArray as $object) : ?>
-            <h1><?= $object->title ?></h1>
-            <p><?= $object->desc ?></p>
+            <?= $object->title ?>
+            <p><?= $object->desc  ?></p>
         <?php endforeach; ?>
+
         <hr>
         <h3>Related articles</h3>
         <div class="row">

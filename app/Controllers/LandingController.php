@@ -56,27 +56,45 @@ class LandingController extends BaseController
         switch ($programId) {
             case 'alternative-fuel':
                 $object1 = new stdClass();
-                $object1->title = 'Alternative Fuel';
-                $object1->desc = 'Alternative fuels are those fuels or power sources which serve, 
-                at least partly, as a substitute for fossil oil sources in the transport sector.';
+                $object1->title = '<h1>Alternative Fuel</h1>';
+                $object1->desc = '<p>Alternative fuels are those fuels or power sources which serve, 
+                at least partly, as a substitute for fossil oil sources in the transport sector.</p>';
                 $object2 = new stdClass();
-                $object2->title = 'Definitions';
+                $object2->title = '<h1>Definitions</h1>';
+                $object2->desc = '';
                 $object3 = new stdClass();
-                $object3->title = 'Definitions';
-                $object3->desc = '“Alternative fuels” means fuels or power sources that serve, at least partly, 
+                $object3->title = '<h1>Definitions</h1>';
+                $object3->desc = '<p>"Alternative fuels” means fuels or power sources that serve, at least partly, 
                 as a substitute for fossil oil sources in the energy supply to transport and which have the potential 
-                to contribute to its decarbonisation and enhance the environmental performance of the transport sector.';
+                to contribute to its decarbonisation and enhance the environmental performance of the transport sector.</p>';
                 $objectsArray[] = $object1;
-                // $objectsArray[] = $object2;
-                // $objectsArray[] = $object3;
+                $objectsArray[] = $object2;
+                $objectsArray[] = $object3;
                 break;
 
-                // case 'vehicle-types':
-                //     $object2 = new stdClass();
-                //     $object2->title = 'Vehicle Types';
-                //     $object2->desc = '<b>Content for Vehicle Types.</b>';
-                //     $objectsArray[] = $object2;
-                //     break;
+                case 'vehicle-types':
+                    $object1 = new stdClass();
+                    $object1->title = '<h1>Vehicle Types</h1>';
+                    $object1->desc = '<p>Content for Vehicle Types.</p>';
+                    $object2 = new stdClass();
+                    $object2->title = '<h1>Vehicle categories</h1>';
+                    $object2->desc = '<table class="table">
+                                        <thead>
+                                            <tr class="table-primary">
+                                                <th scope="col">Category</th>
+                                                <th scope="col">Definition</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>L</td>
+                                                <td>Motor vehicles with less than four wheels and some lightweight four-wheelers.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>';
+                    $objectsArray[] = $object1;
+                    $objectsArray[] = $object2;
+                    break;
 
                 // case 'recharging-system':
                 //     $object3 = new stdClass();
@@ -141,6 +159,14 @@ class LandingController extends BaseController
             $data["GDP"] = "4,778";
             $data["PPP"] = "19,588,089,9";
             $data["GDPppp"] = "12,410";
+
+            $data["volIce"] = "1032603";
+            $data["volHev"] = "5100";
+            $data["volBev"] = "10327";
+            $data["volPhev"] = "10";
+            $data["volNewCarSum"] = "1048040";
+            $data["volStockUIO"] = "12250892";
+
         } else {
             $data["population"] = "N/a";
             $data["ttlland"] = "N/a";
@@ -148,6 +174,13 @@ class LandingController extends BaseController
             $data["GDP"] = "N/a";
             $data["PPP"] = "N/a";
             $data["GDPppp"] = "N/a";
+
+            $data["volIce"] = "N/a";
+            $data["volHev"] = "N/a";
+            $data["volBev"] = "N/a";
+            $data["volPhev"] = "N/a";
+            $data["volNewCarSum"] = "N/a";
+            $data["volStockUIO"] = "N/a";
         }
         return view('/landingpage/summary', $data);
     }

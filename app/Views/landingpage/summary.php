@@ -59,12 +59,12 @@
                     <canvas class="chartdiv" id="myChart4"></canvas>
                 </div>
                 <ul>
-                    <li>VOL ICE : 1032603</li>
-                    <li>VOL HEV : 5100</li>
-                    <li>VOL BEV : 10327</li>
-                    <li>VOL PHEV : 10</li>
-                    <li>VOL NEW CAR SUM : 1048040</li>
-                    <li>VOL STOCK / UIO : 12250892</li>
+                    <li>VOL ICE : <?= $volIce ?></li>
+                    <li>VOL HEV : <?= $volHev ?></li>
+                    <li>VOL BEV : <?= $volBev ?></li>
+                    <li>VOL PHEV : <?= $volPhev ?></li>
+                    <li>VOL NEW CAR SUM : <?= $volNewCarSum ?></li>
+                    <li>VOL STOCK / UIO : <?= $volStockUIO ?></li>
                 </ul>
             </div>
 
