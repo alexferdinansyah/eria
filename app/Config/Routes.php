@@ -22,4 +22,3 @@ $routes->get('/news/details', 'LandingController::newsDetail');
 $routes->get('/events', 'LandingController::events');
 
 $routes->get('/summary/(:segment)', 'LandingController::summary/$1');
-

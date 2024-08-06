@@ -7,10 +7,11 @@
 
 <div class="progDCon">
     <div class="allProg">
-        <h3>Updates</h3>
-        <a id="progDetail1" href="<?= base_url('programDetail/alternative-fuel') ?>">1. Alternative Fuel</a>
-        <a id="progDetail2" href="<?= base_url('programDetail/vehicle-types') ?>">2. Vehicle Types</a>
-        <a id="progDetail3" href="<?= base_url('programDetail/recharging-system') ?>">3. Recharging System</a>
+        
+        <h3>UPDATES</h3>
+        <a id="progDetail1" class="<?= $slug == 'alternative-fuel' ? 'active' : '' ?>" href="<?= base_url('programDetail/alternative-fuel') ?>">1. Alternative Fuel</a>
+        <a id="progDetail2" class="<?= $slug == 'vehicle-types' ? 'active' : '' ?>" href="<?= base_url('programDetail/vehicle-types') ?>">2. Vehicle Types</a>
+        <a id="progDetail3" class="<?= $slug == 'recharging-system' ? 'active' : '' ?>" href="<?= base_url('programDetail/recharging-system') ?>">3. Recharging System</a>
     </div>
     <div class="pgd-content">
         <p><?= esc($content) ?></p>
@@ -31,7 +32,7 @@
     </div>
 </div>
 
-<script>
+<!-- <script>
     document.addEventListener('DOMContentLoaded', function() {
         const urlParams = new URLSearchParams(window.location.search);
         const programId = urlParams.get('program');
@@ -39,6 +40,6 @@
             document.getElementById(`progDetail${programId.slice(-1)}`).classList.add('active');
         }
     });
-</script>
+</script> -->
 
 <?= $this->endSection(); ?>

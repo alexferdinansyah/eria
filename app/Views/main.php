@@ -146,16 +146,16 @@
 </body>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const programLinks = document.querySelectorAll('.cos-dropdown-menu a');
-        programLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                const programId = this.id;
-                window.location.href = `/program/details?program=${programId}`;
-            });
-        });
-    });
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     const programLinks = document.querySelectorAll('.cos-dropdown-menu a');
+    //     programLinks.forEach(link => {
+    //         link.addEventListener('click', function(event) {
+    //             event.preventDefault();
+    //             const programId = this.id;
+    //             window.location.href = `/program/details?program=${programId}`;
+    //         });
+    //     });
+    // });
 </script>
 
 </html>

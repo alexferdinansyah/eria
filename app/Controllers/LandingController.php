@@ -24,10 +24,12 @@ class LandingController extends BaseController
     public function programDetail($programId = null)
     {
         $data = [];
+        $data['slug'] = $programId;
         switch ($programId) {
             case 'alternative-fuel':
                 $data['title'] = 'Alternative Fuel';
-                $data['content'] = 'Content for Alternative Fuel.';
+                $data['content'] = 'Alternative fuels are those fuels or power sources which serve, 
+                at least partly, as a substitute for fossil oil sources in the transport sector.';
                 break;
             case 'vehicle-types':
                 $data['title'] = 'Vehicle Types';
@@ -42,9 +44,9 @@ class LandingController extends BaseController
                 $data['content'] = 'Default content.';
                 break;
         }
+
         return view('landingpage/programDetail', $data);
     }
-
 
     // public function programDetail($id){
     //     // $data;
