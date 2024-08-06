@@ -49,6 +49,17 @@ function makeChart(element, type, data){
       }]
   };
 
+  let blankData = {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+          label: 'VOL ICE',
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          backgroundColor: "rgba(255, 0, 0, 0.8)",
+          borderColor: "rgba(255, 0, 0, 1)",
+          borderWidth: 1
+      }]
+  };
+
   let volHEV = {
       labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
       datasets: [{
@@ -103,14 +114,6 @@ function makeChart(element, type, data){
           borderWidth: 1
       }]
   };
-
-  makeChart(bar1, 'bar', volICE)
-  makeChart(bar2, 'bar', volHEV)
-  makeChart(bar3, 'bar', volBEV)
-  makeChart(bar4, 'bar', volPHEV)
-  makeChart(bar5, 'bar', volNewCarSum)
-  makeChart(bar6, 'bar', volStockUIO)
-
 
   // IF INDONESIA
   if(route == 'indonesia'){
@@ -205,10 +208,22 @@ function makeChart(element, type, data){
     };
 
     makeChart(ctx4,'doughnut' ,chart4Data)
-
+    
+    makeChart(bar1, 'bar', volICE)
+    makeChart(bar2, 'bar', volHEV)
+    makeChart(bar3, 'bar', volBEV)
+    makeChart(bar4, 'bar', volPHEV)
+    makeChart(bar5, 'bar', volNewCarSum)
+    makeChart(bar6, 'bar', volStockUIO)
   }else{
     myButton.forEach(myButton => myButton.disabled = true);
-
+    makeChart(bar1, 'bar', blankData)
+    makeChart(bar2, 'bar', blankData)
+    makeChart(bar3, 'bar', blankData)
+    makeChart(bar4, 'bar', blankData)
+    makeChart(bar5, 'bar', blankData)
+    makeChart(bar6, 'bar', blankData)
+    
     // blank data chart 2x2
     let chart1data = {
       labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
