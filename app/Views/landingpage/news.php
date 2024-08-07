@@ -4,7 +4,7 @@
 
 <header class="header">
     <p>News And Views</p>
-    <p class="sec">The latest News and Updates from ERIA</p>
+    <p class="sec">The latest News and Updates from A2VTP</p>
 </header>
 
 <section class="container my-5">

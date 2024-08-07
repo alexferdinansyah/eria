@@ -2,7 +2,8 @@
 
 <?= $this->section('content') ?>
 <header class="header">
-    <p>ASEAN/East Asia NTM Database</p>
+    <p>News And Views</p>
+    <p class="sec">The latest News and Updates from A2VTP</p>
 </header>
 
 <div class="progDCon">

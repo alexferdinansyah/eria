@@ -260,7 +260,7 @@ class LandingController extends BaseController
 
                     $object2 = new stdClass();
                     $object2->title = '<h1>Recharging pool, -station, -point, connector</h1>';
-                    $object2->desc = '<p>The EU - Sustainable Transport Forum gives the following definitions providing us the starting point of this publication.</p>';
+                    $object2->desc = '<p>The ASEAN - Sustainable Transport Forum gives the following definitions providing us the starting point of this publication.</p>';
                     $object2->desc .= '<div class="row">
                                             <img src="https://alternative-fuels-observatory.ec.europa.eu/system/files/inline-images/recharging%20pool%20breakdown.png" >
                                        </div>';
@@ -293,7 +293,7 @@ class LandingController extends BaseController
 
                     $object4 = new stdClass();
                     $object4->title = '<h1>Recharging modes based on power output</h1>' ;
-                    $object4->desc  = '<p>In the European Union, recharging points are classified into two main categories, based on their power output and speed. Category 1 is recharging via AC, while Category 2 is recharging via DC. </p>' ;
+                    $object4->desc  = '<p>In the ASEAN, recharging points are classified into two main categories, based on their power output and speed. Category 1 is recharging via AC, while Category 2 is recharging via DC. </p>' ;
                     $object4->desc .= '<b>Recharging point categories based on AFIR (Annex III)</b>' ;
                     $object4->desc .= '<table class="table">
                                         <thead>
@@ -354,22 +354,22 @@ class LandingController extends BaseController
                     $object5 = new stdClass();
                     $object5->title = '<h1>Types of EV recharging connectors (plugs)</h1>';
                     $object5->desc = '<p>To date, not all battery electric vehicles and plug-in hybrid electric vehicles can recharge at every recharging point in the world. This is because the EV recharging connector and vehicle inlet vary across geographies and models.</p>';
-                    $object5->desc .= '<b>Europe</b>';
-                    $object5->desc .= '<p>For the EU, the Alternative Fuels Infrastructure Directive 2019/94/EU (AFID) currently requires that all recharging points are, for interoperability purposes, equipped at least with socket outlets or vehicle connectors of Type 2, Mennekes (for AC normal and high power recharging points), and connectors of the combined charging system, CCS/Combo 2 (for DC high power recharging points). The figure below provides an illustrated overview of these requirements:</p>';
+                    $object5->desc .= '<b>ASEAN</b>';
+                    $object5->desc .= '<p>For the ASEAN, the Alternative Fuels Infrastructure currently requires that all recharging points are, for interoperability purposes, equipped at least with socket outlets or vehicle connectors of Type 2, Mennekes (for AC normal and high power recharging points), and connectors of the combined charging system, CCS/Combo 2 (for DC high power recharging points). The figure below provides an illustrated overview of these requirements:</p>';
                     $object5->desc .= '<div class="row">
                                         <img src="https://alternative-fuels-observatory.ec.europa.eu/system/files/inline-images/Charin%20pic_0.PNG">
                                         </div>
                     ';
-                    $object5->desc .= '<p>At the same time, AFID does not prohibit the addition of other connectors to a recharging point. While prior to the adoption of AFID, a number of recharging points with AC connectors other than Type 2 were deployed in the EU, the prescription of the Type 2 standard through the Directive put an end to this. Similarly, while it has for some time been market practice to equip in particular 50 kW recharging points with an additional CHAdeMO connector, more and more providers of high power recharging points choose to equip their stations with CCS/Combo 2 connectors only.</p>';
+                    $object5->desc .= '<p>At the same time, AFID does not prohibit the addition of other connectors to a recharging point. While prior to the adoption of AFID, a number of recharging points with AC connectors other than Type 2 were deployed in the ASEAN, the prescription of the Type 2 standard through the Directive put an end to this. Similarly, while it has for some time been market practice to equip in particular 50 kW recharging points with an additional CHAdeMO connector, more and more providers of high power recharging points choose to equip their stations with CCS/Combo 2 connectors only.</p>';
                     $object5->desc .= '<b>Rest of world – other standards</b>';
                     $object5->desc .= '<b>SAE J1772 and J3068 (North-America, Japan)</b>';
                     $object5->desc .= '<p>The Society of Automobile Engineers (SAE) has developed the J1772 and J3068 connector standards. They are mostly applied in the North-American markets, while J1772 is also used in Japan for AC recharging purposes.</p>';
-                    $object5->desc .= '<p>SAE J1772 (IEC 62196 Type 1) defines four levels of single-phase recharging: AC Level 1, AC Level 2, DC Level 1, and DC Level 2. Although the SAE J1772 CCS connector for DC recharging is quite similar (though slightly different) from the EU CCS connector, the AC J1772 connector is entirely different. This is largely due to the fact that the electricity is commonly supplied at 120 volts in the US, compared to 230V in Europe.</p>';
+                    $object5->desc .= '<p>SAE J1772 (IEC 62196 Type 1) defines four levels of single-phase recharging: AC Level 1, AC Level 2, DC Level 1, and DC Level 2. Although the SAE J1772 CCS connector for DC recharging is quite similar (though slightly different) from the ASEAN CCS connector, the AC J1772 connector is entirely different. This is largely due to the fact that the electricity is commonly supplied at 120 volts in the US, compared to 230V in ASEAN.</p>';
                     $object5->desc .= '<p>SAE J3068 complements SAE J1772 with solutions for three-phase recharging. The J3068 connector is mechanically identical to the Type 2 connector, and is based on the IEC 62196-2 and -3 standards.</p>';
                     $object5->desc .= '<b>CHAdeMO (Japan)</b>';
-                    $object5->desc .= '<p>The Japanese utility TEPCO developed CHAdeMo. It is the official Japanese DC recharging standard and virtually all Japanese DC fast recharging stations offer a CHAdeMO connector. In Europe, while it has for some time been market practice to equip in particular 50kW recharging points with an additional CHAdeMO connector, the importance of CHAdeMO is fading. Mainly this is due to the choices by Japanese (but also some French) car manufacturers to increasingly equip their EU market electric vehicles with a CCS inlet.</p>';
+                    $object5->desc .= '<p>The Japanese utility TEPCO developed CHAdeMo. It is the official Japanese DC recharging standard and virtually all Japanese DC fast recharging stations offer a CHAdeMO connector. In ASEAN, while it has for some time been market practice to equip in particular 50kW recharging points with an additional CHAdeMO connector, the importance of CHAdeMO is fading. Mainly this is due to the choices by Japanese (but also some French) car manufacturers to increasingly equip their ASEAN market electric vehicles with a CCS inlet.</p>';
                     $object5->desc .= '<b>Tesla (all markets except EU)</b>';
-                    $object5->desc .= '<p>Tesla has developed a proprietary standard for its connectors and inlets. The Tesla connector is a unified connector for AC and DC recharging, as it supports all voltage levels. However, since the end of 2018, Tesla vehicles intended for the EU market are supplied with a European CCS inlet, and Tesla is gradually also equipping its European recharging points with EU-type CCS connectors.</p>';
+                    $object5->desc .= '<p>Tesla has developed a proprietary standard for its connectors and inlets. The Tesla connector is a unified connector for AC and DC recharging, as it supports all voltage levels. However, since the end of 2018, Tesla vehicles intended for the ASEAN market are supplied with a ASEAN CCS inlet, and Tesla is gradually also equipping its ASEAN recharging points with ASEAN-type CCS connectors.</p>';
                     $object5->desc .= '<b>GB/T 20234.2 and 20234.3 (China)</b>';
                     $object5->desc .= '<p>Guobiao or in short GB standards are the Chinese national standards. The suffix /T indicates these are recommended (though not mandatory) standards. While GB/T 20234.2 is the Chinese standard for AC recharging connectors, 20234.3 applies to DC recharging connectors. These standards are only supported in China, although there have been discussions between CHAdeMO and the Chinese standardisation organisations to develop a new, common DC recharging connector.</p>';
 
