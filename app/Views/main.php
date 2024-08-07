@@ -31,12 +31,12 @@
 <body>
     <div class="navbar">
         <a href="/" class="nav-logo">
-            <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="">
+            <img src="<?= base_url('assets/images/logo-A2VTP.png') ?>" alt="">
             <p>ASEAN Alternative Vehicle Technology Portal</p>
         </a>
         <div class="nav-menus">
             <ul>
-                <li><a href="/program"">PROGRAMMES</a></li>
+                <li><a href="/program">PROGRAMMES</a></li>
                 <li><a href=" /publications">PUBLICATIONS</a></li>
                 <li class="dropdown-con">
                     <a href="/news">UPDATES</a>
