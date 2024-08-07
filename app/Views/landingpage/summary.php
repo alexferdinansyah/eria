@@ -20,27 +20,27 @@
                         <p><?= $population ?></p>
                     </div>
                     <div>
-                        <p>Total Land Area</p>
+                        <p>Total Land Area - km</p>
                         <p><?= $ttlland ?></p>
                     </div>
                     <div>
-                        <p>Total Highway Area</p>
+                        <p>Total Highway Area - km</p>
                         <p><?= $totalHighway ?></p>
                     </div>
                 </section>
                 <section class="container-sum">
                     <div>
-                        <p>GDP Per Capita (Current US$)</p>
+                        <p>GDP Per Capita - US$</p>
                         <p><?= $GDP ?></p>
                     </div>
                     <div>
-                        <p>Purchasing Power Parity (PPP)</p>
+                        <p>Purchasing Power Parity (PPP) - US$</p>
                         <p><?= $PPP ?></p>
                     </div>
                 </section>
                 <section class="container-sum">
                     <div>
-                        <p>GDP Per Capita Purchasing Power Parity (PPP)</p>
+                        <p>GDP Per Capita Purchasing Power Parity (PPP) - $US</p>
                         <p><?= $GDPppp ?></p>
                     </div>
                 </section>

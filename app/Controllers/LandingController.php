@@ -448,7 +448,7 @@ class LandingController extends BaseController
             $data["ttlland"] = "1,892,556";
             $data["totalHighway"] = "548,097";
             $data["GDP"] = "4,778";
-            $data["PPP"] = "19,588,089,9";
+            $data["PPP"] = "1,214.92";
             $data["GDPppp"] = "12,410";
 
             $data["volIce"] = "1032603";
