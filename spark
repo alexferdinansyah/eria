@@ -48,7 +48,7 @@ if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
 
 // We want errors to be shown when using it from the CLI.
 error_reporting(E_ALL);
-init_set('display_errors', '1');
+ini_set('display_errors', '1');
 
 /*
  *---------------------------------------------------------------

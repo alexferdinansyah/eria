@@ -15,7 +15,7 @@
  | painful debugging.
  */
 error_reporting(E_ALL);
-init_set('display_errors', '1');
+ini_set('display_errors', '1');
 
 /*
  |--------------------------------------------------------------------------
