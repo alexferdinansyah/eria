@@ -39,11 +39,11 @@
                 <li><a href="/program">PROGRAMMES</a></li>
                 <li><a href=" /publications">PUBLICATIONS</a></li>
                 <li class="dropdown-con">
-                    <a href="<?= base_url('programDetail/alternative-fuel') ?>">UPDATES</a>
+                    <a href="<?= base_url('update/alternative-fuel') ?>">UPDATES</a>
                     <ul class="cos-dropdown-menu">
-                        <li><a href="<?= base_url('programDetail/alternative-fuel') ?>" id="program1">ALTERNATIVE FUEL</a></li>
-                        <li><a href="/programDetail/vehicle-types" id="program2">VEHICLE TYPES</a></li>
-                        <li><a href="/programDetail/recharging-system" id="program3">RECHARGING SYSTEM</a></li>
+                        <li><a href="<?= base_url('update/alternative-fuel') ?>" id="program1">ALTERNATIVE FUEL</a></li>
+                        <li><a href="/update/vehicle-types" id="program2">VEHICLE TYPES</a></li>
+                        <li><a href="/update/recharging-system" id="program3">RECHARGING SYSTEM</a></li>
                     </ul>
                 </li>
 

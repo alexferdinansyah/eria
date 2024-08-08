@@ -10,12 +10,12 @@
     <div class="allProg">
 
         <h3>UPDATES</h3>
-        <a id="progDetail1" class="active" href="<?= base_url('update/alternative-fuel') ?>">1. Alternative Fuel</a>
-        <a id="progDetail2" class="" href="<?= base_url('update/vehicle-types') ?>">2. Vehicle Types</a>
-        <a id="progDetail3" class="" href="<?= base_url('update/recharging-system') ?>">3. Recharging System</a>
+        <a id="progDetail1" class="<?= $slug == 'alternative-fuel' ? 'active' : '' ?>" href="<?= base_url('update/alternative-fuel') ?>">1. Alternative Fuel</a>
+        <a id="progDetail2" class="<?= $slug == 'vehicle-types' ? 'active' : '' ?>" href="<?= base_url('update/vehicle-types') ?>">2. Vehicle Types</a>
+        <a id="progDetail3" class="<?= $slug == 'recharging-system' ? 'active' : '' ?>" href="<?= base_url('update/recharging-system') ?>">3. Recharging System</a>
     </div>
     <div class="pgd-content">
-        <p>ERIA collaborates closely with the ASEAN Member State holding the Chairmanship to design and deliver Priority Economic Deliverables, providing essential support in this process.</p>
+        <?= $content; ?>
 
         <hr>
         <h3>Related articles</h3>

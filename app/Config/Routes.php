@@ -8,9 +8,8 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'LandingController::index');
 $routes->get('/program', 'LandingController::program');
 $routes->get('/program/details/', 'LandingController::programDetail');
-$routes->get('/programDetail/(:any)', 'LandingController::programDetail/$1');
-
-// $routes->get('/program/details/(:num)', 'LandingController::programDetail/$1');
+$routes->get('/update/(:any)', 'LandingController::updateDetail/$1');
+    
 // $routes->get('/program/(:num)', 'ProgramController::getId/$1');
 $routes->get('/publications', 'LandingController::publications');
 $routes->get('/publications/details/(:num)', 'LandingController::publicationDetail/$1');
