@@ -89,6 +89,11 @@ class LandingController extends BaseController
         return view('landingpage/events');
     }
 
+    public function eventsDetail()
+    {
+        return view('landingpage/eventDetail');
+    }
+
     public function summary($nat)
     {
         $data["nation"] = $nat;
