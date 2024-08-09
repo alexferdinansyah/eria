@@ -975,6 +975,43 @@ li>a {
     color: rgb(165, 165, 165);
 }
 
+/****************************************************************** program ******************************************************************/
+/* .program-image {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+} */
+
+.program-image {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .program-image {
+        height: 150px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .program-image {
+        height: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .program-image {
+        height: 250px;
+    }
+}
+
 .event-content{
     width: 900px;
 }
