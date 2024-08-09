@@ -7,56 +7,56 @@
 </header>
 
 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
 
-        <div class="contain d-flex flex-col">
-            <img src="https://www.eria.org//uploads/publications/20240605/publications-catalogue-2024.webp" alt="test">
-            <div class="p-4">
-                <h1>Annual Report</h1>
-                <p>11 Juni 2024</p>
-                <p>ASEAN-China relations play a pivotal role in shaping the future of the Asian economy. This ERIA report delves into the challenges arising from the evolution of the digital economy, the restructuring of Global Value Chains (GVCs), and Asia's transition to a green economy, while envisioning the</p>
-                <a href="#" class="btn btn-outline-light">Read More</a>
+                <div class="contain d-flex flex-col">
+                    <img src="https://www.eria.org//uploads/publications/20240605/publications-catalogue-2024.webp" alt="test">
+                    <div class="p-4">
+                        <h1>Annual Report</h1>
+                        <p>11 Juni 2024</p>
+                        <p>ASEAN-China relations play a pivotal role in shaping the future of the Asian economy. This ERIA report delves into the challenges arising from the evolution of the digital economy, the restructuring of Global Value Chains (GVCs), and Asia's transition to a green economy, while envisioning the</p>
+                        <a href="#" class="btn btn-outline-light">Read More</a>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
-        <div class="contain d-flex flex-col">
-            <img src="https://www.eria.org//uploads/publications/20240605/publications-catalogue-2024.webp" alt="test">
-            <div class="p-4">
-                <h1>Annual Report</h1>
-                <p>11 Juni 2024</p>
-                <p>ASEAN-China relations play a pivotal role in shaping the future of the Asian economy. This ERIA report delves into the challenges arising from the evolution of the digital economy, the restructuring of Global Value Chains (GVCs), and Asia's transition to a green economy, while envisioning the</p>
-                <a href="#" class="btn btn-outline-light">Read More</a>
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                <div class="contain d-flex flex-col">
+                    <img src="https://www.eria.org//uploads/publications/20240605/publications-catalogue-2024.webp" alt="test">
+                    <div class="p-4">
+                        <h1>Annual Report</h1>
+                        <p>11 Juni 2024</p>
+                        <p>ASEAN-China relations play a pivotal role in shaping the future of the Asian economy. This ERIA report delves into the challenges arising from the evolution of the digital economy, the restructuring of Global Value Chains (GVCs), and Asia's transition to a green economy, while envisioning the</p>
+                        <a href="#" class="btn btn-outline-light">Read More</a>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
-        <div class="contain d-flex flex-col">
-            <img src="https://www.eria.org//uploads/publications/20240605/publications-catalogue-2024.webp" alt="test">
-            <div class="p-4">
-                <h1>Annual Report</h1>
-                <p>11 Juni 2024</p>
-                <p>ASEAN-China relations play a pivotal role in shaping the future of the Asian economy. This ERIA report delves into the challenges arising from the evolution of the digital economy, the restructuring of Global Value Chains (GVCs), and Asia's transition to a green economy, while envisioning the</p>
-                <a href="#" class="btn btn-outline-light">Read More</a>
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                <div class="contain d-flex flex-col">
+                    <img src="https://www.eria.org//uploads/publications/20240605/publications-catalogue-2024.webp" alt="test">
+                    <div class="p-4">
+                        <h1>Annual Report</h1>
+                        <p>11 Juni 2024</p>
+                        <p>ASEAN-China relations play a pivotal role in shaping the future of the Asian economy. This ERIA report delves into the challenges arising from the evolution of the digital economy, the restructuring of Global Value Chains (GVCs), and Asia's transition to a green economy, while envisioning the</p>
+                        <a href="#" class="btn btn-outline-light">Read More</a>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
     </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
 
 
@@ -121,14 +121,12 @@
             </div>
         </div>
     </section>
-    
 </div>
-<div class="d-flex justify-content-center align-items-center" style="width: 100vw;">
+
+<div class="d-flex justify-content-center align-items-center" style="width: 100vw; margin-bottom: 2%;">
     <button class="load-btn">
         Load More
     </button>
 </div>
-
-
 
 <?= $this->endSection(); ?>
