@@ -21,7 +21,7 @@ class LandingController extends BaseController
         $result = $contentModel->AseanChairmanship()->content;
 
         $data['content'] = $result;
-        return view('landingpage/program');
+        return view('landingpage/program', $data);
     }
 
     public function programDetail(){
