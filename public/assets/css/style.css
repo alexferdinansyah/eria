@@ -964,7 +964,7 @@ img.img-map {
     visibility: visible;
 }
 
-.data-s {
+#data-s {
     margin-top: 100px;
     margin-bottom: 100px;
     margin-left: 100px;
@@ -1001,4 +1001,14 @@ li>a {
     .program-image {
         height: 250px;
     }
+}
+
+.event-content{
+    width: 900px;
+}
+
+.documentary h4{
+    background-color: var(--blue);
+    color: white;
+    padding: 20px;
 }

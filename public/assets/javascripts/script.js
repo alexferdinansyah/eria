@@ -20,6 +20,9 @@ function makeChart(element, type, data){
 
   const route = getLocationFromUrl();
   console.log(route);
+
+  const ds = document.getElementById('data-s')
+  // console.log(ds)
   
   // 2x2 chart summary element
   const ctx1 = document.getElementById('myChart1');
@@ -270,6 +273,10 @@ function makeChart(element, type, data){
     makeChart(bar5, 'bar', volNewCarSum)
     makeChart(bar6, 'bar', volStockUIO)
   }else{
+    
+    // remove data source where not indonesia
+    ds.style.display ="none"
+
     myButton.forEach(myButton => myButton.disabled = true);
     makeChart(bar1, 'bar', volICEBlank)
     makeChart(bar2, 'bar', volHEVBlank)
