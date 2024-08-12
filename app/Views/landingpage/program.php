@@ -15,7 +15,7 @@
         <a id="progDetail3" href="<?= base_url('update/recharging-system') ?>">3. Recharging System</a>
     </div>
     <div class="pgd-content">
-        konten ada disini
+        <?= $content ?>
 
         <hr>
         <h3>Related articles</h3>

@@ -16,6 +16,11 @@ class LandingController extends BaseController
 
     public function program()
     {
+        $contentModel = new ContentModel();
+
+        $result = $contentModel->AseanChairmanship()->content;
+
+        $data['content'] = $result;
         return view('landingpage/program');
     }
 
@@ -27,7 +32,6 @@ class LandingController extends BaseController
     {
 
         $contentModel = new ContentModel();
-        $objectsArray = [];
         
         switch ($updateId) {
             case 'alternative-fuel':
