@@ -8,7 +8,6 @@
 
 <div class="progDCon">
     <div class="allProg">
-
         <h3>UPDATES</h3>
         <a id="progDetail1" class="active" href="<?= base_url('update/alternative-fuel') ?>">1. Alternative Fuel</a>
         <a id="progDetail2" class="" href="<?= base_url('update/vehicle-types') ?>">2. Vehicle Types</a>
@@ -32,16 +31,5 @@
             </a>
         </div>
     </div>
-</div>
 
-<!-- <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const programId = urlParams.get('program');
-        if (programId) {
-            document.getElementById(`progDetail${programId.slice(-1)}`).classList.add('active');
-        }
-    });
-</script> -->
-
-<?= $this->endSection(); ?>
+    <?= $this->endSection(); ?>

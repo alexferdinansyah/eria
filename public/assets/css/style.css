@@ -976,15 +976,6 @@ li>a {
 }
 
 /****************************************************************** program ******************************************************************/
-/* .program-image {
-    width: 100% !important;
-    height: 200px !important;
-    object-fit: cover !important;
-    padding: 5px;
-    border-radius: 5px;
-    display: block;
-} */
-
 .program-image {
     width: 100% !important;
     height: 200px !important;

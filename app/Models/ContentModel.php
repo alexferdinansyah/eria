@@ -1,26 +1,28 @@
-<?php 
+<?php
 
 namespace App\Models;
 
 use stdClass;
 
-class ContentModel {
+class ContentModel
+{
 
-    public function alternativeFuel(){
+    public function alternativeFuel()
+    {
         $object = new StdClass();
-    
+
         $object->content = '<h3>Alternative Fuel</h3>';
         $object->content .= '<p>Alternative fuels are those fuels or power sources which serve, at least partly, as a substitute for fossil oil sources in the transport sector.</p>';
-    
+
         $object->content .= '<h3>Definitions</h3>';
         $object->content .= '<br>';
-    
+
         $object->content .= '<h3>Current Directive on the deployment of alternative fuels infrastructure</h3>';
         $object->content .= '<p>“Alternative fuels” means fuels or power sources that serve, at least partly, as a substitute for fossil oil sources in the energy supply to transport and which have the potential to contribute to its decarbonisation and enhance the environmental performance of the transport sector.</p>';
-    
+
         $object->content .= '<h3>Scope</h3>';
         $object->content .= '<br>';
-    
+
         $object->content .= '<h5>Current Directive on the deployment of alternative fuels infrastructure</h5>';
         $object->content .= '<ul>
             <li>Electricity</li>
@@ -31,10 +33,10 @@ class ContentModel {
             <li>Liquefied Natural gas (liquefied natural gas (LNG))</li>
             <li>Liquefied petroleum gas (LPG).</li>
         </ul>';
-    
+
         $object->content .= '<h5>Proposed Regulation on the deployment of alternative fuels infrastructure</h5>';
         $object->content .= '<p>In the proposed AFI regulation, alternative fuels are classified in three distinct categories (which will be contentribed in the remainder of this section):</p>';
-    
+
         $object->content .= '<table class="table">
             <thead>
                 <tr class="table-primary">
@@ -61,9 +63,10 @@ class ContentModel {
         return $object;
     }
 
-    public function vehicleTypes() {
+    public function vehicleTypes()
+    {
         $object = new stdClass();
-    
+
         $object->content = '<h3>Vehicle Types</h3><br>';
         $object->content .= '
         <div style="max-height: 400px; overflow-y: auto;">
@@ -178,19 +181,20 @@ class ContentModel {
                 </tbody>
             </table>
         </div>';
-    
+
         return $object;
     }
 
-    public function rechargingSystem() {
+    public function rechargingSystem()
+    {
         $object = new stdClass();
-        
-        
+
+
         $object->content = '<h1>Recharging System</h1>';
-    
+
         $object->content .= '<h2>Recharging System</h2>';
         $object->content .= '<p>Recharging electric vehicles is relatively new and technology develops in a rapid pace. As a result, lots of different terms and definitions are used, often referring to the same phenomenon. This page enables the reader to familiarize with the relevant terms. These terms are grouped per theme. This page aims to give clear definitions and explanations on relevant aspects of electric vehicle charging.</p>';
-    
+
         $object->content .= '<h2>Recharging pool, -station, -point, connector</h2>';
         $object->content .= '<p>The ASEAN - Sustainable Transport Forum gives the following definitions providing us the starting point of this publication.</p>';
         $object->content .= '<div class="row">
@@ -218,10 +222,10 @@ class ContentModel {
         $object->content .= '<p>‘connector’ means the physical interface between the recharging or refuelling point and the vehicle through which the fuel or electric energy is exchanged;</p>';
         $object->content .= '<hr>';
         $object->content .= '<p>Usually, the number of recharging points and the number of connectors is equal, but not always. For example, there are recharging stations consisting of 2 recharging points and 3 connectors. In that case not more than 2 connectors can be used, no more than 2 vehicles can be charged at a time (one AC and the other DC).</p>';
-    
+
         $object->content .= '<h2>The access type of the recharging stations</h2>';
         $object->content .= '<p>Currently, EAFO counts all types of publicly accessible recharging infrastructure.</p>';
-    
+
         $object->content .= '<h2>Recharging modes based on power output</h2>';
         $object->content .= '<p>In the ASEAN, recharging points are classified into two main categories, based on their power output and speed. Category 1 is recharging via AC, while Category 2 is recharging via DC. </p>';
         $object->content .= '<b>Recharging point categories based on AFIR (Annex III)</b>';
@@ -279,7 +283,7 @@ class ContentModel {
                                 </tr>
                             </tbody>
                         </table>';
-    
+
         $object->content .= '<h2>Types of EV recharging connectors (plugs)</h2>';
         $object->content .= '<p>To date, not all battery electric vehicles and plug-in hybrid electric vehicles can recharge at every recharging point in the world. This is because the EV recharging connector and vehicle inlet vary across geographies and models.</p>';
         $object->content .= '<b>ASEAN</b>';
@@ -299,7 +303,7 @@ class ContentModel {
         $object->content .= '<p>Tesla has developed a proprietary standard for its connectors and inlets. The Tesla connector is a unified connector for AC and DC recharging, as it supports all voltage levels. However, since the end of 2018, Tesla vehicles intended for the ASEAN market are supplied with a ASEAN CCS inlet, and Tesla is gradually also equipping its ASEAN recharging points with ASEAN-type CCS connectors.</p>';
         $object->content .= '<b>GB/T 20234.2 and 20234.3 (China)</b>';
         $object->content .= '<p>Guobiao or in short GB standards are the Chinese national standards. The suffix /T indicates these are recommended (though not mandatory) standards. While GB/T 20234.2 is the Chinese standard for AC recharging connectors, 20234.3 applies to DC recharging connectors. These standards are only supported in China, although there have been discussions between CHAdeMO and the Chinese standardisation organisations to develop a new, common DC recharging connector.</p>';
-    
+
         $object->content .= '<h2>Overview of global connector standards</h2>';
         $object->content .= '<b>Legal or recommended standard for each geographical zone</b>';
         $object->content .= '<div class="row">
@@ -309,9 +313,7 @@ class ContentModel {
         $object->content .= '<div class="row">
                             <img src="https://alternative-fuels-observatory.ec.europa.eu/system/files/inline-images/K%C3%A9pkiv%C3%A1g%C3%A1s.PNG">
                             </div>';
-    
+
         return $object;
     }
-    
-    
 }
