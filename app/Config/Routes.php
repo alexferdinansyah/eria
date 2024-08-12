@@ -6,7 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'LandingController::index');
-$routes->get('/program', 'LandingController::program');
+$routes->get('/program/(:any)', 'LandingController::program/$1');
 $routes->get('/program/details/', 'LandingController::programDetail');
 $routes->get('/update/(:any)', 'LandingController::updateDetail/$1');
     
