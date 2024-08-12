@@ -67,10 +67,4 @@
     </button>
 </div>
 
-<div class="d-flex justify-content-center align-items-center" style="width: 100vw; margin-bottom: 2%;">
-    <button class="load-btn">
-        Load More
-    </button>
-</div>
-
 <?= $this->endSection(); ?>

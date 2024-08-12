@@ -16,28 +16,26 @@ class LandingController extends BaseController
 
     public function program($prog)
     {
-
+        $contentModel = new ContentModel();
         switch ($prog) {
             case 'asean-chairmanship':
-                $result = "<h1>asean-chairmanship</h1>";
+                $result = $contentModel->AseanChairmanship()->content;
                 break;
-            case 'asean-east-asia-ntm-database' :
-                $result = "<h1>asean-east-asia-ntm-database</h1>";
+            case 'asean-east-asia-ntm-database':
+                $result = $contentModel->AseanNTM()->content;
                 break;
-            case 'asia-ccus-network' :
-                $result = "<h1>asia-ccus-network</h1>";
+            case 'asia-ccus-network':
+                $result = $contentModel->AsiaCCUS()->content;
                 break;
-
         }
-        $contentModel = new ContentModel();
-
-        // $result = $contentModel->AseanChaimanship()->content;
 
         $data['content'] = $result;
+        $data['slug'] = $prog;
         return view('landingpage/program', $data);
     }
 
-    public function programDetail(){
+    public function programDetail()
+    {
         return view('landingpage/programDetail');
     }
 
@@ -45,7 +43,7 @@ class LandingController extends BaseController
     {
 
         $contentModel = new ContentModel();
-        
+
         switch ($updateId) {
             case 'alternative-fuel':
                 $result = $contentModel->alternativeFuel()->content;
@@ -53,7 +51,7 @@ class LandingController extends BaseController
 
             case 'vehicle-types':
                 $result = $contentModel->vehicleTypes()->content;
-                
+
                 break;
 
             case 'recharging-system':
@@ -129,7 +127,6 @@ class LandingController extends BaseController
             $data["volPhev"] = "10";
             $data["volNewCarSum"] = "1048040";
             $data["volStockUIO"] = "12250892";
-
         } else {
             $data["population"] = "N/a";
             $data["ttlland"] = "N/a";

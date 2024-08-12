@@ -321,9 +321,31 @@ class ContentModel
     {
         $object = new stdClass();
 
-        $object->content = '<h2>Recharging System</h2>';
-        $object->content .= '<h2>Recharging System</h2>';
+        $object->content = '<p>ERIA collaborates closely with the ASEAN Member State holding the Chairmanship to design and deliver Priority Economic Deliverables, providing essential support in this process.</p>';
+        return $object;
+    }
 
+    public function AseanNTM()
+    {
+        $object = new stdClass();
+
+        $object->content = 'ERIA, in collaboration with the United Nations Conference on Trade and Development (UNCTAD), collected and classified non-tariff measures (NTMs) in the ten ASEAN countries (Brunei Darussalam, Cambodia, Indonesia, Lao PDR, Malaysia, Myanmar, the Philippines, Singapore, Thailand, and Viet Nam). Both organisations worked on all regulations and official documents including international conventions adopted by countries which were in effect as of March 2018. 
+                            Data collection consists of two phases: The first database released in January 2016, and the updated database completed in early 2019. Both phases are accompanied by analytical reports.
+                            The project aims to (i) collect, validate, and store NTM data from official sources; (ii) improve the general understanding of these measures and their impact on world trade; and (iii) provide insights on NTMs in ten countries <br><br>';
+        $object->content .= 'Click the button below to access the NTM database in an external site.<br><br>';
+        $object->content .= '<button class="d-block load-btn">TRAINS: the global database on Non-Tariff Measures</button>';
+        return $object;
+    }
+
+    public function AsiaCCUS()
+    {
+        $object = new stdClass();
+        $object->content = 'The Association of Southeast Asian Nations (ASEAN) and the East Asia Summit (EAS) region are facing tremendous challenges regarding the future energy landscape and how the energy transition will embrace a new architecture – including sound policies and technologies to ensure energy access with affordability, 
+                            energy security, and energy sustainability. Given the high share of fossil fuels in the current energy mix of ASEAN and EAS (oil, coal, and natural gas make up almost 80% of the primary energy mix for both the ASEAN and EAS region), 
+                            the clean use of fossil fuels through the deployment of clean technologies is indispensable for decarbonising emissions in ASEAN and the EAS region. The future energy transition of ASEAN and the EAS region will rely on today’s actions, policies, and investments to change the fossil fuel-based energy system towards a cleaner energy system. 
+                            But any decisions and energy policy measures to be rolled out during the energy transition need to be weighed against potentially higher energy costs, affordability issues, and energy security risks. The continued use of fossil fuel to steer economic growth in ASEAN and the EAS region will require appropriate technologies to use fossil fuels 
+                            in responsible and environmentally friendly ways through clean technologies such as clean coal technology and carbon capture, utilisation, and storage (CCUS), to decarbonise the region’s emission in the foreseeable future.<br><br>';
+        $object->content .= '<button class="d-block load-btn">ASEAN Handbook on Good Regulatory practices</button>';
         return $object;
     }
 }

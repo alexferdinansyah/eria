@@ -9,14 +9,13 @@
 <div class="progDCon">
     <div class="allProg">
 
-        <h3>UPDATES</h3>
-        <a id="progDetail1" href="<?= base_url('update/alternative-fuel') ?>">1. Alternative Fuel</a>
-        <a id="progDetail2" href="<?= base_url('update/vehicle-types') ?>">2. Vehicle Types</a>
-        <a id="progDetail3" href="<?= base_url('update/recharging-system') ?>">3. Recharging System</a>
+        <h3>Programmes</h3>
+        <a id="progDetail1" class="<?= $slug == 'asean-chairmanship' ? 'active' : '' ?>" href="<?= base_url('program/asean-chairmanship') ?>">ASEAN Chairmanship</a>
+        <a id="progDetail2" class="<?= $slug == 'asean-east-asia-ntm-database' ? 'active' : '' ?>" href="<?= base_url('program/asean-east-asia-ntm-database') ?>">ASEAN/East Asia NTM Database</a>
+        <a id="progDetail3" class="<?= $slug == 'asia-ccus-network' ? 'active' : '' ?>" href="<?= base_url('program/asia-ccus-network') ?>">Asia CCUS Network</a>
     </div>
     <div class="pgd-content">
         <?= $content ?>
-
         <hr>
         <h3>Related articles</h3>
         <div class="row">
@@ -30,6 +29,12 @@
                 <h5>ERIA Capacity Building Seminar in Cambodia - Remaining Challenge for ASEAN Economic Community 2015</h5>
                 <p>31 July 2024</p>
             </a>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center" style="width: 100%; margin-bottom: 2%; margin-top: 2%;">
+            <button class="load-btn">
+                Load More
+            </button>
         </div>
     </div>
 </div>
