@@ -316,4 +316,14 @@ class ContentModel
 
         return $object;
     }
+
+    public function AseanChaimanship()
+    {
+        $object = new stdClass();
+
+        $object->content = '<h1>Recharging System</h1>';
+        $object->content .= '<h2>Recharging System</h2>';
+
+        return $object;
+    }
 }
