@@ -14,11 +14,24 @@ class LandingController extends BaseController
         return view('landingpage/landingpage');
     }
 
-    public function program()
+    public function program($prog)
     {
+
+        switch ($prog) {
+            case 'asean-chairmanship':
+                $result = "<h1>asean-chairmanship</h1>";
+                break;
+            case 'asean-east-asia-ntm-database' :
+                $result = "<h1>asean-east-asia-ntm-database</h1>";
+                break;
+            case 'asia-ccus-network' :
+                $result = "<h1>asia-ccus-network</h1>";
+                break;
+
+        }
         $contentModel = new ContentModel();
 
-        $result = $contentModel->AseanChairmanship()->content;
+        // $result = $contentModel->AseanChaimanship()->content;
 
         $data['content'] = $result;
         return view('landingpage/program', $data);
