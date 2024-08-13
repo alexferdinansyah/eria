@@ -66,7 +66,7 @@
 
 
 <!---------------------------------------------------------- UPDATE NEWS ---------------------------------------------------------->
-<h3 style="margin-left:100px;">Updates</h3>
+<!-- <h3 style="margin-left:100px;">Updates</h3> -->
 <section class="container my-5">
     <div class="row">
         <a style="text-decoration:none;" class="col-md-4 grid-item">
