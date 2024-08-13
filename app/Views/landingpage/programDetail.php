@@ -19,12 +19,12 @@
         <hr>
         <h3>Related articles</h3>
         <div class="row">
-            <a href="" class="col-md-6">
+            <a href="/news/details" class="col-md-6">
                 <img class="img-thumbnail" src="https://www.eria.org//uploads/articles/20150119/eria_capacity-building_phnom-penh_jan-19-20-cropped.jpg" alt="">
                 <h5>ERIA Capacity Building Seminar in Cambodia - Remaining Challenge for ASEAN Economic Community 2015</h5>
                 <p>31 July 2024</p>
             </a>
-            <a href="" class="col-md-6">
+            <a href="/news/details" class="col-md-6">
                 <img class="img-thumbnail" src="https://www.eria.org//uploads/articles/20140812/cb-ha-noi-2014-crop.jpg" alt="">
                 <h5>ERIA Capacity Building Seminar in Cambodia - Remaining Challenge for ASEAN Economic Community 2015</h5>
                 <p>31 July 2024</p>
