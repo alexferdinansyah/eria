@@ -17,7 +17,7 @@
                         <h1>Annual Report</h1>
                         <p>11 Juni 2024</p>
                         <p>ASEAN-China relations play a pivotal role in shaping the future of the Asian economy. This ERIA report delves into the challenges arising from the evolution of the digital economy, the restructuring of Global Value Chains (GVCs), and Asia's transition to a green economy, while envisioning the</p>
-                        <a href="#" class="btn btn-outline-light">Read More</a>
+                        <a href="/publications/details/1" class="btn btn-outline-light">Read More</a>
                     </div>
                 </div>
             </div>

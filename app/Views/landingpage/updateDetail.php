@@ -10,9 +10,9 @@
     <div class="allProg">
 
         <h3>UPDATES</h3>
-        <a id="progDetail1" class="<?= $slug == 'alternative-fuel' ? 'active' : '' ?>" href="<?= base_url('update/alternative-fuel') ?>">1. Alternative Fuel</a>
-        <a id="progDetail2" class="<?= $slug == 'vehicle-types' ? 'active' : '' ?>" href="<?= base_url('update/vehicle-types') ?>">2. Vehicle Types</a>
-        <a id="progDetail3" class="<?= $slug == 'recharging-system' ? 'active' : '' ?>" href="<?= base_url('update/recharging-system') ?>">3. Recharging System</a>
+        <a id="progDetail1" class="<?= $slug == 'alternative-fuel' ? 'active' : '' ?>" href="<?= base_url('update/alternative-fuel') ?>">Alternative Fuel</a>
+        <a id="progDetail2" class="<?= $slug == 'vehicle-types' ? 'active' : '' ?>" href="<?= base_url('update/vehicle-types') ?>">Vehicle Types</a>
+        <a id="progDetail3" class="<?= $slug == 'recharging-system' ? 'active' : '' ?>" href="<?= base_url('update/recharging-system') ?>">Recharging System</a>
     </div>
     <div class="pgd-content">
         <?= $content; ?>
