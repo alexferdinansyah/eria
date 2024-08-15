@@ -1003,11 +1003,11 @@ li>a {
     }
 }
 
-.event-content{
+.event-content {
     width: 900px;
 }
 
-.documentary h4{
+.documentary h4 {
     background-color: var(--blue);
     color: white;
     padding: 20px;

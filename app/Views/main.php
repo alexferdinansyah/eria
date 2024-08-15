@@ -41,7 +41,7 @@
                     <ul class="cos-dropdown-menu">
                         <li><a href="<?= base_url('program/asean-chairmanship') ?>" id="program1">ASEAN CHAIRMANSHIP</a></li>
                         <li><a href="<?= base_url('program/asean-east-asia-ntm-database') ?>" id="program2">ASEAN EAST ASIA NTM DATABASE</a></li>
-                        <li><a href="<?= base_url('program/asia-ccus-network') ?>" id="program3">ASIA CCUS NETWORK</a></li>
+                        <li><a href="<?= base_url('program/asia-ccus-network') ?>" id="program3">ASIA CCUS NETWORK </a></li>
                     </ul>
                 </li>
                 <li><a href=" /publications">PUBLICATIONS</a></li>
