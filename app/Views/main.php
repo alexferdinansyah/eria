@@ -31,13 +31,16 @@
 <body>
     <div class="navbar">
         <a href="/" class="nav-logo">
-            <img src="<?= base_url('assets/images/logo-A2VTP.png') ?>" alt="">
+            <h4 class="A2VTP">A2VTP</h4>
             <p>ASEAN Alternative Vehicle Technology Portal</p>
+        </a>
+        <a href="https://www.eria.org/">
+            <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="" width="100">
         </a>
         <div class="nav-menus">
             <ul>
                 <li class="dropdown-con">
-                    <a href="/program/asean-chairmanship">PROGRAMMES</a>
+                    <!-- <a href="/program/asean-chairmanship">PROGRAMMES</a> -->
                     <ul class="cos-dropdown-menu">
                         <li><a href="<?= base_url('program/asean-chairmanship') ?>" id="program1">ASEAN CHAIRMANSHIP</a></li>
                         <li><a href="<?= base_url('program/asean-east-asia-ntm-database') ?>" id="program2">ASEAN EAST ASIA NTM DATABASE</a></li>

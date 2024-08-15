@@ -103,9 +103,12 @@ body {
     border-radius: 0;
 }
 
-
 .search-btn i {
     margin-right: 5px;
+}
+
+.A2VTP {
+    color: #103979;
 }
 
 /************************************************ Slider ************************************************/
@@ -116,7 +119,7 @@ body {
 
 .slider-description {
     background-color: var(--blue);
-    color: #ffffff;
+    color: #ffffff; 
 }
 
 .slider-description h2 {
@@ -136,7 +139,6 @@ body {
     margin-left: 20%;
 }
 
-/************************************************ chart (dropdown) ************************************************/
 .container {
     width: 100%;
     margin-bottom: 30px;
@@ -154,9 +156,10 @@ body {
     .img-container {
         order: 1;
         width: 50%;
-        display: flex;
-        justify-content: center;
+        /* display: flex; */
+        /* justify-content: center; */
         align-items: center;
+        margin-left: 10%;
     }
 
     .img-container img {
@@ -319,8 +322,6 @@ body {
     }
 }
 
-
-/************************************************ card updates ************************************************/
 .header {
     width: 100vw;
     background-color: var(--blue);

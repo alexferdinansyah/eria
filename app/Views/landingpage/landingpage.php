@@ -6,8 +6,8 @@
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <div class="row align-items-center">
-                    <div class="col-md-5 slider-description">
+                <div class="row">
+                    <div class="col-md-12 slider-description">
                         <h2>ASEAN ALTERNATIVE VEHICLE TECHNOLOGY PORTAL</h2>
                         <p style="text-align: justify;">
                             An online data of ASEAN new & alternative vehicle technology
@@ -16,17 +16,12 @@
                             development in 10 ASEAN member states to open public and to
                             regularly produce ASEAN Vehicle Technology Outlook.
                         </p>
-                        <div class="container mt-5 d-flex flex-column align-items-center">
-                            <div class="d-flex flex-column flex-lg-row w-100 align-items-center justify-content-center">
-                                <div class="img-container">
-                                    <img src="<?= base_url('assets/images/nations/maps/Peta ASEAN.svg') ?>" class="img-fluid" alt="ASEAN Map">
-                                </div>
+
+                        <div class="container mt-5 d-flex justify-content-between">
+                            <div class="img-container">
+                                <img src="<?= base_url('assets/images/nations/maps/Peta ASEAN.svg') ?>" alt="ASEAN Map">
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-5" style="margin-left: 12%; margin-top: -24%;">
-                        <div class="d-flex justify-content-start">
-                            <div class="dropdown-container p-3 rounded shadow-sm w-100">
+                            <div class="dropdown-container p-3 rounded shadow-sm">
                                 <div class="d-flex flex-column flex-md-row align-items-start mb-3">
                                     <div class="d-flex flex-column align-items-center align-items-md-start">
                                         <img src="<?= base_url('assets/images/road.png') ?>" alt="Logo" class="dropdown-logo mb-2" style="height: 60px; width: auto;">
@@ -62,6 +57,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- <div class="container mt-5 d-flex flex-column align-items-center">
     <div class="d-flex flex-column flex-lg-row w-100 align-items-center justify-content-center">
