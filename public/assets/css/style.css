@@ -117,6 +117,20 @@ body {
     padding: 10%;
 } */
 
+.hero{
+    width: 100%;
+    background-color: var(--blue);
+    color: white;
+    padding-left:100px ;
+    padding-right:100px ;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.hero p{
+    font-size: 20px;
+}
+
 .slider-description {
     background-color: var(--blue);
     color: #ffffff;
@@ -154,14 +168,12 @@ body {
     }
 
     .img-container {
-        order: 1;
-        /* width: 50%; */
+        background-color: #007bff;
+        width: 100%;
+        /* order: 1; */
         /* display: flex; */
         /* justify-content: center; */
-        align-items: center;
-        margin-left: 10%;
-        max-width: 100%;
-        height: auto;
+        /* align-items: center; */
     }
 
     .img-container img {
