@@ -56,7 +56,8 @@
                         <li><a href="<?= base_url('update/recharging-system') ?>" id="program3">RECHARGING SYSTEM</a></li>
                     </ul>
                 </li>
-                <li><a href="/events">EVENTS</a></li>
+                <!-- <li><a href="/events">EVENTS</a></li> -->
+                <li><a href="/events">ABOUT</a></li>
             </ul>
         </div>
     </div>

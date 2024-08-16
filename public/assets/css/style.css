@@ -119,7 +119,7 @@ body {
 
 .slider-description {
     background-color: var(--blue);
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 .slider-description h2 {
@@ -155,11 +155,13 @@ body {
 
     .img-container {
         order: 1;
-        width: 50%;
+        /* width: 50%; */
         /* display: flex; */
         /* justify-content: center; */
         align-items: center;
         margin-left: 10%;
+        max-width: 100%;
+        height: auto;
     }
 
     .img-container img {
@@ -175,7 +177,7 @@ body {
     }
 
     .dropdown-container {
-        width: 75%;
+        width: 100%;
     }
 
     .select-wrapper {
@@ -262,6 +264,7 @@ body {
 
     .dropdown-content {
         margin-top: 10px;
+        width: 100%;
     }
 
     .dropdown-country {

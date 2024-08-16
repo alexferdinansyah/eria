@@ -8,8 +8,10 @@
             <div class="carousel-item active">
                 <div class="row">
                     <div class="col-md-12 slider-description">
-                        <h2>ASEAN ALTERNATIVE VEHICLE TECHNOLOGY PORTAL</h2>
-                        <p style="text-align: justify;">
+                        <div class="text-center mb-4">
+                            <h2>ASEAN ALTERNATIVE VEHICLE TECHNOLOGY PORTAL</h2>
+                        </div>
+                        <p class="text-justify mx-auto" style="max-width: 90%;">
                             An online data of ASEAN new & alternative vehicle technology
                             with the main objective of providing comprehensive information
                             on the current situation of alternative vehicle technology
@@ -17,46 +19,53 @@
                             regularly produce ASEAN Vehicle Technology Outlook.
                         </p>
 
-                        <div class="container mt-5 d-flex justify-content-between">
-                            <div class="img-container">
-                                <img src="<?= base_url('assets/images/nations/maps/Peta ASEAN.svg') ?>" alt="ASEAN Map">
-                            </div>
-                            <div class="dropdown-container p-3 rounded shadow-sm">
-                                <div class="d-flex flex-column flex-md-row align-items-start mb-3">
-                                    <div class="d-flex flex-column align-items-center align-items-md-start">
-                                        <img src="<?= base_url('assets/images/road.png') ?>" alt="Logo" class="dropdown-logo mb-2" style="height: 60px; width: auto;">
-                                        <h4 class="dropdown-title text-center text-md-start mb-0 mt-2 mt-md-0">Road</h4>
-                                    </div>
-                                    <div class="ms-md-3 mt-3 mt-md-0 flex-grow-1">
-                                        <p class="text-md-start mb-1" style="font-size: 1.125rem;">
-                                            View interactive infographics containing up-to-date statistics on infrastructures and fleet data for road vehicles, private and commercial.
-                                        </p>
-                                        <p class="text-md-start mb-3" style="font-size: 1.125rem;">Available for all ASEAN countries</p>
+                        <div class="container mt-5">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <div class="img-container text-center">
+                                        <img src="<?= base_url('assets/images/nations/maps/Peta ASEAN.svg') ?>" alt="ASEAN Map" class="img-fluid" style="max-width: 110%;">
                                     </div>
                                 </div>
-                                <div class="dropdown-content">
-                                    <select class="dropdown-country form-select" id="asean-dropdown" onchange="redirectToSummary()">
-                                        <option disabled hidden selected value="country">CHOOSE COUNTRY</option>
-                                        <option value="brunei">Brunei</option>
-                                        <option value="cambodia">Cambodia</option>
-                                        <option value="indonesia">Indonesia</option>
-                                        <option value="laos">Laos</option>
-                                        <option value="malaysia">Malaysia</option>
-                                        <option value="myanmar">Myanmar</option>
-                                        <option value="philippines">Philippines</option>
-                                        <option value="singapore">Singapore</option>
-                                        <option value="thailand">Thailand</option>
-                                        <option value="vietnam">Vietnam</option>
-                                    </select>
+                                <div class="col-md-6">
+                                    <div class="dropdown-container p-4 rounded shadow-sm" style="width: 100%;">
+                                        <div class="d-flex flex-column flex-md-row align-items-start mb-4">
+                                            <div class="d-flex flex-column align-items-center align-items-md-start">
+                                                <img src="<?= base_url('assets/images/road.png') ?>" alt="Logo" class="dropdown-logo mb-3" style="height: 60px; width: auto;">
+                                                <h4 class="dropdown-title text-center text-md-start mb-3 mt-0">Road</h4>
+                                            </div>
+                                            <div class="ms-md-3 mt-3 mt-md-0 flex-grow-1">
+                                                <p class="text-md-start mb-3" style="font-size: 1.125rem;">
+                                                    View interactive infographics containing up-to-date statistics on infrastructures and fleet data for road vehicles, private and commercial.
+                                                </p>
+                                                <p class="text-md-start mb-0" style="font-size: 1.125rem;">Available for all ASEAN countries</p>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-content">
+                                            <select class="dropdown-country form-select" id="asean-dropdown" onchange="redirectToSummary()" style="width: 100%;">
+                                                <option disabled hidden selected value="country">CHOOSE COUNTRY</option>
+                                                <option value="brunei">Brunei</option>
+                                                <option value="cambodia">Cambodia</option>
+                                                <option value="indonesia">Indonesia</option>
+                                                <option value="laos">Laos</option>
+                                                <option value="malaysia">Malaysia</option>
+                                                <option value="myanmar">Myanmar</option>
+                                                <option value="philippines">Philippines</option>
+                                                <option value="singapore">Singapore</option>
+                                                <option value="thailand">Thailand</option>
+                                                <option value="vietnam">Vietnam</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div> <!-- End of row -->
+                        </div> <!-- End of container -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 
 <!-- <div class="container mt-5 d-flex flex-column align-items-center">
