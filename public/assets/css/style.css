@@ -14,32 +14,11 @@ body {
 
 .navbar {
     width: 100%;
-    height: 100px;
+    padding-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.nav-logo {
-    /* background-color: #007bff; */
-    text-decoration: none;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    /* width: 35%; */
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin-left: 120px;
-    padding-top: 20px;
-}
-
-.nav-logo img {
-    /* background-color: red; */
-    width: 70%;
-    height: 100%;
 }
 
 .nav-logo p {
@@ -68,6 +47,7 @@ body {
     padding: 15px;
 }
 
+
 .nav-menus ul li:hover {
     background-color: rgba(179, 179, 179, 0.3);
 }
@@ -76,66 +56,32 @@ body {
     color: black;
     text-decoration: none;
     font-size: 14px;
+
     font-weight: 600;
-}
-
-.input-group {
-    display: flex;
-    align-items: center;
-}
-
-.search-input {
-    flex-grow: 1;
-    margin-right: 10px;
-    border: 1px solid #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    padding: 10px;
-}
-
-.search-btn {
-    background-color: var(--blue);
-    color: white;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border-radius: 0;
-}
-
-.search-btn i {
-    margin-right: 5px;
-}
-
-.A2VTP {
-    color: #103979;
-}
-
-
-.nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .nav-logo {
     display: flex;
-    align-items: center;
+
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
     margin: 0 10px;
     text-decoration: none;
 }
 
-.logo-text, .nav-logo img {
-    margin-left: 10px;
-}
+
 
 .nav-logo p {
-    margin-left: 10px;
-    margin-bottom: 0;
+    margin: 0;
     font-size: 14px;
+    width: 200px;
     color: #000;
-    max-width: 200px;
+    /* Adjust this width as needed */
     white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Optional, for overflow control */
     line-height: 1.4;
 }
 

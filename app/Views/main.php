@@ -31,8 +31,8 @@
 <body>
     <div class="navbar">
         <a href="/" class="nav-logo">
-            <div class="logo-text">
-                <h4 class="A2VTP" style="margin-left: 10px;">A2VTP</h4>
+            <div class="logo-text" style="margin-left: 15px;">
+                <h4 class="A2VTP">A2VTP</h4>
                 <p>ASEAN Alternative Vehicle Technology Portal</p>
             </div>
         </a>
@@ -50,7 +50,7 @@
                         <li><a href="<?= base_url('program/asia-ccus-network') ?>" id="program3">ASIA CCUS NETWORK </a></li>
                     </ul>
                 </li>
-                <li><a href=" /publications">PUBLICATIONS</a></li>
+                <li><a href="/publications">PUBLICATIONS</a></li>
                 <li class="dropdown-con">
                     <a href="<?= base_url('update/alternative-fuel') ?>">UPDATES</a>
                     <ul class="cos-dropdown-menu">
