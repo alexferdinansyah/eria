@@ -144,4 +144,9 @@ class LandingController extends BaseController
         }
         return view('/landingpage/summary', $data);
     }
+
+    public function about()
+    {
+        return view('landingpage/about');
+    }
 }

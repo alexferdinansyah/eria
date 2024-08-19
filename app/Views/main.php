@@ -31,11 +31,14 @@
 <body>
     <div class="navbar">
         <a href="/" class="nav-logo">
-            <h4 class="A2VTP">A2VTP</h4>
-            <p>ASEAN Alternative Vehicle Technology Portal</p>
+            <div class="logo-text">
+                <h4 class="A2VTP" style="margin-left: 10px;">A2VTP</h4>
+                <p>ASEAN Alternative Vehicle Technology Portal</p>
+            </div>
         </a>
-        <a href="https://www.eria.org/">
+        <a href="https://www.eria.org/" class="nav-logo">
             <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="" width="100">
+            <p>Economic Research Institute for ASEAN and East Asia</p>
         </a>
         <div class="nav-menus">
             <ul>
@@ -57,7 +60,7 @@
                     </ul>
                 </li>
                 <!-- <li><a href="/events">EVENTS</a></li> -->
-                <li><a href="/events">ABOUT</a></li>
+                <li><a href="/about">ABOUT</a></li>
             </ul>
         </div>
     </div>

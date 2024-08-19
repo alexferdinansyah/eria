@@ -22,3 +22,5 @@ $routes->get('/events', 'LandingController::events');
 $routes->get('/events/detail', 'LandingController::eventsDetail');
 
 $routes->get('/summary/(:segment)', 'LandingController::summary/$1');
+
+$routes->get('/about', 'LandingController::about');
