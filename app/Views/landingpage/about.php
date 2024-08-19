@@ -61,7 +61,7 @@
                             <img src="<?= base_url('assets/images/logoui.png') ?>" alt="Logo UI" class="img-fluid custom-logo">
                         </a>
                         <div class="description2 ms-3">
-                            <a href="https://www.ui.ac.id" target="_blank">Universitas Indonesia</a> - lorem ipsuum
+                            <a href="https://www.ui.ac.id" target="_blank">Universitas Indonesia</a> - Research Partner
                             <div>This represents the University of Indonesia, a partner institution.</div>
                         </div>
                     </div>
