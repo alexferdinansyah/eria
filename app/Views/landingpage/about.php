@@ -50,10 +50,9 @@
                             <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="Logo ERIA" class="img-fluid custom-logo">
                         </a>
                         <div class="description1 ms-3">
-                            <a href="https://www.eria.org" target="_blank">ERIA</a> - Research Institute
+                            <a href="https://www.eria.org" target="_blank">ERIA</a> - <span>Research Institute</span>
                             <div>This represents the Economic Research Institute for ASEAN and East Asia.</div>
                         </div>
-
                     </div>
 
                     <div class="logo d-flex align-items-center">
@@ -61,7 +60,7 @@
                             <img src="<?= base_url('assets/images/logoui.png') ?>" alt="Logo UI" class="img-fluid custom-logo">
                         </a>
                         <div class="description2 ms-3">
-                            <a href="https://www.ui.ac.id" target="_blank">Universitas Indonesia</a> - Research Partner
+                            <a href="https://www.ui.ac.id" target="_blank">Universitas Indonesia</a> <span>- Research Partner</span>
                             <div>This represents the University of Indonesia, a partner institution.</div>
                         </div>
                     </div>
@@ -71,7 +70,7 @@
                             <img src="<?= base_url('assets/images/LightCodeDigital.jpg') ?>" alt="Logo UI" class="img-fluid custom-logo">
                         </a>
                         <div class="description3 ms-3">
-                            <a href="#" target="_blank">Light Code Digital</a> - Web Developer
+                            <a href="#" target="_blank">Light Code Digital</a> <span>- Web Developer</span>
                             <div>This represents the Light Code Digital, a partner institution.</div>
                         </div>
                     </div>

@@ -60,21 +60,30 @@ body {
     font-weight: 600;
 }
 
+.nav-logos {
+    display: flex;
+}
+
 .nav-logo {
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    margin: 0 10px;
+    margin: 0;
+    margin-left: 10%;
+    /* background-color: blue; */
     text-decoration: none;
 }
 
 .nav-logo p {
     margin: 0;
     font-size: 14px;
-    width: 200px;
+    width: 175px;
+    /* adjust the width on here for the gap  */
     color: #000;
     /* Adjust this width as needed */
+    /* background-color: blue; */
+
     white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
