@@ -50,7 +50,7 @@
                             <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="Logo ERIA" class="img-fluid custom-logo">
                         </a>
                         <div class="description1 ms-3">
-                            <a href="https://www.eria.org" target="_blank">ERIA</a> - Lembaga Research
+                            <a href="https://www.eria.org" target="_blank">ERIA</a> - Research Institute
                             <div>This represents the Economic Research Institute for ASEAN and East Asia.</div>
                         </div>
 
