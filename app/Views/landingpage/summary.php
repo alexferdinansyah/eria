@@ -87,14 +87,23 @@
             <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
                 <canvas class="chartdiv" id="bar6"></canvas>
             </div>
-            
+
             <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
             </div>
-            
         </div>
     </div>
 </div>
 
+<div class="conten-histories" style="margin-left: 7%; margin-top: 2%">
+    <h2>Histories</h2>
+</div>
+<br>
+<br>
+<div class="conten-forecasting" style="margin-left: 7%;">
+    <h2>Forecasting</h2>
+</div>
+
+<!-- DISCLAIMER COMING SOON -->
 
 <!-- data source -->
 <div id="data-s">

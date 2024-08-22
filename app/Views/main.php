@@ -45,17 +45,17 @@
         </div>
         <div class="nav-menus">
             <ul>
-                <li class="dropdown-con">
-                    <!-- <a href="/program/asean-chairmanship">PROGRAMMES</a> -->
+                <!-- <li class="dropdown-con">
+                    <a href="/program/asean-chairmanship">PROGRAMMES</a>
                     <ul class="cos-dropdown-menu">
                         <li><a href="<?= base_url('program/asean-chairmanship') ?>" id="program1">ASEAN CHAIRMANSHIP</a></li>
                         <li><a href="<?= base_url('program/asean-east-asia-ntm-database') ?>" id="program2">ASEAN EAST ASIA NTM DATABASE</a></li>
                         <li><a href="<?= base_url('program/asia-ccus-network') ?>" id="program3">ASIA CCUS NETWORK </a></li>
                     </ul>
-                </li>
-                <li><a href="/publications">PUBLICATIONS</a></li>
+                </li> -->
+                <li><a href="/publications">RELATED PUBLICATION</a></li>
                 <li class="dropdown-con">
-                    <a href="<?= base_url('update/alternative-fuel') ?>">UPDATES</a>
+                    <a href="<?= base_url('update/alternative-fuel') ?>">NEWS & UPDATES</a>
                     <ul class="cos-dropdown-menu">
                         <li><a href="<?= base_url('update/alternative-fuel') ?>" id="program1">ALTERNATIVE FUEL</a></li>
                         <li><a href="<?= base_url('update/vehicle-types') ?>" id="program2">VEHICLE TYPES</a></li>
