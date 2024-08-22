@@ -30,6 +30,9 @@ function makeChart(element, type, data){
   const ctx3 = document.getElementById('myChart3');
   const ctx4 = document.getElementById('myChart4');
 
+  const line1 = document.getElementById('line1')
+  const line2 = document.getElementById('line2')
+
   // bar chart element
   const bar1 = document.getElementById('bar1');
   const bar2 = document.getElementById('bar2');
@@ -40,6 +43,32 @@ function makeChart(element, type, data){
 
   const myButton = document.querySelectorAll('#download-button');
   
+  // line chart data
+  let gdp = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    datasets: [{
+      label: 'GDP per Capita (Current US$)',
+      data: [3614,	3668,	3603,	3477,	3323,	3559,	384,	3903,	4151,	3896,	4334,	4778, 0],
+      backgroundColor: "rgba(75, 0, 130, 0.8)",
+      borderColor: "rgba(75, 0, 130, 1)",
+      borderWidth: 1
+    }]
+  }
+
+  let ppp = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    datasets: [{
+      label: 'GDP per Capita Purchasing Power Parity (PPP)',
+      data: [8611,	9016,	9402,	9759,	10122,	10519,	10942,	11397,	11858,	11516,	11859,	1241, 0],
+      backgroundColor: "rgba(75, 0, 130, 0.8)",
+      borderColor: "rgba(75, 0, 130, 1)",
+      borderWidth: 1
+    }]
+  }
+
+    makeChart(line1, 'line', gdp);
+    makeChart(line2, 'line', ppp);
+
   // bar chart data
   let volICE = {
       labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
@@ -240,10 +269,10 @@ function makeChart(element, type, data){
     // makeChart(ctx3, 'line', chart3Data)
 
     let chart4Data = {
-      labels: ['ICE', 'HEV', 'BEV', 'PHEV', 'NEW CAR SUM', 'STOCK / UIO'],
+      labels: ['ICE', 'HEV', 'BEV', 'PHEV', ],
       datasets: [{
         label: '2022 Data',
-        data: [1032603, 5100, 10327, 10, 1048040, 12250892],
+        data: [1032603, 5100, 10327, 10],
         backgroundColor: [
           'rgba(255, 0, 0, 0.8)',    // Red //
           'rgba(255, 127, 0, 0.8)',  // Orange

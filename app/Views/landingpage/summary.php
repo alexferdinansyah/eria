@@ -54,6 +54,12 @@
             <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
                 <canvas class="chartdiv" id="myChart2"></canvas>
             </div>
+            <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
+                <canvas class="chartdiv" id="line1"></canvas>
+            </div>
+            <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
+                <canvas class="chartdiv" id="line2"></canvas>
+            </div>
             <div class="d-flex align-items-center gap-2" style="width: 40%;">
                 <div class="d-flex" style="width: 300px;">
                     <canvas class="chartdiv" id="myChart4"></canvas>
@@ -63,8 +69,6 @@
                     <li>VOL HEV : <?= $volHev ?></li>
                     <li>VOL BEV : <?= $volBev ?></li>
                     <li>VOL PHEV : <?= $volPhev ?></li>
-                    <li>VOL NEW CAR SUM : <?= $volNewCarSum ?></li>
-                    <li>VOL STOCK / UIO : <?= $volStockUIO ?></li>
                 </ul>
             </div>
 
