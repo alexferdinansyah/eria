@@ -11,6 +11,7 @@
 <div class="row">
     <div class="summary-wrapper">
         <!-- summary -->
+        <h1 style="margin-left:50px;">Econometric</h1>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
             <div class="content-summary">
                 <h2>Summary</h2>
@@ -95,16 +96,179 @@
             <div class="chart-parent" style="width: 40%;">
             </div>
         </div>
-    </div>
-</div>
+        <h1 style="margin-left:50px;">Historical</h1>
+        <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
+            <div class="content-summary">
+                <h2>Summary</h2>
+                <section class="container-sum">
+                    <div>
+                        <p>Population</p>
+                        <p><?= $population ?></p>
+                    </div>
+                    <div>
+                        <p>Total Land Area - km</p>
+                        <p><?= $ttlland ?></p>
+                    </div>
+                    <div>
+                        <p>Total Highway Area - km</p>
+                        <p><?= $totalHighway ?></p>
+                    </div>
+                </section>
+                <section class="container-sum">
+                    <div>
+                        <p>GDP Per Capita - US$</p>
+                        <p><?= $GDP ?></p>
+                    </div>
+                    <div>
+                        <p>Purchasing Power Parity (PPP) - US$</p>
+                        <p><?= $PPP ?></p>
+                    </div>
+                </section>
+                <section class="container-sum">
+                    <div>
+                        <p>GDP Per Capita Purchasing Power Parity (PPP) - US$</p>
+                        <p><?= $GDPppp ?></p>
+                    </div>
+                </section>
+            </div>
+            <img class="img-map" src="<?= base_url('assets/images/nations/maps/'  . $nation . ".svg") ?>" alt="">
 
-<div class="conten-histories" style="margin-left: 7%; margin-top: 2%">
-    <h2>Histories</h2>
-</div>
-<br>
-<br>
-<div class="conten-forecasting" style="margin-left: 7%;">
-    <h2>Forecasting</h2>
+            <!-- chart top -->
+            <div class="chart-parent" style="width: 40%;">
+                <canvas class="chartdiv" id="his1"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;">
+                <canvas class="chartdiv" id="his2"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
+                <canvas class="chartdiv" id="his3"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
+                <canvas class="chartdiv" id="his4"></canvas>
+            </div>
+            <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
+                <div class="chart-parent" style="width: 300px;">
+                    <canvas class="chartdiv" id="his5"></canvas>
+                </div>
+                <ul>
+                    <li>VOL ICE : <?= $volIce ?></li>
+                    <li>VOL HEV : <?= $volHev ?></li>
+                    <li>VOL BEV : <?= $volBev ?></li>
+                    <li>VOL PHEV : <?= $volPhev ?></li>
+                </ul>
+            </div>
+
+            <!-- bar chart -->
+            <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
+                <canvas class="chartdiv" id="his6"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;">
+                <canvas class="chartdiv" id="his7"></canvas>
+            </div>
+            
+            <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
+                <canvas class="chartdiv" id="his8"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
+                <canvas class="chartdiv" id="his9"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
+                <canvas class="chartdiv" id="his10"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
+                <canvas class="chartdiv" id="his11"></canvas>
+            </div>
+
+            <div class="chart-parent" style="width: 40%;">
+            </div>
+        </div>
+        <h1 style="margin-left:50px;">Forecasting</h1>
+        <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
+            <div class="content-summary">
+                <h2>Summary</h2>
+                <section class="container-sum">
+                    <div>
+                        <p>Population</p>
+                        <p><?= $population ?></p>
+                    </div>
+                    <div>
+                        <p>Total Land Area - km</p>
+                        <p><?= $ttlland ?></p>
+                    </div>
+                    <div>
+                        <p>Total Highway Area - km</p>
+                        <p><?= $totalHighway ?></p>
+                    </div>
+                </section>
+                <section class="container-sum">
+                    <div>
+                        <p>GDP Per Capita - US$</p>
+                        <p><?= $GDP ?></p>
+                    </div>
+                    <div>
+                        <p>Purchasing Power Parity (PPP) - US$</p>
+                        <p><?= $PPP ?></p>
+                    </div>
+                </section>
+                <section class="container-sum">
+                    <div>
+                        <p>GDP Per Capita Purchasing Power Parity (PPP) - US$</p>
+                        <p><?= $GDPppp ?></p>
+                    </div>
+                </section>
+            </div>
+            <img class="img-map" src="<?= base_url('assets/images/nations/maps/'  . $nation . ".svg") ?>" alt="">
+
+            <!-- chart top -->
+            <div class="chart-parent" style="width: 40%;">
+                <canvas class="chartdiv" id="fore1"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;">
+                <canvas class="chartdiv" id="fore2"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
+                <canvas class="chartdiv" id="fore3"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
+                <canvas class="chartdiv" id="fore4"></canvas>
+            </div>
+            <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
+                <div class="chart-parent" style="width: 300px;">
+                    <canvas class="chartdiv" id="fore5"></canvas>
+                </div>
+                <ul>
+                    <li>VOL ICE : <?= $volIce ?></li>
+                    <li>VOL HEV : <?= $volHev ?></li>
+                    <li>VOL BEV : <?= $volBev ?></li>
+                    <li>VOL PHEV : <?= $volPhev ?></li>
+                </ul>
+            </div>
+
+            <!-- bar chart -->
+            <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
+                <canvas class="chartdiv" id="fore6"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;">
+                <canvas class="chartdiv" id="fore7"></canvas>
+            </div>
+            
+            <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
+                <canvas class="chartdiv" id="fore8"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
+                <canvas class="chartdiv" id="fore9"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
+                <canvas class="chartdiv" id="fore10"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
+                <canvas class="chartdiv" id="fore11"></canvas>
+            </div>
+
+            <div class="chart-parent" style="width: 40%;">
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- DISCLAIMER COMING SOON -->

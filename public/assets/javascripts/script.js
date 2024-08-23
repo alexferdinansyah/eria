@@ -54,6 +54,17 @@ function makeChart(element, type, data){
       borderWidth: 1
     }]
   }
+  
+  let gdpBlank = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    datasets: [{
+      label: 'GDP per Capita (Current US$)',
+      data: [],
+      backgroundColor: "rgba(75, 0, 130, 0.8)",
+      borderColor: "rgba(75, 0, 130, 1)",
+      borderWidth: 1
+    }]
+  };
 
   let ppp = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
@@ -65,9 +76,18 @@ function makeChart(element, type, data){
       borderWidth: 1
     }]
   }
-
-    makeChart(line1, 'line', gdp);
-    makeChart(line2, 'line', ppp);
+  
+  let pppBlank = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    datasets: [{
+      label: 'GDP per Capita Purchasing Power Parity (PPP)',
+      data: [],
+      backgroundColor: "rgba(75, 0, 130, 0.8)",
+      borderColor: "rgba(75, 0, 130, 1)",
+      borderWidth: 1
+    }]
+  };
+    
 
   // bar chart data
   let volICE = {
@@ -204,6 +224,10 @@ function makeChart(element, type, data){
 
   // IF INDONESIA
   if(route == 'indonesia'){
+
+    makeChart(line1, 'line', gdp);
+    makeChart(line2, 'line', ppp);
+
     let chart1Data = {
       labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
       datasets: [{
@@ -230,41 +254,41 @@ function makeChart(element, type, data){
 
     makeChart(ctx2, 'line', chart2Data);
 
-    let chart3Data = {
-        labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
-        datasets: [
-        {
-          label: 'VOL ICE',
-          data: [894164, 1116230,1229811,1208028,1013518,1062694,1077364,1151308,1029775,531175,884009,1032603],
-          borderWidth: 1
-        },
-        {
-          label: 'VOL HEV',
-          data: [0,0,0,0,0,0,0,0,331,1108,2473,5100],
-          borderWidth: 1
-        },
-        {
-          label: 'VOL BEV',
-          data: [0,0,0,0,0,0,0,0,0,118,685,10327],
-          borderWidth: 1
-        },
-        {
-          label: 'VOL PHEV',
-          data: [0,0,0,0,0,0,0,0,20,6,35,10],
-          borderWidth: 1
-        },
-        {
-          label: 'VOL NEW CAR SUM',
-          data: [894164,1116230,1229811,1208028,1013518,1062694,1077364,1151308,1030126,532407,887202,1048040],
-          borderWidth: 1
-        },
-        {
-          label: 'VOL STOCK / UIO',
-          data: [894164,2010394,3240205,4448233,5461751,6524445,7601809,8753117,9783243,10315650,11202852,12250892],
-          borderWidth: 1
-        },
-      ] 
-    };
+    // let chart3Data = {
+    //     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+    //     datasets: [
+    //     {
+    //       label: 'VOL ICE',
+    //       data: [894164, 1116230,1229811,1208028,1013518,1062694,1077364,1151308,1029775,531175,884009,1032603],
+    //       borderWidth: 1
+    //     },
+    //     {
+    //       label: 'VOL HEV',
+    //       data: [0,0,0,0,0,0,0,0,331,1108,2473,5100],
+    //       borderWidth: 1
+    //     },
+    //     {
+    //       label: 'VOL BEV',
+    //       data: [0,0,0,0,0,0,0,0,0,118,685,10327],
+    //       borderWidth: 1
+    //     },
+    //     {
+    //       label: 'VOL PHEV',
+    //       data: [0,0,0,0,0,0,0,0,20,6,35,10],
+    //       borderWidth: 1
+    //     },
+    //     {
+    //       label: 'VOL NEW CAR SUM',
+    //       data: [894164,1116230,1229811,1208028,1013518,1062694,1077364,1151308,1030126,532407,887202,1048040],
+    //       borderWidth: 1
+    //     },
+    //     {
+    //       label: 'VOL STOCK / UIO',
+    //       data: [894164,2010394,3240205,4448233,5461751,6524445,7601809,8753117,9783243,10315650,11202852,12250892],
+    //       borderWidth: 1
+    //     },
+    //   ] 
+    // };
 
     // makeChart(ctx3, 'line', chart3Data)
 
@@ -301,8 +325,61 @@ function makeChart(element, type, data){
     makeChart(bar4, 'bar', volPHEV)
     makeChart(bar5, 'bar', volNewCarSum)
     makeChart(bar6, 'bar', volStockUIO)
+
+    // chart Historical
+    const his1 = document.getElementById('his1');
+    const his2 = document.getElementById('his2');
+    const his3 = document.getElementById('his3');
+    const his4 = document.getElementById('his4');
+    const his5 = document.getElementById('his5');
+    const his6 = document.getElementById('his6');
+    const his7 = document.getElementById('his7');
+    const his8 = document.getElementById('his8');
+    const his9 = document.getElementById('his9');
+    const his10 = document.getElementById('his10');
+    const his11 = document.getElementById('his11');
+
+    makeChart(his1, 'line', chart1Data)
+    makeChart(his2, 'line', chart2Data)
+    makeChart(his3, 'line', gdp)
+    makeChart(his4, 'line', ppp)
+    makeChart(his5, 'doughnut', chart4Data)
+    makeChart(his6, 'bar', volICE)
+    makeChart(his7, 'bar', volHEV)
+    makeChart(his8, 'bar', volBEV)
+    makeChart(his9, 'bar', volPHEV)
+    makeChart(his10, 'bar', volNewCarSum)
+    makeChart(his11, 'bar', volStockUIO)
+
+    // chart forecasting
+    const fore1 = document.getElementById('fore1');
+    const fore2 = document.getElementById('fore2');
+    const fore3 = document.getElementById('fore3');
+    const fore4 = document.getElementById('fore4');
+    const fore5 = document.getElementById('fore5');
+    const fore6 = document.getElementById('fore6');
+    const fore7 = document.getElementById('fore7');
+    const fore8 = document.getElementById('fore8');
+    const fore9 = document.getElementById('fore9');
+    const fore10 = document.getElementById('fore10');
+    const fore11 = document.getElementById('fore11');
+
+    makeChart(fore1, 'line', chart1Data)
+    makeChart(fore2, 'line', chart2Data)
+    makeChart(fore3, 'line', gdp)
+    makeChart(fore4, 'line', ppp)
+    makeChart(fore5, 'doughnut', chart4Data)
+    makeChart(fore6, 'bar', volICE)
+    makeChart(fore7, 'bar', volHEV)
+    makeChart(fore8, 'bar', volBEV)
+    makeChart(fore9, 'bar', volPHEV)
+    makeChart(fore10, 'bar', volNewCarSum)
+    makeChart(fore11, 'bar', volStockUIO)
+
+
   }else{
-    
+    makeChart(line1, 'line', gdpBlank);
+    makeChart(line2, 'line', pppBlank);
     // remove data source where not indonesia
     ds.style.display ="none"
 
@@ -313,6 +390,7 @@ function makeChart(element, type, data){
     makeChart(bar4, 'bar', volPHEVBlank)
     makeChart(bar5, 'bar', volNewCarSumBlank)
     makeChart(bar6, 'bar', volStockUIOBlank)
+    
     
     // blank data chart 2x2
     let chart1data = {
