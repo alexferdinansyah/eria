@@ -716,6 +716,16 @@ img.img-map {
     margin-top: 30px;
 }
 
+.chart-parent{
+    /* background-color: blue; */
+    padding: 0 !important; 
+    margin: 0 !important; 
+}
+
+.chartdiv{
+    /* background-color: green; */
+}
+
 /* 
 .chart-container{
     display: flex;   
