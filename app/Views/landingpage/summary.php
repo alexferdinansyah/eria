@@ -48,14 +48,20 @@
             <img class="img-map" src="<?= base_url('assets/images/nations/maps/'  . $nation . ".svg") ?>" alt="">
 
             <!-- chart top -->
-            <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
-                <canvas class="chartdiv d-flex" id="myChart1"></canvas>
+            <div class="chart-parent" style="width: 40%;">
+                <canvas class="chartdiv" id="myChart1"></canvas>
             </div>
-            <div class="d-flex flex-column align-items-center gap-2" style="width: 40%;">
+            <div class="chart-parent" style="width: 40%;">
                 <canvas class="chartdiv" id="myChart2"></canvas>
             </div>
-            <div class="d-flex align-items-center gap-2" style="width: 40%;">
-                <div class="d-flex" style="width: 300px;">
+            <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
+                <canvas class="chartdiv" id="line1"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
+                <canvas class="chartdiv" id="line2"></canvas>
+            </div>
+            <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
+                <div class="chart-parent" style="width: 300px;">
                     <canvas class="chartdiv" id="myChart4"></canvas>
                 </div>
                 <ul>
@@ -63,31 +69,29 @@
                     <li>VOL HEV : <?= $volHev ?></li>
                     <li>VOL BEV : <?= $volBev ?></li>
                     <li>VOL PHEV : <?= $volPhev ?></li>
-                    <li>VOL NEW CAR SUM : <?= $volNewCarSum ?></li>
-                    <li>VOL STOCK / UIO : <?= $volStockUIO ?></li>
                 </ul>
             </div>
 
             <!-- bar chart -->
-            <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+            <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
                 <canvas class="chartdiv" id="bar1"></canvas>
             </div>
-            <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+            <div class="chart-parent" style="width: 40%;">
                 <canvas class="chartdiv" id="bar2"></canvas>
             </div>
-            <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+            <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
                 <canvas class="chartdiv" id="bar3"></canvas>
             </div>
-            <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
                 <canvas class="chartdiv" id="bar4"></canvas>
             </div>
-            <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
                 <canvas class="chartdiv" id="bar5"></canvas>
             </div>
-            <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
                 <canvas class="chartdiv" id="bar6"></canvas>
             </div>
-            <div class="d-flex justify-content-center flex-column align-items-center gap-2" style="width: 40%;">
+            <div class="chart-parent" style="width: 40%;">
             </div>
         </div>
     </div>
