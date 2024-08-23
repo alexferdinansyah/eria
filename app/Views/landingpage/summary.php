@@ -97,6 +97,15 @@
     </div>
 </div>
 
+<div class="conten-histories" style="margin-left: 7%; margin-top: 2%">
+    <h2>Histories</h2>
+</div>
+<br>
+<br>
+<div class="conten-forecasting" style="margin-left: 7%;">
+    <h2>Forecasting</h2>
+</div>
+
 <!-- DISCLAIMER COMING SOON -->
 
 <!-- data source -->
