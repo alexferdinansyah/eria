@@ -100,7 +100,7 @@
 
         <h2 style="margin-top: 2%; margin-left: 4%;">New Car Sum</h2>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
-            <div class="chart-parent">
+            <div class="chart-parent" style="width: 40%;">
                 <canvas class="chartdiv" id="his10"></canvas>
             </div>
             <div class="chart-parent" style="width: 40%;">
