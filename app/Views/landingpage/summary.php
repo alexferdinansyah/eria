@@ -10,7 +10,7 @@
 
 <div class="row">
     <div class="summary-wrapper">
-        <!-- summary -->
+        
         <h1 style="margin-left:50px;">Econometric</h1>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
             <div class="content-summary">
@@ -21,11 +21,11 @@
                         <p><?= $population ?></p>
                     </div>
                     <div>
-                        <p>Total Land Area - km</p>
+                        <p>Total Land Area - km²</p>
                         <p><?= $ttlland ?></p>
                     </div>
                     <div>
-                        <p>Total Highway Area - km</p>
+                        <p>Total Highway Area - km²</p>
                         <p><?= $totalHighway ?></p>
                     </div>
                 </section>
@@ -95,7 +95,8 @@
             <div class="chart-parent" style="width: 40%;">
             </div>
         </div>
-        <h1 style="margin-left:50px;">Historical</h1>
+
+        <h1 style="margin-top:150px; margin-left:50px;">Historical</h1>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
             <div class="content-summary">
                 <h2 style="margin-left: 2%;">Stock Estimated</h2>
@@ -150,42 +151,9 @@
             <div class="chart-parent" style="width: 40%;">
             </div>
         </div>
-        <h1 style="margin-left:50px;">Forecasting</h1>
+
+        <h1 style="margin-top:150px; margin-left:50px;">Forecasting</h1>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
-            <div class="content-summary">
-                <h2>Summary</h2>
-                <section class="container-sum">
-                    <div>
-                        <p>Population</p>
-                        <p><?= $population ?></p>
-                    </div>
-                    <div>
-                        <p>Total Land Area - km</p>
-                        <p><?= $ttlland ?></p>
-                    </div>
-                    <div>
-                        <p>Total Highway Area - km</p>
-                        <p><?= $totalHighway ?></p>
-                    </div>
-                </section>
-                <section class="container-sum">
-                    <div>
-                        <p>GDP Per Capita - US$</p>
-                        <p><?= $GDP ?></p>
-                    </div>
-                    <div>
-                        <p>Purchasing Power Parity (PPP) - US$</p>
-                        <p><?= $PPP ?></p>
-                    </div>
-                </section>
-                <section class="container-sum">
-                    <div>
-                        <p>GDP Per Capita Purchasing Power Parity (PPP) - US$</p>
-                        <p><?= $GDPppp ?></p>
-                    </div>
-                </section>
-            </div>
-            <img class="img-map" src="<?= base_url('assets/images/nations/maps/'  . $nation . ".svg") ?>" alt="">
 
             <!-- chart top -->
             <div class="chart-parent" style="width: 40%;">
@@ -309,5 +277,6 @@
                 <!-- <div class="chartdiv" id="linechart2"></div> -->
             </div>
         </div>
+
     </div>
 </section>
