@@ -342,10 +342,10 @@ function makeChart(element, type, data){
     // makeChart(bar6, 'bar', volStockUIO)
 
     // chart Historical
-    const his1 = document.getElementById('his1');
-    const his2 = document.getElementById('his2');
-    const his3 = document.getElementById('his3');
-    const his4 = document.getElementById('his4');
+    // const his1 = document.getElementById('his1');
+    // const his2 = document.getElementById('his2');
+    // const his3 = document.getElementById('his3');
+    // const his4 = document.getElementById('his4');
     const his5 = document.getElementById('his5');
     const his6 = document.getElementById('his6');
     const his7 = document.getElementById('his7');
@@ -354,10 +354,10 @@ function makeChart(element, type, data){
     const his10 = document.getElementById('his10');
     const his11 = document.getElementById('his11');
 
-    makeChart(his1, 'line', chart1Data)
-    makeChart(his2, 'line', chart2Data)
-    makeChart(his3, 'line', gdp)
-    makeChart(his4, 'line', ppp)
+    // makeChart(his1, 'line', chart1Data)
+    // makeChart(his2, 'line', chart2Data)
+    // makeChart(his3, 'line', gdp)
+    // makeChart(his4, 'line', ppp)
     makeChart(his5, 'doughnut', chart4Data)
     makeChart(his6, 'bar', volICE)
     makeChart(his7, 'bar', volHEV)

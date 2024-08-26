@@ -10,7 +10,7 @@
 
 <div class="row">
     <div class="summary-wrapper">
-        
+
         <h1 style="margin-left:50px;">Econometric</h1>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
             <div class="content-summary">
@@ -61,60 +61,11 @@
             <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
                 <canvas class="chartdiv" id="line2"></canvas>
             </div>
-            <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
-                <div class="chart-parent" style="width: 300px;">
-                    <canvas class="chartdiv" id="myChart4"></canvas>
-                </div>
-                <ul>
-                    <li>VOL ICE : <?= $volIce ?></li>
-                    <li>VOL HEV : <?= $volHev ?></li>
-                    <li>VOL BEV : <?= $volBev ?></li>
-                    <li>VOL PHEV : <?= $volPhev ?></li>
-                </ul>
-            </div>
-
-            <!-- bar chart -->
-            <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
-                <canvas class="chartdiv" id="bar1"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;">
-                <canvas class="chartdiv" id="bar2"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
-                <canvas class="chartdiv" id="bar3"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
-                <canvas class="chartdiv" id="bar4"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
-                <canvas class="chartdiv" id="bar5"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
-                <canvas class="chartdiv" id="bar6"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;">
-            </div>
         </div>
 
         <h1 style="margin-top:150px; margin-left:50px;">Historical</h1>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
-            <div class="content-summary">
-                <h2 style="margin-left: 2%;">Stock Estimated</h2>
-            </div>
- 
-            <!-- chart top -->
-            <div class="chart-parent" style="width: 40%;">
-                <canvas class="chartdiv" id="his1"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;">
-                <canvas class="chartdiv" id="his2"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
-                <canvas class="chartdiv" id="his3"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
-                <canvas class="chartdiv" id="his4"></canvas>
-            </div>
+            <h2 style="margin-top: 2%; margin-left: 2%;">Stock Estimated</h2>
             <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
                 <div class="chart-parent" style="width: 300px;">
                     <canvas class="chartdiv" id="his5"></canvas>
@@ -134,7 +85,6 @@
             <div class="chart-parent" style="width: 40%;">
                 <canvas class="chartdiv" id="his7"></canvas>
             </div>
-            
             <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
                 <canvas class="chartdiv" id="his8"></canvas>
             </div>
@@ -142,13 +92,16 @@
                 <canvas class="chartdiv" id="his9"></canvas>
             </div>
             <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
-                <canvas class="chartdiv" id="his10"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
                 <canvas class="chartdiv" id="his11"></canvas>
             </div>
-
             <div class="chart-parent" style="width: 40%;">
+            </div>
+        </div>
+
+        <h2 style="margin-top: 2%; margin-left: 4%;">New Car Sum</h2>
+        <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
+            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
+                <canvas class="chartdiv" id="his10"></canvas>
             </div>
         </div>
 
@@ -187,7 +140,7 @@
             <div class="chart-parent" style="width: 40%;">
                 <canvas class="chartdiv" id="fore7"></canvas>
             </div>
-            
+
             <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
                 <canvas class="chartdiv" id="fore8"></canvas>
             </div>
@@ -210,7 +163,7 @@
 <!-- DISCLAIMER COMING SOON -->
 <h1 style="margin-left:50px;">Disclaimer</h1>
 
-<!-- data source --> 
+<!-- data source -->
 <div id="data-s">
     <p>Data Source</p>
     <ol type="A">
