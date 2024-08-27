@@ -115,7 +115,7 @@ function makeChart(element, type, data){
   };
   
   let chart4data = {
-    labels: ['ICE', 'HEV', 'BEV', 'PHEV', 'NEW CAR SUM', 'STOCK / UIO'],
+    labels: ['ICE', 'HEV', 'BEV', 'PHEV'],
     datasets: [{
       label: '2022 Data',
       data: [],
@@ -155,7 +155,7 @@ function makeChart(element, type, data){
   };
 
   let volICEBlank = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034', '2035', '2036'],
       datasets: [{
           label: 'VOL ICE',
           data: [],
@@ -177,7 +177,7 @@ function makeChart(element, type, data){
   };
 
   let volHEVBlank = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034', '2035', '2036'],
       datasets: [{
           label: 'VOL HEV',
           data: [],
@@ -199,7 +199,7 @@ function makeChart(element, type, data){
   };
 
   let volBEVBlank = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034', '2035', '2036'],
       datasets: [{
           label: 'VOL BEV',
           data: [],
@@ -221,7 +221,7 @@ function makeChart(element, type, data){
   };
 
   let volPHEVBlank = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034', '2035', '2036'],
       datasets: [{
           label: 'VOL PHEV',
           data: [],
@@ -230,6 +230,33 @@ function makeChart(element, type, data){
           borderWidth: 1
       }]
   };
+
+  let combinedData = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    datasets: [
+        {
+            label: 'VOL HEV',
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 331, 1108, 2473, 5100, 0],
+            backgroundColor: "rgba(255, 127, 0, 0.8)",
+            borderColor: "rgba(255, 127, 0, 1)",
+            borderWidth: 1
+        },
+        {
+            label: 'VOL BEV',
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 118, 685, 10327, 0],
+            backgroundColor: "rgba(0, 255, 0, 0.8)",
+            borderColor: "rgba(0, 255, 0, 1)",
+            borderWidth: 1
+        },
+        {
+            label: 'VOL PHEV',
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 20, 6, 35, 10, 0],
+            backgroundColor: "rgba(255, 255, 0, 0.8)",
+            borderColor: "rgba(255, 255, 0, 1)",
+            borderWidth: 1
+        }
+    ]
+};
 
   let volNewCarSum = {
       labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
@@ -243,7 +270,7 @@ function makeChart(element, type, data){
   };
 
   let volNewCarSumBlank = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034', '2035', '2036'],
       datasets: [{
           label: 'VOL NEW CAR SUM',
           data: [],
@@ -265,7 +292,7 @@ function makeChart(element, type, data){
   };
 
   let volStockUIOBlank = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034', '2035', '2036'],
       datasets: [{
           label: 'VOL STOCK / UIO',
           data: [],
@@ -308,7 +335,7 @@ function makeChart(element, type, data){
     makeChart(ctx2, 'line', chart2Data);
 
     let chart4Data = {
-      labels: ['ICE', 'HEV', 'BEV', 'PHEV', ],
+      labels: ['ICE', 'HEV', 'BEV', 'PHEV'],
       datasets: [{
         label: '2022 Data',
         data: [1032603, 5100, 10327, 10],
@@ -349,8 +376,8 @@ function makeChart(element, type, data){
     const his5 = document.getElementById('his5');
     const his6 = document.getElementById('his6');
     const his7 = document.getElementById('his7');
-    const his8 = document.getElementById('his8');
-    const his9 = document.getElementById('his9');
+    // const his8 = document.getElementById('his8');
+    // const his9 = document.getElementById('his9');
     const his10 = document.getElementById('his10');
     const his11 = document.getElementById('his11');
 
@@ -360,34 +387,50 @@ function makeChart(element, type, data){
     // makeChart(his4, 'line', ppp)
     makeChart(his5, 'doughnut', chart4Data)
     makeChart(his6, 'bar', volICE)
-    makeChart(his7, 'bar', volHEV)
-    makeChart(his8, 'bar', volBEV)
-    makeChart(his9, 'bar', volPHEV)
+    // makeChart(his7, 'bar', volHEV)
+    new Chart(his7, {
+      type: 'bar',
+      data: combinedData,
+      options: {
+          responsive: true,
+          scales: {
+              x: {
+                  stacked: true
+              },
+              y: {
+                  beginAtZero: true,
+                  stacked: true // This will stack the bars
+              }
+          }
+      }
+  });
+    // makeChart(his8, 'bar', volBEV)
+    // makeChart(his9, 'bar', volPHEV)
     makeChart(his10, 'bar', volNewCarSum)
     makeChart(his11, 'bar', volStockUIO)
 
     // chart forecasting
-    const fore1 = document.getElementById('fore1');
-    const fore2 = document.getElementById('fore2');
-    const fore3 = document.getElementById('fore3');
-    const fore4 = document.getElementById('fore4');
+    // const fore1 = document.getElementById('fore1');
+    // const fore2 = document.getElementById('fore2');
+    // const fore3 = document.getElementById('fore3');
+    // const fore4 = document.getElementById('fore4');
     const fore5 = document.getElementById('fore5');
     const fore6 = document.getElementById('fore6');
     const fore7 = document.getElementById('fore7');
-    const fore8 = document.getElementById('fore8');
-    const fore9 = document.getElementById('fore9');
+    // const fore8 = document.getElementById('fore8');
+    // const fore9 = document.getElementById('fore9');
     const fore10 = document.getElementById('fore10');
     const fore11 = document.getElementById('fore11');
 
-    makeChart(fore1, 'line', chart1data)
-    makeChart(fore2, 'line', chart2data)
-    makeChart(fore3, 'line', gdpBlank)
-    makeChart(fore4, 'line', pppBlank)
+    // makeChart(fore1, 'line', chart1data)
+    // makeChart(fore2, 'line', chart2data)
+    // makeChart(fore3, 'line', gdpBlank)
+    // makeChart(fore4, 'line', pppBlank)
     makeChart(fore5, 'doughnut', chart4data)
     makeChart(fore6, 'bar', volICEBlank)
     makeChart(fore7, 'bar', volHEVBlank)
-    makeChart(fore8, 'bar', volBEVBlank)
-    makeChart(fore9, 'bar', volPHEVBlank)
+    // makeChart(fore8, 'bar', volBEVBlank)
+    // makeChart(fore9, 'bar', volPHEVBlank)
     makeChart(fore10, 'bar', volNewCarSumBlank)
     makeChart(fore11, 'bar', volStockUIOBlank)
 

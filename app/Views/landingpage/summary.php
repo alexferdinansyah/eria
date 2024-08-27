@@ -85,19 +85,123 @@
             <div class="chart-parent" style="width: 40%;">
                 <canvas class="chartdiv" id="his7"></canvas>
             </div>
-            <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
+            <!-- <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
                 <canvas class="chartdiv" id="his8"></canvas>
             </div>
             <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
                 <canvas class="chartdiv" id="his9"></canvas>
-            </div>
+            </div> -->
             <div class="chart-parent" style="width: 40%;">
                 <canvas class="chartdiv" id="his10"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 90%;">
+            <table class="table" style="width: 100%; height: 100%; border-collapse: collapse;">
+                <thead style="font-size:12px;">
+                    <tr>
+                        <th style="height: 40px;">Type</th>
+                        <th>2011</th>
+                        <th>2012</th>
+                        <th>2013</th>
+                        <th>2014</th>
+                        <th>2015</th>
+                        <th>2016</th>
+                        <th>2017</th>
+                        <th>2018</th>
+                        <th>2019</th>
+                        <th>2020</th>
+                        <th>2021</th>
+                        <th>2022</th>
+                        <th>2023</th>
+                    </tr>
+                </thead>
+                <tbody style="font-size:12px;">
+                    <tr style="height: 33.33%;">
+                        <td>VOL HEV</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>331</td>
+                        <td>1108</td>
+                        <td>2473</td>
+                        <td>5100</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style="height: 33.33%;">
+                        <td>VOL BEV</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>118</td>
+                        <td>685</td>
+                        <td>10327</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style="height: 33.33%;">
+                        <td>VOL PHEV</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>20</td>
+                        <td>6</td>
+                        <td>35</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style="height: 33.33%;">
+                        <td>VOL ICE</td>
+                        <td>894164</td>
+                        <td>1116230</td>
+                        <td>1229811</td>
+                        <td>1208028</td>
+                        <td>1013518</td>
+                        <td>1062694</td>
+                        <td>1077364</td>
+                        <td>1151308</td>
+                        <td>1029775</td>
+                        <td>531175</td>
+                        <td>884009</td>
+                        <td>1032603</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style="height: 33.33%;">
+                        <td>TOTAL</td>
+                        <td>894164</td>
+                        <td>1116230</td>
+                        <td>1229811</td>
+                        <td>1208028</td>
+                        <td>1013518</td>
+                        <td>1062694</td>
+                        <td>1077364</td>
+                        <td>1151328</td>
+                        <td>1030112</td>
+                        <td>532436</td>
+                        <td>888202</td>
+                        <td>1043039</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+
             </div>
             <div class="chart-parent" style="width: 40%;">
             </div>
         </div>
-
         <h2 style="margin-top: 2%; margin-left: 4%; margin-bottom: 2%;">Stock Estimated</h2>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
 
@@ -109,21 +213,8 @@
         </div>
 
         <h1 style="margin-top:150px; margin-left:50px;">Forecasting</h1>
+        <h2 style="margin-top: 2%; margin-left: 4%; margin-bottom: 2%;">New Car Sum</h2>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
-
-            <!-- chart top -->
-            <div class="chart-parent" style="width: 40%;">
-                <canvas class="chartdiv" id="fore1"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;">
-                <canvas class="chartdiv" id="fore2"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
-                <canvas class="chartdiv" id="fore3"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
-                <canvas class="chartdiv" id="fore4"></canvas>
-            </div>
             <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
                 <div class="chart-parent" style="width: 300px;">
                     <canvas class="chartdiv" id="fore5"></canvas>
@@ -143,20 +234,129 @@
             <div class="chart-parent" style="width: 40%;">
                 <canvas class="chartdiv" id="fore7"></canvas>
             </div>
-
-            <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
+            <!-- <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
                 <canvas class="chartdiv" id="fore8"></canvas>
             </div>
             <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
                 <canvas class="chartdiv" id="fore9"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
+            </div> -->
+            <div class="chart-parent" style="width: 40%;">
                 <canvas class="chartdiv" id="fore10"></canvas>
             </div>
+            <div class="chart-parent" style="width: 90%;">
+            <table class="table" style="width: 100%; height: 100%; border-collapse: collapse;">
+                <thead style="font-size:12px;">
+                    <tr>
+                        <th style="height: 40px;">Type</th>
+                        <th>2024</th>
+                        <th>2025</th>
+                        <th>2026</th>
+                        <th>2027</th>
+                        <th>2028</th>
+                        <th>2029</th>
+                        <th>2030</th>
+                        <th>2031</th>
+                        <th>2032</th>
+                        <th>2033</th>
+                        <th>2034</th>
+                        <th>2035</th>
+                        <th>2036</th>
+                    </tr>
+                </thead>
+                <tbody style="font-size:12px;">
+                    <tr style="height: 33.33%;">
+                        <td>VOL HEV</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style="height: 33.33%;">
+                        <td>VOL BEV</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style="height: 33.33%;">
+                        <td>VOL PHEV</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style="height: 33.33%;">
+                        <td>VOL ICE</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style="height: 33.33%;">
+                        <td>TOTAL</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            </div>
+            <div class="chart-parent" style="width: 40%;">
+            </div>
+        </div>
+        <h2 style="margin-top: 2%; margin-left: 4%; margin-bottom: 2%;">Stock Estimated</h2>
+        <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
+
             <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
                 <canvas class="chartdiv" id="fore11"></canvas>
             </div>
-
             <div class="chart-parent" style="width: 40%;">
             </div>
         </div>
@@ -164,7 +364,8 @@
 </div>
 
 <!-- DISCLAIMER COMING SOON -->
-<h1 style="margin-left:50px;">Disclaimer</h1>
+<p style="margin-left:100px; margin-top:100px;">Disclaimer</p>
+<p style="margin-left:100px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non distinctio tempora cumque eaque amet voluptatem ullam ea mollitia voluptas architecto, nulla facilis nostrum in corrupti quidem repellat, temporibus modi. Harum alias sint quaerat, dolorum sunt debitis blanditiis quidem, repellat et odio vel. Porro enim iure inventore esse harum cum accusantium.</p>
 
 <!-- data source -->
 <div id="data-s">
