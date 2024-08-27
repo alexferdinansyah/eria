@@ -55,7 +55,7 @@
                         </div>
                     </div>
 
-                    <div class="logo d-flex align-items-center">
+                    <div class="logo d-flex align-items-center">    
                         <a href="#" class="d-block" aria-label="Home - European Commission">
                             <img src="<?= base_url('assets/images/logoui.png') ?>" alt="Logo UI" class="img-fluid custom-logo">
                         </a>
