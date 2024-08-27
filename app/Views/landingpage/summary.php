@@ -64,7 +64,7 @@
         </div>
 
         <h1 style="margin-top:150px; margin-left:50px;">Historical</h1>
-        <h2 style="margin-top: 2%; margin-left: 5%;">Stock Estimated</h2>
+        <h2 style="margin-top: 2%; margin-left: 4%; margin-bottom: 2%;">New Car Sum</h2>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
             <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
                 <div class="chart-parent" style="width: 300px;">
@@ -91,17 +91,18 @@
             <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
                 <canvas class="chartdiv" id="his9"></canvas>
             </div>
-            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
-                <canvas class="chartdiv" id="his11"></canvas>
+            <div class="chart-parent" style="width: 40%;">
+                <canvas class="chartdiv" id="his10"></canvas>
             </div>
             <div class="chart-parent" style="width: 40%;">
             </div>
         </div>
 
-        <h2 style="margin-top: 2%; margin-left: 4%;">New Car Sum</h2>
+        <h2 style="margin-top: 2%; margin-left: 4%; margin-bottom: 2%;">Stock Estimated</h2>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
-            <div class="chart-parent" style="width: 40%;">
-                <canvas class="chartdiv" id="his10"></canvas>
+
+            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
+                <canvas class="chartdiv" id="his11"></canvas>
             </div>
             <div class="chart-parent" style="width: 40%;">
             </div>
