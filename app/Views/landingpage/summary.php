@@ -25,7 +25,7 @@
                         <p><?= $ttlland ?></p>
                     </div>
                     <div>
-                        <p>Total Highway Area - km²</p>
+                        <p>Total Highway Length - km</p>
                         <p><?= $totalHighway ?></p>
                     </div>
                 </section>
