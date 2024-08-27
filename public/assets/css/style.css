@@ -555,6 +555,10 @@ body {
     background-color: var(--blue);
 }
 
+.bg-red{
+    background-color: red;
+}
+
 .font-montserrat {
     font-family: 'Montserrat', sans-serif;
 }
@@ -671,7 +675,6 @@ body {
     color: white;
     background-color: var(--blue);
     width: 100%;
-
 }
 
 .banner img {
