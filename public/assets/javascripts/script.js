@@ -18,6 +18,7 @@ function makeChart(element, type, data){
     });
   }
 
+  //
   const route = getLocationFromUrl();
   console.log(route);
 
