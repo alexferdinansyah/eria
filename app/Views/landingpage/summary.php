@@ -1,7 +1,7 @@
 <?= $this->extend('main') ?>
 
 <?= $this->section('content') ?>
-
+<!--  -->
 <div class="banner">
     <h2><?= ucwords($nation) ?></h2>
     <img src="<?= base_url('assets/images/nations/flags/' . $nation . ".svg"); ?>" alt="">
