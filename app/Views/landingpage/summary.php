@@ -71,10 +71,10 @@
                     <canvas class="chartdiv" id="donut1"></canvas>
                 </div>
                 <ul>
-                    <li>VOL ICE : 1032603</li>
-                    <li>VOL HEV : 5100</li>
-                    <li>VOL BEV : 10327</li>
-                    <li>VOL PHEV : 10</li>
+                    <li>ICE Vehicle Sales : 1032603 </li>
+                    <li>HEV Vehicle Sales : 5100</li>
+                    <li>BEV Vehicle Sales : 10327</li>
+                    <li>PHEV Vehicle Sales : 10</li>
                 </ul>
             </div>
 
@@ -198,11 +198,11 @@
                         <canvas class="chartdiv" id="donut2"></canvas>
                     </div>
                     <ul>
-                        <li>VOL ICE : 12230679</li>
-                        <li>VOL HEV : 9012</li>
-                        <li>VOL BEV : 11130</li>
-                        <li>VOL PHEV : 71</li>
-                    </ul>
+                    <li>ICE Vehicle Sales : 12230679 </li>
+                    <li>HEV Vehicle Sales : 9012</li>
+                    <li>BEV Vehicle Sales : 11130</li>
+                    <li>PHEV Vehicle Sales : 71</li>
+                </ul>
                 </div>
             <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
                     <canvas class="chartdiv" id="bar2"></canvas>
@@ -321,10 +321,10 @@
                         <canvas class="chartdiv" id="fore5"></canvas>
                     </div>
                     <ul>
-                        <li>VOL ICE : <?= $volIce ?></li>
-                        <li>VOL HEV : <?= $volHev ?></li>
-                        <li>VOL BEV : <?= $volBev ?></li>
-                        <li>VOL PHEV : <?= $volPhev ?></li>
+                        <li>ICE Vehicle Sales :  n/a</li>
+                        <li>HEV Vehicle Sales :  n/a</li>
+                        <li>BEV Vehicle Sales :  n/a</li>
+                        <li>PHEV Vehicle Sales :  n/a</li>
                     </ul>
                 </div>
 
@@ -459,10 +459,10 @@
                             <canvas class="chartdiv" id="donut3"></canvas>
                         </div>
                         <ul>
-                            <li>VOL ICE : n/a</li>
-                            <li>VOL HEV : n/a</li>
-                            <li>VOL BEV : n/a</li>
-                            <li>VOL PHEV : n/a</li>
+                            <li>ICE Vehicle Sales : n/a</li>
+                            <li>HEV Vehicle Sales : n/a</li>
+                            <li>BEV Vehicle Sales : n/a</li>
+                            <li>PHEV Vehicle Sales : n/a</li>
                         </ul>
                     </div>
                 <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
