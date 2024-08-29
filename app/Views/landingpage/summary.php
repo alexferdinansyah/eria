@@ -70,11 +70,17 @@
                 <div class="chart-parent" style="width: 300px;">
                     <canvas class="chartdiv" id="donut1"></canvas>
                 </div>
-                <ul>
+                <!-- <ul>
                     <li>VOL ICE : 1032603</li>
                     <li>VOL HEV : 5100</li>
                     <li>VOL BEV : 10327</li>
                     <li>VOL PHEV : 10</li>
+                </ul> -->
+                <ul>
+                    <li>ICE Vehicle Sales : 1032603 </li>
+                    <li>HEV Vehicle Sales : 5100</li>
+                    <li>BEV Vehicle Sales : 10327</li>
+                    <li>PHEV Vehicle Sales : 10</li>
                 </ul>
             </div>
 
@@ -89,102 +95,102 @@
                 <canvas class="chartdiv" id="carsum"></canvas>
             </div>
             <div class="chart-parent" style="width: 90%;">
-            <table class="table" style="width: 100%; height: 100%; border-collapse: collapse;">
-                <thead style="font-size:12px;">
-                    <tr>
-                        <th style="height: 40px;">Type</th>
-                        <th>2011</th>
-                        <th>2012</th>
-                        <th>2013</th>
-                        <th>2014</th>
-                        <th>2015</th>
-                        <th>2016</th>
-                        <th>2017</th>
-                        <th>2018</th>
-                        <th>2019</th>
-                        <th>2020</th>
-                        <th>2021</th>
-                        <th>2022</th>
-                    </tr>
-                </thead>
-                <tbody style="font-size:12px;">
-                    <tr style="height: 33.33%;">
-                        <td>VOL HEV</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>331</td>
-                        <td>1108</td>
-                        <td>2473</td>
-                        <td>5100</td>
-                    </tr>
-                    <tr style="height: 33.33%;">
-                        <td>VOL BEV</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>118</td>
-                        <td>685</td>
-                        <td>10327</td>
-                    </tr>
-                    <tr style="height: 33.33%;">
-                        <td>VOL PHEV</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>20</td>
-                        <td>6</td>
-                        <td>35</td>
-                        <td>10</td>
-                        <td>0</td>
-                    </tr>
-                    <tr style="height: 33.33%;">
-                        <td>VOL ICE</td>
-                        <td>894164</td>
-                        <td>1116230</td>
-                        <td>1229811</td>
-                        <td>1208028</td>
-                        <td>1013518</td>
-                        <td>1062694</td>
-                        <td>1077364</td>
-                        <td>1151308</td>
-                        <td>1029775</td>
-                        <td>531175</td>
-                        <td>884009</td>
-                        <td>1032603</td>
-                    </tr>
-                    <tr style="height: 33.33%;">
-                        <td>TOTAL</td>
-                        <td>894164</td>
-                        <td>1116230</td>
-                        <td>1229811</td>
-                        <td>1208028</td>
-                        <td>1013518</td>
-                        <td>1062694</td>
-                        <td>1077364</td>
-                        <td>1151328</td>
-                        <td>1030112</td>
-                        <td>532436</td>
-                        <td>888202</td>
-                        <td>1043039</td>
-                    </tr>
-                </tbody>
-            </table>
+                <table class="table" style="width: 100%; height: 100%; border-collapse: collapse;">
+                    <thead style="font-size:12px;">
+                        <tr>
+                            <th style="height: 40px;">Type</th>
+                            <th>2011</th>
+                            <th>2012</th>
+                            <th>2013</th>
+                            <th>2014</th>
+                            <th>2015</th>
+                            <th>2016</th>
+                            <th>2017</th>
+                            <th>2018</th>
+                            <th>2019</th>
+                            <th>2020</th>
+                            <th>2021</th>
+                            <th>2022</th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-size:12px;">
+                        <tr style="height: 33.33%;">
+                            <td>HEV Vehicle Sales</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>331</td>
+                            <td>1108</td>
+                            <td>2473</td>
+                            <td>5100</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>BEV Vehicle Sales</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>118</td>
+                            <td>685</td>
+                            <td>10327</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>PHEV Vehicle Sales</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>20</td>
+                            <td>6</td>
+                            <td>35</td>
+                            <td>10</td>
+                            <td>0</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>ICE Vehicle Sales</td>
+                            <td>894164</td>
+                            <td>1116230</td>
+                            <td>1229811</td>
+                            <td>1208028</td>
+                            <td>1013518</td>
+                            <td>1062694</td>
+                            <td>1077364</td>
+                            <td>1151308</td>
+                            <td>1029775</td>
+                            <td>531175</td>
+                            <td>884009</td>
+                            <td>1032603</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>TOTAL</td>
+                            <td>894164</td>
+                            <td>1116230</td>
+                            <td>1229811</td>
+                            <td>1208028</td>
+                            <td>1013518</td>
+                            <td>1062694</td>
+                            <td>1077364</td>
+                            <td>1151328</td>
+                            <td>1030112</td>
+                            <td>532436</td>
+                            <td>888202</td>
+                            <td>1043039</td>
+                        </tr>
+                    </tbody>
+                </table>
 
             </div>
             <div class="chart-parent" style="width: 40%;">
@@ -192,18 +198,18 @@
         </div>
         <h2 style="margin-top: 2%; margin-left: 4%; margin-bottom: 2%;">Stock Estimated</h2>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
-        <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
+            <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
                 <div class="chart-parent" style="width: 300px;">
                     <canvas class="chartdiv" id="donut2"></canvas>
                 </div>
                 <ul>
-                    <li>VOL ICE : 12230679</li>
-                    <li>VOL HEV : 9012</li>
-                    <li>VOL BEV : 11130</li>
-                    <li>VOL PHEV : 71</li>
+                    <li>ICE Vehicle Stock : 12230679</li>
+                    <li>HEV Vehicle Stock : 9012</li>
+                    <li>BEV Vehicle Stock : 11130</li>
+                    <li>PHEV Vehicle Stock : 71</li>
                 </ul>
             </div>
-        <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
+            <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
                 <canvas class="chartdiv" id="bar2"></canvas>
             </div>
             <div class="chart-parent" style="width: 40%;">
@@ -246,116 +252,115 @@
                 <canvas class="chartdiv" id="fore10"></canvas>
             </div>
             <div class="chart-parent" style="width: 90%;">
-            <table class="table" style="width: 100%; height: 100%; border-collapse: collapse;">
-                <thead style="font-size:12px;">
-                    <tr>
-                        <th style="height: 40px;">Type</th>
-                        <th>2024</th>
-                        <th>2025</th>
-                        <th>2026</th>
-                        <th>2027</th>
-                        <th>2028</th>
-                        <th>2029</th>
-                        <th>2030</th>
-                        <th>2031</th>
-                        <th>2032</th>
-                        <th>2033</th>
-                        <th>2034</th>
-                        <th>2035</th>
-                        <th>2036</th>
-                    </tr>
-                </thead>
-                <tbody style="font-size:12px;">
-                    <tr style="height: 33.33%;">
-                        <td>VOL HEV</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr style="height: 33.33%;">
-                        <td>VOL BEV</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr style="height: 33.33%;">
-                        <td>VOL PHEV</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr style="height: 33.33%;">
-                        <td>VOL ICE</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr style="height: 33.33%;">
-                        <td>TOTAL</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                </tbody>
-            </table>
-
+                <table class="table" style="width: 100%; height: 100%; border-collapse: collapse;">
+                    <thead style="font-size:12px;">
+                        <tr>
+                            <th style="height: 40px;">Type</th>
+                            <th>2024</th>
+                            <th>2025</th>
+                            <th>2026</th>
+                            <th>2027</th>
+                            <th>2028</th>
+                            <th>2029</th>
+                            <th>2030</th>
+                            <th>2031</th>
+                            <th>2032</th>
+                            <th>2033</th>
+                            <th>2034</th>
+                            <th>2035</th>
+                            <th>2036</th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-size:12px;">
+                        <tr style="height: 33.33%;">
+                            <td>VOL HEV</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>VOL BEV</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>VOL PHEV</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>VOL ICE</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>TOTAL</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="chart-parent" style="width: 40%;">
             </div>
         </div>
         <h2 style="margin-top: 2%; margin-left: 4%; margin-bottom: 2%;">Stock Estimated</h2>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
-        <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
+            <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
                 <div class="chart-parent" style="width: 300px;">
                     <canvas class="chartdiv" id="donut3"></canvas>
                 </div>
@@ -366,7 +371,7 @@
                     <li>VOL PHEV : n/a</li>
                 </ul>
             </div>
-        <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
+            <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
                 <canvas class="chartdiv" id="bar3"></canvas>
             </div>
             <div class="chart-parent" style="width: 40%;">
