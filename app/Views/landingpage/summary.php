@@ -68,31 +68,25 @@
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
             <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
                 <div class="chart-parent" style="width: 300px;">
-                    <canvas class="chartdiv" id="his5"></canvas>
+                    <canvas class="chartdiv" id="donut1"></canvas>
                 </div>
                 <ul>
-                    <li>VOL ICE : <?= $volIce ?></li>
-                    <li>VOL HEV : <?= $volHev ?></li>
-                    <li>VOL BEV : <?= $volBev ?></li>
-                    <li>VOL PHEV : <?= $volPhev ?></li>
+                    <li>VOL ICE : 1032603</li>
+                    <li>VOL HEV : 5100</li>
+                    <li>VOL BEV : 10327</li>
+                    <li>VOL PHEV : 10</li>
                 </ul>
             </div>
 
             <!-- bar chart -->
             <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
-                <canvas class="chartdiv" id="his6"></canvas>
+                <canvas class="chartdiv" id="bar1"></canvas>
             </div>
             <div class="chart-parent" style="width: 40%;">
-                <canvas class="chartdiv" id="his7"></canvas>
+                <canvas class="chartdiv" id="barCombined1"></canvas>
             </div>
-            <!-- <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
-                <canvas class="chartdiv" id="his8"></canvas>
-            </div>
-            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
-                <canvas class="chartdiv" id="his9"></canvas>
-            </div> -->
             <div class="chart-parent" style="width: 40%;">
-                <canvas class="chartdiv" id="his10"></canvas>
+                <canvas class="chartdiv" id="carsum"></canvas>
             </div>
             <div class="chart-parent" style="width: 90%;">
             <table class="table" style="width: 100%; height: 100%; border-collapse: collapse;">
@@ -111,7 +105,6 @@
                         <th>2020</th>
                         <th>2021</th>
                         <th>2022</th>
-                        <th>2023</th>
                     </tr>
                 </thead>
                 <tbody style="font-size:12px;">
@@ -129,7 +122,6 @@
                         <td>1108</td>
                         <td>2473</td>
                         <td>5100</td>
-                        <td>0</td>
                     </tr>
                     <tr style="height: 33.33%;">
                         <td>VOL BEV</td>
@@ -145,7 +137,6 @@
                         <td>118</td>
                         <td>685</td>
                         <td>10327</td>
-                        <td>0</td>
                     </tr>
                     <tr style="height: 33.33%;">
                         <td>VOL PHEV</td>
@@ -160,7 +151,6 @@
                         <td>6</td>
                         <td>35</td>
                         <td>10</td>
-                        <td>0</td>
                         <td>0</td>
                     </tr>
                     <tr style="height: 33.33%;">
@@ -177,7 +167,6 @@
                         <td>531175</td>
                         <td>884009</td>
                         <td>1032603</td>
-                        <td>0</td>
                     </tr>
                     <tr style="height: 33.33%;">
                         <td>TOTAL</td>
@@ -193,7 +182,6 @@
                         <td>532436</td>
                         <td>888202</td>
                         <td>1043039</td>
-                        <td>0</td>
                     </tr>
                 </tbody>
             </table>
@@ -204,11 +192,25 @@
         </div>
         <h2 style="margin-top: 2%; margin-left: 4%; margin-bottom: 2%;">Stock Estimated</h2>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
-
-            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
-                <canvas class="chartdiv" id="his11"></canvas>
+        <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
+                <div class="chart-parent" style="width: 300px;">
+                    <canvas class="chartdiv" id="donut2"></canvas>
+                </div>
+                <ul>
+                    <li>VOL ICE : 12230679</li>
+                    <li>VOL HEV : 9012</li>
+                    <li>VOL BEV : 11130</li>
+                    <li>VOL PHEV : 71</li>
+                </ul>
+            </div>
+        <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
+                <canvas class="chartdiv" id="bar2"></canvas>
             </div>
             <div class="chart-parent" style="width: 40%;">
+                <canvas class="chartdiv" id="barCombined2"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;">
+                <canvas class="chartdiv" id="stock"></canvas>
             </div>
         </div>
 
@@ -353,11 +355,25 @@
         </div>
         <h2 style="margin-top: 2%; margin-left: 4%; margin-bottom: 2%;">Stock Estimated</h2>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
-
-            <div class="chart-parent" style="width: 40%;padding-left:20px !important;">
-                <canvas class="chartdiv" id="fore11"></canvas>
+        <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
+                <div class="chart-parent" style="width: 300px;">
+                    <canvas class="chartdiv" id="donut3"></canvas>
+                </div>
+                <ul>
+                    <li>VOL ICE : n/a</li>
+                    <li>VOL HEV : n/a</li>
+                    <li>VOL BEV : n/a</li>
+                    <li>VOL PHEV : n/a</li>
+                </ul>
+            </div>
+        <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
+                <canvas class="chartdiv" id="bar3"></canvas>
             </div>
             <div class="chart-parent" style="width: 40%;">
+                <canvas class="chartdiv" id="barCombined3"></canvas>
+            </div>
+            <div class="chart-parent" style="width: 40%;">
+                <canvas class="chartdiv" id="stock2"></canvas>
             </div>
         </div>
     </div>
@@ -365,7 +381,7 @@
 
 <!-- DISCLAIMER COMING SOON -->
 <p style="margin-left:100px; margin-top:100px;">Disclaimer</p>
-<p style="margin-left:100px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non distinctio tempora cumque eaque amet voluptatem ullam ea mollitia voluptas architecto, nulla facilis nostrum in corrupti quidem repellat, temporibus modi. Harum alias sint quaerat, dolorum sunt debitis blanditiis quidem, repellat et odio vel. Porro enim iure inventore esse harum cum accusantium.</p>
+<p style="margin-left:100px;"> Informations displayed are based on sales data</p>
 
 <!-- data source -->
 <div id="data-s">

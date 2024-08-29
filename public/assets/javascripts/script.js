@@ -46,7 +46,7 @@ function makeChart(element, type, data){
   
   // line chart data
   let gdp = {
-    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
     datasets: [{
       label: 'GDP per Capita (Current US$)',
       data: [3614,	3668,	3603,	3477,	3323,	3559,	384,	3903,	4151,	3896,	4334,	4778, 0],
@@ -58,7 +58,7 @@ function makeChart(element, type, data){
 
 
   let ppp = {
-    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
     datasets: [{
       label: 'GDP per Capita Purchasing Power Parity (PPP)',
       data: [8611,	9016,	9402,	9759,	10122,	10519,	10942,	11397,	11858,	11516,	11859,	1241, 0],
@@ -72,7 +72,7 @@ function makeChart(element, type, data){
   // blank data 
   
   let pppBlank = {
-    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
     datasets: [{
       label: 'GDP per Capita Purchasing Power Parity (PPP)',
       data: [],
@@ -83,7 +83,7 @@ function makeChart(element, type, data){
   };
 
   let gdpBlank = {
-    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
     datasets: [{
       label: 'GDP per Capita (Current US$)',
       data: [],
@@ -94,7 +94,7 @@ function makeChart(element, type, data){
   };
 
   let chart1data = {
-    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
     datasets: [{
       label: 'Total Highway Length',
       data: [],
@@ -105,7 +105,7 @@ function makeChart(element, type, data){
   };
 
   let chart2data = {
-    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
     datasets: [{
       label: 'Population',
       data: [],
@@ -145,9 +145,9 @@ function makeChart(element, type, data){
 
   // bar chart data
   let volICE = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
       datasets: [{
-          label: 'VOL ICE',
+          label: 'ICE Vehicle Sales',
           data: [894164, 1116230, 1229811, 1208028, 1013518, 1062694, 1077364, 1151308, 1029775, 531175, 884009, 1032603, 0],
           backgroundColor: "rgba(255, 0, 0, 0.8)",
           borderColor: "rgba(255, 0, 0, 1)",
@@ -167,10 +167,10 @@ function makeChart(element, type, data){
   };
 
   let volHEV = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
       datasets: [{
-          label: 'VOL HEV',
-          data: [0, 0, 0, 0, 0, 0, 0, 0, 331, 1108, 2473, 5100, 0],
+          label: 'HEV Vehicle Sales',
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 331, 1108, 2473, 5100],
           backgroundColor: "rgba(255, 127, 0, 0.8)",
           borderColor: "rgba(255, 127, 0, 1)",
           borderWidth: 1
@@ -189,10 +189,10 @@ function makeChart(element, type, data){
   };
 
   let volBEV = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
       datasets: [{
-          label: 'VOL BEV',
-          data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 118, 685, 10327, 0],
+          label: 'BEV Vehicle Sales',
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 118, 685, 10327],
           backgroundColor: "rgba(0, 255, 0, 0.8)",
           borderColor: "rgba(0, 255, 0, 1)",
           borderWidth: 1
@@ -211,10 +211,10 @@ function makeChart(element, type, data){
   };
 
   let volPHEV = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
       datasets: [{
-          label: 'VOL PHEV',
-          data: [0, 0, 0, 0, 0, 0, 0, 0, 20, 6, 35, 10, 0],
+          label: 'PHEV Vehicle Sales',
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 20, 6, 35, 10],
           backgroundColor: "rgba(255, 255, 0, 0.8)",
           borderColor: "rgba(255, 255, 0, 1)",
           borderWidth: 1
@@ -232,37 +232,10 @@ function makeChart(element, type, data){
       }]
   };
 
-  let combinedData = {
-    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-    datasets: [
-        {
-            label: 'VOL HEV',
-            data: [0, 0, 0, 0, 0, 0, 0, 0, 331, 1108, 2473, 5100, 0],
-            backgroundColor: "rgba(255, 127, 0, 0.8)",
-            borderColor: "rgba(255, 127, 0, 1)",
-            borderWidth: 1
-        },
-        {
-            label: 'VOL BEV',
-            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 118, 685, 10327, 0],
-            backgroundColor: "rgba(0, 255, 0, 0.8)",
-            borderColor: "rgba(0, 255, 0, 1)",
-            borderWidth: 1
-        },
-        {
-            label: 'VOL PHEV',
-            data: [0, 0, 0, 0, 0, 0, 0, 0, 20, 6, 35, 10, 0],
-            backgroundColor: "rgba(255, 255, 0, 0.8)",
-            borderColor: "rgba(255, 255, 0, 1)",
-            borderWidth: 1
-        }
-    ]
-};
-
   let volNewCarSum = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
       datasets: [{
-          label: 'VOL NEW CAR SUM',
+          label: 'Total of Vehicle Sales',
           data: [894164, 1116230, 1229811, 1208028, 1013518, 1062694, 1077364, 1151308, 1030126, 532407, 887202, 1048040, 0],
           backgroundColor: "rgba(0, 0, 255, 0.8)",
           borderColor: "rgba(0, 0, 255, 1)",
@@ -282,7 +255,7 @@ function makeChart(element, type, data){
   };
 
   let volStockUIO = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
       datasets: [{
           label: 'VOL STOCK / UIO',
           data: [894164,2010394,3240205,4448233,5461751,6524445,7601809,8753117,9783243,10315650,11202852,12250892],
@@ -310,7 +283,7 @@ function makeChart(element, type, data){
     makeChart(line2, 'line', ppp);
 
     let chart1Data = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
       datasets: [{
         label: 'Total Highway Length',
         data: [492398,501969,508000,517753, 529073,537838,539353,542310,544474,548366,546116,548097],
@@ -323,7 +296,7 @@ function makeChart(element, type, data){
     makeChart(ctx1, 'line', chart1Data);
     
     let chart2Data = {
-      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
       datasets: [{
         label: 'Population',
         data: [241911000, 245425000, 248818000, 252165000, 255462000,  258705000, 261891000, 264161600, 266911900,  270203917,  272682500, 275773800, 278696200],
@@ -335,7 +308,7 @@ function makeChart(element, type, data){
 
     makeChart(ctx2, 'line', chart2Data);
 
-    let chart4Data = {
+    let donut1Data = {
       labels: ['ICE', 'HEV', 'BEV', 'PHEV'],
       datasets: [{
         label: '2022 Data',
@@ -360,38 +333,231 @@ function makeChart(element, type, data){
       }]
     };
 
-    // makeChart(ctx4,'doughnut' ,chart4Data)
-    
-    // makeChart(bar1, 'bar', volICE)
-    // makeChart(bar2, 'bar', volHEV)
-    // makeChart(bar3, 'bar', volBEV)
-    // makeChart(bar4, 'bar', volPHEV)
-    // makeChart(bar5, 'bar', volNewCarSum)
-    // makeChart(bar6, 'bar', volStockUIO)
+    let donut2Data = {
+      labels: ['ICE', 'HEV', 'BEV', 'PHEV'],
+      datasets: [{
+        label: '2022 Data',
+        data: [12230679, 9012, 11130, 71],
+        backgroundColor: [
+          'rgba(255, 0, 0, 0.8)',    // Red //
+          'rgba(255, 127, 0, 0.8)',  // Orange
+          'rgba(0, 255, 0, 0.8)',    // Green
+          'rgba(255, 255, 0, 0.8)',  // Yellow
+          'rgba(0, 0, 255, 0.8)',    // Blue //
+          'rgba(75, 0, 130, 0.8)'    // Indigo //
+      ],
+      borderColor: [
+          'rgba(255, 0, 0, 1)',
+          'rgba(255, 127, 0, 1)',
+          'rgba(255, 255, 0, 1)',
+          'rgba(0, 255, 0, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(75, 0, 130, 1)'
+      ],
+        borderWidth: 1
+      }]
+    };
+
+    let donut3Data = {
+      labels: ['ICE', 'HEV', 'BEV', 'PHEV'],
+      datasets: [{
+        label: '2022 Data',
+        data: [],
+        backgroundColor: [
+          'rgba(255, 0, 0, 0.8)',    // Red //
+          'rgba(255, 127, 0, 0.8)',  // Orange
+          'rgba(0, 255, 0, 0.8)',    // Green
+          'rgba(255, 255, 0, 0.8)',  // Yellow
+          'rgba(0, 0, 255, 0.8)',    // Blue //
+          'rgba(75, 0, 130, 0.8)'    // Indigo //
+      ],
+      borderColor: [
+          'rgba(255, 0, 0, 1)',
+          'rgba(255, 127, 0, 1)',
+          'rgba(255, 255, 0, 1)',
+          'rgba(0, 255, 0, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(75, 0, 130, 1)'
+      ],
+        borderWidth: 1
+      }]
+    };
+
+  let bar1Data = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
+    datasets: [{
+        label: 'ICE Vehicle Sales',
+        data: [894164, 1116230, 1229811, 1208028, 1013518, 1062694, 1077364, 1151308, 1029775, 531175, 884009, 1032603],
+        backgroundColor: "rgba(255, 0, 0, 0.8)",
+        borderColor: "rgba(255, 0, 0, 1)",
+        borderWidth: 1
+    }]
+};
+  let bar2Data = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
+    datasets: [{
+        label: 'ICE Vehicle Stock',
+        data: [894164,	2010394,	3240205,	4448233,	5461751,	6524445,	7601809,	8753117,	9782892,	10314067,	11198076,	12230679],
+        backgroundColor: "rgba(255, 0, 0, 0.8)",
+        borderColor: "rgba(255, 0, 0, 1)",
+        borderWidth: 1
+    }]
+};
+  let bar3Data = {
+    labels: ['2023','2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'],
+        datasets: [{
+        label: 'VOL ICE',
+        data: [],
+        backgroundColor: "rgba(255, 0, 0, 0.8)",
+        borderColor: "rgba(255, 0, 0, 1)",
+        borderWidth: 1
+    }]
+};
+
+
+let combinedData1 = {
+  labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
+  datasets: [
+      {
+          label: 'VOL HEV',
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 331, 1108, 2473, 5100, 0],
+          backgroundColor: "rgba(255, 127, 0, 0.8)",
+          borderColor: "rgba(255, 127, 0, 1)",
+          borderWidth: 1
+      },
+      {
+          label: 'VOL BEV',
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 118, 685, 10327, 0],
+          backgroundColor: "rgba(0, 255, 0, 0.8)",
+          borderColor: "rgba(0, 255, 0, 1)",
+          borderWidth: 1
+      },
+      {
+          label: 'VOL PHEV',
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 20, 6, 35, 10, 0],
+          backgroundColor: "rgba(255, 255, 0, 0.8)",
+          borderColor: "rgba(255, 255, 0, 1)",
+          borderWidth: 1
+      }
+  ]
+};
+
+
+let combinedData2 = {
+  labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
+  datasets: [
+      {
+          label: 'VOL HEV',
+          data: [0	,0,	0,	0,	0,	0,	0,	0,	331,	1439,	3912,	9012],
+          backgroundColor: "rgba(255, 127, 0, 0.8)",
+          borderColor: "rgba(255, 127, 0, 1)",
+          borderWidth: 1
+      },
+      {
+          label: 'VOL BEV',
+          data: [0	,0,	0,	0,	0,	0,	0,	0,	0,	118,	803,	11130],
+          backgroundColor: "rgba(0, 255, 0, 0.8)",
+          borderColor: "rgba(0, 255, 0, 1)",
+          borderWidth: 1
+      },
+      {
+          label: 'VOL PHEV',
+          data: [0	,0,	0,	0,	0,	0,	0,	0,	20,	26,	61,	71],
+          backgroundColor: "rgba(255, 255, 0, 0.8)",
+          borderColor: "rgba(255, 255, 0, 1)",
+          borderWidth: 1
+      }
+  ]
+};
+
+let combinedData3 = {
+  labels: ['2023','2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'],
+  datasets: [
+      {
+          label: 'VOL HEV',
+          data: [],
+          backgroundColor: "rgba(255, 127, 0, 0.8)",
+          borderColor: "rgba(255, 127, 0, 1)",
+          borderWidth: 1
+      },
+      {
+          label: 'VOL BEV',
+          data: [],
+          backgroundColor: "rgba(0, 255, 0, 0.8)",
+          borderColor: "rgba(0, 255, 0, 1)",
+          borderWidth: 1
+      },
+      {
+          label: 'VOL PHEV',
+          data: [],
+          backgroundColor: "rgba(255, 255, 0, 0.8)",
+          borderColor: "rgba(255, 255, 0, 1)",
+          borderWidth: 1
+      }
+  ]
+};
+
+
+let carsumdata = {
+  labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
+  datasets: [{
+      label: 'Total of Vehicle Sales',
+      data: [894164, 1116230, 1229811, 1208028, 1013518, 1062694, 1077364, 1151308, 1030126, 532407, 887202, 1048040],
+      backgroundColor: "rgba(0, 0, 255, 0.8)",
+      borderColor: "rgba(0, 0, 255, 1)",
+      borderWidth: 1
+  }]
+};
+
+let stockdata = {
+  labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022' ],
+  datasets: [{
+      label: 'Total of Vehicle Stock',
+      data: [894164,	2010394,	3240205,	4448233,	5461751,	6524445,	7601809,	8753117,	9783243,	10315650,	11202852,	12250892],
+      backgroundColor: "rgba(0, 0, 255, 0.8)",
+      borderColor: "rgba(0, 0, 255, 1)",
+      borderWidth: 1
+  }]
+};
+
+let stockdata2 = {
+  labels: ['2023','2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'],
+  datasets: [{
+      label: 'VOL NEW CAR SUM',
+      data: [],
+      backgroundColor: "rgba(0, 0, 255, 0.8)",
+      borderColor: "rgba(0, 0, 255, 1)",
+      borderWidth: 1
+  }]
+};
+
 
     // chart Historical
-    // const his1 = document.getElementById('his1');
-    // const his2 = document.getElementById('his2');
-    // const his3 = document.getElementById('his3');
-    // const his4 = document.getElementById('his4');
-    const his5 = document.getElementById('his5');
-    const his6 = document.getElementById('his6');
-    const his7 = document.getElementById('his7');
-    // const his8 = document.getElementById('his8');
-    // const his9 = document.getElementById('his9');
-    const his10 = document.getElementById('his10');
-    const his11 = document.getElementById('his11');
+    const donut1 = document.getElementById('donut1');
+    const donut2 = document.getElementById('donut2');
+    const donut3 = document.getElementById('donut3');
+    const bar1 = document.getElementById('bar1');
+    const bar2 = document.getElementById('bar2');
+    const bar3 = document.getElementById('bar3');
+    const barCombined1 = document.getElementById('barCombined1');
+    const barCombined2 = document.getElementById('barCombined2');
+    const barCombined3 = document.getElementById('barCombined3');
+    const carsum = document.getElementById('carsum');
+    const stock = document.getElementById('stock');
+    const stock2 = document.getElementById('stock2');
 
-    // makeChart(his1, 'line', chart1Data)
-    // makeChart(his2, 'line', chart2Data)
-    // makeChart(his3, 'line', gdp)
-    // makeChart(his4, 'line', ppp)
-    makeChart(his5, 'doughnut', chart4Data)
-    makeChart(his6, 'bar', volICE)
+    makeChart(donut1, 'doughnut', donut1Data)
+    makeChart(donut2, 'doughnut', donut2Data)
+    makeChart(donut3, 'doughnut', donut3Data)
+
+    makeChart(bar1, 'bar', bar1Data)
+    makeChart(bar2, 'bar', bar2Data)
+    makeChart(bar3, 'bar', bar3Data)
+    
     // makeChart(his7, 'bar', volHEV)
-    new Chart(his7, {
+    new Chart(barCombined1, {
       type: 'bar',
-      data: combinedData,
+      data: combinedData1,
       options: {
           responsive: true,
           scales: {
@@ -405,10 +571,43 @@ function makeChart(element, type, data){
           }
       }
   });
-    // makeChart(his8, 'bar', volBEV)
-    // makeChart(his9, 'bar', volPHEV)
-    makeChart(his10, 'bar', volNewCarSum)
-    makeChart(his11, 'bar', volStockUIO)
+    new Chart(barCombined2, {
+      type: 'bar',
+      data: combinedData2,
+      options: {
+          responsive: true,
+          scales: {
+              x: {
+                  stacked: true
+              },
+              y: {
+                  beginAtZero: true,
+                  stacked: true // This will stack the bars
+              }
+          }
+      }
+  });
+    new Chart(barCombined3, {
+      type: 'bar',
+      data: combinedData3,
+      options: {
+          responsive: true,
+          scales: {
+              x: {
+                  stacked: true
+              },
+              y: {
+                  beginAtZero: true,
+                  stacked: true // This will stack the bars
+              }
+          }
+      }
+  });
+
+
+    makeChart(carsum, 'bar', carsumdata)
+    makeChart(stock, 'bar', stockdata)
+    makeChart(stock2, 'bar', stockdata2)
 
     // chart forecasting
     // const fore1 = document.getElementById('fore1');
