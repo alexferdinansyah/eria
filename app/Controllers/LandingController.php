@@ -127,6 +127,20 @@ class LandingController extends BaseController
             $data["volPhev"] = "10";
             $data["volNewCarSum"] = "1048040";
             $data["volStockUIO"] = "12250892";
+        }else if ($nat == "thailand"){
+            $data["population"] = "66,050,000";
+            $data["ttlland"] = "513,120";
+            $data["totalHighway"] = "N/a";
+            $data["GDP"] = "7,171.81";
+            $data["PPP"] = "N/a";
+            $data["GDPppp"] = "21,112.640";
+
+            $data["volIce"] = "1032603";
+            $data["volHev"] = "5100";
+            $data["volBev"] = "10327";
+            $data["volPhev"] = "10";
+            $data["volNewCarSum"] = "1048040";
+            $data["volStockUIO"] = "12250892";
         } else {
             $data["population"] = "N/a";
             $data["ttlland"] = "N/a";

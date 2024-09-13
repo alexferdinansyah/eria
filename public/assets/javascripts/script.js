@@ -20,10 +20,8 @@ function makeChart(element, type, data) {
 
 //
 const route = getLocationFromUrl();
-console.log(route);
 
 const ds = document.getElementById('data-s')
-// console.log(ds)
 
 // 2x2 chart summary element
 const ctx1 = document.getElementById('myChart1');
@@ -909,7 +907,6 @@ if (route == 'indonesia') {
     }]
   };
 
-
   // chart Historical
   const donut1 = document.getElementById('donut1');
   const donut2 = document.getElementById('donut2');
@@ -1012,8 +1009,4 @@ if (route == 'indonesia') {
   makeChart(fore10, 'bar', volNewCarSumBlank)
   makeChart(fore11, 'bar', volStockUIOBlank)
 
-
-
 }
-
-
