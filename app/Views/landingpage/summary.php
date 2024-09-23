@@ -71,10 +71,10 @@
                     <canvas class="chartdiv" id="donut1"></canvas>
                 </div>
                 <ul>
-                    <li>ICE Vehicle Sales : 1032603 </li>
-                    <li>HEV Vehicle Sales : 5100</li>
-                    <li>BEV Vehicle Sales : 10327</li>
-                    <li>PHEV Vehicle Sales : 10</li>
+                    <li>ICE Vehicle Sales : <?= $sales['ICE'] ?></li>
+                    <li>HEV Vehicle Sales : <?= $sales['HEV'] ?></li>
+                    <li>BEV Vehicle Sales : <?= $sales['BEV'] ?></li>
+                    <li>PHEV Vehicle Sales : <?= $sales['PHEV'] ?></li>
                 </ul>
             </div>
 
@@ -109,7 +109,7 @@
                 </thead>
                 <tbody style="font-size:12px;">
                     <tr style="height: 33.33%;">
-                        <td>VOL HEV</td>
+                        <td>VOL HEV Sales</td>
                         <td>0</td>
                         <td>0</td>
                         <td>0</td>
@@ -124,7 +124,7 @@
                         <td>5100</td>
                     </tr>
                     <tr style="height: 33.33%;">
-                        <td>VOL BEV</td>
+                        <td>VOL BEV Sales</td>
                         <td>0</td>
                         <td>0</td>
                         <td>0</td>
@@ -139,7 +139,7 @@
                         <td>10327</td>
                     </tr>
                     <tr style="height: 33.33%;">
-                        <td>VOL PHEV</td>
+                        <td>VOL PHEV Sales</td>
                         <td>0</td>
                         <td>0</td>
                         <td>0</td>
@@ -154,7 +154,7 @@
                         <td>10</td>
                     </tr>
                     <tr style="height: 33.33%;">
-                        <td>VOL ICE</td>
+                        <td>VOL ICE Sales</td>
                         <td>894164</td>
                         <td>1116230</td>
                         <td>1229811</td>
@@ -169,7 +169,7 @@
                         <td>1032603</td>
                     </tr>
                     <tr style="height: 33.33%;">
-                        <td>TOTAL</td>
+                        <td>TOTAL Sales</td>
                         <td>894164</td>
                         <td>1116230</td>
                         <td>1229811</td>
@@ -198,10 +198,10 @@
                         <canvas class="chartdiv" id="donut2"></canvas>
                     </div>
                     <ul>
-                    <li>ICE Vehicle Sales : 12230679 </li>
-                    <li>HEV Vehicle Sales : 9012</li>
-                    <li>BEV Vehicle Sales : 11130</li>
-                    <li>PHEV Vehicle Sales : 71</li>
+                    <li>ICE Vehicle Stock : <?= $stock['ICE'] ?></li>
+                    <li>HEV Vehicle Stock : <?= $stock['HEV'] ?></li>
+                    <li>BEV Vehicle Stock : <?= $stock['BEV'] ?></li>
+                    <li>PHEV Vehicle Stock : <?= $stock['PHEV'] ?></li>
                 </ul>
                 </div>
             <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
@@ -234,7 +234,7 @@
                     </thead>
                     <tbody style="font-size:12px;">
                         <tr style="height: 33.33%;">
-                            <td>HEV Vehicle Sales</td>
+                            <td>HEV Vehicle Stock</td>
                             <td>0</td>
                             <td>0</td>
                             <td>0</td>
@@ -249,7 +249,7 @@
                             <td>9012</td>
                         </tr>
                         <tr style="height: 33.33%;">
-                            <td>BEV Vehicle Sales</td>
+                            <td>BEV Vehicle Stock</td>
                             <td>0</td>
                             <td>0</td>
                             <td>0</td>
@@ -264,7 +264,7 @@
                             <td>10327</td>
                         </tr>
                         <tr style="height: 33.33%;">
-                            <td>PHEV Vehicle Sales</td>
+                            <td>PHEV Vehicle Stock</td>
                             <td>0</td>
                             <td>0</td>
                             <td>0</td>
@@ -279,7 +279,7 @@
                             <td>71</td>
                         </tr>
                         <tr style="height: 33.33%;">
-                            <td>ICE Vehicle Sales</td>
+                            <td>ICE Vehicle Stock</td>
                             <td>894164</td>
                             <td>2010394</td>
                             <td>3240205</td>
@@ -294,7 +294,7 @@
                             <td>12230679</td>
                         </tr>
                         <tr style="height: 33.33%;">
-                            <td>TOTAL</td>
+                            <td>TOTAL STOCK</td>
                             <td>894164</td>
                             <td>2010394</td>
                             <td>3240205</td>

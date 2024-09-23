@@ -113,7 +113,22 @@ class LandingController extends BaseController
     {
         $data["nation"] = $nat;
 
+        
+        $sales; 
+        $stock; 
+
         if ($nat === "indonesia") {
+                
+            $sales["ICE"] = 1032603;
+            $sales["HEV"] = 5100;
+            $sales["BEV"] = 10327;
+            $sales["PHEV"] = 10;
+
+            $stock["ICE"] = 12230679;
+            $stock["HEV"] = 9012;
+            $stock["BEV"] = 11130;
+            $stock["PHEV"] = 71;
+
             $data["population"] = "275,773,800";
             $data["ttlland"] = "1,892,556";
             $data["totalHighway"] = "548,097";
@@ -128,9 +143,20 @@ class LandingController extends BaseController
             $data["volNewCarSum"] = "1048040";
             $data["volStockUIO"] = "12250892";
         }else if ($nat == "thailand"){
+                
+            $sales["ICE"] = 806194;
+            $sales["HEV"] = 63568;
+            $sales["BEV"] = 9901;
+            $sales["PHEV"] = 11331;
+
+            $stock["ICE"] = 11162809;
+            $stock["HEV"] = 255390;
+            $stock["BEV"] = 14286;
+            $stock["PHEV"] = 19482;
+
             $data["population"] = "66,050,000";
             $data["ttlland"] = "513,120";
-            $data["totalHighway"] = "N/a";
+            $data["totalHighway"] = "703,633";
             $data["GDP"] = "7,171.81";
             $data["PPP"] = "N/a";
             $data["GDPppp"] = "21,112.640";
@@ -141,7 +167,44 @@ class LandingController extends BaseController
             $data["volPhev"] = "10";
             $data["volNewCarSum"] = "1048040";
             $data["volStockUIO"] = "12250892";
-        } else {
+        } else if ($nat == "malaysia"){
+                
+            $sales["ICE"] = 806194;
+            $sales["HEV"] = 63568;
+            $sales["BEV"] = 9901;
+            $sales["PHEV"] = 11331;
+
+            $stock["ICE"] = 12230679;
+            $stock["HEV"] = 9012;
+            $stock["BEV"] = 11130;
+            $stock["PHEV"] = 71;
+
+            $data["population"] = "N/a";
+            $data["ttlland"] = "328550";
+            $data["totalHighway"] = "N/a";
+            $data["GDP"] = "N/a";
+            $data["PPP"] = "N/a";
+            $data["GDPppp"] = "N/a";
+
+            $data["volIce"] = "N/a";
+            $data["volHev"] = "N/a";
+            $data["volBev"] = "N/a";
+            $data["volPhev"] = "N/a";
+            $data["volNewCarSum"] = "N/a";
+            $data["volStockUIO"] = "N/a";
+        } 
+        else {
+                
+            $sales["ICE"] = "N/a";
+            $sales["HEV"] = "N/a";
+            $sales["BEV"] = "N/a";
+            $sales["PHEV"] = "N/a";
+
+            $stock["ICE"] = "N/a";
+            $stock["HEV"] = "N/a";
+            $stock["BEV"] = "N/a";
+            $stock["PHEV"] = "N/a";
+
             $data["population"] = "N/a";
             $data["ttlland"] = "N/a";
             $data["totalHighway"] = "N/a";
@@ -156,6 +219,11 @@ class LandingController extends BaseController
             $data["volNewCarSum"] = "N/a";
             $data["volStockUIO"] = "N/a";
         }
+
+        
+        $data["sales"] = $sales;
+        $data["stock"] = $stock;
+
         return view('/landingpage/summary', $data);
     }
 
