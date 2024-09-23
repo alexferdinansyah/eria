@@ -113,6 +113,7 @@ class LandingController extends BaseController
     {
         $data["nation"] = $nat;
 
+        $data['tes'] = "<h1>hello</h1>";
         
         $sales; 
         $stock; 
@@ -142,7 +143,32 @@ class LandingController extends BaseController
             $data["volPhev"] = "10";
             $data["volNewCarSum"] = "1048040";
             $data["volStockUIO"] = "12250892";
-        }else if ($nat == "thailand"){
+        }else if($nat == "vietnam"){
+            $sales["ICE"] = 1032603;
+            $sales["HEV"] = 5100;
+            $sales["BEV"] = 10327;
+            $sales["PHEV"] = 10;
+
+            $stock["ICE"] = 12230679;
+            $stock["HEV"] = 9012;
+            $stock["BEV"] = 11130;
+            $stock["PHEV"] = 71;
+
+            $data["population"] = "99,474";
+            $data["ttlland"] = "33,1345";
+            $data["totalHighway"] = "N/a";
+            $data["GDP"] = "4,123";
+            $data["PPP"] = "6,908";
+            $data["GDPppp"] = "14,024";
+
+            $data["volIce"] = "1032603";
+            $data["volHev"] = "5100";
+            $data["volBev"] = "10327";
+            $data["volPhev"] = "10";
+            $data["volNewCarSum"] = "1048040";
+            $data["volStockUIO"] = "12250892";
+
+        }else if($nat == "thailand"){
                 
             $sales["ICE"] = 806194;
             $sales["HEV"] = 63568;
@@ -167,7 +193,7 @@ class LandingController extends BaseController
             $data["volPhev"] = "10";
             $data["volNewCarSum"] = "1048040";
             $data["volStockUIO"] = "12250892";
-        } else if ($nat == "malaysia"){
+        }else if($nat == "malaysia"){
                 
             $sales["ICE"] = 806194;
             $sales["HEV"] = 63568;
@@ -179,12 +205,12 @@ class LandingController extends BaseController
             $stock["BEV"] = 11130;
             $stock["PHEV"] = 71;
 
-            $data["population"] = "N/a";
-            $data["ttlland"] = "328550";
-            $data["totalHighway"] = "N/a";
-            $data["GDP"] = "N/a";
-            $data["PPP"] = "N/a";
-            $data["GDPppp"] = "N/a";
+            $data["population"] = "33,938,221";
+            $data["ttlland"] = "328,550";
+            $data["totalHighway"] = "281,302";
+            $data["GDP"] = "11,993.19";
+            $data["PPP"] = "1,137,789,082,909";
+            $data["GDPppp"] = "33,525";
 
             $data["volIce"] = "N/a";
             $data["volHev"] = "N/a";

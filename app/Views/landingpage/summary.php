@@ -12,6 +12,7 @@
     <div class="summary-wrapper">
 
         <h1 style="margin-left:50px;">Econometric</h1>
+        
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
             <div class="content-summary">
                 <h2>Summary</h2>
