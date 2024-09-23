@@ -106,84 +106,11 @@
                         <th>2020</th>
                         <th>2021</th>
                         <th>2022</th>
+                        <th>2023</th>
                     </tr>
                 </thead>
                 <tbody style="font-size:12px;">
-                    <tr style="height: 33.33%;">
-                        <td>VOL HEV Sales</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>331</td>
-                        <td>1108</td>
-                        <td>2473</td>
-                        <td>5100</td>
-                    </tr>
-                    <tr style="height: 33.33%;">
-                        <td>VOL BEV Sales</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>118</td>
-                        <td>685</td>
-                        <td>10327</td>
-                    </tr>
-                    <tr style="height: 33.33%;">
-                        <td>VOL PHEV Sales</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>20</td>
-                        <td>6</td>
-                        <td>35</td>
-                        <td>10</td>
-                    </tr>
-                    <tr style="height: 33.33%;">
-                        <td>VOL ICE Sales</td>
-                        <td>894164</td>
-                        <td>1116230</td>
-                        <td>1229811</td>
-                        <td>1208028</td>
-                        <td>1013518</td>
-                        <td>1062694</td>
-                        <td>1077364</td>
-                        <td>1151308</td>
-                        <td>1029775</td>
-                        <td>531175</td>
-                        <td>884009</td>
-                        <td>1032603</td>
-                    </tr>
-                    <tr style="height: 33.33%;">
-                        <td>TOTAL Sales</td>
-                        <td>894164</td>
-                        <td>1116230</td>
-                        <td>1229811</td>
-                        <td>1208028</td>
-                        <td>1013518</td>
-                        <td>1062694</td>
-                        <td>1077364</td>
-                        <td>1151328</td>
-                        <td>1030112</td>
-                        <td>532436</td>
-                        <td>888202</td>
-                        <td>1043039</td>
-                    </tr>
+                    <?= $tableData1 ?>
                 </tbody>
             </table>
 
@@ -231,84 +158,11 @@
                             <th>2020</th>
                             <th>2021</th>
                             <th>2022</th>
+                            <th>2023</th>
                         </tr>
                     </thead>
                     <tbody style="font-size:12px;">
-                        <tr style="height: 33.33%;">
-                            <td>HEV Vehicle Stock</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>331</td>
-                            <td>1439</td>
-                            <td>3912</td>
-                            <td>9012</td>
-                        </tr>
-                        <tr style="height: 33.33%;">
-                            <td>BEV Vehicle Stock</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>118</td>
-                            <td>685</td>
-                            <td>10327</td>
-                        </tr>
-                        <tr style="height: 33.33%;">
-                            <td>PHEV Vehicle Stock</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>20</td>
-                            <td>26</td>
-                            <td>61</td>
-                            <td>71</td>
-                        </tr>
-                        <tr style="height: 33.33%;">
-                            <td>ICE Vehicle Stock</td>
-                            <td>894164</td>
-                            <td>2010394</td>
-                            <td>3240205</td>
-                            <td>4448233</td>
-                            <td>5461751</td>
-                            <td>6524445</td>
-                            <td>7601809</td>
-                            <td>7601809</td>
-                            <td>9782892</td>
-                            <td>10314067</td>
-                            <td>11198076</td>
-                            <td>12230679</td>
-                        </tr>
-                        <tr style="height: 33.33%;">
-                            <td>TOTAL STOCK</td>
-                            <td>894164</td>
-                            <td>2010394</td>
-                            <td>3240205</td>
-                            <td>4448233</td>
-                            <td>5461751</td>
-                            <td>6524445</td>
-                            <td>7601809</td>
-                            <td>8753117</td>
-                            <td>9783243</td>
-                            <td>10315650</td>
-                            <td>11202852</td>
-                            <td>12250892</td>
-                        </tr>
+                        <?= $tableData2 ?>
                     </tbody>
                 </table>
             </div>
