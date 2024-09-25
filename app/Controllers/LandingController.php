@@ -119,6 +119,45 @@ class LandingController extends BaseController
         $stock; 
 
         if ($nat === "indonesia") {
+            $data["sd"] = '
+            <p>Data Source</p>
+            <ol type="A">
+                <li>Population
+                    <ol>
+                        <li><a href="https://sumsel.bps.go.id/indicator/12/573/4/jumlah-penduduk-menurut-provinsi.html">https://sumsel.bps.go.id/indicator/12/573/4/jumlah-penduduk-menurut-provinsi.html</a></li>
+                        <li><a href="https://jatim.bps.go.id/indicator/12/114/2/jumlah-penduduk-menurut-provinsi-di-indonesia.html">https://jatim.bps.go.id/indicator/12/114/2/jumlah-penduduk-menurut-provinsi-di-indonesia.html</a></li>
+                        <li><a href="https://jatim.bps.go.id/indicator/12/114/1/jumlah-penduduk-menurut-provinsi-di-indonesia.html">https://jatim.bps.go.id/indicator/12/114/1/jumlah-penduduk-menurut-provinsi-di-indonesia.html</a></li>
+                        <li><a href="https://sulut.bps.go.id/indicator/12/958/1/jumlah-penduduk-menurut-provinsi-di-indonesia.html">https://sulut.bps.go.id/indicator/12/958/1/jumlah-penduduk-menurut-provinsi-di-indonesia.html</a></li>
+                        <li><a href="https://www.bps.go.id/id/statistics-table/2/MTk3NSMy/jumlah-penduduk-pertengahan-tahun--ribu-jiwa-.html">https://www.bps.go.id/id/statistics-table/2/MTk3NSMy/jumlah-penduduk-pertengahan-tahun--ribu-jiwa-.html</a></li>
+                    </ol>
+                </li>
+                <li>Total Land Area
+                    <ol>
+                        <li><a href="https://data.worldbank.org/indicator/AG.LND.TOTL.K2?locations=ID&start=2011">https://data.worldbank.org/indicator/AG.LND.TOTL.K2?locations=ID&start=2011</a></li>
+                    </ol>
+                </li>
+                <li>Total Road Length
+                    <ol>
+                        <li><a href="https://www.bps.go.id/en/statistics-table/2/NTAjMg==/length-of-road-by-level-of-government-responsibility--km-.html">https://www.bps.go.id/en/statistics-table/2/NTAjMg==/length-of-road-by-level-of-government-responsibility--km-.html</a></li>
+                    </ol>
+                </li>
+                <li>GDP per Capita (Current US$)
+                    <ol>
+                        <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?end=2022&locations=ID&start=2011&view=chart">https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?end=2022&locations=ID&start=2011&view=chart</a></li>
+                    </ol>
+                </li>
+                <li>Purchasing Power Parity (PPP)
+                    <ol>
+                        <li><a href="https://satudata.kemendag.go.id/data-informasi/perdagangan-dalam-negeri/produk-domestik-bruto">https://satudata.kemendag.go.id/data-informasi/perdagangan-dalam-negeri/produk-domestik-bruto</a></li>
+                    </ol>
+                </li>
+                <li>GDP per Capita, Purchasing Power Parity (PPP)
+                    <ol>
+                        <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=ID&start=2011">https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=ID&start=2011</a></li>
+                    </ol>
+                </li>
+            </ol>
+            ';
                 
             $sales["ICE"] = 1032603;
             $sales["HEV"] = 5100;
@@ -311,6 +350,7 @@ class LandingController extends BaseController
             ';
 
         }else if($nat == "vietnam"){
+            $data["sd"] ="";
             $sales["ICE"] = 1032603;
             $sales["HEV"] = 5100;
             $sales["BEV"] = 10327;
@@ -494,6 +534,49 @@ class LandingController extends BaseController
 
 
         }else if($nat == "thailand"){
+            $data["sd"] ='
+            <p>Data Source</p>
+            <ol type="A">
+                <li>Population
+                    <ol>
+                        <li><a href="https://www.nso.go.th/nsoweb/nso/ebook">https://www.nso.go.th/nsoweb/nso/ebook</a></li>
+                        <li><a href="http://statbbi.nso.go.th/staticreport/page/sector/th/01.aspx">http://statbbi.nso.go.th/staticreport/page/sector/th/01.aspx</a></li>
+                        <li><a href="https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH">https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH</a></li>
+                    </ol>
+                </li>
+                <li>Total Land Area
+                    <ol>
+                        <li><a href="https://www.thailand.go.th/page/land-area">https://www.thailand.go.th/page/land-area</a></li>
+                    </ol>
+                </li>
+                <li>Total Road Length
+                    <ol>
+                        <li><a href="https://www.otp.go.th/uploads/tiny_uploads/PDF/2566-11/25661106-TransportInfrastructureAnnualReport2022.pdf">https://www.otp.go.th/uploads/tiny_uploads/PDF/2566-11/25661106-TransportInfrastructureAnnualReport2022.pdf</a></li>
+                    </ol>
+                </li>
+                <li>GDP per Capita (Current US$)
+                    <ol>
+                        <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TH">https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TH</a></li>
+                    </ol>
+                </li>
+                <li>Purchasing Power Parity (PPP)
+                    <ol>
+                        <li><a href="#">not Available</a></li>
+                    </ol>
+                </li>
+                <li>GDP per Capita, Purchasing Power Parity (PPP)
+                    <ol>
+                        <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=TH&start=2011">https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=TH&start=2011</a></li>
+                    </ol>
+                </li>
+                <li>Public Charging Roadmap
+                    <ol>
+                        <li><a href="https://evat.or.th/ev-information/evat-directory/index">https://evat.or.th/ev-information/evat-directory/index</a></li>
+                        <li><a href="https://data.thaiauto.or.th/tai/dailynews-iframe/11375-%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%A3%E0%B8%96-ev-1,664-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8A%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94.html">https://data.thaiauto.or.th/tai/dailynews-iframe/11375-%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%A3%E0%B8%96-ev-1,664-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8A%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94.html</a></li>
+                    </ol>
+                </li>
+            </ol>
+            ';
                 
             $sales["ICE"] = 806194;
             $sales["HEV"] = 63568;
@@ -685,6 +768,7 @@ class LandingController extends BaseController
                         </tr>
             ';
         }else if($nat == "malaysia"){
+            $data["sd"] ="";
                 
             $sales["ICE"] = 806194;
             $sales["HEV"] = 63568;
@@ -877,7 +961,7 @@ class LandingController extends BaseController
             ';
         } 
         else {
-                
+            $data["sd"] ="";    
             $sales["ICE"] = "N/a";
             $sales["HEV"] = "N/a";
             $sales["BEV"] = "N/a";

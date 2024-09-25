@@ -648,7 +648,7 @@ if (route == 'indonesia') {
   makeChart(fore11, 'bar', volStockUIOBlank)
 
 
-} else if(route == 'thailand'){
+}else if(route == 'thailand'){
   makeChart(line1, 'line', gdp2);
   makeChart(line2, 'line', ppp);
 
@@ -1006,7 +1006,764 @@ if (route == 'indonesia') {
   // makeChart(fore9, 'bar', volPHEVBlank)
   makeChart(fore10, 'bar', volNewCarSumBlank)
   makeChart(fore11, 'bar', volStockUIOBlank)
-}else {
+}else if(route == 'malaysia'){
+  let blank = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    datasets: [{
+      label: 'GDP per Capita (Current US$)',
+      data: [10209.37, 10601.51, 10727.67, 11045.58, 9699.60, 9555.67, 9979.70, 11073.98, 11132.10, 10164.34, 11134.62, 11993.19, 0],
+      backgroundColor: "rgba(75, 0, 130, 0.8)",
+      borderColor: "rgba(75, 0, 130, 1)",
+      borderWidth: 1
+    }]
+  }
+
+  let blank2 = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    datasets: [{
+      label: 'GDP per Capita Purchasing Power Parity (PPP)',
+      data: [21308.22, 22527.00, 22959.20, 24012.83, 24164.96, 24864.04, 25935.14, 27480.95, 28848.10, 27300.27, 29139.37, 33525.30, 0],
+      backgroundColor: "rgba(75, 0, 130, 0.8)",
+      borderColor: "rgba(75, 0, 130, 1)",
+      borderWidth: 1
+    }]
+  }
+  makeChart(line1, 'line', blank);
+  makeChart(line2, 'line', blank2);
+
+  let chart1Data = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    datasets: [{
+      label: 'Total Highway Length',
+      data: [155427, 180882, 202333, 201794, 214816, 238790, 237022, 250023, 256494, 267012, 303016, 281302, 0],
+      backgroundColor: "rgba(75, 0, 130, 0.8)",
+      borderColor: "rgba(75, 0, 130, 1)",
+      borderWidth: 1
+    }]
+  }
+
+  makeChart(ctx1, 'line', chart1Data);
+
+  let chart2Data = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    datasets: [{
+      label: 'Population',
+      data: [29184133, 29660212, 30134807, 30606459, 31068833, 31526418, 31975806, 32399271, 32804020, 33199993, 33573874, 33938221, 0],
+      backgroundColor: "rgba(75, 0, 130, 0.8)",
+      borderColor: "rgba(75, 0, 130, 1)",
+      borderWidth: 1
+    }]
+  }
+
+  makeChart(ctx2, 'line', chart2Data);
+
+  let donut1Data = {
+    // labels ['ICE', 'HEV', 'BEV', 'PHEV'],
+    labels: ['ICE Vehicle Sales', 'HEV Vehicle Sales', 'BEV Vehicle Sales', 'PHEV Vehicle Sales'],
+    datasets: [{
+      label: '2022 Data',
+      data: [],
+      backgroundColor: [
+        'rgba(255, 0, 0, 0.8)',    // Red //
+        'rgba(255, 127, 0, 0.8)',  // Orange
+        'rgba(0, 255, 0, 0.8)',    // Green
+        'rgba(255, 255, 0, 0.8)',  // Yellow
+        'rgba(0, 0, 255, 0.8)',    // Blue //
+        'rgba(75, 0, 130, 0.8)'    // Indigo //
+      ],
+      borderColor: [
+        'rgba(255, 0, 0, 1)',
+        'rgba(255, 127, 0, 1)',
+        'rgba(255, 255, 0, 1)',
+        'rgba(0, 255, 0, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(75, 0, 130, 1)'
+      ],
+      borderWidth: 1
+    }]
+  };
+
+  let donut2Data = {
+    labels: ['ICE Vehicle Stock', 'HEV Vehicle Stock', 'BEV Vehicle Stock', 'PHEV Vehicle Stock'],
+    datasets: [{
+      label: '2022 Data',
+      data: [],
+      backgroundColor: [
+        'rgba(255, 0, 0, 0.8)',    // Red //
+        'rgba(255, 127, 0, 0.8)',  // Orange
+        'rgba(0, 255, 0, 0.8)',    // Green
+        'rgba(255, 255, 0, 0.8)',  // Yellow
+        'rgba(0, 0, 255, 0.8)',    // Blue //
+        'rgba(75, 0, 130, 0.8)'    // Indigo //
+      ],
+      borderColor: [
+        'rgba(255, 0, 0, 1)',
+        'rgba(255, 127, 0, 1)',
+        'rgba(255, 255, 0, 1)',
+        'rgba(0, 255, 0, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(75, 0, 130, 1)'
+      ],
+      borderWidth: 1
+    }]
+  };
+
+  let donut3Data = {
+    labels: ['ICE', 'HEV', 'BEV', 'PHEV'],
+    datasets: [{
+      label: '2022 Data',
+      data: [],
+      backgroundColor: [
+        'rgba(255, 0, 0, 0.8)',    // Red //
+        'rgba(255, 127, 0, 0.8)',  // Orange
+        'rgba(0, 255, 0, 0.8)',    // Green
+        'rgba(255, 255, 0, 0.8)',  // Yellow
+        'rgba(0, 0, 255, 0.8)',    // Blue //
+        'rgba(75, 0, 130, 0.8)'    // Indigo //
+      ],
+      borderColor: [
+        'rgba(255, 0, 0, 1)',
+        'rgba(255, 127, 0, 1)',
+        'rgba(255, 255, 0, 1)',
+        'rgba(0, 255, 0, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(75, 0, 130, 1)'
+      ],
+      borderWidth: 1
+    }]
+  };
+
+  let bar1Data = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022','2023'],
+    datasets: [{
+      label: 'ICE Vehicle Sales',
+      data: [],
+      backgroundColor: "rgba(255, 0, 0, 0.8)",
+      borderColor: "rgba(255, 0, 0, 1)",
+      borderWidth: 1
+    }]
+  };
+  let bar2Data = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022','2023'],
+    datasets: [{
+      label: 'ICE Vehicle Stock',
+      data: [],
+      backgroundColor: "rgba(255, 0, 0, 0.8)",
+      borderColor: "rgba(255, 0, 0, 1)",
+      borderWidth: 1
+    }]
+  };
+  let bar3Data = {
+    labels: ['2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'],
+    datasets: [{
+      label: 'VOL ICE',
+      data: [],
+      backgroundColor: "rgba(255, 0, 0, 0.8)",
+      borderColor: "rgba(255, 0, 0, 1)",
+      borderWidth: 1
+    }]
+  };
+
+  let combinedData1 = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022','2023'],
+    datasets: [
+      {
+        // label: 'VOL HEV',
+        label : 'HEV Vehicle Sales',
+        data: [],
+        backgroundColor: "rgba(255, 127, 0, 0.8)",
+        borderColor: "rgba(255, 127, 0, 1)",
+        borderWidth: 1
+      },
+      {
+        // label: 'VOL BEV',
+        label: 'BEV Vehicle Sales',
+        data: [],
+        backgroundColor: "rgba(0, 255, 0, 0.8)",
+        borderColor: "rgba(0, 255, 0, 1)",
+        borderWidth: 1
+      },
+      {
+        // label: 'VOL PHEV',
+        label: 'PHEV Vehicle Sales',
+        data: [],
+        backgroundColor: "rgba(255, 255, 0, 0.8)",
+        borderColor: "rgba(255, 255, 0, 1)",
+        borderWidth: 1
+      }
+    ]
+  };
+
+  let combinedData2 = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022','2023'],
+    datasets: [
+      {
+        label: 'HEV Vehicle Stock',
+        data: [],
+        backgroundColor: "rgba(255, 127, 0, 0.8)",
+        borderColor: "rgba(255, 127, 0, 1)",
+        borderWidth: 1
+      },
+      {
+        label: 'BEV Vehicle Stock',
+        data: [],
+        backgroundColor: "rgba(0, 255, 0, 0.8)",
+        borderColor: "rgba(0, 255, 0, 1)",
+        borderWidth: 1
+      },
+      {
+        label: 'PHEV Vehicle Stock',
+        data: [],
+        backgroundColor: "rgba(255, 255, 0, 0.8)",
+        borderColor: "rgba(255, 255, 0, 1)",
+        borderWidth: 1
+      }
+    ]
+  };
+
+  let combinedData3 = {
+    labels: ['2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'],
+    datasets: [
+      {
+        label: 'VOL HEV',
+        data: [],
+        backgroundColor: "rgba(255, 127, 0, 0.8)",
+        borderColor: "rgba(255, 127, 0, 1)",
+        borderWidth: 1
+      },
+      {
+        label: 'VOL BEV',
+        data: [],
+        backgroundColor: "rgba(0, 255, 0, 0.8)",
+        borderColor: "rgba(0, 255, 0, 1)",
+        borderWidth: 1
+      },
+      {
+        label: 'VOL PHEV',
+        data: [],
+        backgroundColor: "rgba(255, 255, 0, 0.8)",
+        borderColor: "rgba(255, 255, 0, 1)",
+        borderWidth: 1
+      }
+    ]
+  };
+
+
+  let carsumdata = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+    datasets: [{
+      label: 'Total of Vehicle Sales',
+      data: [],
+      backgroundColor: "rgba(0, 0, 255, 0.8)",
+      borderColor: "rgba(0, 0, 255, 1)",
+      borderWidth: 1
+    }]
+  };
+
+  let stockdata = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+    datasets: [{
+      label: 'Total of Vehicle Stock',
+      data: [],
+      backgroundColor: "rgba(0, 0, 255, 0.8)",
+      borderColor: "rgba(0, 0, 255, 1)",
+      borderWidth: 1
+    }]
+  };
+
+  let stockdata2 = {
+    labels: ['2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'],
+    datasets: [{
+      label: 'VOL NEW CAR SUM',
+      data: [],
+      backgroundColor: "rgba(0, 0, 255, 0.8)",
+      borderColor: "rgba(0, 0, 255, 1)",
+      borderWidth: 1
+    }]
+  };
+
+  // chart Historical
+  const donut1 = document.getElementById('donut1');
+  const donut2 = document.getElementById('donut2');
+  const donut3 = document.getElementById('donut3');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+  const barCombined1 = document.getElementById('barCombined1');
+  const barCombined2 = document.getElementById('barCombined2');
+  const barCombined3 = document.getElementById('barCombined3');
+  const carsum = document.getElementById('carsum');
+  const stock = document.getElementById('stock');
+  const stock2 = document.getElementById('stock2');
+
+  makeChart(donut1, 'doughnut', donut1Data)
+  makeChart(donut2, 'doughnut', donut2Data)
+  makeChart(donut3, 'doughnut', donut3Data)
+
+  makeChart(bar1, 'bar', bar1Data)
+  makeChart(bar2, 'bar', bar2Data)
+  makeChart(bar3, 'bar', bar3Data)
+
+  // makeChart(his7, 'bar', volHEV)
+  new Chart(barCombined1, {
+    type: 'bar',
+    data: combinedData1,
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          stacked: true
+        },
+        y: {
+          beginAtZero: true,
+          stacked: true // This will stack the bars
+        }
+      }
+    }
+  });
+  new Chart(barCombined2, {
+    type: 'bar',
+    data: combinedData2,
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          stacked: true
+        },
+        y: {
+          beginAtZero: true,
+          stacked: true // This will stack the bars
+        }
+      }
+    }
+  });
+  new Chart(barCombined3, {
+    type: 'bar',
+    data: combinedData3,
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          stacked: true
+        },
+        y: {
+          beginAtZero: true,
+          stacked: true // This will stack the bars
+        }
+      }
+    }
+  });
+
+
+  makeChart(carsum, 'bar', carsumdata)
+  makeChart(stock, 'bar', stockdata)
+  makeChart(stock2, 'bar', stockdata2)
+
+  // chart forecasting
+  // const fore1 = document.getElementById('fore1');
+  // const fore2 = document.getElementById('fore2');
+  // const fore3 = document.getElementById('fore3');
+  // const fore4 = document.getElementById('fore4');
+  const fore5 = document.getElementById('fore5');
+  const fore6 = document.getElementById('fore6');
+  const fore7 = document.getElementById('fore7');
+  // const fore8 = document.getElementById('fore8');
+  // const fore9 = document.getElementById('fore9');
+  const fore10 = document.getElementById('fore10');
+  const fore11 = document.getElementById('fore11');
+
+  // makeChart(fore1, 'line', chart1data)
+  // makeChart(fore2, 'line', chart2data)
+  // makeChart(fore3, 'line', gdpBlank)
+  // makeChart(fore4, 'line', pppBlank)
+  makeChart(fore5, 'doughnut', chart4data)
+  makeChart(fore6, 'bar', volICEBlank)
+  makeChart(fore7, 'bar', volHEVBlank)
+  // makeChart(fore8, 'bar', volBEVBlank)
+  // makeChart(fore9, 'bar', volPHEVBlank)
+  makeChart(fore10, 'bar', volNewCarSumBlank)
+  makeChart(fore11, 'bar', volStockUIOBlank)
+}else if(route == 'vietnam'){
+
+  let blank = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    datasets: [{
+      label: 'GDP per Capita (Current US$)',
+      data: [1958.12, 2192.65, 2369.24, 2559.19, 2596.01, 2757.26, 2983.46, 3250.53, 3464.91, 3551.92, 3720.24, 4123.83,0],
+      backgroundColor: "rgba(75, 0, 130, 0.8)",
+      borderColor: "rgba(75, 0, 130, 1)",
+      borderWidth: 1
+    }]
+  }
+
+  let blank2 = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    datasets: [{
+      label: 'GDP per Capita Purchasing Power Parity (PPP)',
+      data: [5793.93, 6391.72, 6781.27, 7332.40, 7724.16, 8453.07, 9281.28, 10149.50, 11190.15, 11781.15, 12219.01, 14024.81,0],
+      backgroundColor: "rgba(75, 0, 130, 0.8)",
+      borderColor: "rgba(75, 0, 130, 1)",
+      borderWidth: 1
+    }]
+  }
+  makeChart(line1, 'line', blank);
+  makeChart(line2, 'line', blank2);
+
+  let chart1Data = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022','2023'],
+    datasets: [{
+      label: 'Total Highway Length',
+      data: [],
+      backgroundColor: "rgba(75, 0, 130, 0.8)",
+      borderColor: "rgba(75, 0, 130, 1)",
+      borderWidth: 1
+    }]
+  }
+
+  makeChart(ctx1, 'line', chart1Data);
+
+  let chart2Data = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+    datasets: [{
+      label: 'Population',
+      data: [88146, 89203, 90191, 91204, 92229, 93251, 94286, 95385, 96484, 97583, 98506, 99474,0],
+      backgroundColor: "rgba(75, 0, 130, 0.8)",
+      borderColor: "rgba(75, 0, 130, 1)",
+      borderWidth: 1
+    }]
+  }
+
+  makeChart(ctx2, 'line', chart2Data);
+
+  let donut1Data = {
+    // labels ['ICE', 'HEV', 'BEV', 'PHEV'],
+    labels: ['ICE Vehicle Sales', 'HEV Vehicle Sales', 'BEV Vehicle Sales', 'PHEV Vehicle Sales'],
+    datasets: [{
+      label: '2022 Data',
+      data: [],
+      backgroundColor: [
+        'rgba(255, 0, 0, 0.8)',    // Red //
+        'rgba(255, 127, 0, 0.8)',  // Orange
+        'rgba(0, 255, 0, 0.8)',    // Green
+        'rgba(255, 255, 0, 0.8)',  // Yellow
+        'rgba(0, 0, 255, 0.8)',    // Blue //
+        'rgba(75, 0, 130, 0.8)'    // Indigo //
+      ],
+      borderColor: [
+        'rgba(255, 0, 0, 1)',
+        'rgba(255, 127, 0, 1)',
+        'rgba(255, 255, 0, 1)',
+        'rgba(0, 255, 0, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(75, 0, 130, 1)'
+      ],
+      borderWidth: 1
+    }]
+  };
+
+  let donut2Data = {
+    labels: ['ICE Vehicle Stock', 'HEV Vehicle Stock', 'BEV Vehicle Stock', 'PHEV Vehicle Stock'],
+    datasets: [{
+      label: '2022 Data',
+      data: [],
+      backgroundColor: [
+        'rgba(255, 0, 0, 0.8)',    // Red //
+        'rgba(255, 127, 0, 0.8)',  // Orange
+        'rgba(0, 255, 0, 0.8)',    // Green
+        'rgba(255, 255, 0, 0.8)',  // Yellow
+        'rgba(0, 0, 255, 0.8)',    // Blue //
+        'rgba(75, 0, 130, 0.8)'    // Indigo //
+      ],
+      borderColor: [
+        'rgba(255, 0, 0, 1)',
+        'rgba(255, 127, 0, 1)',
+        'rgba(255, 255, 0, 1)',
+        'rgba(0, 255, 0, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(75, 0, 130, 1)'
+      ],
+      borderWidth: 1
+    }]
+  };
+
+  let donut3Data = {
+    labels: ['ICE', 'HEV', 'BEV', 'PHEV'],
+    datasets: [{
+      label: '2022 Data',
+      data: [],
+      backgroundColor: [
+        'rgba(255, 0, 0, 0.8)',    // Red //
+        'rgba(255, 127, 0, 0.8)',  // Orange
+        'rgba(0, 255, 0, 0.8)',    // Green
+        'rgba(255, 255, 0, 0.8)',  // Yellow
+        'rgba(0, 0, 255, 0.8)',    // Blue //
+        'rgba(75, 0, 130, 0.8)'    // Indigo //
+      ],
+      borderColor: [
+        'rgba(255, 0, 0, 1)',
+        'rgba(255, 127, 0, 1)',
+        'rgba(255, 255, 0, 1)',
+        'rgba(0, 255, 0, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(75, 0, 130, 1)'
+      ],
+      borderWidth: 1
+    }]
+  };
+
+  let bar1Data = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022','2023'],
+    datasets: [{
+      label: 'ICE Vehicle Sales',
+      data: [],
+      backgroundColor: "rgba(255, 0, 0, 0.8)",
+      borderColor: "rgba(255, 0, 0, 1)",
+      borderWidth: 1
+    }]
+  };
+  let bar2Data = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022','2023'],
+    datasets: [{
+      label: 'ICE Vehicle Stock',
+      data: [],
+      backgroundColor: "rgba(255, 0, 0, 0.8)",
+      borderColor: "rgba(255, 0, 0, 1)",
+      borderWidth: 1
+    }]
+  };
+  let bar3Data = {
+    labels: ['2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'],
+    datasets: [{
+      label: 'VOL ICE',
+      data: [],
+      backgroundColor: "rgba(255, 0, 0, 0.8)",
+      borderColor: "rgba(255, 0, 0, 1)",
+      borderWidth: 1
+    }]
+  };
+
+  let combinedData1 = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022','2023'],
+    datasets: [
+      {
+        // label: 'VOL HEV',
+        label : 'HEV Vehicle Sales',
+        data: [],
+        backgroundColor: "rgba(255, 127, 0, 0.8)",
+        borderColor: "rgba(255, 127, 0, 1)",
+        borderWidth: 1
+      },
+      {
+        // label: 'VOL BEV',
+        label: 'BEV Vehicle Sales',
+        data: [],
+        backgroundColor: "rgba(0, 255, 0, 0.8)",
+        borderColor: "rgba(0, 255, 0, 1)",
+        borderWidth: 1
+      },
+      {
+        // label: 'VOL PHEV',
+        label: 'PHEV Vehicle Sales',
+        data: [],
+        backgroundColor: "rgba(255, 255, 0, 0.8)",
+        borderColor: "rgba(255, 255, 0, 1)",
+        borderWidth: 1
+      }
+    ]
+  };
+
+  let combinedData2 = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022','2023'],
+    datasets: [
+      {
+        label: 'HEV Vehicle Stock',
+        data: [],
+        backgroundColor: "rgba(255, 127, 0, 0.8)",
+        borderColor: "rgba(255, 127, 0, 1)",
+        borderWidth: 1
+      },
+      {
+        label: 'BEV Vehicle Stock',
+        data: [],
+        backgroundColor: "rgba(0, 255, 0, 0.8)",
+        borderColor: "rgba(0, 255, 0, 1)",
+        borderWidth: 1
+      },
+      {
+        label: 'PHEV Vehicle Stock',
+        data: [],
+        backgroundColor: "rgba(255, 255, 0, 0.8)",
+        borderColor: "rgba(255, 255, 0, 1)",
+        borderWidth: 1
+      }
+    ]
+  };
+
+  let combinedData3 = {
+    labels: ['2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'],
+    datasets: [
+      {
+        label: 'VOL HEV',
+        data: [],
+        backgroundColor: "rgba(255, 127, 0, 0.8)",
+        borderColor: "rgba(255, 127, 0, 1)",
+        borderWidth: 1
+      },
+      {
+        label: 'VOL BEV',
+        data: [],
+        backgroundColor: "rgba(0, 255, 0, 0.8)",
+        borderColor: "rgba(0, 255, 0, 1)",
+        borderWidth: 1
+      },
+      {
+        label: 'VOL PHEV',
+        data: [],
+        backgroundColor: "rgba(255, 255, 0, 0.8)",
+        borderColor: "rgba(255, 255, 0, 1)",
+        borderWidth: 1
+      }
+    ]
+  };
+
+
+  let carsumdata = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+    datasets: [{
+      label: 'Total of Vehicle Sales',
+      data: [],
+      backgroundColor: "rgba(0, 0, 255, 0.8)",
+      borderColor: "rgba(0, 0, 255, 1)",
+      borderWidth: 1
+    }]
+  };
+
+  let stockdata = {
+    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+    datasets: [{
+      label: 'Total of Vehicle Stock',
+      data: [],
+      backgroundColor: "rgba(0, 0, 255, 0.8)",
+      borderColor: "rgba(0, 0, 255, 1)",
+      borderWidth: 1
+    }]
+  };
+
+  let stockdata2 = {
+    labels: ['2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'],
+    datasets: [{
+      label: 'VOL NEW CAR SUM',
+      data: [],
+      backgroundColor: "rgba(0, 0, 255, 0.8)",
+      borderColor: "rgba(0, 0, 255, 1)",
+      borderWidth: 1
+    }]
+  };
+
+  // chart Historical
+  const donut1 = document.getElementById('donut1');
+  const donut2 = document.getElementById('donut2');
+  const donut3 = document.getElementById('donut3');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+  const barCombined1 = document.getElementById('barCombined1');
+  const barCombined2 = document.getElementById('barCombined2');
+  const barCombined3 = document.getElementById('barCombined3');
+  const carsum = document.getElementById('carsum');
+  const stock = document.getElementById('stock');
+  const stock2 = document.getElementById('stock2');
+
+  makeChart(donut1, 'doughnut', donut1Data)
+  makeChart(donut2, 'doughnut', donut2Data)
+  makeChart(donut3, 'doughnut', donut3Data)
+
+  makeChart(bar1, 'bar', bar1Data)
+  makeChart(bar2, 'bar', bar2Data)
+  makeChart(bar3, 'bar', bar3Data)
+
+  // makeChart(his7, 'bar', volHEV)
+  new Chart(barCombined1, {
+    type: 'bar',
+    data: combinedData1,
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          stacked: true
+        },
+        y: {
+          beginAtZero: true,
+          stacked: true // This will stack the bars
+        }
+      }
+    }
+  });
+  new Chart(barCombined2, {
+    type: 'bar',
+    data: combinedData2,
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          stacked: true
+        },
+        y: {
+          beginAtZero: true,
+          stacked: true // This will stack the bars
+        }
+      }
+    }
+  });
+  new Chart(barCombined3, {
+    type: 'bar',
+    data: combinedData3,
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          stacked: true
+        },
+        y: {
+          beginAtZero: true,
+          stacked: true // This will stack the bars
+        }
+      }
+    }
+  });
+
+
+  makeChart(carsum, 'bar', carsumdata)
+  makeChart(stock, 'bar', stockdata)
+  makeChart(stock2, 'bar', stockdata2)
+
+  // chart forecasting
+  // const fore1 = document.getElementById('fore1');
+  // const fore2 = document.getElementById('fore2');
+  // const fore3 = document.getElementById('fore3');
+  // const fore4 = document.getElementById('fore4');
+  const fore5 = document.getElementById('fore5');
+  const fore6 = document.getElementById('fore6');
+  const fore7 = document.getElementById('fore7');
+  // const fore8 = document.getElementById('fore8');
+  // const fore9 = document.getElementById('fore9');
+  const fore10 = document.getElementById('fore10');
+  const fore11 = document.getElementById('fore11');
+
+  // makeChart(fore1, 'line', chart1data)
+  // makeChart(fore2, 'line', chart2data)
+  // makeChart(fore3, 'line', gdpBlank)
+  // makeChart(fore4, 'line', pppBlank)
+  makeChart(fore5, 'doughnut', chart4data)
+  makeChart(fore6, 'bar', volICEBlank)
+  makeChart(fore7, 'bar', volHEVBlank)
+  // makeChart(fore8, 'bar', volBEVBlank)
+  // makeChart(fore9, 'bar', volPHEVBlank)
+  makeChart(fore10, 'bar', volNewCarSumBlank)
+  makeChart(fore11, 'bar', volStockUIOBlank)
+
+}
+else {
   let blank = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
     datasets: [{
