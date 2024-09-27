@@ -47,7 +47,7 @@ let gdp = {
   labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
   datasets: [{
     label: 'GDP per Capita (Current US$)',
-    data: [3614, 3668, 3603, 3477, 3323, 3559, 384, 3903, 4151, 3896, 4334, 4778, 0],
+    data: [3614, 3668, 3603, 3477, 3323, 3559, 3840, 3903, 4151, 3896, 4334, 4778, 0],
     backgroundColor: "rgba(75, 0, 130, 0.8)",
     borderColor: "rgba(75, 0, 130, 1)",
     borderWidth: 1
@@ -289,7 +289,7 @@ let volStockUIOBlank = {
 if (route == 'indonesia') {
 
   makeChart(line1, 'line', gdp);
-  makeChart(line2, 'line', ppp);
+  // makeChart(line2, 'line', ppp);
 
   let chart1Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
@@ -307,13 +307,13 @@ if (route == 'indonesia') {
   let chart2Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
     datasets: [{
-      label: 'Population',
-      data: [241911000, 245425000, 248818000, 252165000, 255462000, 258705000, 261891000, 264161600, 266911900, 270203917, 272682500, 275773800, 278696200],
-      backgroundColor: "rgba(75, 0, 130, 0.8)",
-      borderColor: "rgba(75, 0, 130, 1)",
-      borderWidth: 1
+        label: 'Population (in millions)',
+        data: [241.911, 245.425, 248.818, 252.165, 255.462, 258.705, 261.891, 264.162, 266.912, 270.204, 272.683, 275.774, 278.696],
+        backgroundColor: "rgba(75, 0, 130, 0.8)",
+        borderColor: "rgba(75, 0, 130, 1)",
+        borderWidth: 1
     }]
-  }
+  };
 
   makeChart(ctx2, 'line', chart2Data);
 
@@ -650,7 +650,7 @@ if (route == 'indonesia') {
 
 }else if(route == 'thailand'){
   makeChart(line1, 'line', gdp2);
-  makeChart(line2, 'line', ppp);
+  // makeChart(line2, 'line', ppp);
 
   let chart1Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
@@ -668,8 +668,8 @@ if (route == 'indonesia') {
   let chart2Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
     datasets: [{
-      label: 'Population',
-      data: [64076000,64456695,64785909,65124716,65729098,65931550,66188503,66413979,66558935,66186727,66171439,66090475,66050000],
+      label: 'Population (in millions)',
+      data: [64.076, 64.457, 64.786, 65.125, 65.729, 65.931, 66.189, 66.414, 66.559, 66.187, 66.171, 66.090, 66.050],
       backgroundColor: "rgba(75, 0, 130, 0.8)",
       borderColor: "rgba(75, 0, 130, 1)",
       borderWidth: 1
@@ -1029,7 +1029,7 @@ if (route == 'indonesia') {
     }]
   }
   makeChart(line1, 'line', blank);
-  makeChart(line2, 'line', blank2);
+  // makeChart(line2, 'line', blank2);
 
   let chart1Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
@@ -1047,8 +1047,8 @@ if (route == 'indonesia') {
   let chart2Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
     datasets: [{
-      label: 'Population',
-      data: [29184133, 29660212, 30134807, 30606459, 31068833, 31526418, 31975806, 32399271, 32804020, 33199993, 33573874, 33938221, 0],
+      label: 'Population (in millions)',
+      data: [29.184, 29.660, 30.135, 30.606, 31.069, 31.526, 31.976, 32.399, 32.804, 33.200, 33.574, 33.938, 0],
       backgroundColor: "rgba(75, 0, 130, 0.8)",
       borderColor: "rgba(75, 0, 130, 1)",
       borderWidth: 1
@@ -1407,7 +1407,7 @@ if (route == 'indonesia') {
     }]
   }
   makeChart(line1, 'line', blank);
-  makeChart(line2, 'line', blank2);
+  // makeChart(line2, 'line', blank2);
 
   let chart1Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
@@ -1425,8 +1425,8 @@ if (route == 'indonesia') {
   let chart2Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022',],
     datasets: [{
-      label: 'Population',
-      data: [88146, 89203, 90191, 91204, 92229, 93251, 94286, 95385, 96484, 97583, 98506, 99474,0],
+      label: 'Population (in millions)',
+      data: [88.146, 89.203, 90.191, 91.204, 92.229, 93.251, 94.286, 95.385, 96.484, 97.583, 98.506, 99.474, 0],
       backgroundColor: "rgba(75, 0, 130, 0.8)",
       borderColor: "rgba(75, 0, 130, 1)",
       borderWidth: 1
@@ -1786,7 +1786,7 @@ else {
     }]
   }
   makeChart(line1, 'line', blank);
-  makeChart(line2, 'line', blank2);
+  // makeChart(line2, 'line', blank2);
 
   let chart1Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
@@ -1804,7 +1804,7 @@ else {
   let chart2Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
     datasets: [{
-      label: 'Population',
+      label: 'Population (in millions)',
       data: [],
       backgroundColor: "rgba(75, 0, 130, 0.8)",
       borderColor: "rgba(75, 0, 130, 1)",
