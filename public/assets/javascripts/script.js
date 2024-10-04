@@ -105,7 +105,7 @@ let gdpBlank = {
 let chart1data = {
   labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
   datasets: [{
-    label: 'Total Highway Length',
+    label: 'Total Road Length',
     data: [],
     backgroundColor: "rgba(75, 0, 130, 0.8)",
     borderColor: "rgba(75, 0, 130, 1)",
@@ -295,7 +295,7 @@ if (route == 'indonesia') {
   let chart1Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
     datasets: [{
-      label: 'Total Highway Length',
+      label: 'Total Road Length',
       data: [492398, 501969, 508000, 517753, 529073, 537838, 539353, 542310, 544474, 548366, 546116, 548097],
       backgroundColor: "rgba(75, 0, 130, 0.8)",
       borderColor: "rgba(75, 0, 130, 1)",
@@ -656,8 +656,8 @@ if (route == 'indonesia') {
   let chart1Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
     datasets: [{
-      label: 'Total Highway Length',
-      data: [],
+      label: 'Total Road Length',
+      data: [0,0,0,0,0,0,0,0,701847, 702210, 702723, 702990],
       backgroundColor: "rgba(75, 0, 130, 0.8)",
       borderColor: "rgba(75, 0, 130, 1)",
       borderWidth: 1
@@ -1018,24 +1018,12 @@ if (route == 'indonesia') {
       borderWidth: 1
     }]
   }
-
-  let blank2 = {
-    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
-    datasets: [{
-      label: 'GDP per Capita Purchasing Power Parity (PPP)',
-      data: [21308.22, 22527.00, 22959.20, 24012.83, 24164.96, 24864.04, 25935.14, 27480.95, 28848.10, 27300.27, 29139.37, 33525.30],
-      backgroundColor: "rgba(75, 0, 130, 0.8)",
-      borderColor: "rgba(75, 0, 130, 1)",
-      borderWidth: 1
-    }]
-  }
   makeChart(line1, 'line', blank);
-  // makeChart(line2, 'line', blank2);
 
   let chart1Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
     datasets: [{
-      label: 'Total Highway Length',
+      label: 'Total Road Length',
       data: [155427, 180882, 202333, 201794, 214816, 238790, 237022, 250023, 256494, 267012, 303016, 281302],
       backgroundColor: "rgba(75, 0, 130, 0.8)",
       borderColor: "rgba(75, 0, 130, 1)",
@@ -1397,24 +1385,13 @@ if (route == 'indonesia') {
     }]
   }
 
-  let blank2 = {
-    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022',],
-    datasets: [{
-      label: 'GDP per Capita Purchasing Power Parity (PPP)',
-      data: [5793.93, 6391.72, 6781.27, 7332.40, 7724.16, 8453.07, 9281.28, 10149.50, 11190.15, 11781.15, 12219.01, 14024.81,0],
-      backgroundColor: "rgba(75, 0, 130, 0.8)",
-      borderColor: "rgba(75, 0, 130, 1)",
-      borderWidth: 1
-    }]
-  }
   makeChart(line1, 'line', blank);
-  // makeChart(line2, 'line', blank2);
 
   let chart1Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
     datasets: [{
-      label: 'Total Highway Length',
-      data: [],
+      label: 'Total Road Length',
+      data: [300848, 326000, 334845, 357222, 360216, 368779, 370664, 630564, 635279, 639993, 644708, 649422],
       backgroundColor: "rgba(75, 0, 130, 0.8)",
       borderColor: "rgba(75, 0, 130, 1)",
       borderWidth: 1
@@ -1774,25 +1751,13 @@ if (route == 'indonesia') {
       borderWidth: 1
     }]
   }
-
-  let blank2 = {
-    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
-    datasets: [{
-      label: 'GDP per Capita Purchasing Power Parity (PPP)',
-      data: [],
-      backgroundColor: "rgba(75, 0, 130, 0.8)",
-      borderColor: "rgba(75, 0, 130, 1)",
-      borderWidth: 1
-    }]
-  }
   makeChart(line1, 'line', blank);
-  // makeChart(line2, 'line', blank2);
 
   let chart1Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
     datasets: [{
-      label: 'Total Highway Length',
-      data: [],
+      label: 'Total Road Length',
+      data: [41032, 43601, 45825, 51596, 56330, 58885, 59870, 60340, 58255, 58287, 58875, 59646],
       backgroundColor: "rgba(75, 0, 130, 0.8)",
       borderColor: "rgba(75, 0, 130, 1)",
       borderWidth: 1
@@ -2153,24 +2118,12 @@ else {
       borderWidth: 1
     }]
   }
-
-  let blank2 = {
-    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
-    datasets: [{
-      label: 'GDP per Capita Purchasing Power Parity (PPP)',
-      data: [],
-      backgroundColor: "rgba(75, 0, 130, 0.8)",
-      borderColor: "rgba(75, 0, 130, 1)",
-      borderWidth: 1
-    }]
-  }
   makeChart(line1, 'line', blank);
-  // makeChart(line2, 'line', blank2);
 
   let chart1Data = {
     labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
     datasets: [{
-      label: 'Total Highway Length',
+      label: 'Total Road Length',
       data: [],
       backgroundColor: "rgba(75, 0, 130, 0.8)",
       borderColor: "rgba(75, 0, 130, 1)",

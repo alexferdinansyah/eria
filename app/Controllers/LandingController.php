@@ -171,7 +171,7 @@ class LandingController extends BaseController
 
             $data["population"] = "275,773,800";
             $data["ttlland"] = "1,892,556";
-            $data["totalHighway"] = "548,097";
+            $data["totalRoad"] = "548,097";
             $data["GDP"] = "4,778";
             $data["PPP"] = "1,214.92";
             $data["GDPppp"] = "12,410";
@@ -363,7 +363,7 @@ class LandingController extends BaseController
 
             $data["population"] = "99,474";
             $data["ttlland"] = "33,1345";
-            $data["totalHighway"] = "N/a";
+            $data["totalRoad"] = "649,422";
             $data["GDP"] = "4,123";
             $data["PPP"] = "6,908";
             $data["GDPppp"] = "14,024";
@@ -590,7 +590,7 @@ class LandingController extends BaseController
 
             $data["population"] = "66,050,000";
             $data["ttlland"] = "513,120";
-            $data["totalHighway"] = "703,633";
+            $data["totalRoad"] = "703,633";
             $data["GDP"] = "7,171.81";
             $data["PPP"] = "N/a";
             $data["GDPppp"] = "21,112.640";
@@ -782,7 +782,7 @@ class LandingController extends BaseController
 
             $data["population"] = "33,938,221";
             $data["ttlland"] = "328,550";
-            $data["totalHighway"] = "281,302";
+            $data["totalRoad"] = "281,302";
             $data["GDP"] = "11,993.19";
             $data["PPP"] = "1,137,789,082,909";
             $data["GDPppp"] = "33,525";
@@ -973,7 +973,7 @@ class LandingController extends BaseController
 
             $data["population"] = "7,529,475";
             $data["ttlland"] = "N/a";
-            $data["totalHighway"] = "N/a";
+            $data["totalRoad"] = "59,646";
             $data["GDP"] = "9,326.27";
             $data["PPP"] = "N/a";
             $data["GDPppp"] = "N/a";
@@ -1165,7 +1165,7 @@ class LandingController extends BaseController
 
             $data["population"] = "N/a";
             $data["ttlland"] = "N/a";
-            $data["totalHighway"] = "N/a";
+            $data["totalRoad"] = "N/a";
             $data["GDP"] = "N/a";
             $data["PPP"] = "N/a";
             $data["GDPppp"] = "N/a";

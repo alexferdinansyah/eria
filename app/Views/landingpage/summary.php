@@ -22,12 +22,12 @@
                         <p><?= $population ?></p>
                     </div>
                     <div>
-                        <p>Total Land Area - km²</p>
+                        <p>Total Land Area - Km²</p>
                         <p><?= $ttlland ?></p>
                     </div>
                     <div>
-                        <p>Total Highway Length - km</p>
-                        <p><?= $totalHighway ?></p>
+                        <p>Total Road Length - Km</p>
+                        <p><?= $totalRoad ?></p>
                     </div>
                 </section>
                 <section class="container-sum">
