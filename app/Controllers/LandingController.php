@@ -115,8 +115,8 @@ class LandingController extends BaseController
 
         $data['tes'] = "<h1>hello</h1>";
         
-        $sales; 
-        $stock; 
+        $sales = [];
+        $stock = [];
 
         if ($nat === "indonesia") {
             $data["sd"] = '
@@ -391,6 +391,7 @@ class LandingController extends BaseController
                         <td>0</td>
                         <td>0</td>
                         <td>0</td>
+                        <td>0</td>
                     </tr>
                     <tr style="height: 33.33%;">
                         <td>VOL BEV Sales</td>
@@ -404,11 +405,13 @@ class LandingController extends BaseController
                         <td>0</td>
                         <td>0</td>
                         <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
+                        <td>85</td>
+                        <td>7,080</td>
+                        <td>34,855</td>
                     </tr>
                     <tr style="height: 33.33%;">
                         <td>VOL PHEV Sales</td>
+                        <td>0</td>
                         <td>0</td>
                         <td>0</td>
                         <td>0</td>
@@ -425,38 +428,41 @@ class LandingController extends BaseController
                     <tr style="height: 33.33%;">
                         <td>VOL ICE Sales</td>
                         <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
+                        <td>80,418</td>
+                        <td>96,692</td>
+                        <td>147,588</td>
+                        <td>235,768</td>
+                        <td>308,242</td>
+                        <td>279,369</td>
+                        <td>340,343</td>
+                        <td>400,941</td>
+                        <td>394,836</td>
+                        <td>383,359</td>
+                        <td>455,489</td>
+                        <td>343,827</td>
                     </tr>
                     <tr style="height: 33.33%;">
                         <td>TOTAL Sales</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
+                        <td>110,938</td>
+                        <td>80,418</td>
+                        <td>96,692</td>
+                        <td>147,588</td>
+                        <td>235,768</td>
+                        <td>308,242</td>
+                        <td>279,369</td>
+                        <td>340,343</td>
+                        <td>400,941</td>
+                        <td>394,836</td>
+                        <td>383,444</td>
+                        <td>462,569</td>
+                        <td>378,682</td>
                     </tr>
             ';
 
             $data['tableData2'] = '
             <tr style="height: 33.33%;">
                             <td>HEV Vehicle Stock</td>
+                            <td>0</td>
                             <td>0</td>
                             <td>0</td>
                             <td>0</td>
@@ -482,8 +488,9 @@ class LandingController extends BaseController
                             <td>0</td>
                             <td>0</td>
                             <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
+                            <td>85</td>
+                            <td>7165</td>
+                            <td>42020</td>
                         </tr>
                         <tr style="height: 33.33%;">
                             <td>PHEV Vehicle Stock</td>
@@ -499,36 +506,39 @@ class LandingController extends BaseController
                             <td>0</td>
                             <td>0</td>
                             <td>0</td>
+                            <td>0</td>
                         </tr>
                         <tr style="height: 33.33%;">
                             <td>ICE Vehicle Stock</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
+                            <td>110,938</td>
+                            <td>191,356</td>
+                            <td>288,048</td>
+                            <td>435,636</td>
+                            <td>671,404</td>
+                            <td>979,646</td>
+                            <td>1,259,015</td>
+                            <td>1,599,358</td>
+                            <td>2,000,299</td>
+                            <td>2,395,135</td>
+                            <td>2,778,494</td>
+                            <td>3,233,983</td>
+                            <td>3,577,810</td>
                         </tr>
                         <tr style="height: 33.33%;">
                             <td>TOTAL STOCK</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
+                            <td>110,938</td>
+                            <td>191,356</td>
+                            <td>288,048</td>
+                            <td>435,636</td>
+                            <td>671,404</td>
+                            <td>979,646</td>
+                            <td>1,259,015</td>
+                            <td>1,599,358</td>
+                            <td>2,000,299</td>
+                            <td>2,395,135</td>
+                            <td>2,778,579</td>
+                            <td>3,241,148</td>
+                            <td>3,619,830</td>
                         </tr>
             ';
 
@@ -971,10 +981,10 @@ class LandingController extends BaseController
             $stock["BEV"] = 2296;
             $stock["PHEV"] = 0;
 
-            $data["population"] = "7,529,475";
-            $data["ttlland"] = "N/a";
+            $data["population"] = "7,633,779";
+            $data["ttlland"] = "236,800";
             $data["totalRoad"] = "59,646";
-            $data["GDP"] = "9,326.27";
+            $data["GDP"] = "1,832.00";
             $data["PPP"] = "N/a";
             $data["GDPppp"] = "N/a";
 
@@ -996,11 +1006,11 @@ class LandingController extends BaseController
                         <td>0</td>
                         <td>0</td>
                         <td>0</td>
-                        <td>0</td>
                         <td>3</td>
                         <td>11</td>
                         <td>157</td>
                         <td>63</td>
+                        <td>471</td>
                     </tr>
                     <tr style="height: 33.33%;">
                         <td>VOL BEV Sales</td>
@@ -1010,13 +1020,13 @@ class LandingController extends BaseController
                         <td>0</td>
                         <td>0</td>
                         <td>0</td>
-                        <td>0</td>
                         <td>30</td>
-                        <td>64</td>
-                        <td>182</td>
-                        <td>165</td>
-                        <td>158</td>
-                        <td>1697</td>
+                        <td>65</td>
+                        <td>184</td>
+                        <td>200</td>
+                        <td>283</td>
+                        <td>1786</td>
+                        <td>3152</td>
                     </tr>
                     <tr style="height: 33.33%;">
                         <td>VOL PHEV Sales</td>
@@ -1036,35 +1046,35 @@ class LandingController extends BaseController
                     </tr>
                     <tr style="height: 33.33%;">
                         <td>VOL ICE Sales</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>36151</td>
-                        <td>32153</td>
-                        <td>29974</td>
-                        <td>21732</td>
-                        <td>29531</td>
-                        <td>25224</td>
+                        <td>135351</td>
+                        <td>144561</td>
+                        <td>150781</td>
+                        <td>137703</td>
+                        <td>140320</td>
+                        <td>132516</td>
+                        <td>128957</td>
+                        <td>125516</td>
+                        <td>128293</td>
+                        <td>109535</td>
+                        <td>106852</td>
+                        <td>150464</td>
+                        <td>109641</td>
                     </tr>
                     <tr style="height: 33.33%;">
                         <td>TOTAL Sales</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>36181</td>
-                        <td>32217</td>
-                        <td>30159</td>
-                        <td>21908</td>
-                        <td>29846</td>
-                        <td>26984</td>
+                        <td>135351</td>
+                        <td>144561</td>
+                        <td>150781</td>
+                        <td>137703</td>
+                        <td>140320</td>
+                        <td>132516</td>
+                        <td>128987</td>
+                        <td>125581</td>
+                        <td>128480</td>
+                        <td>109746</td>
+                        <td>107292</td>
+                        <td>152313</td>
+                        <td>113264</td>
                     </tr>
             ';
 
@@ -1079,11 +1089,11 @@ class LandingController extends BaseController
                             <td>0</td>
                             <td>0</td>
                             <td>0</td>
-                            <td>0</td>
                             <td>3</td>
                             <td>14</td>
                             <td>171</td>
                             <td>234</td>
+                            <td>705</td>
                         </tr>
                         <tr style="height: 33.33%;">
                             <td>BEV Vehicle Stock</td>
@@ -1093,13 +1103,13 @@ class LandingController extends BaseController
                             <td>0</td>
                             <td>0</td>
                             <td>0</td>
-                            <td>0</td>
                             <td>30</td>
-                            <td>94</td>
-                            <td>276</td>
-                            <td>441</td>
-                            <td>599</td>
-                            <td>2296</td>
+                            <td>95</td>
+                            <td>279</td>
+                            <td>479</td>
+                            <td>762</td>
+                            <td>2548</td>
+                            <td>5700</td>
                         </tr>
                         <tr style="height: 33.33%;">
                             <td>PHEV Vehicle Stock</td>
@@ -1119,19 +1129,19 @@ class LandingController extends BaseController
                         </tr>
                         <tr style="height: 33.33%;">
                             <td>ICE Vehicle Stock</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>36151</td>
-                            <td>68304</td>
-                            <td>98278</td>
-                            <td>120010</td>
-                            <td>149541</td>
-                            <td>174765</td>
+                            <td>135351</td>
+                            <td>279912</td>
+                            <td>430693</td>
+                            <td>568396</td>
+                            <td>708716</td>
+                            <td>841232</td>
+                            <td>970189</td>
+                            <td>1095705</td>
+                            <td>1223998</td>
+                            <td>1333533</td>
+                            <td>1440385</td>
+                            <td>1590849</td>
+                            <td>1700490</td>
                         </tr>
                         <tr style="height: 33.33%;">
                             <td>TOTAL STOCK</td>

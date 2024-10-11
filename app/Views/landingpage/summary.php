@@ -64,7 +64,7 @@
             </div>
         </div>
 
-        <h1 style="margin-top:150px; margin-left:50px;">Historical</h1>
+        <h1 style="margin-top:70px; margin-left:50px;">Historical</h1>
         <h2 style="margin-top: 2%; margin-left: 4%; margin-bottom: 2%;">New Car Sum</h2>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
             <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
@@ -168,7 +168,7 @@
             </div>
         </div>
 
-        <h1 style="margin-top:150px; margin-left:50px;">Forecasting</h1>
+        <h1 style="margin-top:70px; margin-left:50px;">Forecasting</h1>
         <h2 style="margin-top: 2%; margin-left: 4%; margin-bottom: 2%;">New Car Sum</h2>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
                 <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
