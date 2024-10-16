@@ -1418,7 +1418,7 @@ if (route == 'indonesia') {
     labels: ['ICE Vehicle Sales', 'HEV Vehicle Sales', 'BEV Vehicle Sales', 'PHEV Vehicle Sales'],
     datasets: [{
       label: '2022 Data',
-      data: [],
+      data: [455489,0,7080,0],
       backgroundColor: [
         'rgba(255, 0, 0, 0.8)',    // Red //
         'rgba(255, 127, 0, 0.8)',  // Orange
@@ -1443,7 +1443,7 @@ if (route == 'indonesia') {
     labels: ['ICE Vehicle Stock', 'HEV Vehicle Stock', 'BEV Vehicle Stock', 'PHEV Vehicle Stock'],
     datasets: [{
       label: '2022 Data',
-      data: [],
+      data: [3233983,0,7165,0],
       backgroundColor: [
         'rgba(255, 0, 0, 0.8)',    // Red //
         'rgba(255, 127, 0, 0.8)',  // Orange
