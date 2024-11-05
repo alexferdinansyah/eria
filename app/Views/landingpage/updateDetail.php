@@ -6,18 +6,18 @@
         <p class="sec p-5 m-0">General Information</p>
         <div class="d-flex flex-row gap-2 align-items-start">
             <a class="bg-white text-decoration-none border-white <?= $slug == 'alternative-fuel' ? 'pb-2' : '' ?>" href="<?= base_url('update/alternative-fuel') ?>">
-                <p class="p-3 text-black fs-4 text-center m-0">Alternative Fuel</p>
+                <p class="p-3 text-black program-text text-center m-0">Alternative Fuel</p>
             </a>
             <a class="bg-white text-decoration-none border-white <?= $slug == 'vehicle-types' ? 'pb-2' : '' ?>" href="<?= base_url('update/vehicle-types') ?>">
-                <p class="p-3 text-black fs-4 m-0">Vehicle Types</p>
+                <p class="p-3 text-black program-text m-0">Vehicle Types</p>
             </a>
             <a class="bg-white text-decoration-none border-white <?= $slug == 'recharging-system' ? 'pb-2' : '' ?>" href="<?= base_url('update/recharging-system') ?>">
-                <p class="p-3 text-black fs-4 m-0">Recharging System</p>
+                <p class="p-3 text-black program-text m-0">Recharging System</p>
             </a>
         </div>
     </div>
     <div class="hidden-on-mobile flex-column">
-        <p>General Information</p>
+        <p class="fs-1">General Information</p>
         <p class="sec">The latest News and Updates from A2VTP</p>
     </div>
 </header>

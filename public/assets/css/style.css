@@ -84,6 +84,22 @@ nav {
   font-size: 20px;
 }
 
+/* Adjust padding for mobile screens */
+@media (max-width: 768px) {
+  .hero {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .hero h2 {
+    font-size: smaller;
+  }
+
+  .hero p {
+    font-size: smaller;
+  }
+}
+
 .slider-description {
   background-color: var(--blue);
   color: #ffffff;
@@ -947,7 +963,7 @@ img.img-map {
 }
 
 .custom-logo {
-  width: 100px;
+  width: 60px;
   height: auto;
 }
 
@@ -955,10 +971,13 @@ img.img-map {
   border: 0;
   border-top: 1px solid #ffffff;
   margin: 20px 0;
-  width: 150%;
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
+  .custom-logo {
+    width: 70px;
+  }
+
   .logo-container {
     flex-direction: row;
     align-items: center;
@@ -976,6 +995,10 @@ img.img-map {
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .custom-logo {
+    width: 80px;
+  }
+
   .logo-container {
     flex-direction: row;
     align-items: center;
@@ -992,6 +1015,10 @@ img.img-map {
 }
 
 @media (min-width: 992px) {
+  .custom-logo {
+    width: 100px;
+  }
+
   .row.mb-3 {
     display: flex;
     align-items: flex-end;
@@ -1036,6 +1063,10 @@ img.img-map {
   .logo-description a:hover {
     color: #ddd;
   }
+
+  .custom-divider {
+    width: 150%;
+  }
 }
 
 /****************************************************************** program details ******************************************************************/
@@ -1044,23 +1075,28 @@ img.img-map {
   padding-left: 10px;
   /* padding-bottom: 5px; */
   color: white;
-  font-size: 40px;
 }
 
 .progDCon {
   display: flex;
   gap: 20px;
   width: 100%;
-  padding: 20px;
-  padding-left: 120px;
+  padding: 40px;
 }
 
 .progDCon h3 {
   color: var(--blue);
 }
 
-.allProg {
+.hidden-on-mobile {
+  display: none;
+}
+
+.show-on-mobile {
   display: flex;
+}
+
+.allProg {
   flex-direction: column;
   gap: 12px;
   padding: 24px;
@@ -1080,11 +1116,6 @@ img.img-map {
 .allProg > a.active {
   background-color: var(--blue);
   color: white;
-}
-
-.pgd-content {
-  width: 70%;
-  padding-right: 100px;
 }
 
 .pgd-content > p {
@@ -1131,6 +1162,10 @@ img.img-map {
 li > a {
   text-decoration: none;
   color: rgb(165, 165, 165);
+}
+
+.program-text {
+  font-size: 18px;
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
