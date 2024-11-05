@@ -3,12 +3,12 @@
 <?= $this->section('content') ?>
 
 <section class="section-top bg-blue mb-3">
-    <div class="container py-3 py-lg-5">
+    <div class="container py-3 py-lg-5 gx-5">
         <h1 class="event-title text-white font-montserrat">About A2VTP</h1>
     </div>
 </section>
 
-<div class="container my-5">
+<div class="container my-5 gx-5">
     <divs>
         <h2 class="font-montserrat mb-3" style="font-weight: bold;">History</h2>
         <p>
@@ -39,43 +39,53 @@
     </divs>
 </div>
 
-<div class="container my-5">
+<div class="container my-5 gx-5">
     <div>
         <h2 class="font-montserrat mb-3" style="font-weight: bold;">Teams</h2>
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="logo-container d-flex align-items-center justify-content-lg-end">
-                    <div class="logo d-flex align-items-center">
-                        <a href="#" class="d-block" aria-label="Home - European Commission">
-                            <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="Logo ERIA" class="img-fluid custom-logo">
-                        </a>
-                        <div class="description1 ms-3">
-                            <a href="https://www.eria.org" target="_blank">ERIA</a> - <span>Research Institute</span>
-                            <div>This represents the Economic Research Institute for ASEAN and East Asia.</div>
-                        </div>
-                    </div>
-
-                    <div class="logo d-flex align-items-center">    
-                        <a href="#" class="d-block" aria-label="Home - European Commission">
-                            <img src="<?= base_url('assets/images/logoui.png') ?>" alt="Logo UI" class="img-fluid custom-logo">
-                        </a>
-                        <div class="description2 ms-3">
-                            <a href="https://www.ui.ac.id" target="_blank">Universitas Indonesia</a> <span>- Research Partner</span>
-                            <div>This represents the University of Indonesia, a partner institution.</div>
-                        </div>
-                    </div>
-
-                    <div class="logo d-flex align-items-center">
-                        <a href="#" class="d-block" aria-label="Home - European Commission">
-                            <img src="<?= base_url('assets/images/LightCodeDigital.jpg') ?>" alt="Logo UI" class="img-fluid custom-logo">
-                        </a>
-                        <div class="description3 ms-3">
-                            <a href="#" target="_blank">Light Code Digital</a> <span>- Web Developer</span>
-                            <div>This represents the Light Code Digital, a partner institution.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="pb-3">
+                            <a href="#" class="d-block" aria-label="Home - European Commission">
+                                <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="Logo ERIA" class="custom-logo">
+                            </a>
+                        </td>
+                        <td class="ps-5">
+                            <div>
+                                <a href="https://www.eria.org" target="_blank">ERIA</a> - <span>Research Institute</span>
+                                <div>This represents the Economic Research Institute for ASEAN and East Asia.</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pb-3">
+                            <a href="#" class="d-block" aria-label="Home - European Commission">
+                                <img src="<?= base_url('assets/images/logoui.png') ?>" alt="Logo UI" class="custom-logo">
+                            </a>
+                        </td>
+                        <td class="ps-5">
+                            <div>
+                                <a href="https://www.ui.ac.id" target="_blank">Universitas Indonesia</a> <span>- Research Partner</span>
+                                <div>This represents the University of Indonesia, a partner institution.</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" class="d-block" aria-label="Home - European Commission">
+                                <img src="<?= base_url('assets/images/LightCodeDigital.jpg') ?>" alt="Logo UI" class="custom-logo">
+                            </a>
+                        </td>
+                        <td class="ps-5">
+                            <div>
+                                <a href="#" target="_blank">Light Code Digital</a> <span>- Web Developer</span>
+                                <div>This represents the Light Code Digital, a partner institution.</div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
