@@ -270,8 +270,51 @@ nav {
     border: black solid 2px;
     width: 400px;
   }
+
+  .wrapper-grid{
+    background-color: red;
+  }
+
+  
+.chart-parent {
+  width: 600px !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
+
+img.img-map {
+  width: 400px;
+  margin-top: 30px;
+}
+.donut{
+  width: 350px !important;
+  height: auto !important;
+}
+
+.table-con{
+  border-collapse: collapse;  
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 20px 100px;
+  color: white;
+  background-color: var(--blue);
+  width: 100%;
+}
+
+.banner img {
+  width: 80px;
+  border: solid white 1px;
+  height: auto;
+}
+
+}
+
+/* mobile */
 @media (max-width: 991px) {
   .header {
     width: 100vw;
@@ -470,6 +513,59 @@ nav {
     margin: 0;
     padding: 0;
   }
+
+  
+.chart-parent {
+  /* background-color: blue; */
+  width: 350px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+
+img.img-map {
+  width: 350px;
+  margin-top: 30px;
+}
+
+.content-summary h2{
+  font-size: 15px;
+}
+
+.container-sum p{
+  font-size: 12px;
+}
+
+.donut{
+  width: 300px !important;
+  height: auto !important;
+}
+
+.table-con{
+  overflow: scroll;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  padding-right: 15px;
+  color: white;
+  background-color: var(--blue);
+  width: 100%;
+}
+
+.banner h2{
+  font-size: 15px;
+}
+
+.banner img {
+  width: 65px;
+  border: solid white 1px;
+  height: auto;
+}
+
 }
 
 .dropdown-container {
@@ -829,25 +925,10 @@ nav {
   width: 83%;
 }
 
-.banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 20px 20px 100px;
-  color: white;
-  background-color: var(--blue);
-  width: 100%;
-}
-
-.banner img {
-  width: 80px;
-  border: solid white 1px;
-  height: auto;
-}
-
 .content-summary {
   padding-top: 20px;
-  /* padding-left: 100px; */
+  padding-left: 20px !important;
+  width: 100%;
 }
 
 .acc {
@@ -863,7 +944,7 @@ nav {
 
 .container-sum {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 .container-sum p:first-child {
@@ -873,17 +954,6 @@ nav {
 .container-sum p:last-child {
   color: grey;
   line-height: 0;
-}
-
-img.img-map {
-  width: 400px;
-  margin-top: 30px;
-}
-
-.chart-parent {
-  /* background-color: blue; */
-  padding: 0 !important;
-  margin: 0 !important;
 }
 
 /* .chartdiv{

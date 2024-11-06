@@ -50,13 +50,13 @@
             <ul>
                 <li><a href="/publications">RELATED PUBLICATION</a></li>
                 <li class="dropdown-con">
-                    <a href="<?= base_url('update/alternative-fuel') ?>">NEWS & UPDATES</a>
-                    <ul class="cos-dropdown-menu">
+                    <a href="<?= base_url('update/alternative-fuel') ?>">General Information</a>
+                    <!-- <ul class="cos-dropdown-menu">
                         <li><a href="<?= base_url('update/alternative-fuel') ?>" id="program1">ALTERNATIVE FUEL</a></li>
                         <li><a href="<?= base_url('update/vehicle-types') ?>" id="program2">VEHICLE TYPES</a></li>
                         <li><a href="<?= base_url('update/recharging-system') ?>" id="program3">RECHARGING SYSTEM</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <!-- <li><a href="/events">EVENTS</a></li> -->
                 <li><a href="/about">ABOUT</a></li>

@@ -11,9 +11,9 @@
 <div class="row">
     <div class="summary-wrapper">
 
-        <h1 style="margin-left:50px;">Econometric</h1>
+        <!-- <h1 style="margin-left:50px;">Econometric</h1> -->
         
-        <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
+        <div class="row row-cols-1 row-cols-md-2 justify-content-evenly mb-4">
             <div class="content-summary">
                 <h2>Summary</h2>
                 <section class="container-sum">
@@ -50,34 +50,25 @@
             <img class="img-map" src="<?= base_url('assets/images/nations/maps/'  . $nation . ".svg") ?>" alt="">
 
             <!-- chart top -->
-            <div class="chart-parent" style="width: 40%;">
+            <div class="chart-parent">
                 <canvas class="chartdiv" id="myChart1"></canvas>
             </div>
-            <div class="chart-parent" style="width: 40%;">
+            <div class="chart-parent">
                 <canvas class="chartdiv" id="myChart2"></canvas>
             </div>
-            <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
+            <div class="chart-parent">
                 <canvas class="chartdiv" id="line1"></canvas>
             </div>
-            <div class="chart-parent" style="width: 40%;padding-left:30px !important;">
-                <canvas class="chartdiv" id="line2"></canvas>
+            <div class="chart-parent">
+                <!-- <canvas class="chartdiv" id="line2"></canvas> -->
             </div>
         </div>
 
-        <h1 style="margin-top:70px; margin-left:50px;">Historical</h1>
         <h2 style="margin-top: 2%; margin-left: 4%; margin-bottom: 2%;">Sales Data</h2>
-        <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
-            <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
-                <div class="chart-parent" style="width: 300px;">
-                    <canvas class="chartdiv" id="donut1"></canvas>
+        <div class="grid row row-cols-md-2 row-cols-1 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
+                <div class="chart-parent">
+                    <canvas  class="donut" id="donut1"></canvas>
                 </div>
-                <ul>
-                    <li>ICE Vehicle Sales : <?= $sales['ICE'] ?></li>
-                    <li>HEV Vehicle Sales : <?= $sales['HEV'] ?></li>
-                    <li>BEV Vehicle Sales : <?= $sales['BEV'] ?></li>
-                    <li>PHEV Vehicle Sales : <?= $sales['PHEV'] ?></li>
-                </ul>
-            </div>
 
             <!-- bar chart -->
             <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
@@ -89,49 +80,41 @@
             <div class="chart-parent" style="width: 40%;">
                 <canvas class="chartdiv" id="carsum"></canvas>
             </div>
-            <div class="chart-parent" style="width: 90%;">
-            <table class="table" style="width: 100%; height: 100%; border-collapse: collapse;">
-                <thead style="font-size:12px;">
-                    <tr>
-                        <th style="height: 40px;">Type</th>
-                        <th>2011</th>
-                        <th>2012</th>
-                        <th>2013</th>
-                        <th>2014</th>
-                        <th>2015</th>
-                        <th>2016</th>
-                        <th>2017</th>
-                        <th>2018</th>
-                        <th>2019</th>
-                        <th>2020</th>
-                        <th>2021</th>
-                        <th>2022</th>
-                        <th>2023</th>
-                    </tr>
-                </thead>
-                <tbody style="font-size:12px;">
-                    <?= $tableData1 ?>
-                </tbody>
-            </table>
+            <div class="table-con col-md-12 p-4 ">
+                <table class="table">
+                    <thead style="font-size:12px;">
+                        <tr>
+                            <th style="height: 40px;">Type</th>
+                            <th>2011</th>
+                            <th>2012</th>
+                            <th>2013</th>
+                            <th>2014</th>
+                            <th>2015</th>
+                            <th>2016</th>
+                            <th>2017</th>
+                            <th>2018</th>
+                            <th>2019</th>
+                            <th>2020</th>
+                            <th>2021</th>
+                            <th>2022</th>
+                            <th>2023</th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-size:12px;">
+                        <?= $tableData1 ?>
+                    </tbody>
+                </table>
+            </div>
 
-            </div>
-            <div class="chart-parent" style="width: 40%;">
-            </div>
+            
         </div>
 
         <h2 style="margin-top: 2%; margin-left: 4%; margin-bottom: 2%;">Stock Estimated</h2>
         <div class="grid row row-cols-2 justify-content-evenly gap-0 column-gap-3 row-gap-3 mb-4">
-            <div class="d-flex align-items-center gap-2" style="width: 40%;padding-left:50px !important;">
-                    <div class="chart-parent" style="width: 300px;">
+                    <div class="chart-parent">
                         <canvas class="chartdiv" id="donut2"></canvas>
                     </div>
-                    <ul>
-                    <li>ICE Vehicle Stock : <?= $stock['ICE'] ?></li>
-                    <li>HEV Vehicle Stock : <?= $stock['HEV'] ?></li>
-                    <li>BEV Vehicle Stock : <?= $stock['BEV'] ?></li>
-                    <li>PHEV Vehicle Stock : <?= $stock['PHEV'] ?></li>
-                </ul>
-                </div>
+                
             <div class="chart-parent" style="width: 40%;padding-left:15px !important;">
                     <canvas class="chartdiv" id="bar2"></canvas>
                 </div>

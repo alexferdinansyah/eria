@@ -2474,3 +2474,4 @@ else {
   makeChart(fore11, 'bar', volStockUIOBlank)
 
 }
+
