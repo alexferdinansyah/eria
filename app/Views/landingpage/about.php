@@ -1,12 +1,15 @@
 <?= $this->extend('main') ?>
 
-<?= $this->section('content') ?>
+<?= $this->section('header') ?>
 
-<section class="section-top bg-blue mb-3">
+<section class="section-about-top bg-blue mb-3">
     <div class="container py-3 py-lg-5 gx-5">
         <h1 class="event-title text-white font-montserrat">About A2VTP</h1>
     </div>
 </section>
+<?= $this->endSection(); ?>
+
+<?= $this->section('content') ?>
 
 <div class="container my-5 gx-5">
     <div>

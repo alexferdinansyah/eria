@@ -1,6 +1,6 @@
 <?= $this->extend('main') ?>
 
-<?= $this->section('content') ?>
+<?= $this->section('header') ?>
 <header class="header-program">
     <div class="flex-column">
         <p class="show-on-mobile sec  pb-4 m-0">General Information</p>
@@ -18,6 +18,9 @@
         </div>
     </div>
 </header>
+<?= $this->endSection(); ?>
+
+<?= $this->section('content') ?>
 
 <div class="progDCon">
     <div class="pgd-content">

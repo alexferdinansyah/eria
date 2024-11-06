@@ -12,10 +12,16 @@ body {
   --blue: #103979;
 }
 
+.top-header {
+  position: sticky;
+  top: 0;
+}
+
 nav {
   padding: 10px;
   display: flex;
   align-items: center;
+  background-color: #ffffff;
   justify-content: space-between;
   width: 100%;
 }
@@ -1073,7 +1079,7 @@ img.img-map {
 .header-program {
   background-color: var(--blue);
   padding-left: 20px;
-  padding-top: 40px;
+  padding-top: 30px;
   color: white;
 }
 
@@ -1257,6 +1263,11 @@ li > a {
 }
 
 /****************************************************************** About ******************************************************************/
+/* .section-about-top {
+  position: sticky;
+  top: 0;
+} */
+
 .description1,
 .description2,
 .description3 {

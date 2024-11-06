@@ -32,37 +32,40 @@
 </head>
 
 <body>
-    <nav>
-        <div class="d-flex">
-            <a href="/" class="nav-logo">
-                <div class="logo-text">
-                    <h4 class="A2VTP">A2VTP</h4>
-                    <p>ASEAN Alternative Vehicle Technology Portal</p>
-                </div>
-            </a>
-            <a href="https://www.eria.org/" class="nav-logo">
-                <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="">
-                <p>Economic Research Institute for ASEAN and East Asia</p>
-            </a>
-        </div>
-
-        <div class="nav-menus">
-            <ul>
-                <li><a href="/publications">RELATED PUBLICATION</a></li>
-                <li class="dropdown-con">
-                    <a href="<?= base_url('update/alternative-fuel') ?>">NEWS & UPDATES</a>
-                    <ul class="cos-dropdown-menu">
-                        <li><a href="<?= base_url('update/alternative-fuel') ?>" id="program1">ALTERNATIVE FUEL</a></li>
-                        <li><a href="<?= base_url('update/vehicle-types') ?>" id="program2">VEHICLE TYPES</a></li>
-                        <li><a href="<?= base_url('update/recharging-system') ?>" id="program3">RECHARGING SYSTEM</a>
-                        </li>
-                    </ul>
-                </li>
-                <!-- <li><a href="/events">EVENTS</a></li> -->
-                <li><a href="/about">ABOUT</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="top-header">
+        <nav>
+            <div class="d-flex">
+                <a href="/" class="nav-logo">
+                    <div class="logo-text">
+                        <h4 class="A2VTP">A2VTP</h4>
+                        <p>ASEAN Alternative Vehicle Technology Portal</p>
+                    </div>
+                </a>
+                <a href="https://www.eria.org/" class="nav-logo">
+                    <img src="<?= base_url('assets/images/logo-eria.png') ?>" alt="">
+                    <p>Economic Research Institute for ASEAN and East Asia</p>
+                </a>
+            </div>
+    
+            <div class="nav-menus">
+                <ul>
+                    <li><a href="/publications">RELATED PUBLICATION</a></li>
+                    <li class="dropdown-con">
+                        <a href="<?= base_url('update/alternative-fuel') ?>">NEWS & UPDATES</a>
+                        <ul class="cos-dropdown-menu">
+                            <li><a href="<?= base_url('update/alternative-fuel') ?>" id="program1">ALTERNATIVE FUEL</a></li>
+                            <li><a href="<?= base_url('update/vehicle-types') ?>" id="program2">VEHICLE TYPES</a></li>
+                            <li><a href="<?= base_url('update/recharging-system') ?>" id="program3">RECHARGING SYSTEM</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="/events">EVENTS</a></li> -->
+                    <li><a href="/about">ABOUT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <?= $this->renderSection('header') ?>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
