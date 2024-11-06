@@ -83,7 +83,6 @@
 
     <?= $this->renderSection('content') ?>
 
-    <?= $this->renderSection('script') ?>
     <script src="https://cdn.am s.com/lib/4/core.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
@@ -91,6 +90,7 @@
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <?= $this->renderSection('script') ?>
 
     <script>
         function redirectToSummary() {

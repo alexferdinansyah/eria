@@ -1072,8 +1072,8 @@ img.img-map {
 /****************************************************************** program details ******************************************************************/
 .header-program {
   background-color: var(--blue);
-  padding-left: 10px;
-  /* padding-bottom: 5px; */
+  padding-left: 20px;
+  padding-top: 40px;
   color: white;
 }
 
@@ -1188,18 +1188,13 @@ li > a {
   }
 
   .header-program {
-    padding-bottom: 30px;
     padding-left: 50px;
-    padding-top: 30px;
+    padding-top: 20px;
   }
 
   .progDCon {
-    padding-left: 50px;
-  }
-
-  .pgd-content {
-    width: 70%;
-    padding-right: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 
@@ -1213,17 +1208,12 @@ li > a {
   }
 
   .header-program {
-    padding-bottom: 30px;
     padding-left: 50px;
-    padding-top: 30px;
+    padding-top: 20px;
   }
 
   .progDCon {
-    padding-left: 120px;
-  }
-
-  .pgd-content {
-    width: 70%;
+    padding-left: 100px;
     padding-right: 100px;
   }
 }

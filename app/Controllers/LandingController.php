@@ -1365,4 +1365,9 @@ class LandingController extends BaseController
     {
         return view('landingpage/about');
     }
+
+    public function chart()
+    {
+        return view('landingpage/chart');
+    }
 }
