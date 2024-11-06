@@ -50,7 +50,7 @@
             <ul>
                 <li><a href="/publications">RELATED PUBLICATION</a></li>
                 <li class="dropdown-con">
-                    <a href="<?= base_url('update/alternative-fuel') ?>">General Information</a>
+                    <a href="<?= base_url('update/alternative-fuel') ?>">General Informations</a>
                     <!-- <ul class="cos-dropdown-menu">
                         <li><a href="<?= base_url('update/alternative-fuel') ?>" id="program1">ALTERNATIVE FUEL</a></li>
                         <li><a href="<?= base_url('update/vehicle-types') ?>" id="program2">VEHICLE TYPES</a></li>
