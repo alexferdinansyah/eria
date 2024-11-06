@@ -542,7 +542,8 @@ img.img-map {
 }
 
 .table-con{
-  overflow: scroll;
+  overflow-x: scroll;
+  width: 380px;
 }
 
 .banner {
@@ -564,6 +565,47 @@ img.img-map {
   width: 65px;
   border: solid white 1px;
   height: auto;
+}
+
+.banners {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  padding-left: 20px;
+  color: white;
+  background-color: var(--blue);
+  width: 100%;
+}
+
+
+.banners h2{
+  font-size: 15px;
+}
+
+.banners img {
+  width: 65px;
+  border: solid white 1px;
+  height: auto;
+}
+
+.low-banner{
+  display: flex;
+  column-gap: 8px;
+  background-color: var(--blue);
+  width: 100%;
+}
+
+.low-banner p{
+  text-align: center;
+  background-color: white;
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.low-banner p:not(.foc){
+margin-bottom: 6px;
 }
 
 }
@@ -1374,4 +1416,65 @@ li > a {
   .description3 {
     padding-left: 15%;
   }
+}
+
+
+.bar-dropdown {
+  display: flex;
+  justify-content: end;
+  height: 40px;
+  background-color: var(--blue);
+  padding: 8px;
+  margin: 20px 12px; 
+  position: relative;
+}
+img {
+  cursor: pointer;
+}
+/* Dropdown menu styling */
+.bar-dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Positioned below the section */
+  right: 0;
+  border-radius: 8px;
+  width: 250px; /* Wider dropdown menu */
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  z-index: 1;
+}
+.scroll{
+  height: 200px;
+  overflow: auto;
+}
+.bar-dropdown-menu a {
+  margin-left: 15px;
+  color: black;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+}
+.bar-dropdown-menu a:hover {
+  background-color: #ddd;
+}
+
+.bar-dropdown-menu a img{
+  width: 50px;
+}
+
+.bar-dropdown-menu  img{
+  width: 50px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.back-btn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
 }

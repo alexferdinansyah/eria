@@ -1,3 +1,32 @@
+        const menuIcon = document.getElementsByClassName("menuIcon");
+        const compare = document.getElementsByClassName("compare");
+        const dropdownMenu = document.getElementsByClassName("bar-dropdown-menu")
+        const backBtns = document.getElementsByClassName("back-btn");
+
+        Array.from(menuIcon).forEach((menu, i) => {
+          const start = i*2
+          
+          menu.addEventListener("click", () => {
+            dropdownMenu[start].style.display = dropdownMenu[start].style.display === "block" ? "none" : "block";
+          })
+        })
+        Array.from(compare).forEach((com, i) => {
+          const start = i*2
+          com.addEventListener('click', () => {
+            dropdownMenu[start].style.display = "none";
+            dropdownMenu[start+1].style.display = "block";
+          })
+        })
+
+        Array.from(backBtns).forEach((btn, i) => {
+           
+
+            btn.addEventListener('click', () => {
+                dropdownMenu[i].style.display = "none";
+                
+            })
+        });
+        
 function getLocationFromUrl() {
   const path = window.location.pathname;
   const parts = path.split('/');
