@@ -95,27 +95,34 @@
 
 <?= $this->section('script') ?>
 <script>
-function commarize(min) {
-  min = min || 1e3;
-  // Alter numbers larger than 1k
-  if (this >= min) {
-    var units = ["k", "M", "B", "T"];
 
-    var order = Math.floor(Math.log(this) / Math.log(1000));
+function commarize(unit) {
+  // Define unit multipliers
+  const units = {
+    thousand: 1e3,
+    million: 1e6,
+    billion: 1e9
+  };
 
-    var unitname = units[order - 1];
-    var num = Math.floor(this / 1000 ** order);
+  // Default to thousand if no unit is specified or invalid
+  const divisor = units[unit.toLowerCase()] || 1e3;
 
-    // output number remainder + unitname
-    return num + unitname;
+  // Always divide by the unit, even if it's smaller than the divisor
+  const num = this / divisor;
+
+  // Check if the result is an integer
+  if (Number.isInteger(num)) {
+    return num; // Return without decimals if it's a whole number
+  } else {
+    return num.toFixed(1); // Return with one decimal place if it's not a whole number
   }
-
-  // return formatted original number
-  return this.toLocaleString();
 }
 
+// Extend the Number and String prototype
 Number.prototype.commarize = commarize;
 String.prototype.commarize = commarize;
+
+
 
 const DATA_COUNT = 2022;
 const labels = [];
@@ -156,7 +163,7 @@ const chartIndonesiaRoadLengthConfig = {
       },
       title: {
         display: true,
-        text: "01. Indonesia Road Length",
+        text: "01. Indonesia Road Length (In Thousand)",
       },
     },
     interaction: {
@@ -172,7 +179,7 @@ const chartIndonesiaRoadLengthConfig = {
       y: {
         ticks: {
           callback: function (value, index, ticks) {
-            return String(value).commarize();
+            return String(value).commarize('thousand');
           },
         },
         display: true,
@@ -220,7 +227,7 @@ const chartIndonesiaPopulationConfig = {
       },
       title: {
         display: true,
-        text: "02. Indonesia Populations",
+        text: "02. Indonesia Populations  (In Million)",
       },
     },
     interaction: {
@@ -236,7 +243,7 @@ const chartIndonesiaPopulationConfig = {
       y: {
         ticks: {
           callback: function (value, index, ticks) {
-            return String(value).commarize();
+            return String(value).commarize('million');
           },
         },
         display: true,
@@ -284,7 +291,7 @@ const chartIndonesiaRoadGDPperCapitalConfig = {
       },
       title: {
         display: true,
-        text: "03. Indonesia Road GDP per Capital",
+        text: "03. Indonesia Road GDP per Capital  (In Thousand)",
       },
     },
     interaction: {
@@ -300,7 +307,7 @@ const chartIndonesiaRoadGDPperCapitalConfig = {
       y: {
         ticks: {
           callback: function (value, index, ticks) {
-            return String(value).commarize();
+            return String(value).commarize('thousand');
           },
         },
         display: true,
@@ -378,7 +385,7 @@ const chartCompareIndonesiaRoadLengthConfig = {
       },
       title: {
         display: true,
-        text: "04. Compare Indonesia Road Length",
+        text: "04. Compare Indonesia Road Length (In Thousand)",
       },
     },
     interaction: {
@@ -394,7 +401,7 @@ const chartCompareIndonesiaRoadLengthConfig = {
       y: {
         ticks: {
           callback: function (value, index, ticks) {
-            return String(value).commarize();
+            return String(value).commarize('thousand');
           },
         },
         display: true,
@@ -470,7 +477,7 @@ const chartCompareIndonesiaPopulationConfig = {
       },
       title: {
         display: true,
-        text: "05. Compare Indonesia Population",
+        text: "05. Compare Indonesia Population (In Million)",
       },
     },
     interaction: {
@@ -486,7 +493,7 @@ const chartCompareIndonesiaPopulationConfig = {
       y: {
         ticks: {
           callback: function (value, index, ticks) {
-            return String(value).commarize();
+            return String(value).commarize('million');
           },
         },
         display: true,
@@ -561,7 +568,7 @@ const chartCompareIndonesiaRoadGDPperCapitalConfig = {
       },
       title: {
         display: true,
-        text: "05. Compare Indonesia Population",
+        text: "05. Compare Indonesia Population (In Thousand)",
       },
     },
     interaction: {
@@ -577,7 +584,7 @@ const chartCompareIndonesiaRoadGDPperCapitalConfig = {
       y: {
         ticks: {
           callback: function (value, index, ticks) {
-            return String(value).commarize();
+            return String(value).commarize('thousand');
           },
         },
         display: true,
@@ -632,7 +639,7 @@ const chartIndonesiaVehicleSalesConfig = {
               return data.labels.map(function (label, i) {
                 const value = data.datasets[0].data[i];
                 return {
-                  text: `${label}: ${String(value).commarize()}`,
+                  text: `${label}: ${String(value).commarize('thousand')}`,
                   fillStyle: data.datasets[0].backgroundColor[i],
                   hidden: false,
                 };
@@ -644,16 +651,7 @@ const chartIndonesiaVehicleSalesConfig = {
       },
       title: {
         display: true,
-        text: "07. Indonesia Vehicle Sales",
-      },
-      tooltip: {
-        callbacks: {
-          label: function (tooltipItem) {
-            const label = tooltipItem.label || "";
-            const value = tooltipItem.raw;
-            return `${label}: ${value}`;
-          },
-        },
+        text: "07. Indonesia Vehicle Sales (In Thousand)",
       },
     },
   },
@@ -699,7 +697,7 @@ const chartIndonesiaVehicleStockConfig = {
               return data.labels.map(function (label, i) {
                 const value = data.datasets[0].data[i];
                 return {
-                  text: `${label}: ${String(value).commarize()}`,
+                  text: `${label}: ${String(value).commarize('thousand')}`,
                   fillStyle: data.datasets[0].backgroundColor[i],
                   hidden: false,
                 };
@@ -711,16 +709,7 @@ const chartIndonesiaVehicleStockConfig = {
       },
       title: {
         display: true,
-        text: "07. Indonesia Vehicle Sales",
-      },
-      tooltip: {
-        callbacks: {
-          label: function (tooltipItem) {
-            const label = tooltipItem.label || "";
-            const value = tooltipItem.raw;
-            return `${label}: ${value}`;
-          },
-        },
+        text: "07. Indonesia Vehicle Sales (In Thousand)",
       },
     },
   },
@@ -769,7 +758,7 @@ const chartCompareIndonesiaVehicleSalesConfig = {
       },
       title: {
         display: true,
-        text: "09. Compare Indonesia Vehicle Sales",
+        text: "09. Compare Indonesia Vehicle Sales (In Thousand)",
       },
     },
     responsive: true,
@@ -780,7 +769,7 @@ const chartCompareIndonesiaVehicleSalesConfig = {
       y: {
         ticks: {
           callback: function (value, index, ticks) {
-            return String(value).commarize();
+            return String(value).commarize('thousand');
           },
         },
         stacked: true,
@@ -835,7 +824,7 @@ const chartCompareIndonesiaVehicleStockConfig = {
       },
       title: {
         display: true,
-        text: "10. Compare Indonesia Vehicle Stock",
+        text: "10. Compare Indonesia Vehicle Stock (In Million)",
       },
     },
     responsive: true,
@@ -846,7 +835,7 @@ const chartCompareIndonesiaVehicleStockConfig = {
       y: {
         ticks: {
           callback: function (value, index, ticks) {
-            return String(value).commarize();
+            return String(value).commarize('million');
           },
         },
         stacked: true,
@@ -893,7 +882,7 @@ const chartHistoricalIndonesiaICEVechicleSalesConfig = {
       },
       title: {
         display: true,
-        text: "11. Historical Indonesia ICE Vechicle Sales",
+        text: "11. Historical Indonesia ICE Vechicle Sales (In Thousand)",
       },
     },
     responsive: true,
@@ -901,7 +890,7 @@ const chartHistoricalIndonesiaICEVechicleSalesConfig = {
       y: {
         ticks: {
           callback: function (value, index, ticks) {
-            return String(value).commarize();
+            return String(value).commarize('thousand');
           },
         },
       },
@@ -945,7 +934,7 @@ const chartHistoricalIndonesiaICEVechicleStockConfig = {
       },
       title: {
         display: true,
-        text: "12. Historical Indonesia ICE Vechicle Stock",
+        text: "12. Historical Indonesia ICE Vechicle Stock (In Million)",
       },
     },
     responsive: true,
@@ -953,7 +942,7 @@ const chartHistoricalIndonesiaICEVechicleStockConfig = {
       y: {
         ticks: {
           callback: function (value, index, ticks) {
-            return String(value).commarize();
+            return String(value).commarize('million');
           },
         },
       },
@@ -1015,7 +1004,7 @@ const chartCompareHistoricalIndonesiaICEVechicleSalesConfig = {
       },
       title: {
         display: true,
-        text: "13. Compare Historical Indonesia ICE Vechicle Sales",
+        text: "13. Compare Historical Indonesia ICE Vechicle Sales (In Million)",
       },
     },
     responsive: true,
@@ -1023,7 +1012,7 @@ const chartCompareHistoricalIndonesiaICEVechicleSalesConfig = {
       y: {
         ticks: {
           callback: function (value, index, ticks) {
-            return String(value).commarize();
+            return String(value).commarize('million');
           },
         },
       },
@@ -1085,7 +1074,7 @@ const chartCompareHistoricalIndonesiaICEVechicleStockConfig = {
       },
       title: {
         display: true,
-        text: "14. Compare Historical Indonesia ICE Vechicle Stock",
+        text: "14. Compare Historical Indonesia ICE Vechicle Stock (In Million)",
       },
     },
     responsive: true,
@@ -1093,7 +1082,7 @@ const chartCompareHistoricalIndonesiaICEVechicleStockConfig = {
       y: {
         ticks: {
           callback: function (value, index, ticks) {
-            return String(value).commarize();
+            return String(value).commarize('million');
           },
         },
         suggestedMin: 0,
@@ -1155,7 +1144,7 @@ const chartHistoricalIndonesia_HEV_BEV_PHEV_SalesConfig = {
       },
       title: {
         display: true,
-        text: "15. Historical Indonesia HEV, BEV, PHEV Sales",
+        text: "15. Historical Indonesia HEV, BEV, PHEV Sales (In Thousand)",
       },
     },
     responsive: true,
@@ -1166,7 +1155,7 @@ const chartHistoricalIndonesia_HEV_BEV_PHEV_SalesConfig = {
       y: {
         ticks: {
           callback: function (value, index, ticks) {
-            return String(value).commarize();
+            return String(value).commarize('thousand');
           },
         },
         stacked: true,
