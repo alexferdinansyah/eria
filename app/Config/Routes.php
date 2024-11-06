@@ -25,3 +25,4 @@ $routes->get('/summary/(:segment)', 'LandingController::summary/$1');
 $routes->get('/summarymobile', 'LandingController::summaryMobile');
 
 $routes->get('/about', 'LandingController::about');
+$routes->get('/chart', 'LandingController::chart');

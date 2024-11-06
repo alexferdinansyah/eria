@@ -9,7 +9,7 @@
 </section>
 
 <div class="container my-5 gx-5">
-    <divs>
+    <div>
         <h2 class="font-montserrat mb-3" style="font-weight: bold;">History</h2>
         <p>
             On 23 August 2006, during the 13th Consultation held between the ASEAN Economic Ministers and the Ministry of Economy,
@@ -36,7 +36,7 @@
             reported to the East Asia Energy Ministers' Meeting also in August 2007. Based on the results of these projects and the thorough discussions of the Expert Group,
             the formal establishment of ERIA was agreed upon by all the leaders of the East Asia Summit at the Third East Asia Summit in Singapore on 21 November 2007.
         </p>
-    </divs>
+    </div>
 </div>
 
 <div class="container my-5 gx-5">
