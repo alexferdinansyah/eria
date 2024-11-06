@@ -653,15 +653,6 @@ const chartIndonesiaVehicleSalesConfig = {
         display: true,
         text: "07. Indonesia Vehicle Sales (In Thousand)",
       },
-      tooltip: {
-        callbacks: {
-          label: function (tooltipItem) {
-            const label = tooltipItem.label || "";
-            const value = tooltipItem.raw;
-            return `${label}: ${value}`;
-          },
-        },
-      },
     },
   },
 };
@@ -719,15 +710,6 @@ const chartIndonesiaVehicleStockConfig = {
       title: {
         display: true,
         text: "07. Indonesia Vehicle Sales (In Thousand)",
-      },
-      tooltip: {
-        callbacks: {
-          label: function (tooltipItem) {
-            const label = tooltipItem.label || "";
-            const value = tooltipItem.raw;
-            return `${label}: ${value}`;
-          },
-        },
       },
     },
   },
