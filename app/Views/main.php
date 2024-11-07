@@ -34,7 +34,7 @@
 <body>
     <div class="top-header">
         <nav>
-            <div class="d-flex">
+            <div class="d-flex gap-2">
                 <a href="/" class="nav-logo">
                     <div class="logo-text">
                         <h4 class="A2VTP">A2VTP</h4>
@@ -46,10 +46,10 @@
                     <p>Economic Research Institute for ASEAN and East Asia</p>
                 </a>
             </div>
-    
+
             <div class="nav-menus">
                 <ul>
-                    <li><a href="/publications">RELATED PUBLICATION</a></li>
+                    <li><a href="/publications">Related Publications</a></li>
                     <li class="dropdown-con">
                         <a href="<?= base_url('update/alternative-fuel') ?>">General Informations</a>
                         <!-- <ul class="cos-dropdown-menu">
@@ -60,7 +60,7 @@
                         </ul> -->
                     </li>
                     <!-- <li><a href="/events">EVENTS</a></li> -->
-                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="/about">About</a></li>
                 </ul>
             </div>
         </nav>

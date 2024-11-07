@@ -67,7 +67,7 @@ class ContentModel
     {
         $object = new stdClass();
 
-        $object->content = '<h3>Vehicle Types</h3><br>';
+        $object->content = '<h3>Vehicle Types</h3><p class="vehicle-type-subtitle">ICE, HEV, BEV, and PHEV are terms used to describe different types of vehicles:</p>';
         $object->content .= '
         <div style="max-height: 400px; overflow-y: auto;">
             <table class="table">
@@ -79,105 +79,22 @@ class ContentModel
                 </thead>
                 <tbody>
                     <tr>
-                        <td>L</td>
-                        <td>Motor vehicles with less than four wheels and some lightweight four-wheelers.</td>
+                        <td>ICE</td>
+                        <td>Internal Combustion Engine, a heat engine that uses an oxidizer, usually air, to burn fuel in a combustion chamber. The expansion of the gases produced by the combustion applies force to pistons, which drive the crankshaft and turn the wheels.</td>
                     </tr>
                     <tr>
-                        <td>L1</td>
-                        <td>A two-wheeled vehicle with an engine cylinder capacity in the case of a thermic engine not exceeding 50 cm3 and whatever the means of propulsion a maximum design speed not exceeding 50 km/h.</td>
+                        <td>BEV</td>
+                        <td>Battery Electric Vehicle, a vehicle that is powered solely by a battery. </td>
                     </tr>
                     <tr>
-                        <td>L2</td>
-                        <td>MA three-wheeled vehicle of any wheel arrangement with an engine cylinder capacity in the case of a thermic engine not exceeding 50 cm3 and whatever the means of propulsion a maximum design speed not exceeding 50 km/h.</td>
+                        <td>HEV</td>
+                        <td>Hybrid Electric Vehicle. </td>
                     </tr>
                     <tr>
-                        <td>L3</td>
-                        <td>A two-wheeled vehicle with an engine cylinder capacity in the case of a thermic engine exceeding 50 cm3 or whatever the means of propulsion a maximum design speed exceeding 50 km/h.</td>
+                        <td>PHEV</td>
+                        <td>Plug-in Hybrid Electric Vehicle, a vehicle that uses both a battery and an internal combustion engine (ICE) to power the car. PHEVs typically start in all-electric mode, but switch to hybrid mode when they reach highway speeds.</td>
                     </tr>
-                    <tr>
-                        <td>L4</td>
-                        <td>A vehicle with three wheels asymmetrically arranged in relation to the longitudinal median plane with an engine cylinder capacity in the case of a thermic engine exceeding 50 cm3 or whatever the means of propulsion a maximum design speed exceeding 50 km/h (motor cycles with sidecars).</td>
-                    </tr>
-                    <tr>
-                        <td>L5</td>
-                        <td>A vehicle with three wheels symmetrically arranged in relation to the longitudinal median plane with an engine cylinder capacity in the case of a thermic engine exceeding 50 cm3 or whatever the means of propulsion a maximum design speed exceeding 50 km/h.</td>
-                    </tr>
-                    <tr>
-                        <td>L6</td>
-                        <td>A vehicle with four wheels whose unladen mass is not more than 350 kg, not including the mass of the batteries in case of electric vehicles, whose maximum design speed is not more than 45 km/h, and whose engine cylinder capacity does not exceed 50 cm3 for spark (positive) ignition engines, or whose maximum net power output does not exceed 4 kW in the case of other internal combustion engines, or whose maximum continuous rated power does not exceed 4 kW in the case of electric engines.</td>
-                    </tr>
-                    <tr>
-                        <td>L7</td>
-                        <td>A vehicle with four wheels, other than that classified for the category L6, whose unladen mass is not more than 400 kg (550 kg for vehicles intended for carrying goods), not including the mass of batteries in the case of electric vehicles and whose maximum continuous rated power does not exceed 15 kW.</td>
-                    </tr>
-                    <tr>
-                        <td>M</td>
-                        <td>Power-driven vehicles having at least four wheels and used for the carriage of passengers.</td>
-                    </tr>
-                    <tr>
-                        <td>M1</td>
-                        <td>Vehicles used for the carriage of passengers and comprising not more than eight seats in addition to the drivers seat.</td>
-                    </tr>
-                    <tr>
-                        <td>M2</td>
-                        <td>Vehicles used for the carriage of passengers, comprising more than eight seats in addition to the drivers seat, and having a maximum mass not exceeding 5 tonnes.</td>
-                    </tr>
-                    <tr>
-                        <td>M3</td>
-                        <td>Vehicles used for the carriage of passengers, comprising more than eight seats in addition to the drivers seat, and having a maximum mass exceeding 5 tonnes.</td>
-                    </tr>
-                    <tr>
-                        <td>N</td>
-                        <td>Power-driven vehicles having at least four wheels and used for the carriage of goods.</td>
-                    </tr>
-                    <tr>
-                        <td>N1</td>
-                        <td>Vehicles used for the carriage of goods and having a maximum mass not exceeding 3.5 tonnes.</td>
-                    </tr>
-                    <tr>
-                        <td>N2</td>
-                        <td>Vehicles used for the carriage of goods and having a maximum mass exceeding 3.5 tonnes but not exceeding 12 tonnes.</td>
-                    </tr>
-                    <tr>
-                        <td>N3</td>
-                        <td>Vehicles used for the carriage of goods and having a maximum mass exceeding 12 tonnes.</td>
-                    </tr>
-                    <tr>
-                        <td>O</td>
-                        <td>Trailers</td>
-                    </tr>
-                    <tr>
-                        <td>O1</td>
-                        <td>Trailers with a maximum mass not exceeding 0.75 tonnes.</td>
-                    </tr>
-                    <tr>
-                        <td>O2</td>
-                        <td>Trailers with a maximum mass exceeding 0.75 tonnes, but not exceeding 3.5 tonnes.</td>
-                    </tr>
-                    <tr>
-                        <td>O3</td>
-                        <td>Trailers with a maximum mass exceeding 3.5 tonnes, but not exceeding 10 tonnes.</td>
-                    </tr>
-                    <tr>
-                        <td>O4</td>
-                        <td>Trailers with a maximum mass exceeding 10 tonnes.</td>
-                    </tr>
-                    <tr>
-                        <td>T</td>
-                        <td>Motorised, wheeled or tracked agricultural or forestry vehicle having at least two axles and a maximum design speed of not less than 6 km/h, the main function of which lies in its tractive power and which has been especially designed to pull, push, carry and actuate certain interchangeable equipment designed to perform agricultural or forestry work, or to tow agricultural or forestry trailers or equipment; it may be adapted to carry a load in the context of agricultural or forestry work and/or may be equipped with one or more passenger seats.</td>
-                    </tr>
-                    <tr>
-                        <td>R</td>
-                        <td>Agricultural trailer: means any agricultural or forestry vehicle intended mainly to be towed by a tractor and intended mainly to carry loads or to process materials and where the ratio of the technically permissible maximum laden mass to the unladen mass of that vehicle is equal to or greater than 3.0.</td>
-                    </tr>
-                    <tr>
-                        <td>S</td>
-                        <td>Interchangeable towed equipment: means any vehicle used in agriculture or forestry which is designed to be towed by a tractor, changes or adds to its functions, permanently incorporates an implement or is designed to process materials, which may include a load platform designed and constructed to receive any tools and appliances needed for those purposes and to store temporarily any materials produced or needed during work and where the ratio of the technically permissible maximum laden mass to the unladen mass of that vehicle is less than 3.0.</td>
-                    </tr>
-                    <tr>
-                        <td>G</td>
-                        <td>Off-road vehicles.</td>
-                    </tr>
+                    
                 </tbody>
             </table>
         </div>';

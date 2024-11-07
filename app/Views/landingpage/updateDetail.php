@@ -5,15 +5,15 @@
     <div class="flex-column">
         <p class="show-on-mobile sec  pb-4 m-0">General Information</p>
         <p class="hidden-on-mobile fs-1">General Information</p>
-        <div class="d-flex flex-row gap-2 align-items-start">
-            <a class="bg-white text-decoration-none border-white <?= $slug == 'alternative-fuel' ? 'pb-2' : '' ?>" href="<?= base_url('update/alternative-fuel') ?>">
-                <p class="p-3 text-black program-text text-center m-0">Alternative Fuel</p>
+        <div class="d-flex flex-row gap-1 align-items-start">
+            <a class="bg-white text-decoration-none border-white <?= $slug == 'alternative-fuel' ? 'pb-1' : '' ?>" href="<?= base_url('update/alternative-fuel') ?>">
+                <p class="text-black program-text text-center m-0">Alternative Fuel</p>
             </a>
-            <a class="bg-white text-decoration-none border-white <?= $slug == 'vehicle-types' ? 'pb-2' : '' ?>" href="<?= base_url('update/vehicle-types') ?>">
-                <p class="p-3 text-black program-text m-0">Vehicle Types</p>
+            <a class="bg-white text-decoration-none border-white <?= $slug == 'vehicle-types' ? 'pb-1' : '' ?>" href="<?= base_url('update/vehicle-types') ?>">
+                <p class="text-black program-text m-0">Vehicle Types</p>
             </a>
-            <a class="bg-white text-decoration-none border-white <?= $slug == 'recharging-system' ? 'pb-2' : '' ?>" href="<?= base_url('update/recharging-system') ?>">
-                <p class="p-3 text-black program-text m-0">Recharging System</p>
+            <a class="bg-white text-decoration-none border-white <?= $slug == 'recharging-system' ? 'pb-1' : '' ?>" href="<?= base_url('update/recharging-system') ?>">
+                <p class="text-black program-text m-0">Recharging System</p>
             </a>
         </div>
     </div>
@@ -30,7 +30,7 @@
         <h3>Related articles</h3>
         <div class="row">
             <a href="/news/details" class="col-md-6">
-                <img class="img-thumbnail" src="https://www.eria.org//uploads/articles/20150119/eria_capacity-building_phnom-penh_jan-19-20-cropped.jpg" alt="">
+                <!-- <img class="img-thumbnail" src="https://www.eria.org//uploads/articles/20150119/eria_capacity-building_phnom-penh_jan-19-20-cropped.jpg" alt=""> -->
                 <h5>ERIA Capacity Building Seminar in Cambodia - Remaining Challenge for ASEAN Economic Community 2015</h5>
                 <p>31 July 2024</p>
             </a>
