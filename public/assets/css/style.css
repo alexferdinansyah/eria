@@ -12,11 +12,6 @@ body {
   --blue: #103979;
 }
 
-.top-header {
-  position: sticky;
-  top: 0;
-}
-
 nav {
   padding: 10px;
   display: flex;
@@ -585,6 +580,8 @@ nav {
 }
 
 .low-banner{
+  position: sticky;
+  top: 0;
   display: flex;
   column-gap: 8px;
   background-color: var(--blue);
@@ -1768,4 +1765,13 @@ img {
     .header-list_container label {
         padding: 0px;
         margin: 0px;
+    }
+
+    .show-btn{
+      background-color: var(--blue);
+      width: 90%;
+      padding: 8px;
+      color: white;
+      border-radius: 12px;
+      margin: 20px;
     }

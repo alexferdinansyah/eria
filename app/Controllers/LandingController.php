@@ -1361,7 +1361,8 @@ class LandingController extends BaseController
         return view('/landingpage/summary', $data);
     }
 
-    public function summaryMobile(){
+    public function summaryMobile($cat){
+        $data["cat"] = $cat;   
         $data["population"] = "99,474";
         $data["ttlland"] = "33,1345";
         $data["totalRoad"] = "649,422";

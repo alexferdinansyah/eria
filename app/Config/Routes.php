@@ -22,7 +22,7 @@ $routes->get('/events', 'LandingController::events');
 $routes->get('/events/detail', 'LandingController::eventsDetail');
 
 $routes->get('/summary/(:segment)', 'LandingController::summary/$1');
-$routes->get('/summarymobile', 'LandingController::summaryMobile');
+$routes->get('/summarymobile/(:segment)', 'LandingController::summaryMobile/$1');
 
 $routes->get('/about', 'LandingController::about');
 $routes->get('/chart', 'LandingController::chart');

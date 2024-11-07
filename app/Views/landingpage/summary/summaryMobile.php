@@ -1,308 +1,489 @@
 <?= $this->extend('main') ?>
 
 <?= $this->section('content') ?>
-<!--  -->
+
 <div class="banners">
     <h2>Indonesia</h2>
     <img src="<?= base_url('assets/images/nations/flags/indonesia.svg'); ?>" alt="">    
 </div>
 <div class="low-banner">
-    <p class="foc">Econometric</p>
-    <p>Historical</p>
-    <p>Forcasting</p>
+    <p class="<?= $cat == 'econometric'? 'foc' :'' ?>">Econometric</p>
+    <p class="<?= $cat == 'historical'? 'foc' :'' ?>">Historical</p>
+    <p class="<?= $cat == 'forcasting'? 'foc' :'' ?>">Forcasting</p>
 
 </div>
 
 <div class="row">
     <div class="summary-wrapper">
+        <?php if($cat == 'econometric'): ?>   
+              <!-- econometric start -->
+                  <div class="row row-cols-1 row-cols-md-2 justify-content-evenly mb-4">
+                      <div class="content-summary">
+                          <h2>Summary</h2>
+                          <section class="container-sum">
+                              <div>
+                                  <p>Population</p>
+                                  <p><?= $population ?></p>
+                              </div>
+                              <div>
+                                  <p>Total Land Area - Km²</p>
+                                  <p><?= $ttlland ?></p>
+                              </div>
+                              <div>
+                                  <p>Total Road Length - Km</p>
+                                  <p><?= $totalRoad ?></p>
+                              </div>
+                          </section>
+                          <section class="container-sum">
+                              <div>
+                                  <p>GDP Per Capita - US$</p>
+                                  <p><?= $GDP ?></p>
+                              </div>
+                              <div>
+                                  <p>Purchasing Power Parity (PPP) - US$</p>
+                                  <p><?= $PPP ?></p>
+                              </div>
+                          </section>
+                          <section class="container-sum">
+                              <div>
+                                  <p>GDP Per Capita Purchasing Power Parity (PPP) - US$</p>
+                                  <p><?= $GDPppp ?></p>
+                              </div>
+                          </section>
+                      </div>
+                      <img class="img-map" src="<?= base_url('assets/images/nations/maps/indonesia.svg') ?>" alt="">
 
-        <!-- <h1 style="margin-left:50px;">Econometric</h1> -->
-        
-        <div class="row row-cols-1 row-cols-md-2 justify-content-evenly mb-4">
-            <div class="content-summary">
-                <h2>Summary</h2>
-                <section class="container-sum">
-                    <div>
-                        <p>Population</p>
-                        <p><?= $population ?></p>
-                    </div>
-                    <div>
-                        <p>Total Land Area - Km²</p>
-                        <p><?= $ttlland ?></p>
-                    </div>
-                    <div>
-                        <p>Total Road Length - Km</p>
-                        <p><?= $totalRoad ?></p>
-                    </div>
-                </section>
-                <section class="container-sum">
-                    <div>
-                        <p>GDP Per Capita - US$</p>
-                        <p><?= $GDP ?></p>
-                    </div>
-                    <div>
-                        <p>Purchasing Power Parity (PPP) - US$</p>
-                        <p><?= $PPP ?></p>
-                    </div>
-                </section>
-                <section class="container-sum">
-                    <div>
-                        <p>GDP Per Capita Purchasing Power Parity (PPP) - US$</p>
-                        <p><?= $GDPppp ?></p>
-                    </div>
-                </section>
-            </div>
-            <img class="img-map" src="<?= base_url('assets/images/nations/maps/indonesia.svg') ?>" alt="">
+                  </div>
 
-        </div>
+                <h1 style="font-size:12px; margin-left:12px">Historical Road Length, Population, & GDP Per Capita</h1>
+                <p style="font-size:10px; margin-left:12px; ">Total number of Historical Road Length, Population, & GDP Per Capita</p>
 
-        <h1 style="font-size:12px; margin-left:12px">Historical Road Length, Population, & GDP Per Capita</h1>
-        <p style="font-size:10px; margin-left:12px; ">Total number of Historical Road Length, Population, & GDP Per Capita</p>
+                <section class="bar-dropdown">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
+                        alt="Menu Icon" class="menuIcon">
+                    <div class="bar-dropdown-menu" id="dropdownMenu1">
+                        <div class="back-btn">
+                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                        </div>
+                        <a class="compare" href="#">Compare</a>
+                        <a href="#">Download CV</a>
+                        <a href="#">print Chart</a>
+                    </div>
 
-        <section class="bar-dropdown">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
-                alt="Menu Icon" class="menuIcon">
-            <div class="bar-dropdown-menu" id="dropdownMenu1">
-                <div class="back-btn">
-                    <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                </div>
-                <a class="compare" href="#">Compare</a>
-                <a href="#">Download CV</a>
-                <a href="#">print Chart</a>
-            </div>
+                    <div class="bar-dropdown-menu scroll">
+                        <div class="back-btn">
+                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                        </div>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+                            <span>Brunei</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
+                            <span>Cambodia</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+                            <span>Laos</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+                            <span>Malaysia</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+                            <span>Myanmar</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+                            <span>philippines</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+                            <span>Thailand</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+                            <span>Vietnam</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <button class="show-btn">Show</button>
+                        
+                    </div>
 
-            <div class="bar-dropdown-menu scroll">
-                <div class="back-btn">
-                    <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                </div>
-                <a href="#">
-                    <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
-                    <span>Brunei</span>
-                    <input type="checkbox" name="" id="">
-                </a>
-                <a href="#">
-                    <img  src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
-                    <span>Cambodia</span>
-                    <input type="checkbox" name="" id="">
-                </a>
-                <a href="#">
-                    <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
-                    <span>Laos</span>
-                    <input type="checkbox" name="" id="">
-                </a>
-                <a href="#">
-                    <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
-                    <span>Malaysia</span>
-                    <input type="checkbox" name="" id="">
-                </a>
-                <a href="#">
-                    <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
-                    <span>Myanmar</span>
-                    <input type="checkbox" name="" id="">
-                </a>
-                <a href="#">
-                    <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
-                    <span>philippines</span>
-                    <input type="checkbox" name="" id="">
-                </a>
-                <a href="#">
-                    <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
-                    <span>Thailand</span>
-                    <input type="checkbox" name="" id="">
-                </a>
-                <a href="#">
-                    <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
-                    <span>Vietnam</span>
-                    <input type="checkbox" name="" id="">
-                </a>
-                <button class="btn btn-primary">Show</button>
                 
-            </div>
+                </section>
 
-        
-        </section>
-
-        <h1 style="font-size:12px; margin-left:12px">Total Road Lenght (In Thousand)</h1>
-        <div class="chart-parent">
-            <canvas id="chartIndonesiaRoadLength"></canvas>
-        </div>
-
-        <h1 style="font-size:12px; margin-left:12px">Population (in million)</h1>
-        <div class="chart-parent">
-            <canvas id="chartIndonesiaPopulation"></canvas>
-        </div>
-
-        <h1 style="font-size:12px; margin-left:12px">GDP Per Capita (Current  US$)</h1>
-        <div class="chart-parent">
-            <canvas id="chartIndonesiaRoadGDPperCapital"></canvas>
-        </div>
-
-        <h1 style="font-size:12px; margin-left:12px">Current Sales & Stock Data</h1>
-        <p style="font-size:10px; margin-left:12px; ">Total of number Current Sales & Stock Data</p>
-        
-        <section class="bar-dropdown">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
-                alt="Menu Icon" class="menuIcon">
-            <div class="bar-dropdown-menu">
-                <div class="back-btn">
-                    <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                <h1 style="font-size:12px; margin-left:12px">Total Road Lenght (In Thousand)</h1>
+                <div class="chart-parent">
+                    <canvas id="chartIndonesiaRoadLength"></canvas>
                 </div>
-                <a class="compare" href="#">Compare</a>
-                <a href="#">Download CV</a>
-                <a href="#">print Chart</a>
-            </div>
 
-            <div class="bar-dropdown-menu scroll">
-                <div class="back-btn">
-                    <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                <h1 style="font-size:12px; margin-left:12px">Population (in million)</h1>
+                <div class="chart-parent">
+                    <canvas id="chartIndonesiaPopulation"></canvas>
                 </div>
-                <a href="#">Option 1</a>
-                <a href="#">Option 2</a>
-                <a href="#">Option 3</a>
-                <a href="#">Option 4</a>
-                <a href="#">Option 5</a>
-                <a href="#">Option 6</a>
-                <a href="#">Option 7</a>
-                <a href="#">Option 8</a>
-                <a href="#">Option 9</a>
-                <a href="#">Option 10</a>
-            </div>
 
-        
-        </section>
-
-        <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
-        <div class="chart-parent">
-            <canvas id="chartIndonesiaVehicleSales"></canvas>
-        </div>
-
-        <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
-        <div class="chart-parent">
-            <canvas id="chartIndonesiaVehicleStock"></canvas>
-        </div>
-
-        <h1 style="font-size:12px; margin-left:12px">Historical HEV, BEV, PHEV Vechicle Sales & Stock</h1>
-        <p style="font-size:10px; margin-left:12px; ">Total number of PHEV, BEV, HEV Vehicle Sales</p>
-        
-        <section class="bar-dropdown">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
-                alt="Menu Icon" class="menuIcon">
-            <div class="bar-dropdown-menu">
-                <div class="back-btn">
-                    <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                <h1 style="font-size:12px; margin-left:12px">GDP Per Capita (Current  US$)</h1>
+                <div class="chart-parent">
+                    <canvas id="chartIndonesiaRoadGDPperCapital"></canvas>
                 </div>
-                <a class="compare" href="#">Compare</a>
-                <a href="#">Download CV</a>
-                <a href="#">print Chart</a>
-            </div>
+                      
+        <?php endif; ?>
+        <!-- econometric end -->
 
-            <div class="bar-dropdown-menu scroll">
-                <div class="back-btn">
-                    <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+        <!-- historical start -->
+        <?php if($cat == 'historical'): ?>   
+
+            <h1 style="font-size:15px; margin:12px">Current Sales & Stock Data</h1>
+            <p style="font-size:10px; margin-left:12px; ">Total of number Current Sales & Stock Data</p>
+            
+            <section class="bar-dropdown">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
+                    alt="Menu Icon" class="menuIcon">
+                <div class="bar-dropdown-menu">
+                    <div class="back-btn">
+                        <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                    </div>
+                    <a class="compare" href="#">Compare</a>
+                    <a href="#">Download CV</a>
+                    <a href="#">print Chart</a>
                 </div>
-                <a href="#">Option 1</a>
-                <a href="#">Option 2</a>
-                <a href="#">Option 3</a>
-                <a href="#">Option 4</a>
-                <a href="#">Option 5</a>
-                <a href="#">Option 6</a>
-                <a href="#">Option 7</a>
-                <a href="#">Option 8</a>
-                <a href="#">Option 9</a>
-                <a href="#">Option 10</a>
+
+                <div class="bar-dropdown-menu scroll">
+                        <div class="back-btn">
+                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                        </div>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+                            <span>Brunei</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
+                            <span>Cambodia</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+                            <span>Laos</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+                            <span>Malaysia</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+                            <span>Myanmar</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+                            <span>philippines</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+                            <span>Thailand</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+                            <span>Vietnam</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <button class="btn btn-primary">Show</button>
+                        
+                    </div>
+
+            
+            </section>
+
+            <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
+            <div class="chart-parent">
+                <canvas id="chartIndonesiaVehicleSales"></canvas>
             </div>
 
-        
-        </section>
-        
-        <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
-        <div class="chart-parent">
-            <canvas id="chart1"></canvas>
-        </div>
-        
-        <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
-        <div class="chart-parent">
-            <canvas id="chart2"></canvas>
-        </div>
+            <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
+            <div class="chart-parent">
+                <canvas id="chartIndonesiaVehicleStock"></canvas>
+            </div>
 
-        
-        <h1 style="font-size:12px; margin-left:12px">Total of Histroical Vechicle Sales & Stock</h1>
-        <p style="font-size:10px; margin-left:12px; ">Total number of Historical Vehicle Sales & Stock</p>
-        
-        <section class="bar-dropdown">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
-                alt="Menu Icon" class="menuIcon">
-            <div class="bar-dropdown-menu">
-                <div class="back-btn">
-                    <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+            <h1 style="font-size:12px; margin-left:12px">Historical ICE Vechicle Sales and Stock</h1>
+            <p style="font-size:10px; margin-left:12px; ">Total number of ICE Vehicle Sales and Stock</p>
+
+            <section class="bar-dropdown">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
+                    alt="Menu Icon" class="menuIcon">
+                <div class="bar-dropdown-menu">
+                    <div class="back-btn">
+                        <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                    </div>
+                    <a class="compare" href="#">Compare</a>
+                    <a href="#">Download CV</a>
+                    <a href="#">print Chart</a>
                 </div>
-                <a class="compare" href="#">Compare</a>
-                <a href="#">Download CV</a>
-                <a href="#">print Chart</a>
+
+                <div class="bar-dropdown-menu scroll">
+                        <div class="back-btn">
+                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                        </div>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+                            <span>Brunei</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
+                            <span>Cambodia</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+                            <span>Laos</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+                            <span>Malaysia</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+                            <span>Myanmar</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+                            <span>philippines</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+                            <span>Thailand</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+                            <span>Vietnam</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <button class="btn btn-primary">Show</button>
+                        
+                    </div>
+
+            
+            </section>
+
+            
+            <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
+            <div class="chart-parent">
+                <canvas id="chartHistoricalIndonesiaICEVechicleSales"></canvas>
             </div>
 
-            <div class="bar-dropdown-menu scroll">
-                <div class="back-btn">
-                    <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+            <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
+            <div class="chart-parent">
+                <canvas id="chartHistoricalIndonesiaICEVechicleStock"></canvas>
+            </div>
+
+            <h1 style="font-size:12px; margin-left:12px">Historical HEV, BEV, PHEV Vechicle Sales & Stock</h1>
+            <p style="font-size:10px; margin-left:12px; ">Total number of PHEV, BEV, HEV Vehicle Sales</p>
+            
+            <section class="bar-dropdown">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
+                    alt="Menu Icon" class="menuIcon">
+                <div class="bar-dropdown-menu">
+                    <div class="back-btn">
+                        <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                    </div>
+                    <a class="compare" href="#">Compare</a>
+                    <a href="#">Download CV</a>
+                    <a href="#">print Chart</a>
                 </div>
-                <a href="#">Option 1</a>
-                <a href="#">Option 2</a>
-                <a href="#">Option 3</a>
-                <a href="#">Option 4</a>
-                <a href="#">Option 5</a>
-                <a href="#">Option 6</a>
-                <a href="#">Option 7</a>
-                <a href="#">Option 8</a>
-                <a href="#">Option 9</a>
-                <a href="#">Option 10</a>
+
+                <div class="bar-dropdown-menu scroll">
+                        <div class="back-btn">
+                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                        </div>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+                            <span>Brunei</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
+                            <span>Cambodia</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+                            <span>Laos</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+                            <span>Malaysia</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+                            <span>Myanmar</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+                            <span>philippines</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+                            <span>Thailand</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+                            <span>Vietnam</span>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <button class="btn btn-primary">Show</button>
+                        
+                  </div>
+
+            
+            </section>
+            
+            <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
+            <div class="chart-parent">
+                <canvas id="chart1"></canvas>
+            </div>
+            
+            <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
+            <div class="chart-parent">
+                <canvas id="chart2"></canvas>
             </div>
 
-        
-        </section>
-                
-        <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
-        <div class="chart-parent">
-            <canvas id="chart4"></canvas>
-        </div>
-        
-                
-        <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
-        <div class="chart-parent">
-            <canvas id="chart5"></canvas>
-        </div>
+            
+            <h1 style="font-size:12px; margin-left:12px">Total of Histroical Vechicle Sales & Stock</h1>
+            <p style="font-size:10px; margin-left:12px; ">Total number of Historical Vehicle Sales & Stock</p>
+            
+            <section class="bar-dropdown">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
+                    alt="Menu Icon" class="menuIcon">
+                <div class="bar-dropdown-menu">
+                    <div class="back-btn">
+                        <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                    </div>
+                    <a class="compare" href="#">Compare</a>
+                    <a href="#">Download CV</a>
+                    <a href="#">print Chart</a>
+                </div>
 
-        <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
-        <div class="table-con p-4">
-                <table class="table">
-                    <thead style="font-size:12px;">
-                        <tr>
-                            <th style="height: 40px;">Type</th>
-                            <th>2011</th>
-                            <th>2012</th>
-                            <th>2013</th>
-                            <th>2014</th>
-                            <th>2015</th>
-                            <th>2016</th>
-                            <th>2017</th>
-                            <th>2018</th>
-                            <th>2019</th>
-                            <th>2020</th>
-                            <th>2021</th>
-                            <th>2022</th>
-                            <th>2023</th>
-                        </tr>
-                    </thead>
-                    <tbody style="font-size:12px;">
-                        <?= $tableData1 ?>
-                    </tbody>
-                </table>
+                <div class="bar-dropdown-menu scroll">
+                    <div class="back-btn">
+                        <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                    </div>
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                    <a href="#">Option 4</a>
+                    <a href="#">Option 5</a>
+                    <a href="#">Option 6</a>
+                    <a href="#">Option 7</a>
+                    <a href="#">Option 8</a>
+                    <a href="#">Option 9</a>
+                    <a href="#">Option 10</a>
+                </div>
+
+            
+            </section>
+                    
+            <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
+            <div class="chart-parent">
+                <canvas id="totalSales"></canvas>
             </div>
+            
+                    
+            <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
+            <div class="chart-parent">
+                <canvas id="totalStock"></canvas>
+            </div>
+
+            <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
+            <div class="table-con p-2">
+                    <table class="table">
+                        <thead style="font-size:12px;">
+                            <tr>
+                                <th style="height: 40px;">Type</th>
+                                <th>2011</th>
+                                <th>2012</th>
+                                <th>2013</th>
+                                <th>2014</th>
+                                <th>2015</th>
+                                <th>2016</th>
+                                <th>2017</th>
+                                <th>2018</th>
+                                <th>2019</th>
+                                <th>2020</th>
+                                <th>2021</th>
+                                <th>2022</th>
+                                <th>2023</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:12px;">
+                            <?= $tableData1 ?>
+                        </tbody>
+                    </table>
+            </div>
+            <div class="table-con p-2">
+                    <table class="table">
+                        <thead style="font-size:12px;">
+                            <tr>
+                                <th style="height: 40px;">Type</th>
+                                <th>2011</th>
+                                <th>2012</th>
+                                <th>2013</th>
+                                <th>2014</th>
+                                <th>2015</th>
+                                <th>2016</th>
+                                <th>2017</th>
+                                <th>2018</th>
+                                <th>2019</th>
+                                <th>2020</th>
+                                <th>2021</th>
+                                <th>2022</th>
+                                <th>2023</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:12px;">
+                            <?= $tableData2 ?>
+                        </tbody>
+                    </table>
+            </div>
+
+        <?php endif; ?>
+        <!-- historical end -->
+
+        <!-- forcasting start -->
+        <?php if($cat == 'forcasting'): ?>   
+          
+        <?php endif; ?>
+        <!-- forcasting end -->
         
+
 <?= $this->endSection(); ?>
 
 <?= $this->section('script') ?>
 <script>
-    function commarize(min) {
+function commarize(min) {
           min = min || 1e3;
           // Alter numbers larger than 1k
           if (this >= min) {
@@ -320,7 +501,7 @@
           // return formatted original number
           return this.toLocaleString();
         }
-        
+
         Number.prototype.commarize = commarize;
         String.prototype.commarize = commarize;
             const DATA_COUNT = 2022;
@@ -328,6 +509,10 @@
         for (let i = 2011; i <= DATA_COUNT; ++i) {
           labels.push(i.toString());
         }
+
+switch (window.location.pathname.split('/')[2]) {
+  case 'econometric':
+            
     const chartIndonesiaRoadLength = document.getElementById(
           "chartIndonesiaRoadLength"
         );
@@ -522,8 +707,12 @@
           chartIndonesiaRoadGDPperCapitalConfig
         );
 
-        //07. Indonesia Vehicle Sales
-        const chartIndonesiaVehicleSales = document.getElementById(
+
+    break;
+  case 'historical':
+    
+    //07. Indonesia Vehicle Sales
+    const chartIndonesiaVehicleSales = document.getElementById(
           "chartIndonesiaVehicleSales"
         );
         const chartIndonesiaVehicleSalesDataPoints = [1032603, 5100, 10327, 10];
@@ -765,169 +954,220 @@
 
     new Chart(ctx22, config2);
 
-    const ctx44 = document.getElementById('chart4').getContext('2d');
 
-const vehicleSalesComparisonData = {
-    labels: [
-        '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
-        '2019', '2020', '2021', '2022'
-    ],
-    datasets: [
-        {
-            label: 'Indonesia',
-            data: [
-                894164, 1116230, 1229811, 1208028, 1013518, 1062694, 
-                1077364, 1151308, 1030126, 532407, 887202, 1048040
-            ],
-            backgroundColor: 'rgba(65, 133, 250, 0.8)',
-            borderColor: 'rgba(65, 133, 250, 1)',
-            borderWidth: 1
-        },
-        {
-            label: 'Malaysia',
-            data: [
-                0, 0, 2474758, 2563872, 2401520, 2203942, 
-                2251800, 2437204, 2517070, 2326804, 2385184, 3045518
-            ],
-            backgroundColor: 'rgba(233, 67, 56, 0.8)',
-            borderColor: 'rgba(233, 67, 56, 1)',
-            borderWidth: 1
-        },
-        {
-            label: 'Thailand',
-            data: [
-                870307, 1285700, 1312383, 914288, 806917, 820939, 
-                92914, 1003191, 1018962, 819077, 780069, 890994
-            ],
-            backgroundColor: 'rgba(240, 193, 9, 0.8)',
-            borderColor: 'rgba(240, 193, 9, 1)',
-            borderWidth: 1
-        }
-    ]
-};
+    const ctxtotalsales = document.getElementById('totalSales').getContext('2d');
 
-const config4 = {
-    type: 'bar',
-    data: vehicleSalesComparisonData,
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                display: true,
-                position: 'bottom'
-            },
-            tooltip: {
-                callbacks: {
-                    label: function(context) {
-                        let label = context.dataset.label || '';
-                        if (label) {
-                            label += ': ';
-                        }
-                        label += (context.raw / 1000000).toFixed(2) + 'M'; // Convert to millions
-                        return label;
-                    }
-                }
-            }
-        },
-        scales: {
-            x: {
-                stacked: false
-            },
-            y: {
-                beginAtZero: true,
+      const totalvehicleSalesData = {
+          labels: [
+              '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
+              '2019', '2020', '2021', '2022'
+          ],
+          datasets: [
+              {
+                  label: 'Vehicle Sales (Indonesia)',
+                  data: [
+                      894164, 1116230, 1229811, 1208028, 1013518, 1062694, 
+                      1077364, 1151308, 1030126, 532407, 887202, 1048040
+                  ],
+                  backgroundColor: 'rgba(65, 133, 250, 1.0)',
+                  borderColor: 'rgba(65, 133, 250, 1.0)',
+                  borderWidth: 1
+              }
+          ]
+      };
+
+      const configtotalsales = {
+          type: 'bar',
+          data: totalvehicleSalesData,
+          options: {
+              responsive: true,
+              plugins: {
+                  legend: {
+                      display: false,
+                      position: 'top'
+                  },
+              },
+              scales: {
+                  y: {
+                    ticks: {
+                      callback: function (value, index, ticks) {
+                        return String(value).commarize();
+                      },
+                    },
+                      beginAtZero: true,
+                      title: {
+                          display: true,
+                          text: 'Number of Vehicles Sold'
+                      }
+                      
+                  }
+              }
+          }
+      };
+
+          new Chart(ctxtotalsales, configtotalsales);
+
+          const ctxtotalstock = document.getElementById('totalStock').getContext('2d');
+
+          const vehicletotalStockDataIndonesia = {
+          labels: [
+          '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
+          '2019', '2020', '2021', '2022'
+          ],
+          datasets: [
+          {
+              label: 'Vehicle Stock (Indonesia)',
+              data: [
+                  894164, 2010394, 3240205, 4448233, 5461751, 6524445, 
+                  7601809, 8753117, 9783243, 10315650, 11202852, 12250892
+              ],
+              backgroundColor: 'rgba(65, 133, 250, 1.0)',
+              borderColor: 'rgba(65, 133, 250, 1.0)',
+              borderWidth: 1
+          }
+          ]
+          };
+
+          const configtotalstock = {
+          type: 'bar',
+          data: vehicletotalStockDataIndonesia,
+          options: {
+          responsive: true,
+          plugins: {
+              legend: {
+                  display: false,
+                  position: 'top'
+              },
+          },
+          scales: {
+              y: {
                 ticks: {
-                    callback: function(value) {
-                        return (value / 1000000) + 'M'; // Display y-axis in millions
-                    }
-                }
-            }
-        }
-    }
-};
+                  callback: function (value, index, ticks) {
+                    return String(value).commarize();
+                  },
+                },
+                  beginAtZero: true,
+                  title: {
+                      display: true,
+                      text: 'Number of Vehicles in Stock'
+                  }
+              }
+          }
+          }
+          };
 
-new Chart(ctx44, config4);
+    new Chart(ctxtotalstock, configtotalstock);
 
-
-const ctx55 = document.getElementById('chart5').getContext('2d');
-
-const groupedVehicleSalesData = {
-    labels: [
-        '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
-        '2019', '2020', '2021', '2022'
-    ],
-    datasets: [
-        {
-            label: 'Indonesia',
-            data: [
-                894164, 2010394, 3240205, 4448233, 5461751, 6524445, 
-                7601809, 8753117, 9783243, 10315650, 11202852, 12250892
-            ],
-            backgroundColor: 'rgba(65, 133, 250, 0.8)',
-            borderColor: 'rgba(65, 133, 250, 1)',
-            borderWidth: 1
-        },
-        {
-            label: 'Malaysia',
-            data: [
-                0, 0, 2474758, 5038630, 7440150, 9644092, 
-                11895892, 14333096, 16850166, 19176970, 21562154, 24607672
-            ],
-            backgroundColor: 'rgba(233, 67, 56, 0.8)',
-            borderColor: 'rgba(233, 67, 56, 1)',
-            borderWidth: 1
-        },
-        {
-            label: 'Thailand',
-            data: [
-                870307, 2156007, 3468390, 4382678, 5189595, 6010534, 
-                6939674, 7942865, 8961827, 9780904, 10560973, 11451967
-            ],
-            backgroundColor: 'rgba(240, 193, 9, 0.8)',
-            borderColor: 'rgba(240, 193, 9, 1)',
-            borderWidth: 1
-        }
-    ]
-};
-
-const config5 = {
-    type: 'bar',
-    data: groupedVehicleSalesData,
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
+        //11. Historical Indonesia ICE Vechicle Sales
+        const chartHistoricalIndonesiaICEVechicleSales = document.getElementById(
+                  "chartHistoricalIndonesiaICEVechicleSales"
+                );
+        
+        const chartHistoricalIndonesiaICEVechicleSalesDataPoints = [
+          894164, 1116230, 1229811, 1208028, 1013518, 1062694, 1077364, 1151308,
+          1029775, 531175, 884009, 1032603,
+        ];
+        
+        const chartHistoricalIndonesiaICEVechicleSalesData = {
+          labels: labels,
+          datasets: [
+            {
+              label: "ICE Vehicle Sales",
+              data: chartHistoricalIndonesiaICEVechicleSalesDataPoints,
+              backgroundColor: "#4285f4",
+            },
+          ],
+        };
+        
+        const chartHistoricalIndonesiaICEVechicleSalesConfig = {
+          type: "bar",
+          data: chartHistoricalIndonesiaICEVechicleSalesData,
+          options: {
+            plugins: {
+              legend: {
+                position: "bottom",
+              },
+              title: {
                 display: true,
-                position: 'bottom'
+                text: "11. Historical Indonesia ICE Vechicle Sales",
+              },
             },
-            tooltip: {
-                callbacks: {
-                    label: function(context) {
-                        let label = context.dataset.label || '';
-                        if (label) {
-                            label += ': ';
-                        }
-                        label += (context.raw / 1000000).toFixed(2) + 'M'; // Convert to millions
-                        return label;
-                    }
-                }
-            }
-        },
-        scales: {
-            x: {
-                grouped: true,
-            },
-            y: {
-                beginAtZero: true,
+            responsive: true,
+            scales: {
+              y: {
                 ticks: {
-                    callback: function(value) {
-                        return (value / 1000000) + 'M'; // Display y-axis in millions
-                    }
-                }
-            }
-        }
-    }
-};
+                  callback: function (value, index, ticks) {
+                    return String(value).commarize();
+                  },
+                },
+              },
+            },
+          },
+        };
+        
+        new Chart(
+          chartHistoricalIndonesiaICEVechicleSales,
+          chartHistoricalIndonesiaICEVechicleSalesConfig
+        );
+        
+        //12. Historical Indonesia ICE Vechicle Stock
+        const chartHistoricalIndonesiaICEVechicleStock = document.getElementById(
+          "chartHistoricalIndonesiaICEVechicleStock"
+        );
+        
+        const chartHistoricalIndonesiaICEVechicleStockDataPoints = [
+          894164, 2010394, 3240205, 4448233, 5461751, 6524445, 7601809, 8753117,
+          9782892, 10314067, 11198076, 12230679,
+        ];
+        
+        const chartHistoricalIndonesiaICEVechicleStockData = {
+          labels: labels,
+          datasets: [
+            {
+              label: "ICE Vehicle Stock",
+              data: chartHistoricalIndonesiaICEVechicleStockDataPoints,
+              backgroundColor: "#4285f4",
+            },
+          ],
+        };
+        
+        const chartHistoricalIndonesiaICEVechicleStockConfig = {
+          type: "bar",
+          data: chartHistoricalIndonesiaICEVechicleStockData,
+          options: {
+            plugins: {
+              legend: {
+                position: "bottom",
+              },
+              title: {
+                display: true,
+                text: "12. Historical Indonesia ICE Vechicle Stock",
+              },
+            },
+            responsive: true,
+            scales: {
+              y: {
+                ticks: {
+                  callback: function (value, index, ticks) {
+                    return String(value).commarize();
+                  },
+                },
+              },
+            },
+          },
+        };
+        
+        new Chart(
+          chartHistoricalIndonesiaICEVechicleStock,
+          chartHistoricalIndonesiaICEVechicleStockConfig
+        );
+    break;
 
-new Chart(ctx55, config5);
+  
+    default:
+    break;
+}
+        
+        
 </script>
 <?= $this->endSection(); ?>
