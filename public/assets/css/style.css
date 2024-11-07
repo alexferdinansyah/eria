@@ -15,6 +15,7 @@ body {
 .top-header {
   position: sticky;
   top: 0;
+  z-index: 9999;
 }
 
 nav {
@@ -1611,6 +1612,7 @@ img {
 }
 
 #dropdown-item {
+  text-align: center;
   margin-bottom: 15px;
 }
 
@@ -1639,12 +1641,13 @@ img {
         position: relative;
         user-select: none;
         width: 100%;
+        z-index: 1;
     }
 
     .header-list_container {
         display: flex;
         justify-content: start;
-        align-items: start;
+        align-items: center;
         gap: 10px;
         padding: 10px;
         padding-bottom: 5px;
@@ -1653,6 +1656,7 @@ img {
     .header-list_container p {
         margin: 0px;
         font-weight: bold;
+        color: black;
     }
 
     .dropdown-popup__list-container::-webkit-scrollbar {
@@ -1692,9 +1696,11 @@ img {
     }
 
     .dropdown-popup__button {
+        margin-top: 10px;
         line-height: 2em;
         background-color: #fff;
-        padding: 0.5em;
+        padding: 0.3em;
+        padding-left: 20px;
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
@@ -1704,7 +1710,6 @@ img {
         color: inherit;
         font-family: inherit;
         outline: none;
-        font-weight: bold;
         width: 100%;
     }
 
@@ -1768,4 +1773,9 @@ img {
     .header-list_container label {
         padding: 0px;
         margin: 0px;
+    }
+
+    .dropdown-popup__list a {
+      color: #000;
+      font-weight: bold;
     }
