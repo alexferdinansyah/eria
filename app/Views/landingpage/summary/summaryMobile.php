@@ -4,8 +4,8 @@
 
 <?= $this->section('header') ?>
 <div class="banners">
+  <img src="<?= base_url('assets/images/nations/flags/indonesia.svg'); ?>" alt="">    
     <h2>Indonesia</h2>
-    <img src="<?= base_url('assets/images/nations/flags/indonesia.svg'); ?>" alt="">    
 </div>
 <div class="low-banner">
     <p class="<?= $cat == 'econometric'? 'foc' :'' ?>">Summary</p>
@@ -58,8 +58,8 @@
 
                   </div>
 
-                <h1 style="font-size:12px; margin-left:12px">Historical Road Length, Population, & GDP Per Capita</h1>
-                <p style="font-size:10px; margin-left:12px; ">Total number of Historical Road Length, Population, & GDP Per Capita</p>
+                <h1 style="font-size:12px; margin-left:12px">Road Length, Population, & GDP Per Capita</h1>
+                <p style="font-size:10px; margin-left:12px; ">Total number of Road Length, Population, & GDP Per Capita</p>
 
                 <section class="bar-dropdown">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
@@ -73,48 +73,71 @@
                         <a href="#">print Chart</a>
                     </div>
 
-                    <div class="bar-dropdown-menu scroll">
+                    <div class="bar-dropdown-menu">
                         <div class="back-btn">
                             <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
                         </div>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
                             <span>Brunei</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+                            <span>Singapore</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
                             <span>Cambodia</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
                             <span>Laos</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
                             <span>Malaysia</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
                             <span>Myanmar</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
                             <span>philippines</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
                             <span>Thailand</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
                             <span>Vietnam</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <button class="show-btn">Show</button>
@@ -134,7 +157,7 @@
                     <canvas id="chartIndonesiaPopulation"></canvas>
                 </div>
 
-                <h1 style="font-size:12px; margin-left:12px">GDP Per Capita (Current  US$)</h1>
+                <h1 style="font-size:12px; margin-left:12px">GDP Per Capita Current  US$(In Thousand)</h1>
                 <div class="chart-parent">
                     <canvas id="chartIndonesiaRoadGDPperCapital"></canvas>
                 </div>
@@ -160,48 +183,64 @@
                     <a href="#">print Chart</a>
                 </div>
 
-                <div class="bar-dropdown-menu scroll">
+                <div class="bar-dropdown-menu">
                         <div class="back-btn">
                             <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
                         </div>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
                             <span>Brunei</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
-                            <img  src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
-                            <span>Cambodia</span>
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+                            <span>Singapore</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
                             <span>Laos</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
                             <span>Malaysia</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
                             <span>Myanmar</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
                             <span>philippines</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
                             <span>Thailand</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
                             <span>Vietnam</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <button class="show-btn">Show</button>
@@ -213,15 +252,15 @@
 
             <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
             <div class="chart-parent">
-                <canvas id="chartIndonesiaVehicleSales"></canvas>
+                <canvas style="margin-left:12px;" id="chartIndonesiaVehicleSales"></canvas>
             </div>
 
             <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
-            <div class="chart-parent">
-                <canvas id="chartIndonesiaVehicleStock"></canvas>
+            <div  class="chart-parent">
+                <canvas style="margin-left:12px;" id="chartIndonesiaVehicleStock"></canvas>
             </div>
 
-            <h1 style="font-size:12px; margin-left:12px">Historical ICE Vechicle Sales and Stock</h1>
+            <h1 style="font-size:12px; margin-left:12px">ICE Vechicle Sales and Stock</h1>
             <p style="font-size:10px; margin-left:12px; ">Total number of ICE Vehicle Sales and Stock</p>
 
             <section class="bar-dropdown">
@@ -236,48 +275,64 @@
                     <a href="#">print Chart</a>
                 </div>
 
-                <div class="bar-dropdown-menu scroll">
+                <div class="bar-dropdown-menu">
                         <div class="back-btn">
                             <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
                         </div>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
                             <span>Brunei</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
-                            <img  src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
-                            <span>Cambodia</span>
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+                            <span>Singapore</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
                             <span>Laos</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
                             <span>Malaysia</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
                             <span>Myanmar</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
                             <span>philippines</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
                             <span>Thailand</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
                             <span>Vietnam</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <button class="show-btn">Show</button>
@@ -288,17 +343,17 @@
             </section>
 
             
-            <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
+            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
             <div class="chart-parent">
                 <canvas id="chartHistoricalIndonesiaICEVechicleSales"></canvas>
             </div>
 
-            <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
+            <h1 style="font-size:12px; margin-left:12px">Stock Data (In Million)</h1>
             <div class="chart-parent">
                 <canvas id="chartHistoricalIndonesiaICEVechicleStock"></canvas>
             </div>
 
-            <h1 style="font-size:12px; margin-left:12px">Historical HEV, BEV, PHEV Vechicle Sales & Stock</h1>
+            <h1 style="font-size:12px; margin-left:12px">HEV, BEV, PHEV Vechicle Sales & Stock</h1>
             <p style="font-size:10px; margin-left:12px; ">Total number of PHEV, BEV, HEV Vehicle Sales</p>
             
             <section class="bar-dropdown">
@@ -313,48 +368,64 @@
                     <a href="#">print Chart</a>
                 </div>
 
-                <div class="bar-dropdown-menu scroll">
+                <div class="bar-dropdown-menu">
                         <div class="back-btn">
                             <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
                         </div>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
                             <span>Brunei</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
-                            <img  src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
-                            <span>Cambodia</span>
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+                            <span>Singapore</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
                             <span>Laos</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
                             <span>Malaysia</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
                             <span>Myanmar</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
                             <span>philippines</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
                             <span>Thailand</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
                             <span>Vietnam</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <button class="show-btn">Show</button>
@@ -364,19 +435,19 @@
             
             </section>
             
-            <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
+            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
             <div class="chart-parent">
                 <canvas id="chart1"></canvas>
             </div>
             
-            <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
+            <h1 style="font-size:12px; margin-left:12px">Stock Data (In Thousand)</h1>
             <div class="chart-parent">
                 <canvas id="chart2"></canvas>
             </div>
 
             
             <h1 style="font-size:12px; margin-left:12px">Total of Histroical Vechicle Sales & Stock</h1>
-            <p style="font-size:10px; margin-left:12px; ">Total number of Historical Vehicle Sales & Stock</p>
+            <p style="font-size:10px; margin-left:12px; ">Total number of Vehicle Sales & Stock</p>
             
             <section class="bar-dropdown">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
@@ -390,7 +461,7 @@
                     <a href="#">print Chart</a>
                 </div>
 
-                <div class="bar-dropdown-menu scroll">
+                <div class="bar-dropdown-menu">
                     <div class="back-btn">
                         <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
                     </div>
@@ -409,18 +480,17 @@
             
             </section>
                     
-            <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
+            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
             <div class="chart-parent">
                 <canvas id="totalSales"></canvas>
             </div>
             
                     
-            <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
+            <h1 style="font-size:12px; margin-left:12px">Stock Data (in Million)</h1>
             <div class="chart-parent">
                 <canvas id="totalStock"></canvas>
             </div>
 
-            <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
             <div class="table-con p-2">
                     <table class="table">
                         <thead style="font-size:12px;">
@@ -477,8 +547,8 @@
 
         <!-- forcasting start -->
         <?php if($cat == 'forcasting'): ?>   
-                <h1 style="font-size:14px; margin:12px">Historical Road Length, Population, & GDP Per Capita</h1>
-                <p style="font-size:10px; margin-left:12px; ">Total number of Historical Road Length, Population, & GDP Per Capita</p>
+                <h1 style="font-size:14px; margin:12px">Road Length, Population, & GDP Per Capita</h1>
+                <p style="font-size:10px; margin-left:12px; ">Total number of Road Length, Population, & GDP Per Capita</p>
 
                 <section class="bar-dropdown">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
@@ -492,48 +562,64 @@
                         <a href="#">print Chart</a>
                     </div>
 
-                    <div class="bar-dropdown-menu scroll">
+                    <div class="bar-dropdown-menu">
                         <div class="back-btn">
                             <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
                         </div>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
                             <span>Brunei</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
-                            <img  src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
-                            <span>Cambodia</span>
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+                            <span>Singapore</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
                             <span>Laos</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
                             <span>Malaysia</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
                             <span>Myanmar</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
                             <span>philippines</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
                             <span>Thailand</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
                             <span>Vietnam</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <button class="show-btn">Show</button>
@@ -545,20 +631,20 @@
 
                 <h1 style="font-size:12px; margin-left:12px">Total Road Lenght (In Thousand)</h1>
                 <div class="chart-parent">
-                    <canvas id="ttlroadl"></canvas>
+                    <canvas style="margin-left:12px;" id="ttlroadl"></canvas>
                 </div>
                 
                 <h1 style="font-size:12px; margin-left:12px">Population (in million)</h1>
                 <div class="chart-parent">
-                    <canvas id="ppln"></canvas>
+                    <canvas style="margin-left:12px;" id="ppln"></canvas>
                 </div>
 
-                <h1 style="font-size:12px; margin-left:12px">GDP Per Capita (Current  US$)</h1>
+                <h1 style="font-size:12px; margin-left:12px">GDP Per Capita Current  US$(In Thousand)</h1>
                 <div class="chart-parent">
-                    <canvas id="gdppc"></canvas>
+                    <canvas style="margin-left:12px;" id="gdppc"></canvas>
                 </div>
 
-                <h1 style="font-size:12px; margin:12px">Historical ICE Vechicle Sales and Stock</h1>
+                <h1 style="font-size:12px; margin:12px">ICE Vechicle Sales and Stock</h1>
                 <p style="font-size:10px; margin-left:12px; ">Total number of ICE Vehicle Sales and Stock</p>
 
                 <section class="bar-dropdown">
@@ -573,48 +659,64 @@
                         <a href="#">print Chart</a>
                     </div>
 
-                    <div class="bar-dropdown-menu scroll">
+                    <div class="bar-dropdown-menu">
                         <div class="back-btn">
                             <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
                         </div>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
                             <span>Brunei</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
-                            <img  src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
-                            <span>Cambodia</span>
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+                            <span>Singapore</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
                             <span>Laos</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
                             <span>Malaysia</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
                             <span>Myanmar</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
                             <span>philippines</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
                             <span>Thailand</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
                             <span>Vietnam</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <button class="show-btn">Show</button>
@@ -636,7 +738,7 @@
                 </div>
 
                 
-                <h1 style="font-size:12px; margin:12px">Historical HEV, BEV, PHEV Vechicle Sales & Stock</h1>
+                <h1 style="font-size:12px; margin:12px">HEV, BEV, PHEV Vechicle Sales & Stock</h1>
                 <p style="font-size:10px; margin-left:12px; ">Total number of PHEV, BEV, HEV Vehicle Sales</p>
 
                 <section class="bar-dropdown">
@@ -651,48 +753,64 @@
                         <a href="#">print Chart</a>
                     </div>
 
-                    <div class="bar-dropdown-menu scroll">
+                    <div class="bar-dropdown-menu">
                         <div class="back-btn">
                             <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
                         </div>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
                             <span>Brunei</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
-                            <img  src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
-                            <span>Cambodia</span>
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+                            <span>Singapore</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
                             <span>Laos</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
                             <span>Malaysia</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
                             <span>Myanmar</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
                             <span>philippines</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
                             <span>Thailand</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
                             <span>Vietnam</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <button class="show-btn">Show</button>
@@ -715,7 +833,7 @@
 
 
                 <h1 style="font-size:12px; margin:12px">Total of Histroical Vechicle Sales & Stock</h1>
-                <p style="font-size:10px; margin-left:12px; ">Total number of Historical Vehicle Sales & Stock</p>
+                <p style="font-size:10px; margin-left:12px; ">Total number of Vehicle Sales & Stock</p>
                 <section class="bar-dropdown">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
                         alt="Menu Icon" class="menuIcon">
@@ -728,48 +846,64 @@
                         <a href="#">print Chart</a>
                     </div>
 
-                    <div class="bar-dropdown-menu scroll">
+                    <div class="bar-dropdown-menu">
                         <div class="back-btn">
                             <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
                         </div>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
                             <span>Brunei</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
-                            <img  src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
-                            <span>Cambodia</span>
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+                            <span>Singapore</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
                             <span>Laos</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
                             <span>Malaysia</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
                             <span>Myanmar</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
                             <span>philippines</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
                             <span>Thailand</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <a href="#">
+                          <div class="left">
                             <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
                             <span>Vietnam</span>
+                          </div>
                             <input type="checkbox" name="" id="">
                         </a>
                         <button class="show-btn">Show</button>
@@ -797,28 +931,35 @@
 
 <?= $this->section('script') ?>
 <script>
-function commarize(min) {
-          min = min || 1e3;
-          // Alter numbers larger than 1k
-          if (this >= min) {
-            var units = ["k", "M", "B", "T"];
-        
-            var order = Math.floor(Math.log(this) / Math.log(1000));
-        
-            var unitname = units[order - 1];
-            var num = Math.floor(this / 1000 ** order);
-        
-            // output number remainder + unitname
-            return num 
-            // + unitname;
-          }
-        
-          // return formatted original number
-          return this.toLocaleString();
-        }
+        function commarize(min, granular = false) {
+  min = min || 1e3;
 
-        Number.prototype.commarize = commarize;
-        String.prototype.commarize = commarize;
+  if (this >= min) {
+    const units = ["k", "M", "B", "T"];
+    const order = Math.floor(Math.log(this) / Math.log(1000));
+
+    if (granular) {
+      // Granular formatting:
+      if (order > 0 && this < Math.pow(1000, order + 1)) {
+        const num = Math.floor(this / Math.pow(1000, order));
+        const unitname = units[order - 1];
+        return num + unitname;
+      }
+    }
+
+    // Standard formatting:
+    const unitname = units[order - 1];
+    const num = Math.floor(this / Math.pow(1000, order));
+    return num + unitname;
+  }
+
+  return this.toLocaleString();
+}
+
+Number.prototype.commarize = commarize;
+String.prototype.commarize = commarize;
+console.log((1000000).commarize(1000, true)); // Output: 1000k
+
             const DATA_COUNT = 2022;
         const labels = [];
         for (let i = 2011; i <= DATA_COUNT; ++i) {
@@ -1030,6 +1171,7 @@ switch (window.location.pathname.split('/')[2]) {
     const chartIndonesiaVehicleSales = document.getElementById(
           "chartIndonesiaVehicleSales"
         );
+
         const chartIndonesiaVehicleSalesDataPoints = [1032603, 5100, 10327, 10];
         
         const chartIndonesiaVehicleSalesData = {
@@ -1064,7 +1206,7 @@ switch (window.location.pathname.split('/')[2]) {
                       return data.labels.map(function (label, i) {
                         const value = data.datasets[0].data[i];
                         return {
-                          text: `${label}: ${String(value).commarize()}`,
+                          text: `${label}: ${value}`, // Normal label formatting
                           fillStyle: data.datasets[0].backgroundColor[i],
                           hidden: false,
                         };
@@ -1097,6 +1239,7 @@ switch (window.location.pathname.split('/')[2]) {
         const chartIndonesiaVehicleStock = document.getElementById(
           "chartIndonesiaVehicleStock"
         );
+
         const chartIndonesiaVehicleStockDataPoints = [12230679, 9012, 11130, 71];
         
         const chartIndonesiaVehicleStockData = {
@@ -1131,7 +1274,7 @@ switch (window.location.pathname.split('/')[2]) {
                       return data.labels.map(function (label, i) {
                         const value = data.datasets[0].data[i];
                         return {
-                          text: `${label}: ${String(value).commarize()}`,
+                          text: `${label}: ${value}`, // Normal label formatting
                           fillStyle: data.datasets[0].backgroundColor[i],
                           hidden: false,
                         };
@@ -1140,10 +1283,6 @@ switch (window.location.pathname.split('/')[2]) {
                     return [];
                   },
                 },
-              },
-              title: {
-                display: false,
-                text: "07. Indonesia Vehicle Sales",
               },
               tooltip: {
                 callbacks: {
@@ -1206,6 +1345,11 @@ switch (window.location.pathname.split('/')[2]) {
                         stacked: true
                     },
                     y: {
+                      ticks: {
+                        callback: function (value, index, ticks) {
+                          return String(value).commarize();
+                        },
+                      },
                         stacked: true,
                     }
                 }
@@ -1262,6 +1406,11 @@ switch (window.location.pathname.split('/')[2]) {
                     y: {
                         stacked: true,
                         beginAtZero: true,
+                        ticks: {
+                          callback: function (value, index, ticks) {
+                            return String(value).commarize();
+                          },
+                        },
                     }
                 }
             }
@@ -1310,10 +1459,6 @@ switch (window.location.pathname.split('/')[2]) {
                           },
                         },
                           beginAtZero: true,
-                          title: {
-                              display: true,
-                              text: 'Number of Vehicles Sold'
-                          }
                           
                       }
                   }
@@ -1362,10 +1507,6 @@ switch (window.location.pathname.split('/')[2]) {
                   },
                 },
                   beginAtZero: true,
-                  title: {
-                      display: true,
-                      text: 'Number of Vehicles in Stock'
-                  }
               }
           }
           }
@@ -1401,10 +1542,6 @@ switch (window.location.pathname.split('/')[2]) {
             plugins: {
               legend: {
                 position: "bottom",
-              },
-              title: {
-                display: true,
-                text: "11. Historical Indonesia ICE Vechicle Sales",
               },
             },
             responsive: true,
@@ -1453,10 +1590,6 @@ switch (window.location.pathname.split('/')[2]) {
             plugins: {
               legend: {
                 position: "bottom",
-              },
-              title: {
-                display: true,
-                text: "12. Historical Indonesia ICE Vechicle Stock",
               },
             },
             responsive: true,
@@ -1931,7 +2064,8 @@ switch (window.location.pathname.split('/')[2]) {
             },
             plugins: {
                 legend: {
-                    display: true // Display legend
+                    display: true,
+                    position: "bottom"
                 },
                 tooltip: {
                     callbacks: {

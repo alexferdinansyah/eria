@@ -565,7 +565,7 @@ nav {
 
 .banners {
   display: flex;
-  justify-content: space-between;
+  gap: 12px;
   align-items: center;
   padding: 12px;
   padding-left: 20px;
@@ -1455,7 +1455,9 @@ img {
   color: black;
   text-decoration: none;
   padding: 8px 12px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .bar-dropdown-menu a:hover {
   background-color: #ddd;
