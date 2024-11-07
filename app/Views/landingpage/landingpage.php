@@ -1114,7 +1114,7 @@
                                         </label>
                                         <p>Choose Country</p>
                                     </div>
-                                    <a href="/summary/brunei">
+                                    <a href="/summarymobile/econometric">
                                         <label for="default">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32">
@@ -1137,7 +1137,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/summary/cambodia">
+                                    <a href="/summarymobile/econometric">
                                         <label for="light">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1156,7 +1156,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/summary/indonesia">
+                                    <a href="/summarymobile/econometric">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1173,7 +1173,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/summary/laos">
+                                    <a href="/summarymobile/econometric">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1192,7 +1192,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/summary/malaysia">
+                                    <a href="/summarymobile/econometric">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1219,7 +1219,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="/summary/myanmar">
+                                    <a href="/summarymobile/econometric">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1239,7 +1239,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="/summary/philippines">
+                                    <a href="/summarymobile/econometric">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1259,7 +1259,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="/summary/singapore">
+                                    <a href="/summarymobile/econometric">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1283,7 +1283,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="/summary/thailand">
+                                    <a href="/summarymobile/econometric">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1304,7 +1304,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="/summary/vietnam">
+                                    <a href="/summarymobile/econometric">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1394,7 +1394,7 @@
     const singapur = document.getElementById('singapura-3');
 
     text.style.position = "absolute";
-    text.style.transition = "opacity 0.5s ease";
+    text.style.transition = "0.5s";
     text.style.opacity = "0";
     text.style.visibility = "hidden";
 
@@ -1419,7 +1419,7 @@
     // Function to handle the click event
     function setupCountryClick(countryElement, countryName) {
         countryElement.addEventListener('click', () => {
-            window.location.href = `/summary/${countryName.toLowerCase()}`
+            window.location.href = `/summarymobile/econometric`
         });
     }
 
