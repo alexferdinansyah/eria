@@ -2,16 +2,20 @@
 
 <?= $this->section('content') ?>
 
+<?= $this->section('header') ?>
 <div class="banners">
     <h2>Indonesia</h2>
     <img src="<?= base_url('assets/images/nations/flags/indonesia.svg'); ?>" alt="">    
 </div>
 <div class="low-banner">
-    <p class="<?= $cat == 'econometric'? 'foc' :'' ?>">Econometric</p>
+    <p class="<?= $cat == 'econometric'? 'foc' :'' ?>">Summary</p>
     <p class="<?= $cat == 'historical'? 'foc' :'' ?>">Historical</p>
     <p class="<?= $cat == 'forcasting'? 'foc' :'' ?>">Forcasting</p>
 
 </div>
+
+<?= $this->endSection(); ?>
+
 
 <div class="row">
     <div class="summary-wrapper">
@@ -19,7 +23,6 @@
               <!-- econometric start -->
                   <div class="row row-cols-1 row-cols-md-2 justify-content-evenly mb-4">
                       <div class="content-summary">
-                          <h2>Summary</h2>
                           <section class="container-sum">
                               <div>
                                   <p>Population</p>

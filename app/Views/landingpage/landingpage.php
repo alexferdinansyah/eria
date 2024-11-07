@@ -1356,7 +1356,7 @@
 
 <!---------------------------------------------------------- UPDATE NEWS ---------------------------------------------------------->
 <h3 class="update">Updates</h3>
-<!-- <section class="container my-5">
+<section class="container my-5">
     <div class="row">
         <a style="text-decoration:none;" class="col-md-4 col-6 grid-item news">
             <img src="https://www.eria.org//uploads/articles/20150119/eria_capacity-building_phnom-penh_jan-19-20-cropped.jpg" alt="Capacity Building">
@@ -1371,7 +1371,7 @@
             <p class="news-p">Phnom Penh, 4 July 2024: ERIA President Tetsuya Watanabe paid a courtesy visit to Cambodia’s Deputy Prime Minister and Minister of Economy and Finance, H.E. Dr Aun Pornmoniroth.</p>
         </a>
     </div>
-</section> -->
+</section>
 
 <!---------------------------------------------------------- FOOTER  ---------------------------------------------------------->
 

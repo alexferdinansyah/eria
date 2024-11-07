@@ -12,6 +12,12 @@ body {
   --blue: #103979;
 }
 
+.top-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
 nav {
   padding: 10px;
   display: flex;
@@ -580,8 +586,6 @@ nav {
 }
 
 .low-banner{
-  position: sticky;
-  top: 0;
   display: flex;
   column-gap: 8px;
   background-color: var(--blue);
