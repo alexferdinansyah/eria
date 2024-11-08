@@ -1,4 +1,3 @@
-        const lowbanner = document.getElementsByClassName("low-banner");
         const menuIcon = document.getElementsByClassName("menuIcon");
         const compare = document.getElementsByClassName("compare");
         const dropdownMenu = document.getElementsByClassName("bar-dropdown-menu")
@@ -9,19 +8,6 @@
           window.location.href = `${origin}/summarymobile/compare/econometric`              
         }
 
-        Array.from(lowbanner[0].getElementsByTagName("p")).forEach((p, i) => {
-          p.addEventListener('click', () => {
-            if (i == 0) {
-              window.location.href = `${origin}/summarymobile/econometric`              
-            }
-            else if(i == 1){
-              window.location.href = `${origin}/summarymobile/historical`
-            }
-            else{
-              window.location.href = `${origin}/summarymobile/forcasting`
-            }
-          })
-        })
         Array.from(menuIcon).forEach((menu, i) => {
           const start = i*2
           

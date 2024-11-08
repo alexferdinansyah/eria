@@ -21,8 +21,8 @@ $routes->get('/news/details', 'LandingController::newsDetail');
 $routes->get('/events', 'LandingController::events');
 $routes->get('/events/detail', 'LandingController::eventsDetail');
 
-$routes->get('/summary/(:segment)', 'LandingController::summary/$1');
-$routes->get('/summarymobile/(:segment)', 'LandingController::summaryMobile/$1');
+// $routes->get('/summary/(:segment)', 'LandingController::summary/$1');
+$routes->get('/summarymobile/(:segment)/(:segment)', 'LandingController::summaryMobile/$1/$2');
 $routes->get('/summarymobile/compare/(:segment)', 'LandingController::compare/$1');
 
 

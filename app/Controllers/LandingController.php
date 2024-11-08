@@ -1361,7 +1361,8 @@ class LandingController extends BaseController
         return view('/landingpage/summary', $data);
     }
 
-    public function summaryMobile($cat){
+    public function summaryMobile($cat, $nat){
+        $data["nat"] = $nat;   //negara
         $data["cat"] = $cat;   
         $data["population"] = "99,474";
         $data["ttlland"] = "33,1345";
@@ -1578,7 +1579,12 @@ class LandingController extends BaseController
                 </li>
             </ol>
             ';
-        return view('/landingpage/summary/summaryMobile', $data);
+
+            if($nat == "indonesia"){
+                return view('/landingpage/summary/nations/indonesia', $data);
+            }else{
+                echo "gblk";
+            }
     }
 
     public function compare($cat){

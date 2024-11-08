@@ -149,17 +149,17 @@
 
                 <h1 style="font-size:12px; margin-left:12px">Total Road Lenght (In Thousand)</h1>
                 <div class="chart-parent">
-                    <canvas id="chartIndonesiaRoadLength"></canvas>
+                    <canvas id="chartCompareIndonesiaRoadLength"></canvas>
                 </div>
 
                 <h1 style="font-size:12px; margin-left:12px">Population (in million)</h1>
                 <div class="chart-parent">
-                    <canvas id="chartIndonesiaPopulation"></canvas>
+                    <canvas id="chartCompareIndonesiaPopulation"></canvas>
                 </div>
 
                 <h1 style="font-size:12px; margin-left:12px">GDP Per Capita Current  US$(In Thousand)</h1>
                 <div class="chart-parent">
-                    <canvas id="chartIndonesiaRoadGDPperCapital"></canvas>
+                    <canvas id="chartCompareIndonesiaRoadGDPperCapital"></canvas>
                 </div>
                       
         <?php endif; ?>
@@ -931,34 +931,51 @@
 
 <?= $this->section('script') ?>
 <script>
-        function commarize(min, granular = false) {
-  min = min || 1e3;
+          const lowbanner = document.getElementsByClassName("low-banner");
 
-  if (this >= min) {
-    const units = ["k", "M", "B", "T"];
-    const order = Math.floor(Math.log(this) / Math.log(1000));
-
-    if (granular) {
-      // Granular formatting:
-      if (order > 0 && this < Math.pow(1000, order + 1)) {
-        const num = Math.floor(this / Math.pow(1000, order));
-        const unitname = units[order - 1];
-        return num + unitname;
-      }
+Array.from(lowbanner[0].getElementsByTagName("p")).forEach((p, i) => {
+  p.addEventListener('click', () => {
+    if (i == 0) {
+      window.location.href = `${origin}/summarymobile/compare/econometric`              
     }
+    else if(i == 1){
+      window.location.href = `${origin}/summarymobile/compare/historical`
+    }
+    else{
+      window.location.href = `${origin}/summarymobile/compare/forcasting`
+    }
+  })
+})
 
-    // Standard formatting:
-    const unitname = units[order - 1];
-    const num = Math.floor(this / Math.pow(1000, order));
-    return num + unitname;
-  }
+        function commarize(min, scale = "default") {
+          min = min || 1e3;
+          let value = this;
 
-  return this.toLocaleString();
-}
+          // Adjust value based on scale option
+          if (scale === "million") {
+            value /= 1e6;
+            if (value < 1) return value.toFixed(1); // e.g., "0.1" for 100k in million scale
+          } else if (scale === "thousand") {
+            value /= 1e3;
+          }
 
-Number.prototype.commarize = commarize;
-String.prototype.commarize = commarize;
-console.log((1000000).commarize(1000, true)); // Output: 1000k
+          // Alter numbers larger than 1k
+          if (value >= min) {
+            const units = ["k", "M", "B", "T"];
+            const order = Math.floor(Math.log(value) / Math.log(1000));
+            const unitname = units[order - 1];
+            const num = (value / 1000 ** order).toFixed(1); // Keeps one decimal place
+
+            // Output number remainder + unitname
+            return num;
+          }
+
+          // Return formatted original number
+          return value.toLocaleString();
+        }
+
+        Number.prototype.commarize = commarize;
+        String.prototype.commarize = commarize;
 
             const DATA_COUNT = 2022;
         const labels = [];
@@ -966,201 +983,246 @@ console.log((1000000).commarize(1000, true)); // Output: 1000k
           labels.push(i.toString());
         }
 
-switch (window.location.pathname.split('/')[2]) {
+switch (window.location.pathname.split('/')[3]) {
   case 'econometric':
             
-    const chartIndonesiaRoadLength = document.getElementById(
-          "chartIndonesiaRoadLength"
+    //04. Compare Indonesia Road Length
+    const chartCompareIndonesiaRoadLength = document.getElementById(
+          "chartCompareIndonesiaRoadLength"
         );
-        const chartIndonesiaRoadLengthDataPoints = [
+
+        console.log(chartCompareIndonesiaRoadLength)
+        
+        const chartCompareIndonesiaRoadLengthIndonesiaDataPoints = [
           492398, 501969, 508000, 517753, 529073, 537838, 539353, 542310, 544474,
           548366, 546116, 548097,
         ];
-        const chartIndonesiaRoadLengthData = {
-          labels: labels,
-          datasets: [
-            {
-              label: "Indonesia Road Length",
-              data: chartIndonesiaRoadLengthDataPoints,
-              borderColor: "#4285f4",
-              fill: false,
-              tension: 0.4,
-            },
-          ],
-        };
-        
-        const chartIndonesiaRoadLengthConfig = {
-          type: "line",
-          data: chartIndonesiaRoadLengthData,
-          options: {
-            responsive: true,
-            plugins: {
-              legend: {
-                display: false,
-              },
-              title: {
-                display: false,
-                text: "01. Indonesia Road Length",
-              },
-            },
-            interaction: {
-              intersect: false,
-            },
-            scales: {
-              x: {
-                display: true,
-                title: {
-                  display: true,
-                },
-              },
-              y: {
-                ticks: {
-                  callback: function (value, index, ticks) {
-                    return String(value).commarize();
-                  },
-                },
-                display: true,
-                title: {
-                  display: true,
-                },
-                suggestedMin: 0,
-                suggestedMax: 1000000,
-              },
-            },
-          },
-        };
-        
-        new Chart(chartIndonesiaRoadLength, chartIndonesiaRoadLengthConfig);
-
-        // 02. Indonesia Population
-        const chartIndonesiaPopulation = document.getElementById(
-          "chartIndonesiaPopulation"
-        );
-        const chartIndonesiaPopulationDataPoints = [
-          241911000, 245425000, 248818000, 252165000, 255462000, 258705000, 261891000,
-          264161600, 266911900, 270203917, 272682500, 275773800,
+        const chartCompareIndonesiaRoadLengthMalaysiaDataPoints = [
+          155427, 180882, 202333, 201794, 214816, 238790, 237022, 250023, 256494,
+          267012, 303016, 281302,
         ];
-        const chartIndonesiaPopulationData = {
-          labels: labels,
-          datasets: [
-            {
-              label: "Indonesia Populations",
-              data: chartIndonesiaPopulationDataPoints,
-              borderColor: "#4285f4",
-              fill: false,
-              tension: 0.4,
-            },
-          ],
-        };
-        
-        const chartIndonesiaPopulationConfig = {
-          type: "line",
-          data: chartIndonesiaPopulationData,
-          options: {
-            responsive: true,
-            plugins: {
-              legend: {
-                display: false,
-              },
-              title: {
-                display: false,
-                text: "02. Indonesia Populations",
-              },
-            },
-            interaction: {
-              intersect: false,
-            },
-            scales: {
-              x: {
-                display: true,
-                title: {
-                  display: true,
-                },
-              },
-              y: {
-                ticks: {
-                  callback: function (value, index, ticks) {
-                    return String(value).commarize();
-                  },
-                },
-                display: true,
-                title: {
-                  display: true,
-                },
-                suggestedMin: 0,
-                suggestedMax: 400000000,
-              },
-            },
-          },
-        };
-        
-        new Chart(chartIndonesiaPopulation, chartIndonesiaPopulationConfig);
-
-        //03. Indonesia Road GDP per Capital
-        const chartIndonesiaRoadGDPperCapital = document.getElementById(
-          "chartIndonesiaRoadGDPperCapital"
-        );
-        
-        const chartIndonesiaRoadGDPperCapitalDataPoints = [
-          3614, 3668, 3603, 3477, 3323, 3559, 3840, 3903, 4151, 3896, 4334, 4778,
+        const chartCompareIndonesiaRoadLengthThailandDataPoints = [
+          231216, 231790, 232196, 233175, 454025, 455653, 456487, 701847, 702210,
+          702723, 702970, 703594,
         ];
-        const chartIndonesiaRoadGDPperCapitalData = {
+        const chartCompareIndonesiaRoadLengthData = {
           labels: labels,
           datasets: [
             {
-              label: "Indonesia Road GDP per Capital",
-              data: chartIndonesiaRoadGDPperCapitalDataPoints,
+              label: "Indonesia",
+              data: chartCompareIndonesiaRoadLengthIndonesiaDataPoints,
               borderColor: "#4285f4",
               fill: false,
               tension: 0.4,
+              backgroundColor: "#4285f4",
+            },
+            {
+              label: "Malaysia",
+              data: chartCompareIndonesiaRoadLengthMalaysiaDataPoints,
+              borderColor: "#ea4335",
+              fill: false,
+              tension: 0.4,
+              backgroundColor: "#ea4335",
+            },
+            {
+              label: "Thailand",
+              data: chartCompareIndonesiaRoadLengthThailandDataPoints,
+              borderColor: "#fbbc04",
+              fill: false,
+              tension: 0.4,
+              backgroundColor: "#fbbc04",
             },
           ],
         };
         
-        const chartIndonesiaRoadGDPperCapitalConfig = {
+        const chartCompareIndonesiaRoadLengthConfig = {
           type: "line",
-          data: chartIndonesiaRoadGDPperCapitalData,
+          data: chartCompareIndonesiaRoadLengthData,
           options: {
             responsive: true,
             plugins: {
               legend: {
-                display: false,
-              },
-              title: {
-                display: false,
-                text: "03. Indonesia Road GDP per Capital",
-              },
+                display: true,
+                position: "bottom",
+              }
             },
             interaction: {
               intersect: false,
             },
             scales: {
-              x: {
-                display: true,
-                title: {
-                  display: true,
-                },
-              },
               y: {
                 ticks: {
                   callback: function (value, index, ticks) {
-                    return String(value).commarize();
+                    return String(value).commarize(1e3, "thousand");
                   },
                 },
                 display: true,
-                title: {
-                  display: true,
-                },
-                suggestedMin: 0,
-                suggestedMax: 5000,
+                
               },
             },
           },
         };
         
         new Chart(
-          chartIndonesiaRoadGDPperCapital,
-          chartIndonesiaRoadGDPperCapitalConfig
+          chartCompareIndonesiaRoadLength,
+          chartCompareIndonesiaRoadLengthConfig
+        );
+        
+        //05. Compare Indonesia Population
+        const chartCompareIndonesiaPopulation = document.getElementById(
+          "chartCompareIndonesiaPopulation"
+        );
+        
+        const chartCompareIndonesiaPopulationIndonesiaDataPoints = [
+          241911000, 245425000, 248818000, 252165000, 255462000, 258705000, 261891000,
+          264161600, 266911900, 270203917, 272682500, 275773800,
+        ];
+        const chartCompareIndonesiaPopulationMalaysiaDataPoints = [
+          29184133, 29660212, 30134807, 30606459, 31068833, 31526418, 31975806,
+          32399271, 32804020, 33199993, 33573874, 33938221,
+        ];
+        const chartCompareIndonesiaPopulationThailandDataPoints = [
+          64076000, 64456695, 64785909, 65124716, 65729098, 65931550, 66188503,
+          66413979, 66558935, 66186727, 66171439, 66090475,
+        ];
+        const chartCompareIndonesiaPopulationData = {
+          labels: labels,
+          datasets: [
+            {
+              label: "Indonesia",
+              data: chartCompareIndonesiaPopulationIndonesiaDataPoints,
+              borderColor: "#4285f4",
+              fill: false,
+              tension: 0.4,
+              backgroundColor: "#4285f4",
+            },
+            {
+              label: "Malaysia",
+              data: chartCompareIndonesiaPopulationMalaysiaDataPoints,
+              borderColor: "#ea4335",
+              fill: false,
+              tension: 0.4,
+              backgroundColor: "#ea4335",
+            },
+            {
+              label: "Thailand",
+              data: chartCompareIndonesiaPopulationThailandDataPoints,
+              borderColor: "#fbbc04",
+              fill: false,
+              tension: 0.4,
+              backgroundColor: "#fbbc04",
+            },
+          ],
+        };
+        
+        const chartCompareIndonesiaPopulationConfig = {
+          type: "line",
+          data: chartCompareIndonesiaPopulationData,
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: true,
+                position: "bottom",
+              },
+            },
+            interaction: {
+              intersect: false,
+            },
+            scales: {              
+              y: {
+                ticks: {
+                  callback: function (value, index, ticks) {
+                    return String(value).commarize(1e3, "million");
+                  },
+                },
+                display: true,
+              },
+            },
+          },
+        };
+        
+        new Chart(
+          chartCompareIndonesiaPopulation,
+          chartCompareIndonesiaPopulationConfig
+        );
+        
+        //06. Compare Indonesia Road GDP per Capital
+        const chartCompareIndonesiaRoadGDPperCapital = document.getElementById(
+          "chartCompareIndonesiaRoadGDPperCapital"
+        );
+        
+        const chartCompareIndonesiaRoadGDPperCapitalIndonesiaDataPoints = [
+          3614, 3668, 3603, 3477, 3323, 3559, 3840, 3903, 4151, 3896, 4334, 4778,
+        ];
+        const chartCompareIndonesiaRoadGDPperCapitalMalaysiaDataPoints = [
+          10209.37, 10601.51, 10727.67, 11045.58, 9699.6, 9555.67, 9979.7, 11073.98,
+          11132.1, 10164.34, 11134.62, 11993.19,
+        ];
+        const chartCompareIndonesiaRoadGDPperCapitalThailandDataPoints = [
+          5396.64, 5748.63, 6041.13, 5822.38, 5708.79, 5854.46, 6436.79, 7124.56,
+          7628.58, 7001.85, 7070.51, 6913.05,
+        ];
+        const chartCompareIndonesiaRoadGDPperCapitalData = {
+          labels: labels,
+          datasets: [
+            {
+              label: "Indonesia",
+              data: chartCompareIndonesiaRoadGDPperCapitalIndonesiaDataPoints,
+              borderColor: "#4285f4",
+              fill: false,
+              tension: 0.4,
+              backgroundColor: "#4285f4",
+            },
+            {
+              label: "Malaysia",
+              data: chartCompareIndonesiaRoadGDPperCapitalMalaysiaDataPoints,
+              borderColor: "#ea4335",
+              fill: false,
+              tension: 0.4,
+              backgroundColor: "#ea4335",
+            },
+            {
+              label: "Thailand",
+              data: chartCompareIndonesiaRoadGDPperCapitalThailandDataPoints,
+              borderColor: "#fbbc04",
+              fill: false,
+              tension: 0.4,
+              backgroundColor: "#fbbc04",
+            },
+          ],
+        };
+        
+        const chartCompareIndonesiaRoadGDPperCapitalConfig = {
+          type: "line",
+          data: chartCompareIndonesiaRoadGDPperCapitalData,
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: true,
+                position: "bottom",
+              },
+            },
+            interaction: {
+              intersect: false,
+            },
+            scales: {
+              y: {
+                ticks: {
+                  callback: function (value, index, ticks) {
+                    return String(value).commarize(1e3, "million");
+                  },
+                },
+                display: true,
+              },
+            },
+          },
+        };
+        
+        new Chart(
+          chartCompareIndonesiaRoadGDPperCapital,
+          chartCompareIndonesiaRoadGDPperCapitalConfig
         );
 
 

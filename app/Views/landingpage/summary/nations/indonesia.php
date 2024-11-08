@@ -344,12 +344,12 @@
 
             
             <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
-            <div class="chart-parent">
+            <div class="chart-parent ml-chart">
                 <canvas id="chartHistoricalIndonesiaICEVechicleSales"></canvas>
             </div>
 
             <h1 style="font-size:12px; margin-left:12px">Stock Data (In Million)</h1>
-            <div class="chart-parent">
+            <div class="chart-parent ml-chart">
                 <canvas id="chartHistoricalIndonesiaICEVechicleStock"></canvas>
             </div>
 
@@ -436,12 +436,12 @@
             </section>
             
             <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
-            <div class="chart-parent">
+            <div class="chart-parent ml-chart">
                 <canvas id="chart1"></canvas>
             </div>
             
             <h1 style="font-size:12px; margin-left:12px">Stock Data (In Thousand)</h1>
-            <div class="chart-parent">
+            <div class="chart-parent ml-chart">
                 <canvas id="chart2"></canvas>
             </div>
 
@@ -528,13 +528,13 @@
             </section>
                     
             <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
-            <div class="chart-parent">
+            <div class="chart-parent ml-chart">
                 <canvas id="totalSales"></canvas>
             </div>
             
                     
             <h1 style="font-size:12px; margin-left:12px">Stock Data (in Million)</h1>
-            <div class="chart-parent">
+            <div class="chart-parent ml-chart">
                 <canvas id="totalStock"></canvas>
             </div>
 
@@ -542,7 +542,7 @@
                     <table class="table">
                         <thead style="font-size:12px;">
                             <tr>
-                                <th style="height: 40px;">Type</th>
+                                <th style="height: 40px; padding: 8px 50px">Type</th>
                                 <th>2011</th>
                                 <th>2012</th>
                                 <th>2013</th>
@@ -567,7 +567,7 @@
                     <table class="table">
                         <thead style="font-size:12px;">
                             <tr>
-                                <th style="height: 40px;">Type</th>
+                                <th style="height: 40px; padding: 8px 50px">Type</th>
                                 <th>2011</th>
                                 <th>2012</th>
                                 <th>2013</th>
@@ -775,12 +775,12 @@
 
                  
                 <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
-                <div class="chart-parent">
+                <div class="chart-parent ml-chart">
                     <canvas id="icesales"></canvas>
                 </div>
 
                 <h1 style="font-size:12px; margin-left:12px">Stock Data (In Million)</h1>
-                <div class="chart-parent">
+                <div class="chart-parent ml-chart">
                     <canvas id="icestock"></canvas>
                 </div>
 
@@ -869,12 +869,12 @@
 
                  
                 <h1 style="font-size:12px; margin-left:12px">Sales Data (in Thousand)</h1>
-                <div class="chart-parent">
+                <div class="chart-parent ml-chart">
                     <canvas id="hbpsales"></canvas>
                 </div>
 
                 <h1 style="font-size:12px; margin-left:12px">Stock Data (In Thousand)</h1>
-                <div class="chart-parent">
+                <div class="chart-parent ml-chart">
                     <canvas id="hbpstock"></canvas>
                 </div>
 
@@ -962,12 +962,12 @@
 
                  
                 <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
-                <div class="chart-parent">
+                <div class="chart-parent ml-chart">
                     <canvas id="vsales"></canvas>
                 </div>
 
                 <h1 style="font-size:12px; margin-left:12px">Stock Data (In Million)</h1>
-                <div class="chart-parent">
+                <div class="chart-parent ml-chart">
                     <canvas id="vstock"></canvas>
                 </div>
         <?php endif; ?>
@@ -978,6 +978,23 @@
 
 <?= $this->section('script') ?>
 <script>
+  const nations ="<?= $nat ?>" 
+        const lowbanner = document.getElementsByClassName("low-banner");
+
+        Array.from(lowbanner[0].getElementsByTagName("p")).forEach((p, i) => {
+          p.addEventListener('click', () => {
+            if (i == 0) {
+              window.location.href = `${origin}/summarymobile/econometric/${nations}`              
+            }
+            else if(i == 1){
+              window.location.href = `${origin}/summarymobile/historical/${nations}`
+            }
+            else{
+              window.location.href = `${origin}/summarymobile/forcasting/${nations}`
+            }
+          })
+        })
+        
         function commarize(min, scale = "default") {
           min = min || 1e3;
           let value = this;

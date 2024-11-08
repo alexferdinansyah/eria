@@ -285,7 +285,7 @@ nav {
   .chart-parent {
     width: 600px !important;
     padding: 0 !important;
-    margin: 0 !important;
+    padding: 0 !important;
   }
 
   img.img-map {
@@ -512,11 +512,15 @@ nav {
     padding: 0;
   }
 
+  .ml-chart{
+    margin-left: 12px;
+  }
+
   .chart-parent {
     /* background-color: blue; */
     width: 350px !important;
     padding: 0 !important;
-    margin: 0 !important;
+    /* margin: 0 !important; */
   }
 
   img.img-map {
