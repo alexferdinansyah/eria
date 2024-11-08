@@ -1582,263 +1582,44 @@ class LandingController extends BaseController
         } else if ($nat == "thailand") {
             $data["nat"] = $nat;   //negara
             $data["cat"] = $cat;
-            $data["population"] = "99,474";
-            $data["ttlland"] = "33,1345";
-            $data["totalRoad"] = "649,422";
-            $data["GDP"] = "4,123";
-            $data["PPP"] = "6,908";
-            $data["GDPppp"] = "14,024";
-            $data['tableData1'] = '
-                    <tr style="height: 33.33%;">
-                                <td>VOL HEV Sales</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>331</td>
-                                <td>1108</td>
-                                <td>2473</td>
-                                <td>5100</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>VOL BEV Sales</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>118</td>
-                                <td>685</td>
-                                <td>10327</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>VOL PHEV Sales</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>20</td>
-                                <td>6</td>
-                                <td>35</td>
-                                <td>10</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>VOL ICE Sales</td>
-                                <td>894164</td>
-                                <td>1116230</td>
-                                <td>1229811</td>
-                                <td>1208028</td>
-                                <td>1013518</td>
-                                <td>1062694</td>
-                                <td>1077364</td>
-                                <td>1151308</td>
-                                <td>1029775</td>
-                                <td>531175</td>
-                                <td>884009</td>
-                                <td>1032603</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>TOTAL Sales</td>
-                                <td>894164</td>
-                                <td>1116230</td>
-                                <td>1229811</td>
-                                <td>1208028</td>
-                                <td>1013518</td>
-                                <td>1062694</td>
-                                <td>1077364</td>
-                                <td>1151328</td>
-                                <td>1030112</td>
-                                <td>532436</td>
-                                <td>888202</td>
-                                <td>1043039</td>
-                                <td>0</td>
-                            </tr>
-                    ';
-
-            $data['tableData2'] = '
-                <tr style="height: 33.33%;">
-                                <td>HEV Vehicle Stock</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>331</td>
-                                <td>1439</td>
-                                <td>3912</td>
-                                <td>9012</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>BEV Vehicle Stock</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>118</td>
-                                <td>685</td>
-                                <td>10327</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>PHEV Vehicle Stock</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>20</td>
-                                <td>26</td>
-                                <td>61</td>
-                                <td>71</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>ICE Vehicle Stock</td>
-                                <td>894164</td>
-                                <td>2010394</td>
-                                <td>3240205</td>
-                                <td>4448233</td>
-                                <td>5461751</td>
-                                <td>6524445</td>
-                                <td>7601809</td>
-                                <td>7601809</td>
-                                <td>9782892</td>
-                                <td>10314067</td>
-                                <td>11198076</td>
-                                <td>12230679</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>TOTAL STOCK</td>
-                                <td>894164</td>
-                                <td>2010394</td>
-                                <td>3240205</td>
-                                <td>4448233</td>
-                                <td>5461751</td>
-                                <td>6524445</td>
-                                <td>7601809</td>
-                                <td>8753117</td>
-                                <td>9783243</td>
-                                <td>10315650</td>
-                                <td>11202852</td>
-                                <td>12250892</td>
-                                <td>0</td>
-                            </tr>
-                ';
-
-            $data["sd"] = '
-                <p>Data Source</p>
-                <ol type="A">
-                    <li>Population
-                        <ol>
-                            <li><a href="https://www.nso.go.th/nsoweb/nso/ebook">https://www.nso.go.th/nsoweb/nso/ebook</a></li>
-                            <li><a href="http://statbbi.nso.go.th/staticreport/page/sector/th/01.aspx">http://statbbi.nso.go.th/staticreport/page/sector/th/01.aspx</a></li>
-                            <li><a href="https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH">https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH</a></li>
-                        </ol>
-                    </li>
-                    <li>Total Land Area
-                        <ol>
-                            <li><a href="https://www.thailand.go.th/page/land-area">https://www.thailand.go.th/page/land-area</a></li>
-                        </ol>
-                    </li>
-                    <li>Total Road Length
-                        <ol>
-                            <li><a href="https://www.otp.go.th/uploads/tiny_uploads/PDF/2566-11/25661106-TransportInfrastructureAnnualReport2022.pdf">https://www.otp.go.th/uploads/tiny_uploads/PDF/2566-11/25661106-TransportInfrastructureAnnualReport2022.pdf</a></li>
-                        </ol>
-                    </li>
-                    <li>GDP per Capita (Current US$)
-                        <ol>
-                            <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TH">https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TH</a></li>
-                        </ol>
-                    </li>
-                    <li>Purchasing Power Parity (PPP)
-                        <ol>
-                            <li><a href="#">not Available</a></li>
-                        </ol>
-                    </li>
-                    <li>GDP per Capita, Purchasing Power Parity (PPP)
-                        <ol>
-                            <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=TH&start=2011">https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=TH&start=2011</a></li>
-                        </ol>
-                    </li>
-                    <li>Public Charging Roadmap
-                        <ol>
-                            <li><a href="https://evat.or.th/ev-information/evat-directory/index">https://evat.or.th/ev-information/evat-directory/index</a></li>
-                            <li><a href="https://data.thaiauto.or.th/tai/dailynews-iframe/11375-%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%A3%E0%B8%96-ev-1,664-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8A%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94.html">https://data.thaiauto.or.th/tai/dailynews-iframe/11375-%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%A3%E0%B8%96-ev-1,664-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8A%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94.html</a></li>
-                        </ol>
-                    </li>
-                </ol>
-                ';
-            return view('/landingpage/summary/nations/thailand', $data);
-        } else if ($nat == "malaysia") {
-            $data["nat"] = $nat;   //negara
-            $data["cat"] = $cat;
-            $data["population"] = "99,474";
-            $data["ttlland"] = "33,1345";
-            $data["totalRoad"] = "649,422";
-            $data["GDP"] = "4,123";
-            $data["PPP"] = "6,908";
-            $data["GDPppp"] = "14,024";
+            $data["population"] = "66,050,000";
+            $data["ttlland"] = "513,120";
+            $data["totalRoad"] = "704,282";
+            $data["GDP"] = "7,171.81";
+            $data["PPP"] = "";
+            $data["GDPppp"] = "21,112.64";
             $data['tableData1'] = '
                 <tr style="height: 33.33%;">
                             <td>VOL HEV Sales</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>331</td>
-                            <td>1108</td>
-                            <td>2473</td>
-                            <td>5100</td>
-                            <td>0</td>
+                            <td>12,077</td>
+                            <td>16,102</td>
+                            <td>16,175</td>
+                            <td>9,101</td>
+                            <td>7,629</td>
+                            <td>9,577</td>
+                            <td>11,944</td>
+                            <td>20,056</td>
+                            <td>26,447</td>
+                            <td>28,375</td>
+                            <td>34,339</td>
+                            <td>63,568</td>
+                            <td>84,476</td>
                         </tr>
                         <tr style="height: 33.33%;">
-                            <td>VOL BEV Sales</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>118</td>
-                            <td>685</td>
-                            <td>10327</td>
-                            <td>0</td>
+                        <td>VOL BEV Sales</td>
+                            <td>9</td>
+                            <td>7</td>
+                            <td>13</td>
+                            <td>6</td>
+                            <td>14</td>
+                            <td>2</td>
+                            <td>38</td>
+                            <td>152</td>
+                            <td>748</td>
+                            <td>1,406</td>
+                            <td>1,990</td>
+                            <td>9,901</td>
+                            <td>76,793</td>
                         </tr>
                         <tr style="height: 33.33%;">
                             <td>VOL PHEV Sales</td>
@@ -1850,172 +1631,391 @@ class LandingController extends BaseController
                             <td>0</td>
                             <td>0</td>
                             <td>0</td>
-                            <td>20</td>
-                            <td>6</td>
-                            <td>35</td>
-                            <td>10</td>
                             <td>0</td>
+                            <td>1,091</td>
+                            <td>7,060</td>
+                            <td>11,331</td>
+                            <td>11,703</td>
                         </tr>
                         <tr style="height: 33.33%;">
                             <td>VOL ICE Sales</td>
-                            <td>894164</td>
-                            <td>1116230</td>
-                            <td>1229811</td>
-                            <td>1208028</td>
-                            <td>1013518</td>
-                            <td>1062694</td>
-                            <td>1077364</td>
-                            <td>1151308</td>
-                            <td>1029775</td>
-                            <td>531175</td>
-                            <td>884009</td>
-                            <td>1032603</td>
-                            <td>0</td>
+                            <td>858,221</td>
+                            <td>1,269,591</td>
+                            <td>1,296,195</td>
+                            <td>905,181</td>
+                            <td>799,274</td>
+                            <td>811,360</td>
+                            <td>917,158</td>
+                            <td>982,983</td>
+                            <td>991,767</td>
+                            <td>788,205</td>
+                            <td>736,680</td>
+                            <td>806,194</td>
+                            <td>675,188</td>
                         </tr>
                         <tr style="height: 33.33%;">
                             <td>TOTAL Sales</td>
-                            <td>894164</td>
-                            <td>1116230</td>
-                            <td>1229811</td>
-                            <td>1208028</td>
-                            <td>1013518</td>
-                            <td>1062694</td>
-                            <td>1077364</td>
-                            <td>1151328</td>
-                            <td>1030112</td>
-                            <td>532436</td>
-                            <td>888202</td>
-                            <td>1043039</td>
-                            <td>0</td>
+                            <td>870,307</td>
+                            <td>1,285,700</td>
+                            <td>1,312,383</td>
+                            <td>914,288</td>
+                            <td>806,917</td>
+                            <td>820,939</td>
+                            <td>929,140</td>
+                            <td>1,003,191</td>
+                            <td>1,018,962</td>
+                            <td>819,077</td>
+                            <td>780,069</td>
+                            <td>890,994</td>
+                            <td>848,160</td>
                         </tr>
                 ';
 
             $data['tableData2'] = '
-                <tr style="height: 33.33%;">
-                                <td>HEV Vehicle Stock</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>331</td>
-                                <td>1439</td>
-                                <td>3912</td>
-                                <td>9012</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>BEV Vehicle Stock</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>118</td>
-                                <td>685</td>
-                                <td>10327</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>PHEV Vehicle Stock</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>20</td>
-                                <td>26</td>
-                                <td>61</td>
-                                <td>71</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>ICE Vehicle Stock</td>
-                                <td>894164</td>
-                                <td>2010394</td>
-                                <td>3240205</td>
-                                <td>4448233</td>
-                                <td>5461751</td>
-                                <td>6524445</td>
-                                <td>7601809</td>
-                                <td>7601809</td>
-                                <td>9782892</td>
-                                <td>10314067</td>
-                                <td>11198076</td>
-                                <td>12230679</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>TOTAL STOCK</td>
-                                <td>894164</td>
-                                <td>2010394</td>
-                                <td>3240205</td>
-                                <td>4448233</td>
-                                <td>5461751</td>
-                                <td>6524445</td>
-                                <td>7601809</td>
-                                <td>8753117</td>
-                                <td>9783243</td>
-                                <td>10315650</td>
-                                <td>11202852</td>
-                                <td>12250892</td>
-                                <td>0</td>
-                            </tr>
-                ';
+            <tr style="height: 33.33%;">
+                            <td>HEV Vehicle Stock</td>
+                            <td>12077</td>
+                            <td>28179</td>
+                            <td>44354</td>
+                            <td>53455</td>
+                            <td>61084</td>
+                            <td>70661</td>
+                            <td>82605</td>
+                            <td>102661</td>
+                            <td>129108</td>
+                            <td>157483</td>
+                            <td>191822</td>
+                            <td>255390</td>
+                            <td>339866</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>BEV Vehicle Stock</td>
+                            <td>9</td>
+                            <td>16</td>
+                            <td>29</td>
+                            <td>35</td>
+                            <td>49</td>
+                            <td>51</td>
+                            <td>89</td>
+                            <td>241</td>
+                            <td>989</td>
+                            <td>2395</td>
+                            <td>4385</td>
+                            <td>14286</td>
+                            <td>91079</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>PHEV Vehicle Stock</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1091</td>
+                            <td>8151</td>
+                            <td>19482</td>
+                            <td>31185</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>ICE Vehicle Stock</td>
+                            <td>894164</td>
+                            <td>2010394</td>
+                            <td>3240205</td>
+                            <td>4448233</td>
+                            <td>5461751</td>
+                            <td>6524445</td>
+                            <td>7601809</td>
+                            <td>7601809</td>
+                            <td>9782892</td>
+                            <td>10314067</td>
+                            <td>11198076</td>
+                            <td>12230679</td>
+                            <td>0</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>TOTAL STOCK</td>
+                            <td>858221</td>
+                            <td>2127812</td>
+                            <td>3424007</td>
+                            <td>4329188</td>
+                            <td>5128462</td>
+                            <td>5939822</td>
+                            <td>6856980</td>
+                            <td>7839963</td>
+                            <td>8831730</td>
+                            <td>9619935</td>
+                            <td>10356615</td>
+                            <td>11162809</td>
+                            <td>11837997</td>
+                        </tr>
+            ';
 
             $data["sd"] = '
-                <p>Data Source</p>
-                <ol type="A">
-                    <li>Population
-                        <ol>
-                            <li><a href="https://www.nso.go.th/nsoweb/nso/ebook">https://www.nso.go.th/nsoweb/nso/ebook</a></li>
-                            <li><a href="http://statbbi.nso.go.th/staticreport/page/sector/th/01.aspx">http://statbbi.nso.go.th/staticreport/page/sector/th/01.aspx</a></li>
-                            <li><a href="https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH">https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH</a></li>
-                        </ol>
-                    </li>
-                    <li>Total Land Area
-                        <ol>
-                            <li><a href="https://www.thailand.go.th/page/land-area">https://www.thailand.go.th/page/land-area</a></li>
-                        </ol>
-                    </li>
-                    <li>Total Road Length
-                        <ol>
-                            <li><a href="https://www.otp.go.th/uploads/tiny_uploads/PDF/2566-11/25661106-TransportInfrastructureAnnualReport2022.pdf">https://www.otp.go.th/uploads/tiny_uploads/PDF/2566-11/25661106-TransportInfrastructureAnnualReport2022.pdf</a></li>
-                        </ol>
-                    </li>
-                    <li>GDP per Capita (Current US$)
-                        <ol>
-                            <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TH">https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TH</a></li>
-                        </ol>
-                    </li>
-                    <li>Purchasing Power Parity (PPP)
-                        <ol>
-                            <li><a href="#">not Available</a></li>
-                        </ol>
-                    </li>
-                    <li>GDP per Capita, Purchasing Power Parity (PPP)
-                        <ol>
-                            <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=TH&start=2011">https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=TH&start=2011</a></li>
-                        </ol>
-                    </li>
-                    <li>Public Charging Roadmap
-                        <ol>
-                            <li><a href="https://evat.or.th/ev-information/evat-directory/index">https://evat.or.th/ev-information/evat-directory/index</a></li>
-                            <li><a href="https://data.thaiauto.or.th/tai/dailynews-iframe/11375-%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%A3%E0%B8%96-ev-1,664-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8A%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94.html">https://data.thaiauto.or.th/tai/dailynews-iframe/11375-%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%A3%E0%B8%96-ev-1,664-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8A%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94.html</a></li>
-                        </ol>
-                    </li>
-                </ol>
-                ';
+            <p>Data Source</p>
+            <ol type="A">
+                <li>Population
+                    <ol>
+                        <li><a href="https://www.nso.go.th/nsoweb/nso/ebook">https://www.nso.go.th/nsoweb/nso/ebook</a></li>
+                        <li><a href="http://statbbi.nso.go.th/staticreport/page/sector/th/01.aspx">http://statbbi.nso.go.th/staticreport/page/sector/th/01.aspx</a></li>
+                        <li><a href="https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH">https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH</a></li>
+                    </ol>
+                </li>
+                <li>Total Land Area
+                    <ol>
+                        <li><a href="https://www.thailand.go.th/page/land-area">https://www.thailand.go.th/page/land-area</a></li>
+                    </ol>
+                </li>
+                <li>Total Road Length
+                    <ol>
+                        <li><a href="https://www.otp.go.th/uploads/tiny_uploads/PDF/2566-11/25661106-TransportInfrastructureAnnualReport2022.pdf">https://www.otp.go.th/uploads/tiny_uploads/PDF/2566-11/25661106-TransportInfrastructureAnnualReport2022.pdf</a></li>
+                    </ol>
+                </li>
+                <li>GDP per Capita (Current US$)
+                    <ol>
+                        <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TH">https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TH</a></li>
+                    </ol>
+                </li>
+                <li>Purchasing Power Parity (PPP)
+                    <ol>
+                        <li><a href="#">not Available</a></li>
+                    </ol>
+                </li>
+                <li>GDP per Capita, Purchasing Power Parity (PPP)
+                    <ol>
+                        <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=TH&start=2011">https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=TH&start=2011</a></li>
+                    </ol>
+                </li>
+                <li>Public Charging Roadmap
+                    <ol>
+                        <li><a href="https://evat.or.th/ev-information/evat-directory/index">https://evat.or.th/ev-information/evat-directory/index</a></li>
+                        <li><a href="https://data.thaiauto.or.th/tai/dailynews-iframe/11375-%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%A3%E0%B8%96-ev-1,664-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8A%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94.html">https://data.thaiauto.or.th/tai/dailynews-iframe/11375-%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%A3%E0%B8%96-ev-1,664-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8A%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94.html</a></li>
+                    </ol>
+                </li>
+            </ol>
+            ';
+            return view('/landingpage/summary/nations/thailand', $data);
+        } else if ($nat == "malaysia") {
+            $data["nat"] = $nat;   //negara
+            $data["cat"] = $cat;
+            $data["population"] = "33,938,221";
+            $data["ttlland"] = "328,550";
+            $data["totalRoad"] = "281,302";
+            $data["GDP"] = "11,993.19";
+            $data["PPP"] = "1,137,789,082,909";
+            $data["GDPppp"] = "33,525.30";
+            $data['tableData1'] = '
+            <tr style="height: 33.33%;">
+                        <td>VOL HEV Sales</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>13908</td>
+                        <td>11724</td>
+                        <td>18316</td>
+                        <td>15610</td>
+                        <td>12266</td>
+                        <td>4134</td>
+                        <td>5548</td>
+                        <td>30762</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style="height: 33.33%;">
+                        <td>VOL BEV Sales</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>496</td>
+                        <td>1300</td>
+                        <td>1772</td>
+                        <td>1720</td>
+                        <td>1796</td>
+                        <td>2448</td>
+                        <td>2362</td>
+                        <td>1574</td>
+                        <td>2118</td>
+                        <td>8618</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style="height: 33.33%;">
+                        <td>VOL PHEV Sales</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>33732</td>
+                        <td>15360</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style="height: 33.33%;">
+                        <td>VOL ICE Sales</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>2440530</td>
+                        <td>2547212</td>
+                        <td>2385840</td>
+                        <td>2190498</td>
+                        <td>2231688</td>
+                        <td>2419146</td>
+                        <td>2502442</td>
+                        <td>2321096</td>
+                        <td>2377518</td>
+                        <td>3006138</td>
+                        <td>0</td>
+                    </tr>
+                    <tr style="height: 33.33%;">
+                        <td>TOTAL Sales</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>2474758</td>
+                        <td>2563872</td>
+                        <td>2401520</td>
+                        <td>2203942</td>
+                        <td>2251800</td>
+                        <td>2437204</td>
+                        <td>2517070</td>
+                        <td>2326804</td>
+                        <td>2385184</td>
+                        <td>3045518</td>
+                        <td>0</td>
+                    </tr>
+            ';
+
+            $data['tableData2'] = '
+            <tr style="height: 33.33%;">
+                            <td>HEV Vehicle Stock</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>13908</td>
+                            <td>25632</td>
+                            <td>43948</td>
+                            <td>59558</td>
+                            <td>71824</td>
+                            <td>75958</td>
+                            <td>81506</td>
+                            <td>112268</td>
+                            <td>0</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>BEV Vehicle Stock</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>496</td>
+                            <td>1796</td>
+                            <td>3568</td>
+                            <td>5288</td>
+                            <td>7084</td>
+                            <td>9532</td>
+                            <td>11894</td>
+                            <td>13468</td>
+                            <td>15586</td>
+                            <td>24204</td>
+                            <td>0</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>PHEV Vehicle Stock</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>33732</td>
+                            <td>49092</td>
+                            <td>49092</td>
+                            <td>49092</td>
+                            <td>49092</td>
+                            <td>49092</td>
+                            <td>49092</td>
+                            <td>49092</td>
+                            <td>49092</td>
+                            <td>49092</td>
+                            <td>0</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>ICE Vehicle Stock</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2440530</td>
+                            <td>4987742</td>
+                            <td>7373582</td>
+                            <td>9564080</td>
+                            <td>11795768</td>
+                            <td>14214914</td>
+                            <td>16717356</td>
+                            <td>19038452</td>
+                            <td>21415970</td>
+                            <td>24422108</td>
+                            <td>0</td>
+                        </tr>
+                        <tr style="height: 33.33%;">
+                            <td>TOTAL STOCK</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2474758</td>
+                            <td>5038630</td>
+                            <td>7440150</td>
+                            <td>9644092</td>
+                            <td>11895892</td>
+                            <td>14333096</td>
+                            <td>16850166</td>
+                            <td>19176970</td>
+                            <td>21562154</td>
+                            <td>24607672</td>
+                            <td>0</td>
+                        </tr>
+            ';
+
+            $data["sd"] = '
+            <p>Data Source</p>
+            <ol type="A">
+                <li>Population
+                    <ol>
+                        <li><a href="https://www.nso.go.th/nsoweb/nso/ebook">https://www.nso.go.th/nsoweb/nso/ebook</a></li>
+                        <li><a href="http://statbbi.nso.go.th/staticreport/page/sector/th/01.aspx">http://statbbi.nso.go.th/staticreport/page/sector/th/01.aspx</a></li>
+                        <li><a href="https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH">https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH</a></li>
+                    </ol>
+                </li>
+                <li>Total Land Area
+                    <ol>
+                        <li><a href="https://www.thailand.go.th/page/land-area">https://www.thailand.go.th/page/land-area</a></li>
+                    </ol>
+                </li>
+                <li>Total Road Length
+                    <ol>
+                        <li><a href="https://www.otp.go.th/uploads/tiny_uploads/PDF/2566-11/25661106-TransportInfrastructureAnnualReport2022.pdf">https://www.otp.go.th/uploads/tiny_uploads/PDF/2566-11/25661106-TransportInfrastructureAnnualReport2022.pdf</a></li>
+                    </ol>
+                </li>
+                <li>GDP per Capita (Current US$)
+                    <ol>
+                        <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TH">https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TH</a></li>
+                    </ol>
+                </li>
+                <li>Purchasing Power Parity (PPP)
+                    <ol>
+                        <li><a href="#">not Available</a></li>
+                    </ol>
+                </li>
+                <li>GDP per Capita, Purchasing Power Parity (PPP)
+                    <ol>
+                        <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=TH&start=2011">https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=TH&start=2011</a></li>
+                    </ol>
+                </li>
+                <li>Public Charging Roadmap
+                    <ol>
+                        <li><a href="https://evat.or.th/ev-information/evat-directory/index">https://evat.or.th/ev-information/evat-directory/index</a></li>
+                        <li><a href="https://data.thaiauto.or.th/tai/dailynews-iframe/11375-%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%A3%E0%B8%96-ev-1,664-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8A%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94.html">https://data.thaiauto.or.th/tai/dailynews-iframe/11375-%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%A3%E0%B8%96-ev-1,664-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8A%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94.html</a></li>
+                    </ol>
+                </li>
+            </ol>
+            ';
             return view('/landingpage/summary/nations/malaysia', $data);
         } else if ($nat == "laos") {
             $data["nat"] = $nat;   //negara
