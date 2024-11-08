@@ -147,12 +147,12 @@
                 
                 </section>
 
-                <h1 style="font-size:12px; margin-left:12px">Total Road Lenght (In Million)</h1>
+                <h1 style="font-size:12px; margin-left:12px">Total Road Lenght (In Thousand)</h1>
                 <div class="chart-parent">
                     <canvas id="chartIndonesiaRoadLength"></canvas>
                 </div>
 
-                <h1 style="font-size:12px; margin-left:12px">Population (In Million)</h1>
+                <h1 style="font-size:12px; margin-left:12px">Population (in million)</h1>
                 <div class="chart-parent">
                     <canvas id="chartIndonesiaPopulation"></canvas>
                 </div>
@@ -252,7 +252,7 @@
 
             <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
             <div class="chart-parent">
-                <canvas style="margin-left:12px;" id="chartIndonesiaVehicleSales"></canvas>
+                <canvas style="margin-left:12px;" id="chartCompareIndonesiaRoadLength"></canvas>
             </div>
 
             <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
@@ -343,7 +343,7 @@
             </section>
 
             
-            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
+            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
             <div class="chart-parent">
                 <canvas id="chartHistoricalIndonesiaICEVechicleSales"></canvas>
             </div>
@@ -480,7 +480,7 @@
             
             </section>
                     
-            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
+            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
             <div class="chart-parent">
                 <canvas id="totalSales"></canvas>
             </div>
@@ -727,7 +727,7 @@
                 </section>
 
                  
-                <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
+                <h1 style="font-size:12px; margin-left:12px">Sales Data (in thousand)</h1>
                 <div class="chart-parent">
                     <canvas id="icesales"></canvas>
                 </div>
@@ -821,7 +821,7 @@
                 </section>
 
                  
-                <h1 style="font-size:12px; margin-left:12px">Sales Data (in Thousand)</h1>
+                <h1 style="font-size:12px; margin-left:12px">Sales Data (in Million)</h1>
                 <div class="chart-parent">
                     <canvas id="hbpsales"></canvas>
                 </div>
@@ -914,7 +914,7 @@
                 </section>
 
                  
-                <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
+                <h1 style="font-size:12px; margin-left:12px">Sales Data (in Thousand)</h1>
                 <div class="chart-parent">
                     <canvas id="vsales"></canvas>
                 </div>
@@ -931,44 +931,34 @@
 
 <?= $this->section('script') ?>
 <script>
-        function commarize(min, scale = "default") {
+        function commarize(min, granular = false) {
   min = min || 1e3;
-  let value = this;
 
-  // Adjust value based on scale option
-  if (scale === "million") {
-    value /= 1e6;
-    if (value < 1) return value.toFixed(1); // e.g., "0.1" for 100k in million scale
-  } else if (scale === "thousand") {
-    value /= 1e3;
-  }
-
-  // Alter numbers larger than 1k
-  if (value >= min) {
+  if (this >= min) {
     const units = ["k", "M", "B", "T"];
-    const order = Math.floor(Math.log(value) / Math.log(1000));
-    const unitname = units[order - 1];
-    const num = (value / 1000 ** order).toFixed(1); // Keeps one decimal place
+    const order = Math.floor(Math.log(this) / Math.log(1000));
 
-    // Output number remainder + unitname
-    return num;
+    if (granular) {
+      // Granular formatting:
+      if (order > 0 && this < Math.pow(1000, order + 1)) {
+        const num = Math.floor(this / Math.pow(1000, order));
+        const unitname = units[order - 1];
+        return num + unitname;
+      }
+    }
+
+    // Standard formatting:
+    const unitname = units[order - 1];
+    const num = Math.floor(this / Math.pow(1000, order));
+    return num + unitname;
   }
 
-  // Return formatted original number
-  return value.toLocaleString();
+  return this.toLocaleString();
 }
 
 Number.prototype.commarize = commarize;
 String.prototype.commarize = commarize;
-
-// Example usage
-const num1 = 100000;       // 100k
-const num2 = 1000000;      // 1 million
-
-console.log(num1.commarize(1e3, "million")); 
-console.log(num2.commarize(1e3, "thousand")); 
-console.log(num2.commarize());               
-
+console.log((1000000).commarize(1000, true)); // Output: 1000k
 
             const DATA_COUNT = 2022;
         const labels = [];
@@ -1026,7 +1016,7 @@ switch (window.location.pathname.split('/')[2]) {
               y: {
                 ticks: {
                   callback: function (value, index, ticks) {
-                    return String(value).commarize(1e3, "million");
+                    return String(value).commarize();
                   },
                 },
                 display: true,
@@ -1465,7 +1455,7 @@ switch (window.location.pathname.split('/')[2]) {
                       y: {
                         ticks: {
                           callback: function (value, index, ticks) {
-                            return String(value).commarize(1e3, "million");
+                            return String(value).commarize();
                           },
                         },
                           beginAtZero: true,
@@ -1559,7 +1549,7 @@ switch (window.location.pathname.split('/')[2]) {
               y: {
                 ticks: {
                   callback: function (value, index, ticks) {
-                    return String(value).commarize(1e3, "million");
+                    return String(value).commarize();
                   },
                 },
               },
@@ -1833,7 +1823,7 @@ switch (window.location.pathname.split('/')[2]) {
                     beginAtZero: true,
                     ticks: {
                                   callback: function (value, index, ticks) {
-                                    return String(value).commarize(1e3, "million");
+                                    return String(value).commarize();
                                   },
                                 },
                 }
@@ -2122,7 +2112,7 @@ switch (window.location.pathname.split('/')[2]) {
                     beginAtZero: true,
                     ticks: {
                               callback: function (value, index, ticks) {
-                                return String(value).commarize(1e3, "million");
+                                return String(value).commarize();
                               },
                             },
                 }

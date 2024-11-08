@@ -5,6 +5,10 @@
         const backBtns = document.getElementsByClassName("back-btn");
         const origin = window.location.origin
 
+        function gotoCompare(){
+          window.location.href = `${origin}/summarymobile/compare/econometric`              
+        }
+
         Array.from(lowbanner[0].getElementsByTagName("p")).forEach((p, i) => {
           p.addEventListener('click', () => {
             if (i == 0) {
