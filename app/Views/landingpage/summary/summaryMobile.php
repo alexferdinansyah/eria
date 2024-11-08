@@ -161,14 +161,8 @@
                 <div class="chart-parent">
                     <canvas id="chartIndonesiaRoadGDPperCapital"></canvas>
                 </div>
-                      
-        <?php endif; ?>
-        <!-- econometric end -->
 
-        <!-- historical start -->
-        <?php if($cat == 'historical'): ?>   
-
-            <h1 style="font-size:15px; margin:12px">Current Sales & Stock Data</h1>
+                <h1 style="font-size:12px; margin-left:12px">Current Sales & Stock Data</h1>
             <p style="font-size:10px; margin-left:12px; ">Total of number Current Sales & Stock Data</p>
             
             <section class="bar-dropdown">
@@ -259,8 +253,14 @@
             <div  class="chart-parent">
                 <canvas style="margin-left:12px;" id="chartIndonesiaVehicleStock"></canvas>
             </div>
+                      
+        <?php endif; ?>
+        <!-- econometric end -->
 
-            <h1 style="font-size:12px; margin-left:12px">ICE Vechicle Sales and Stock</h1>
+        <!-- historical start -->
+        <?php if($cat == 'historical'): ?>               
+
+            <h1 style="font-size:14px; margin:12px">ICE Vechicle Sales and Stock</h1>
             <p style="font-size:10px; margin-left:12px; ">Total number of ICE Vehicle Sales and Stock</p>
 
             <section class="bar-dropdown">
@@ -462,22 +462,69 @@
                 </div>
 
                 <div class="bar-dropdown-menu">
-                    <div class="back-btn">
-                        <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                    </div>
-                    <a href="#">Option 1</a>
-                    <a href="#">Option 2</a>
-                    <a href="#">Option 3</a>
-                    <a href="#">Option 4</a>
-                    <a href="#">Option 5</a>
-                    <a href="#">Option 6</a>
-                    <a href="#">Option 7</a>
-                    <a href="#">Option 8</a>
-                    <a href="#">Option 9</a>
-                    <a href="#">Option 10</a>
-                </div>
+                        <div class="back-btn">
+                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                        </div>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+                            <span>Brunei</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+                            <span>Singapore</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+                            <span>Laos</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+                            <span>Malaysia</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+                            <span>Myanmar</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+                            <span>philippines</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+                            <span>Thailand</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+                            <span>Vietnam</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <button class="show-btn">Show</button>
+                        
+                  </div>
 
-            
             </section>
                     
             <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
@@ -932,42 +979,34 @@
 <?= $this->section('script') ?>
 <script>
         function commarize(min, scale = "default") {
-  min = min || 1e3;
-  let value = this;
+          min = min || 1e3;
+          let value = this;
 
-  // Adjust value based on scale option
-  if (scale === "million") {
-    value /= 1e6;
-    if (value < 1) return value.toFixed(1); // e.g., "0.1" for 100k in million scale
-  } else if (scale === "thousand") {
-    value /= 1e3;
-  }
+          // Adjust value based on scale option
+          if (scale === "million") {
+            value /= 1e6;
+            if (value < 1) return value.toFixed(1); // e.g., "0.1" for 100k in million scale
+          } else if (scale === "thousand") {
+            value /= 1e3;
+          }
 
-  // Alter numbers larger than 1k
-  if (value >= min) {
-    const units = ["k", "M", "B", "T"];
-    const order = Math.floor(Math.log(value) / Math.log(1000));
-    const unitname = units[order - 1];
-    const num = (value / 1000 ** order).toFixed(1); // Keeps one decimal place
+          // Alter numbers larger than 1k
+          if (value >= min) {
+            const units = ["k", "M", "B", "T"];
+            const order = Math.floor(Math.log(value) / Math.log(1000));
+            const unitname = units[order - 1];
+            const num = (value / 1000 ** order).toFixed(1); // Keeps one decimal place
 
-    // Output number remainder + unitname
-    return num;
-  }
+            // Output number remainder + unitname
+            return num;
+          }
 
-  // Return formatted original number
-  return value.toLocaleString();
-}
+          // Return formatted original number
+          return value.toLocaleString();
+        }
 
-Number.prototype.commarize = commarize;
-String.prototype.commarize = commarize;
-
-// Example usage
-const num1 = 100000;       // 100k
-const num2 = 1000000;      // 1 million
-
-console.log(num1.commarize(1e3, "million")); 
-console.log(num2.commarize(1e3, "thousand")); 
-console.log(num2.commarize());               
+        Number.prototype.commarize = commarize;
+        String.prototype.commarize = commarize;             
 
 
             const DATA_COUNT = 2022;
@@ -1173,11 +1212,7 @@ switch (window.location.pathname.split('/')[2]) {
           chartIndonesiaRoadGDPperCapitalConfig
         );
 
-
-    break;
-  case 'historical':
-    
-    //07. Indonesia Vehicle Sales
+        //07. Indonesia Vehicle Sales
     const chartIndonesiaVehicleSales = document.getElementById(
           "chartIndonesiaVehicleSales"
         );
@@ -1308,6 +1343,8 @@ switch (window.location.pathname.split('/')[2]) {
         };
         
         new Chart(chartIndonesiaVehicleStock, chartIndonesiaVehicleStockConfig);
+    break;
+  case 'historical':    
 
         const ctx = document.getElementById('chart1').getContext('2d');
 

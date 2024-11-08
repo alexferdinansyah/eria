@@ -252,7 +252,7 @@
 
             <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
             <div class="chart-parent">
-                <canvas style="margin-left:12px;" id="chartCompareIndonesiaRoadLength"></canvas>
+                <canvas style="margin-left:12px;" id="chartIndonesiaVehicleSales"></canvas>
             </div>
 
             <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
