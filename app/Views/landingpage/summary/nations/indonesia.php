@@ -3,16 +3,40 @@
 <?= $this->section('content') ?>
 
 <?= $this->section('header') ?>
-<div class="banners">
+<!-- <div class="banners">
   <img src="<?= base_url('assets/images/nations/flags/indonesia.svg'); ?>" alt="">    
     <h2>Indonesia</h2>
 </div>
-<div class="low-banner">
+<div class="low-banner ">
     <p class="<?= $cat == 'econometric'? 'foc' :'' ?>">Summary</p>
     <p class="<?= $cat == 'historical'? 'foc' :'' ?>">Historical</p>
     <p class="<?= $cat == 'forcasting'? 'foc' :'' ?>">Forcasting</p>
 
-</div>
+</div> -->
+<?= $this->section('header') ?>
+<header class="header-program">
+    <div class="flex-column">
+        <div class="show-on-mobile sec pb-4 m-0 flex align-items-center gap-2">
+          <img style="width:60px;" src="<?= base_url('assets/images/nations/flags/indonesia.svg'); ?>" alt="">    
+          <p>Indonesia</p>
+          
+        </div>
+        <p class="hidden-on-mobile fs-1">General Information</p>
+        <div class="d-flex flex-row gap-1 align-items-start">
+            <a class="bg-white text-decoration-none border-white <?= $cat == 'econometric' ? 'pb-1' : '' ?>" href="<?= base_url('summarymobile/econometric/indonesia') ?>">
+                <p class="text-black program-text text-center m-0">Alternative Fuel</p>
+            </a>
+            <a class="bg-white text-decoration-none border-white <?= $cat == 'historical' ? 'pb-1' : '' ?>" href="<?= base_url('summarymobile/historical/indonesia') ?>">
+                <p class="text-black program-text m-0">Vehicle Types</p>
+            </a>
+            <a class="bg-white text-decoration-none border-white <?= $cat == 'forcasting' ? 'pb-1' : '' ?>" href="<?= base_url('summarymobile/forcasting/indonesia') ?>">
+                <p class="text-black program-text m-0">Recharging System</p>
+            </a>
+        </div>
+    </div>
+</header>
+<?= $this->endSection(); ?>
+
 
 <?= $this->endSection(); ?>
 
@@ -979,21 +1003,6 @@
 <?= $this->section('script') ?>
 <script>
   const nations ="<?= $nat ?>" 
-        const lowbanner = document.getElementsByClassName("low-banner");
-
-        Array.from(lowbanner[0].getElementsByTagName("p")).forEach((p, i) => {
-          p.addEventListener('click', () => {
-            if (i == 0) {
-              window.location.href = `${origin}/summarymobile/econometric/${nations}`              
-            }
-            else if(i == 1){
-              window.location.href = `${origin}/summarymobile/historical/${nations}`
-            }
-            else{
-              window.location.href = `${origin}/summarymobile/forcasting/${nations}`
-            }
-          })
-        })
         
         function commarize(min, scale = "default") {
           min = min || 1e3;

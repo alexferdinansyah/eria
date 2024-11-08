@@ -301,9 +301,9 @@ nav {
     border-collapse: collapse;
   }
 
-  .banner {
+  .banners {
     display: flex;
-    justify-content: space-between;
+    gap: 12px;
     align-items: center;
     padding: 20px 20px 20px 100px;
     color: white;
@@ -311,11 +311,37 @@ nav {
     width: 100%;
   }
 
-  .banner img {
+  .banners img {
     width: 80px;
     border: solid white 1px;
     height: auto;
   }
+  
+  
+.banners img {
+  width: 65px;
+  border: solid white 1px;
+  height: auto;
+}
+
+.low-banner{
+  display: flex;
+  column-gap: 8px;
+  background-color: var(--blue);
+  width: 100%;
+}
+
+.low-banner p{
+  text-align: center;
+  background-color: white;
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.low-banner p:not(.foc){
+margin-bottom: 6px;
+}
 }
 
 /* mobile */
