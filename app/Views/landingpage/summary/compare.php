@@ -161,14 +161,8 @@
                 <div class="chart-parent">
                     <canvas id="chartCompareIndonesiaRoadGDPperCapital"></canvas>
                 </div>
-                      
-        <?php endif; ?>
-        <!-- econometric end -->
 
-        <!-- historical start -->
-        <?php if($cat == 'historical'): ?>   
-
-            <h1 style="font-size:15px; margin:12px">Current Sales & Stock Data</h1>
+                <h1 style="font-size:15px; margin:12px">Current Sales & Stock Data</h1>
             <p style="font-size:10px; margin-left:12px; ">Total of number Current Sales & Stock Data</p>
             
             <section class="bar-dropdown">
@@ -259,6 +253,12 @@
             <div  class="chart-parent">
                 <canvas style="margin-left:12px;" id="chartIndonesiaVehicleStock"></canvas>
             </div>
+                      
+        <?php endif; ?>
+        <!-- econometric end -->
+
+        <!-- historical start -->
+        <?php if($cat == 'historical'): ?>           
 
             <h1 style="font-size:12px; margin-left:12px">ICE Vechicle Sales and Stock</h1>
             <p style="font-size:10px; margin-left:12px; ">Total number of ICE Vehicle Sales and Stock</p>
@@ -345,12 +345,12 @@
             
             <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
             <div class="chart-parent">
-                <canvas id="chartHistoricalIndonesiaICEVechicleSales"></canvas>
+                <canvas id="chart4"></canvas>
             </div>
 
             <h1 style="font-size:12px; margin-left:12px">Stock Data (In Million)</h1>
             <div class="chart-parent">
-                <canvas id="chartHistoricalIndonesiaICEVechicleStock"></canvas>
+                <canvas id="chart5"></canvas>
             </div>
 
             <h1 style="font-size:12px; margin-left:12px">HEV, BEV, PHEV Vechicle Sales & Stock</h1>
@@ -437,12 +437,12 @@
             
             <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
             <div class="chart-parent">
-                <canvas id="chart1"></canvas>
+                <canvas id="myChart"></canvas>
             </div>
             
             <h1 style="font-size:12px; margin-left:12px">Stock Data (In Thousand)</h1>
             <div class="chart-parent">
-                <canvas id="chart2"></canvas>
+                <canvas id="myUpdatedChart"></canvas>
             </div>
 
             
@@ -1225,11 +1225,7 @@ switch (window.location.pathname.split('/')[2]) {
           chartCompareIndonesiaRoadGDPperCapitalConfig
         );
 
-
-    break;
-  case 'historical':
-    
-    //07. Indonesia Vehicle Sales
+        //07. Indonesia Vehicle Sales
     const chartIndonesiaVehicleSales = document.getElementById(
           "chartIndonesiaVehicleSales"
         );
@@ -1361,316 +1357,349 @@ switch (window.location.pathname.split('/')[2]) {
         
         new Chart(chartIndonesiaVehicleStock, chartIndonesiaVehicleStockConfig);
 
-        const ctx = document.getElementById('chart1').getContext('2d');
+    break;
+  case 'historical':
 
-        const vehicleStockData = {
-            labels: [
-                '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
-                '2019', '2020', '2021', '2022'
-            ],
-            datasets: [
-                {
-                    label: 'HEV',
-                    data: [12077, 28179, 44354, 53455, 61084, 70661, 82605, 102661, 129108, 157483, 191822, 255390],
-                    backgroundColor: 'rgba(65, 133, 250, 1.0)'
+        const ctx = document.getElementById('myChart').getContext('2d');
+            const myCharts = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        '2011', '2012', '2013', '2014', '2015', 
+                        '2016', '2017', '2018', '2019', '2020', 
+                        '2021', '2022'
+                    ],
+                    datasets: [
+                        // Indonesia data
+                        {
+                            label: 'Indonesia - PHEV',
+                            data: [0, 0, 0, 0, 0, 0, 0, 0, 20, 6, 35, 10],
+                            backgroundColor: 'rgba(240, 193, 9, 1.0)', // Yellow for PHEV
+                            stack: 'Stack 0',
+                        },
+                        {
+                            label: 'Indonesia - BEV',
+                            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 118, 685, 10327],
+                            backgroundColor: 'rgba(233, 67, 56, 1.0)', // Red for BEV
+                            stack: 'Stack 0',
+                        },
+                        {
+                            label: 'Indonesia - HEV',
+                            data: [0, 0, 0, 0, 0, 0, 0, 0, 331, 1108, 2473, 5100],
+                            backgroundColor: 'rgba(65, 133, 250, 1.0)', // Blue for HEV
+                            stack: 'Stack 0',
+                        },
+                        // Malaysia data
+                        {
+                            label: 'Malaysia - PHEV',
+                            data: [0, 0, 33732, 15360, 0, 0, 0, 0, 0, 0, 0, 0],
+                            backgroundColor: 'rgba(240, 193, 9, 1.0)', // Yellow for PHEV
+                            stack: 'Stack 1',
+                        },
+                        {
+                            label: 'Malaysia - BEV',
+                            data: [0, 0, 496, 1300, 13908, 11724, 18316, 15610, 12266, 4134, 5548, 30762],
+                            backgroundColor: 'rgba(233, 67, 56, 1.0)', // Red for BEV
+                            stack: 'Stack 1',
+                        },
+                        {
+                            label: 'Malaysia - HEV',
+                            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                            backgroundColor: 'rgba(65, 133, 250, 1.0)', // Blue for HEV
+                            stack: 'Stack 1',
+                        },
+                        // Thailand data
+                        {
+                            label: 'Thailand - PHEV',
+                            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1091, 7060, 11331],
+                            backgroundColor: 'rgba(240, 193, 9, 1.0)', // Yellow for PHEV
+                            stack: 'Stack 2',
+                        },
+                        {
+                            label: 'Thailand - BEV',
+                            data: [9, 7, 13, 6, 14, 2, 38, 152, 748, 1406, 1990, 9901],
+                            backgroundColor: 'rgba(233, 67, 56, 1.0)', // Red for BEV
+                            stack: 'Stack 2',
+                        },
+                        {
+                            label: 'Thailand - HEV',
+                            data: [12077, 16102, 16175, 9101, 7629, 9577, 11944, 20056, 26447, 28375, 34339, 63568],
+                            backgroundColor: 'rgba(65, 133, 250, 1.0)', // Blue for HEV
+                            stack: 'Stack 2',
+                        },
+                    ],
                 },
-                {
-                    label: 'BEV',
-                    data: [9, 16, 29, 35, 49, 51, 89, 241, 989, 2395, 4385, 14286],
-                    backgroundColor: 'rgba(233, 67, 56, 1.0)'
-                },
-                {
-                    label: 'PHEV',
-                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1091, 8151, 19482],
-                    backgroundColor: 'rgba(240, 193, 9, 1.0)'
-                }
-            ]
-        };
-
-        const config = {
-            type: 'bar',
-            data: vehicleStockData,
-            options: {
-                responsive: true,
-                plugins: {
+                options: {
+                  plugins: {
                     legend: {
                         display:false,
-                        position: 'top'
                     },
-                    title: {
-                        display: false,
-                        text: 'Vehicle Stock by Type (HEV, BEV, PHEV) Over the Years'
-                    }
-                },
-                scales: {
-                    x: {
-                        stacked: true
-                    },
-                    y: {
-                      ticks: {
-                        callback: function (value, index, ticks) {
-                          return String(value).commarize();
+                  },
+                    responsive: true,
+                    scales: {
+                        x: {
+                            stacked: true,
                         },
-                      },
-                        stacked: true,
-                    }
-                }
-            }
-        };
+                        y: {
+                            stacked: true,
+                        },
+                    },
+                },
+            });
 
-        new Chart(ctx, config);
-
-        const ctx22 = document.getElementById('chart2').getContext('2d');
-
-      const vehicleSalesData = {
-        labels: [
-            '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
-            '2019', '2020', '2021', '2022'
-        ],
-        datasets: [
-            {
-                label: 'HEV',
-                data: [12077, 28179, 44354, 53455, 61084, 70661, 82605, 102661, 129108, 157483, 191822, 255390],
-                backgroundColor: 'rgba(65, 133, 250, 1.0)'
-            },
-            {
-                label: 'BEV',
-                data: [9, 16, 29, 35, 49, 51, 89, 241, 989, 2395, 4385, 14286],
-                backgroundColor: 'rgba(233, 67, 56, 1.0)'
-            },
-            {
-                label: 'PHEV',
-                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1091, 8151, 19482],
-                backgroundColor: 'rgba(240, 193, 9, 1.0)'
-            }
-        ]
-      };
-
-        const config2 = {
+            const mymyohmy = document.getElementById('myUpdatedChart').getContext('2d');
+        const myUpdatedChart = new Chart(mymyohmy, {
             type: 'bar',
-            data: vehicleSalesData,
+            data: {
+                labels: [
+                    '2011', '2012', '2013', '2014', '2015', 
+                    '2016', '2017', '2018', '2019', '2020', 
+                    '2021', '2022'
+                ],
+                datasets: [
+                    // Indonesia data
+                    {
+                        label: 'Indonesia - HEV',
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 331, 1439, 3912, 9012],
+                        backgroundColor: 'rgba(65, 133, 250, 1.0)', // Blue for HEV
+                        stack: 'Indonesia',
+                    },
+                    {
+                        label: 'Indonesia - BEV',
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 118, 803, 11130],
+                        backgroundColor: 'rgba(233, 67, 56, 1.0)', // Red for BEV
+                        stack: 'Indonesia',
+                    },
+                    {
+                        label: 'Indonesia - PHEV',
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 20, 26, 61, 71],
+                        backgroundColor: 'rgba(240, 193, 9, 1.0)', // Yellow for PHEV
+                        stack: 'Indonesia',
+                    },
+                    // Malaysia data
+                    {
+                        label: 'Malaysia - HEV',
+                        data: [0, 0, 0, 0, 13908, 25632, 43948, 59558, 71824, 75958, 81506, 112268],
+                        backgroundColor: 'rgba(65, 133, 250, 1.0)', // Blue for HEV
+                        stack: 'Malaysia',
+                    },
+                    {
+                        label: 'Malaysia - BEV',
+                        data: [0, 0, 496, 1796, 3568, 5288, 7084, 9532, 11894, 13468, 15586, 24204],
+                        backgroundColor: 'rgba(233, 67, 56, 1.0)', // Red for BEV
+                        stack: 'Malaysia',
+                    },
+                    {
+                        label: 'Malaysia - PHEV',
+                        data: [0, 0, 33732, 49092, 49092, 49092, 49092, 49092, 49092, 49092, 49092, 49092],
+                        backgroundColor: 'rgba(240, 193, 9, 1.0)', // Yellow for PHEV
+                        stack: 'Malaysia',
+                    },
+                    // Thailand data
+                    {
+                        label: 'Thailand - HEV',
+                        data: [12077, 28179, 44354, 53455, 61084, 70661, 82605, 102661, 129108, 157483, 191822, 255390],
+                        backgroundColor: 'rgba(65, 133, 250, 1.0)', // Blue for HEV
+                        stack: 'Thailand',
+                    },
+                    {
+                        label: 'Thailand - BEV',
+                        data: [9, 16, 29, 35, 49, 51, 89, 241, 989, 2395, 4385, 14286],
+                        backgroundColor: 'rgba(233, 67, 56, 1.0)', // Red for BEV
+                        stack: 'Thailand',
+                    },
+                    {
+                        label: 'Thailand - PHEV',
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1091, 8151, 19482],
+                        backgroundColor: 'rgba(240, 193, 9, 1.0)', // Yellow for PHEV
+                        stack: 'Thailand',
+                    },
+                ],
+            },
             options: {
                 responsive: true,
-                plugins: {
-                    legend: {
-                        display:false,
-                        position: 'top'
-                    },
-                    title: {
-                        display: false,
-                        text: 'Vehicle Sales in Indonesia by Type (HEV, BEV, PHEV) Over the Years'
-                    }
-                },
                 scales: {
                     x: {
-                        stacked: true
+                        stacked: true,
                     },
                     y: {
                         stacked: true,
-                        beginAtZero: true,
-                        ticks: {
-                          callback: function (value, index, ticks) {
-                            return String(value).commarize();
-                          },
-                        },
+                        title: {
+                            display: true,
+                            text: 'Units'
+                        }
+                    },
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
                     }
                 }
-            }
-        };
-
-        new Chart(ctx22, config2);
+            },
+        });
 
 
         const ctxtotalsales = document.getElementById('totalSales').getContext('2d');
 
-          const totalvehicleSalesData = {
-              labels: [
-                  '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
-                  '2019', '2020', '2021', '2022'
-              ],
-              datasets: [
-                  {
-                      label: 'Vehicle Sales (Indonesia)',
-                      data: [
-                          894164, 1116230, 1229811, 1208028, 1013518, 1062694, 
-                          1077364, 1151308, 1030126, 532407, 887202, 1048040
-                      ],
-                      backgroundColor: 'rgba(65, 133, 250, 1.0)',
-                      borderColor: 'rgba(65, 133, 250, 1.0)',
-                      borderWidth: 1
-                  }
-              ]
-          };
+        const ctx4 = document.getElementById('chart4').getContext('2d');
 
-          const configtotalsales = {
-              type: 'bar',
-              data: totalvehicleSalesData,
-              options: {
-                  responsive: true,
-                  plugins: {
-                      legend: {
-                          display: false,
-                          position: 'top'
-                      },
-                  },
-                  scales: {
-                      y: {
-                        ticks: {
-                          callback: function (value, index, ticks) {
-                            return String(value).commarize();
-                          },
-                        },
-                          beginAtZero: true,
-                          
-                      }
-                  }
-              }
-          };
+const vehicleSalesComparisonData = {
+    labels: [
+        '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
+        '2019', '2020', '2021', '2022'
+    ],
+    datasets: [
+        {
+            label: 'Indonesia',
+            data: [
+                894164, 1116230, 1229811, 1208028, 1013518, 1062694, 
+                1077364, 1151308, 1030126, 532407, 887202, 1048040
+            ],
+            backgroundColor: 'rgba(65, 133, 250, 0.8)',
+            borderColor: 'rgba(65, 133, 250, 1)',
+            borderWidth: 1
+        },
+        {
+            label: 'Malaysia',
+            data: [
+                0, 0, 2474758, 2563872, 2401520, 2203942, 
+                2251800, 2437204, 2517070, 2326804, 2385184, 3045518
+            ],
+            backgroundColor: 'rgba(233, 67, 56, 0.8)',
+            borderColor: 'rgba(233, 67, 56, 1)',
+            borderWidth: 1
+        },
+        {
+            label: 'Thailand',
+            data: [
+                870307, 1285700, 1312383, 914288, 806917, 820939, 
+                92914, 1003191, 1018962, 819077, 780069, 890994
+            ],
+            backgroundColor: 'rgba(240, 193, 9, 0.8)',
+            borderColor: 'rgba(240, 193, 9, 1)',
+            borderWidth: 1
+        }
+    ]
+};
 
-          new Chart(ctxtotalsales, configtotalsales);
+const config4 = {
+    type: 'bar',
+    data: vehicleSalesComparisonData,
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom'
+            },
+        },
+        scales: {
+            x: {
+                stacked: false
+            },
+            y: {
+                beginAtZero: true,
+            }
+        }
+    }
+};
 
-          const ctxtotalstock = document.getElementById('totalStock').getContext('2d');
+new Chart(ctx4, config4);
 
-          const vehicletotalStockDataIndonesia = {
-          labels: [
-          '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
-          '2019', '2020', '2021', '2022'
-          ],
-          datasets: [
-          {
-              label: 'Vehicle Stock (Indonesia)',
-              data: [
-                  894164, 2010394, 3240205, 4448233, 5461751, 6524445, 
-                  7601809, 8753117, 9783243, 10315650, 11202852, 12250892
-              ],
-              backgroundColor: 'rgba(65, 133, 250, 1.0)',
-              borderColor: 'rgba(65, 133, 250, 1.0)',
-              borderWidth: 1
-          }
-          ]
-          };
+const ctx5 = document.getElementById('chart5').getContext('2d');
 
-          const configtotalstock = {
-          type: 'bar',
-          data: vehicletotalStockDataIndonesia,
-          options: {
-          responsive: true,
-          plugins: {
-              legend: {
-                  display: false,
-                  position: 'top'
-              },
-          },
-          scales: {
-              y: {
+const groupedVehicleSalesData = {
+    labels: [
+        '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
+        '2019', '2020', '2021', '2022'
+    ],
+    datasets: [
+        {
+            label: 'Indonesia',
+            data: [
+                894164, 2010394, 3240205, 4448233, 5461751, 6524445, 
+                7601809, 8753117, 9783243, 10315650, 11202852, 12250892
+            ],
+            backgroundColor: 'rgba(65, 133, 250, 0.8)',
+            borderColor: 'rgba(65, 133, 250, 1)',
+            borderWidth: 1
+        },
+        {
+            label: 'Malaysia',
+            data: [
+                0, 0, 2474758, 5038630, 7440150, 9644092, 
+                11895892, 14333096, 16850166, 19176970, 21562154, 24607672
+            ],
+            backgroundColor: 'rgba(233, 67, 56, 0.8)',
+            borderColor: 'rgba(233, 67, 56, 1)',
+            borderWidth: 1
+        },
+        {
+            label: 'Thailand',
+            data: [
+                870307, 2156007, 3468390, 4382678, 5189595, 6010534, 
+                6939674, 7942865, 8961827, 9780904, 10560973, 11451967
+            ],
+            backgroundColor: 'rgba(240, 193, 9, 0.8)',
+            borderColor: 'rgba(240, 193, 9, 1)',
+            borderWidth: 1
+        }
+    ]
+};
+
+const config5 = {
+    type: 'bar',
+    data: groupedVehicleSalesData,
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom'
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        let label = context.dataset.label || '';
+                        if (label) {
+                            label += ': ';
+                        }
+                        label += (context.raw / 1000000).toFixed(2) + 'M'; // Convert to millions
+                        return label;
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                grouped: true,
+            },
+            y: {
+                beginAtZero: true,
                 ticks: {
-                  callback: function (value, index, ticks) {
-                    return String(value).commarize();
-                  },
-                },
-                  beginAtZero: true,
-              }
-          }
-          }
-          };
+                    callback: function(value) {
+                        return (value / 1000000) + 'M'; // Display y-axis in millions
+                    }
+                }
+            }
+        }
+    }
+};
 
-        new Chart(ctxtotalstock, configtotalstock);
+new Chart(ctx5, config5);
 
-        //11. Historical Indonesia ICE Vechicle Sales
-        const chartHistoricalIndonesiaICEVechicleSales = document.getElementById(
-                  "chartHistoricalIndonesiaICEVechicleSales"
-                );
-        
-        const chartHistoricalIndonesiaICEVechicleSalesDataPoints = [
-          894164, 1116230, 1229811, 1208028, 1013518, 1062694, 1077364, 1151308,
-          1029775, 531175, 884009, 1032603,
-        ];
-        
-        const chartHistoricalIndonesiaICEVechicleSalesData = {
-          labels: labels,
-          datasets: [
-            {
-              label: "ICE Vehicle Sales",
-              data: chartHistoricalIndonesiaICEVechicleSalesDataPoints,
-              backgroundColor: "#4285f4",
-            },
-          ],
-        };
-        
-        const chartHistoricalIndonesiaICEVechicleSalesConfig = {
-          type: "bar",
-          data: chartHistoricalIndonesiaICEVechicleSalesData,
-          options: {
-            plugins: {
-              legend: {
-                position: "bottom",
-              },
-            },
-            responsive: true,
-            scales: {
-              y: {
-                ticks: {
-                  callback: function (value, index, ticks) {
-                    return String(value).commarize();
-                  },
-                },
-              },
-            },
-          },
-        };
-        
-        new Chart(
-          chartHistoricalIndonesiaICEVechicleSales,
-          chartHistoricalIndonesiaICEVechicleSalesConfig
-        );
-        
-        //12. Historical Indonesia ICE Vechicle Stock
-        const chartHistoricalIndonesiaICEVechicleStock = document.getElementById(
-          "chartHistoricalIndonesiaICEVechicleStock"
-        );
-        
-        const chartHistoricalIndonesiaICEVechicleStockDataPoints = [
-          894164, 2010394, 3240205, 4448233, 5461751, 6524445, 7601809, 8753117,
-          9782892, 10314067, 11198076, 12230679,
-        ];
-        
-        const chartHistoricalIndonesiaICEVechicleStockData = {
-          labels: labels,
-          datasets: [
-            {
-              label: "ICE Vehicle Stock",
-              data: chartHistoricalIndonesiaICEVechicleStockDataPoints,
-              backgroundColor: "#4285f4",
-            },
-          ],
-        };
-        
-        const chartHistoricalIndonesiaICEVechicleStockConfig = {
-          type: "bar",
-          data: chartHistoricalIndonesiaICEVechicleStockData,
-          options: {
-            plugins: {
-              legend: {
-                position: "bottom",
-              },
-            },
-            responsive: true,
-            scales: {
-              y: {
-                ticks: {
-                  callback: function (value, index, ticks) {
-                    return String(value).commarize();
-                  },
-                },
-              },
-            },
-          },
-        };
-        
-        new Chart(
-          chartHistoricalIndonesiaICEVechicleStock,
-          chartHistoricalIndonesiaICEVechicleStockConfig
-        );
+
+          
+new Chart(ctxtotalsales, config4);
+
+const ctxtotalstock = document.getElementById('totalStock').getContext('2d');
+
+new Chart(ctxtotalstock, config5);
+
   break;
   case 'forcasting':
       const ttlroadl = document.getElementById('ttlroadl').getContext('2d');

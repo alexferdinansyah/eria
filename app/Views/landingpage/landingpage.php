@@ -1114,7 +1114,7 @@
                                         </label>
                                         <p>Choose Country</p>
                                     </div>
-                                    <a href="/summarymobile/econometric/indonesia">
+                                    <a href="/summarymobile/econometric/brunei">
                                         <label for="default">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32">
@@ -1137,7 +1137,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/summarymobile/econometric/indonesia">
+                                    <a href="/summarymobile/econometric/cambodia">
                                         <label for="light">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1173,7 +1173,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/summarymobile/econometric/indonesia">
+                                    <a href="/summarymobile/econometric/laos">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1192,7 +1192,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/summarymobile/econometric/indonesia">
+                                    <a href="/summarymobile/econometric/malaysia">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1219,7 +1219,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="/summarymobile/econometric/indonesia">
+                                    <a href="/summarymobile/econometric/myanmar">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1239,7 +1239,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="/summarymobile/econometric/indonesia">
+                                    <a href="/summarymobile/econometric/philippines">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1259,7 +1259,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="/summarymobile/econometric/indonesia">
+                                    <a href="/summarymobile/econometric/singapore">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1283,7 +1283,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="/summarymobile/econometric/indonesia">
+                                    <a href="/summarymobile/econometric/thailand">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1304,7 +1304,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="/summarymobile/econometric/indonesia">
+                                    <a href="/summarymobile/econometric/vietnam">
                                         <label for="dark">
                                             <span class="dropdown-popup__icons">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -1323,19 +1323,6 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- <select class="dropdown-country form-select" id="asean-dropdown" onchange="redirectToSummary()" style="width: 100%;">
-                        <option disabled hidden selected value="country">CHOOSE COUNTRY</option>
-                        <option value="brunei">Brunei</option>
-                        <option value="cambodia">Cambodia</option>
-                        <option value="indonesia">Indonesia</option>
-                        <option value="laos">Laos</option>
-                        <option value="malaysia">Malaysia</option>
-                        <option value="myanmar">Myanmar</option>
-                        <option value="philippines">Philippines</option>
-                        <option value="singapore">Singapore</option>
-                        <option value="thailand">Thailand</option>
-                        <option value="vietnam">Vietnam</option>
-                    </select> -->
                 </div>
             </div>
         </div>
@@ -1345,14 +1332,6 @@
 
 </div>
 
-
-<!-- <div class="container mt-5 d-flex flex-column align-items-center">
-    <div class="d-flex flex-column flex-lg-row w-100 align-items-center justify-content-center">
-        <div class="img-container">
-            <img src="<?= base_url('assets/images/nations/maps/Peta ASEAN.svg') ?>" class="img-fluid" alt="ASEAN Map">
-        </div>
-    </div>
-</div> -->
 
 <!---------------------------------------------------------- UPDATE NEWS ---------------------------------------------------------->
 <h3 class="update">Updates</h3>

@@ -141,6 +141,26 @@ nav {
 
 /* Flexbox for desktop view */
 @media (min-width: 992px) {
+
+  .bar-dropdown{
+    margin: 20px 40px; 
+  }
+
+  .sum{
+    font-size: 24px;
+    margin-left:40px;
+  }
+  
+  .sump{
+    margin-left:40px;
+  }
+  
+.content-summary {
+  padding-top: 20px;
+  padding-left: 20px !important;
+  width: 100%;
+}
+
   .header {
     width: 100vw;
     background-color: var(--blue);
@@ -285,11 +305,11 @@ nav {
   .chart-parent {
     width: 600px !important;
     padding: 0 !important;
-    padding: 0 !important;
+    margin-left: 20px;
   }
 
   img.img-map {
-    width: 400px;
+    width: 600px;
     margin-top: 30px;
   }
   .donut {
@@ -346,6 +366,21 @@ margin-bottom: 6px;
 
 /* mobile */
 @media (max-width: 991px) {
+  .bar-dropdown{
+    margin: 20px 12px; 
+  }
+
+  .sum {
+    font-size: 12px;
+    margin-left:12px
+  }
+
+  .sump{
+    font-size: 10px;
+    margin-left:12px
+  }
+
+
   .header {
     width: 100vw;
     background-color: var(--blue);
@@ -553,6 +588,13 @@ margin-bottom: 6px;
     width: 350px;
     margin-top: 30px;
   }
+
+  
+.content-summary {
+  padding-top: 20px;
+  padding-left: 20px !important;
+  width: 100%;
+}
 
   .content-summary h2 {
     font-size: 15px;
@@ -991,12 +1033,6 @@ margin-bottom: 6px;
   margin-left: 9%;
   border-top: 2px solid #ccc;
   width: 83%;
-}
-
-.content-summary {
-  padding-top: 20px;
-  padding-left: 20px !important;
-  width: 100%;
 }
 
 .acc {
@@ -1457,7 +1493,6 @@ li > a {
   height: 40px;
   background-color: var(--blue);
   padding: 8px;
-  margin: 20px 12px; 
   position: relative;
 }
 img {
