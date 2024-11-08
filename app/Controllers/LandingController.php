@@ -1582,8 +1582,21 @@ class LandingController extends BaseController
 
             if($nat == "indonesia"){
                 return view('/landingpage/summary/nations/indonesia', $data);
-            }else{
-                echo "gblk";
+            }
+            else if($nat == "thailand"){
+                return view('/landingpage/summary/nations/thailand', $data);
+            }
+            else if($nat == "malaysia"){
+                return view('/landingpage/summary/nations/malaysia', $data);
+            }
+            else if($nat == "laos"){
+                return view('/landingpage/summary/nations/laos', $data);
+            }
+            else if($nat == "vietnam"){
+                return view('/landingpage/summary/nations/vietnam', $data);
+            }
+            else{
+                echo "404";
             }
     }
 

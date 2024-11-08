@@ -19,11 +19,12 @@ $routes->get('/news/details', 'LandingController::newsDetail');
 // $routes->get('/updates', 'LandingController::updates');
 
 $routes->get('/events', 'LandingController::events');
+
 $routes->get('/events/detail', 'LandingController::eventsDetail');
 
 // $routes->get('/summary/(:segment)', 'LandingController::summary/$1');
 $routes->get('/summarymobile/(:segment)/(:segment)', 'LandingController::summaryMobile/$1/$2');
-$routes->get('/summarymobile/compare/(:segment)', 'LandingController::compare/$1');
+$routes->get('/compare/(:segment)', 'LandingController::compare/$1');
 
 
 $routes->get('/about', 'LandingController::about');

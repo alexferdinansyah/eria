@@ -5,7 +5,7 @@
         const origin = window.location.origin
 
         function gotoCompare(){
-          window.location.href = `${origin}/summarymobile/compare/econometric`              
+          window.location.href = `${origin}/compare/econometric`              
         }
 
         Array.from(menuIcon).forEach((menu, i) => {

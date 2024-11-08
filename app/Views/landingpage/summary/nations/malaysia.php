@@ -4,8 +4,8 @@
 
 <?= $this->section('header') ?>
 <div class="banners">
-  <img src="<?= base_url('assets/images/nations/flags/indonesia.svg'); ?>" alt="">    
-    <h2>Indonesia</h2>
+  <img src="<?= base_url('assets/images/nations/flags/malaysia.svg'); ?>" alt="">    
+    <h2>Malaysia</h2>
 </div>
 <div class="low-banner">
     <p class="<?= $cat == 'econometric'? 'foc' :'' ?>">Summary</p>
@@ -147,28 +147,22 @@
                 
                 </section>
 
-                <h1 style="font-size:12px; margin-left:12px">Total Road Lenght (In Thousand)</h1>
+                <h1 style="font-size:12px; margin-left:12px">Total Road Lenght (In Million)</h1>
                 <div class="chart-parent">
-                    <canvas id="chartCompareIndonesiaRoadLength"></canvas>
+                    <canvas id="chartIndonesiaRoadLength"></canvas>
                 </div>
 
-                <h1 style="font-size:12px; margin-left:12px">Population (in million)</h1>
+                <h1 style="font-size:12px; margin-left:12px">Population (In Million)</h1>
                 <div class="chart-parent">
-                    <canvas id="chartCompareIndonesiaPopulation"></canvas>
+                    <canvas id="chartIndonesiaPopulation"></canvas>
                 </div>
 
                 <h1 style="font-size:12px; margin-left:12px">GDP Per Capita Current  US$(In Thousand)</h1>
                 <div class="chart-parent">
-                    <canvas id="chartCompareIndonesiaRoadGDPperCapital"></canvas>
+                    <canvas id="chartIndonesiaRoadGDPperCapital"></canvas>
                 </div>
-                      
-        <?php endif; ?>
-        <!-- econometric end -->
 
-        <!-- historical start -->
-        <?php if($cat == 'historical'): ?>   
-
-            <h1 style="font-size:15px; margin:12px">Current Sales & Stock Data</h1>
+                <h1 style="font-size:12px; margin-left:12px">Current Sales & Stock Data</h1>
             <p style="font-size:10px; margin-left:12px; ">Total of number Current Sales & Stock Data</p>
             
             <section class="bar-dropdown">
@@ -259,8 +253,14 @@
             <div  class="chart-parent">
                 <canvas style="margin-left:12px;" id="chartIndonesiaVehicleStock"></canvas>
             </div>
+                      
+        <?php endif; ?>
+        <!-- econometric end -->
 
-            <h1 style="font-size:12px; margin-left:12px">ICE Vechicle Sales and Stock</h1>
+        <!-- historical start -->
+        <?php if($cat == 'historical'): ?>               
+
+            <h1 style="font-size:14px; margin:12px">ICE Vechicle Sales and Stock</h1>
             <p style="font-size:10px; margin-left:12px; ">Total number of ICE Vehicle Sales and Stock</p>
 
             <section class="bar-dropdown">
@@ -343,13 +343,13 @@
             </section>
 
             
-            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
-            <div class="chart-parent">
+            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
+            <div class="chart-parent ml-chart">
                 <canvas id="chartHistoricalIndonesiaICEVechicleSales"></canvas>
             </div>
 
             <h1 style="font-size:12px; margin-left:12px">Stock Data (In Million)</h1>
-            <div class="chart-parent">
+            <div class="chart-parent ml-chart">
                 <canvas id="chartHistoricalIndonesiaICEVechicleStock"></canvas>
             </div>
 
@@ -436,12 +436,12 @@
             </section>
             
             <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
-            <div class="chart-parent">
+            <div class="chart-parent ml-chart">
                 <canvas id="chart1"></canvas>
             </div>
             
             <h1 style="font-size:12px; margin-left:12px">Stock Data (In Thousand)</h1>
-            <div class="chart-parent">
+            <div class="chart-parent ml-chart">
                 <canvas id="chart2"></canvas>
             </div>
 
@@ -462,32 +462,79 @@
                 </div>
 
                 <div class="bar-dropdown-menu">
-                    <div class="back-btn">
-                        <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                    </div>
-                    <a href="#">Option 1</a>
-                    <a href="#">Option 2</a>
-                    <a href="#">Option 3</a>
-                    <a href="#">Option 4</a>
-                    <a href="#">Option 5</a>
-                    <a href="#">Option 6</a>
-                    <a href="#">Option 7</a>
-                    <a href="#">Option 8</a>
-                    <a href="#">Option 9</a>
-                    <a href="#">Option 10</a>
-                </div>
+                        <div class="back-btn">
+                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+                        </div>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+                            <span>Brunei</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+                            <span>Singapore</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+                            <span>Laos</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+                            <span>Malaysia</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+                            <span>Myanmar</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+                            <span>philippines</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+                            <span>Thailand</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <a href="#">
+                          <div class="left">
+                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+                            <span>Vietnam</span>
+                          </div>
+                            <input type="checkbox" name="" id="">
+                        </a>
+                        <button class="show-btn">Show</button>
+                        
+                  </div>
 
-            
             </section>
                     
-            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
-            <div class="chart-parent">
+            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
+            <div class="chart-parent ml-chart">
                 <canvas id="totalSales"></canvas>
             </div>
             
                     
             <h1 style="font-size:12px; margin-left:12px">Stock Data (in Million)</h1>
-            <div class="chart-parent">
+            <div class="chart-parent ml-chart">
                 <canvas id="totalStock"></canvas>
             </div>
 
@@ -495,7 +542,7 @@
                     <table class="table">
                         <thead style="font-size:12px;">
                             <tr>
-                                <th style="height: 40px;">Type</th>
+                                <th style="height: 40px; padding: 8px 50px">Type</th>
                                 <th>2011</th>
                                 <th>2012</th>
                                 <th>2013</th>
@@ -520,7 +567,7 @@
                     <table class="table">
                         <thead style="font-size:12px;">
                             <tr>
-                                <th style="height: 40px;">Type</th>
+                                <th style="height: 40px; padding: 8px 50px">Type</th>
                                 <th>2011</th>
                                 <th>2012</th>
                                 <th>2013</th>
@@ -727,13 +774,13 @@
                 </section>
 
                  
-                <h1 style="font-size:12px; margin-left:12px">Sales Data (in thousand)</h1>
-                <div class="chart-parent">
+                <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
+                <div class="chart-parent ml-chart">
                     <canvas id="icesales"></canvas>
                 </div>
 
                 <h1 style="font-size:12px; margin-left:12px">Stock Data (In Million)</h1>
-                <div class="chart-parent">
+                <div class="chart-parent ml-chart">
                     <canvas id="icestock"></canvas>
                 </div>
 
@@ -821,13 +868,13 @@
                 </section>
 
                  
-                <h1 style="font-size:12px; margin-left:12px">Sales Data (in Million)</h1>
-                <div class="chart-parent">
+                <h1 style="font-size:12px; margin-left:12px">Sales Data (in Thousand)</h1>
+                <div class="chart-parent ml-chart">
                     <canvas id="hbpsales"></canvas>
                 </div>
 
                 <h1 style="font-size:12px; margin-left:12px">Stock Data (In Thousand)</h1>
-                <div class="chart-parent">
+                <div class="chart-parent ml-chart">
                     <canvas id="hbpstock"></canvas>
                 </div>
 
@@ -914,13 +961,13 @@
                 </section>
 
                  
-                <h1 style="font-size:12px; margin-left:12px">Sales Data (in Thousand)</h1>
-                <div class="chart-parent">
+                <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
+                <div class="chart-parent ml-chart">
                     <canvas id="vsales"></canvas>
                 </div>
 
                 <h1 style="font-size:12px; margin-left:12px">Stock Data (In Million)</h1>
-                <div class="chart-parent">
+                <div class="chart-parent ml-chart">
                     <canvas id="vstock"></canvas>
                 </div>
         <?php endif; ?>
@@ -931,22 +978,23 @@
 
 <?= $this->section('script') ?>
 <script>
-          const lowbanner = document.getElementsByClassName("low-banner");
+  const nations ="<?= $nat ?>" 
+        const lowbanner = document.getElementsByClassName("low-banner");
 
-Array.from(lowbanner[0].getElementsByTagName("p")).forEach((p, i) => {
-  p.addEventListener('click', () => {
-    if (i == 0) {
-      window.location.href = `${origin}/compare/econometric`              
-    }
-    else if(i == 1){
-      window.location.href = `${origin}/compare/historical`
-    }
-    else{
-      window.location.href = `${origin}/compare/forcasting`
-    }
-  })
-})
-
+        Array.from(lowbanner[0].getElementsByTagName("p")).forEach((p, i) => {
+          p.addEventListener('click', () => {
+            if (i == 0) {
+              window.location.href = `${origin}/summarymobile/econometric/${nations}`              
+            }
+            else if(i == 1){
+              window.location.href = `${origin}/summarymobile/historical/${nations}`
+            }
+            else{
+              window.location.href = `${origin}/summarymobile/forcasting/${nations}`
+            }
+          })
+        })
+        
         function commarize(min, scale = "default") {
           min = min || 1e3;
           let value = this;
@@ -975,7 +1023,8 @@ Array.from(lowbanner[0].getElementsByTagName("p")).forEach((p, i) => {
         }
 
         Number.prototype.commarize = commarize;
-        String.prototype.commarize = commarize;
+        String.prototype.commarize = commarize;             
+
 
             const DATA_COUNT = 2022;
         const labels = [];
@@ -986,250 +1035,201 @@ Array.from(lowbanner[0].getElementsByTagName("p")).forEach((p, i) => {
 switch (window.location.pathname.split('/')[2]) {
   case 'econometric':
             
-    //04. Compare Indonesia Road Length
-    const chartCompareIndonesiaRoadLength = document.getElementById(
-          "chartCompareIndonesiaRoadLength"
+    const chartIndonesiaRoadLength = document.getElementById(
+          "chartIndonesiaRoadLength"
         );
-
-        console.log(chartCompareIndonesiaRoadLength)
-        
-        const chartCompareIndonesiaRoadLengthIndonesiaDataPoints = [
+        const chartIndonesiaRoadLengthDataPoints = [
           492398, 501969, 508000, 517753, 529073, 537838, 539353, 542310, 544474,
           548366, 546116, 548097,
         ];
-        const chartCompareIndonesiaRoadLengthMalaysiaDataPoints = [
-          155427, 180882, 202333, 201794, 214816, 238790, 237022, 250023, 256494,
-          267012, 303016, 281302,
-        ];
-        const chartCompareIndonesiaRoadLengthThailandDataPoints = [
-          231216, 231790, 232196, 233175, 454025, 455653, 456487, 701847, 702210,
-          702723, 702970, 703594,
-        ];
-        const chartCompareIndonesiaRoadLengthData = {
+        const chartIndonesiaRoadLengthData = {
           labels: labels,
           datasets: [
             {
-              label: "Indonesia",
-              data: chartCompareIndonesiaRoadLengthIndonesiaDataPoints,
+              label: "Indonesia Road Length",
+              data: chartIndonesiaRoadLengthDataPoints,
               borderColor: "#4285f4",
               fill: false,
               tension: 0.4,
-              backgroundColor: "#4285f4",
-            },
-            {
-              label: "Malaysia",
-              data: chartCompareIndonesiaRoadLengthMalaysiaDataPoints,
-              borderColor: "#ea4335",
-              fill: false,
-              tension: 0.4,
-              backgroundColor: "#ea4335",
-            },
-            {
-              label: "Thailand",
-              data: chartCompareIndonesiaRoadLengthThailandDataPoints,
-              borderColor: "#fbbc04",
-              fill: false,
-              tension: 0.4,
-              backgroundColor: "#fbbc04",
             },
           ],
         };
         
-        const chartCompareIndonesiaRoadLengthConfig = {
+        const chartIndonesiaRoadLengthConfig = {
           type: "line",
-          data: chartCompareIndonesiaRoadLengthData,
+          data: chartIndonesiaRoadLengthData,
           options: {
             responsive: true,
             plugins: {
               legend: {
-                display: true,
-                position: "bottom",
-              }
+                display: false,
+              },
+              title: {
+                display: false,
+                text: "01. Indonesia Road Length",
+              },
             },
             interaction: {
               intersect: false,
             },
             scales: {
+              x: {
+                display: true,
+                title: {
+                  display: true,
+                },
+              },
               y: {
                 ticks: {
                   callback: function (value, index, ticks) {
-                    return String(value).commarize(1e3, "thousand");
+                    return String(value).commarize(1e3, "million");
                   },
                 },
                 display: true,
-                
+                title: {
+                  display: true,
+                },
+                suggestedMin: 0,
+                suggestedMax: 1000000,
               },
             },
           },
         };
         
-        new Chart(
-          chartCompareIndonesiaRoadLength,
-          chartCompareIndonesiaRoadLengthConfig
+        new Chart(chartIndonesiaRoadLength, chartIndonesiaRoadLengthConfig);
+
+        // 02. Indonesia Population
+        const chartIndonesiaPopulation = document.getElementById(
+          "chartIndonesiaPopulation"
         );
-        
-        //05. Compare Indonesia Population
-        const chartCompareIndonesiaPopulation = document.getElementById(
-          "chartCompareIndonesiaPopulation"
-        );
-        
-        const chartCompareIndonesiaPopulationIndonesiaDataPoints = [
+        const chartIndonesiaPopulationDataPoints = [
           241911000, 245425000, 248818000, 252165000, 255462000, 258705000, 261891000,
           264161600, 266911900, 270203917, 272682500, 275773800,
         ];
-        const chartCompareIndonesiaPopulationMalaysiaDataPoints = [
-          29184133, 29660212, 30134807, 30606459, 31068833, 31526418, 31975806,
-          32399271, 32804020, 33199993, 33573874, 33938221,
-        ];
-        const chartCompareIndonesiaPopulationThailandDataPoints = [
-          64076000, 64456695, 64785909, 65124716, 65729098, 65931550, 66188503,
-          66413979, 66558935, 66186727, 66171439, 66090475,
-        ];
-        const chartCompareIndonesiaPopulationData = {
+        const chartIndonesiaPopulationData = {
           labels: labels,
           datasets: [
             {
-              label: "Indonesia",
-              data: chartCompareIndonesiaPopulationIndonesiaDataPoints,
+              label: "Indonesia Populations",
+              data: chartIndonesiaPopulationDataPoints,
               borderColor: "#4285f4",
               fill: false,
               tension: 0.4,
-              backgroundColor: "#4285f4",
-            },
-            {
-              label: "Malaysia",
-              data: chartCompareIndonesiaPopulationMalaysiaDataPoints,
-              borderColor: "#ea4335",
-              fill: false,
-              tension: 0.4,
-              backgroundColor: "#ea4335",
-            },
-            {
-              label: "Thailand",
-              data: chartCompareIndonesiaPopulationThailandDataPoints,
-              borderColor: "#fbbc04",
-              fill: false,
-              tension: 0.4,
-              backgroundColor: "#fbbc04",
             },
           ],
         };
         
-        const chartCompareIndonesiaPopulationConfig = {
+        const chartIndonesiaPopulationConfig = {
           type: "line",
-          data: chartCompareIndonesiaPopulationData,
+          data: chartIndonesiaPopulationData,
           options: {
             responsive: true,
             plugins: {
               legend: {
-                display: true,
-                position: "bottom",
+                display: false,
               },
-            },
-            interaction: {
-              intersect: false,
-            },
-            scales: {              
-              y: {
-                ticks: {
-                  callback: function (value, index, ticks) {
-                    return String(value).commarize(1e3, "million");
-                  },
-                },
-                display: true,
-              },
-            },
-          },
-        };
-        
-        new Chart(
-          chartCompareIndonesiaPopulation,
-          chartCompareIndonesiaPopulationConfig
-        );
-        
-        //06. Compare Indonesia Road GDP per Capital
-        const chartCompareIndonesiaRoadGDPperCapital = document.getElementById(
-          "chartCompareIndonesiaRoadGDPperCapital"
-        );
-        
-        const chartCompareIndonesiaRoadGDPperCapitalIndonesiaDataPoints = [
-          3614, 3668, 3603, 3477, 3323, 3559, 3840, 3903, 4151, 3896, 4334, 4778,
-        ];
-        const chartCompareIndonesiaRoadGDPperCapitalMalaysiaDataPoints = [
-          10209.37, 10601.51, 10727.67, 11045.58, 9699.6, 9555.67, 9979.7, 11073.98,
-          11132.1, 10164.34, 11134.62, 11993.19,
-        ];
-        const chartCompareIndonesiaRoadGDPperCapitalThailandDataPoints = [
-          5396.64, 5748.63, 6041.13, 5822.38, 5708.79, 5854.46, 6436.79, 7124.56,
-          7628.58, 7001.85, 7070.51, 6913.05,
-        ];
-        const chartCompareIndonesiaRoadGDPperCapitalData = {
-          labels: labels,
-          datasets: [
-            {
-              label: "Indonesia",
-              data: chartCompareIndonesiaRoadGDPperCapitalIndonesiaDataPoints,
-              borderColor: "#4285f4",
-              fill: false,
-              tension: 0.4,
-              backgroundColor: "#4285f4",
-            },
-            {
-              label: "Malaysia",
-              data: chartCompareIndonesiaRoadGDPperCapitalMalaysiaDataPoints,
-              borderColor: "#ea4335",
-              fill: false,
-              tension: 0.4,
-              backgroundColor: "#ea4335",
-            },
-            {
-              label: "Thailand",
-              data: chartCompareIndonesiaRoadGDPperCapitalThailandDataPoints,
-              borderColor: "#fbbc04",
-              fill: false,
-              tension: 0.4,
-              backgroundColor: "#fbbc04",
-            },
-          ],
-        };
-        
-        const chartCompareIndonesiaRoadGDPperCapitalConfig = {
-          type: "line",
-          data: chartCompareIndonesiaRoadGDPperCapitalData,
-          options: {
-            responsive: true,
-            plugins: {
-              legend: {
-                display: true,
-                position: "bottom",
+              title: {
+                display: false,
+                text: "02. Indonesia Populations",
               },
             },
             interaction: {
               intersect: false,
             },
             scales: {
+              x: {
+                display: true,
+                title: {
+                  display: true,
+                },
+              },
               y: {
                 ticks: {
                   callback: function (value, index, ticks) {
-                    return String(value).commarize(1e3, "million");
+                    return String(value).commarize();
                   },
                 },
                 display: true,
+                title: {
+                  display: true,
+                },
+                suggestedMin: 0,
+                suggestedMax: 400000000,
+              },
+            },
+          },
+        };
+        
+        new Chart(chartIndonesiaPopulation, chartIndonesiaPopulationConfig);
+
+        //03. Indonesia Road GDP per Capital
+        const chartIndonesiaRoadGDPperCapital = document.getElementById(
+          "chartIndonesiaRoadGDPperCapital"
+        );
+        
+        const chartIndonesiaRoadGDPperCapitalDataPoints = [
+          3614, 3668, 3603, 3477, 3323, 3559, 3840, 3903, 4151, 3896, 4334, 4778,
+        ];
+        const chartIndonesiaRoadGDPperCapitalData = {
+          labels: labels,
+          datasets: [
+            {
+              label: "Indonesia Road GDP per Capital",
+              data: chartIndonesiaRoadGDPperCapitalDataPoints,
+              borderColor: "#4285f4",
+              fill: false,
+              tension: 0.4,
+            },
+          ],
+        };
+        
+        const chartIndonesiaRoadGDPperCapitalConfig = {
+          type: "line",
+          data: chartIndonesiaRoadGDPperCapitalData,
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: false,
+              },
+              title: {
+                display: false,
+                text: "03. Indonesia Road GDP per Capital",
+              },
+            },
+            interaction: {
+              intersect: false,
+            },
+            scales: {
+              x: {
+                display: true,
+                title: {
+                  display: true,
+                },
+              },
+              y: {
+                ticks: {
+                  callback: function (value, index, ticks) {
+                    return String(value).commarize();
+                  },
+                },
+                display: true,
+                title: {
+                  display: true,
+                },
+                suggestedMin: 0,
+                suggestedMax: 5000,
               },
             },
           },
         };
         
         new Chart(
-          chartCompareIndonesiaRoadGDPperCapital,
-          chartCompareIndonesiaRoadGDPperCapitalConfig
+          chartIndonesiaRoadGDPperCapital,
+          chartIndonesiaRoadGDPperCapitalConfig
         );
 
-
-    break;
-  case 'historical':
-    
-    //07. Indonesia Vehicle Sales
+        //07. Indonesia Vehicle Sales
     const chartIndonesiaVehicleSales = document.getElementById(
           "chartIndonesiaVehicleSales"
         );
@@ -1360,6 +1360,8 @@ switch (window.location.pathname.split('/')[2]) {
         };
         
         new Chart(chartIndonesiaVehicleStock, chartIndonesiaVehicleStockConfig);
+    break;
+  case 'historical':    
 
         const ctx = document.getElementById('chart1').getContext('2d');
 
@@ -1517,7 +1519,7 @@ switch (window.location.pathname.split('/')[2]) {
                       y: {
                         ticks: {
                           callback: function (value, index, ticks) {
-                            return String(value).commarize();
+                            return String(value).commarize(1e3, "million");
                           },
                         },
                           beginAtZero: true,
@@ -1611,7 +1613,7 @@ switch (window.location.pathname.split('/')[2]) {
               y: {
                 ticks: {
                   callback: function (value, index, ticks) {
-                    return String(value).commarize();
+                    return String(value).commarize(1e3, "million");
                   },
                 },
               },
@@ -1885,7 +1887,7 @@ switch (window.location.pathname.split('/')[2]) {
                     beginAtZero: true,
                     ticks: {
                                   callback: function (value, index, ticks) {
-                                    return String(value).commarize();
+                                    return String(value).commarize(1e3, "million");
                                   },
                                 },
                 }
@@ -2174,7 +2176,7 @@ switch (window.location.pathname.split('/')[2]) {
                     beginAtZero: true,
                     ticks: {
                               callback: function (value, index, ticks) {
-                                return String(value).commarize();
+                                return String(value).commarize(1e3, "million");
                               },
                             },
                 }
