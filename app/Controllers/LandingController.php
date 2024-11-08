@@ -114,7 +114,7 @@ class LandingController extends BaseController
         $data["nation"] = $nat;
 
         $data['tes'] = "<h1>hello</h1>";
-        
+
         $sales = [];
         $stock = [];
 
@@ -158,7 +158,7 @@ class LandingController extends BaseController
                 </li>
             </ol>
             ';
-                
+
             $sales["ICE"] = 1032603;
             $sales["HEV"] = 5100;
             $sales["BEV"] = 10327;
@@ -183,7 +183,7 @@ class LandingController extends BaseController
             $data["volNewCarSum"] = "1048040";
             $data["volStockUIO"] = "12250892";
 
-            $data['tableData1'] ='
+            $data['tableData1'] = '
             <tr style="height: 33.33%;">
                         <td>VOL HEV Sales</td>
                         <td>0</td>
@@ -348,9 +348,8 @@ class LandingController extends BaseController
                             <td>0</td>
                         </tr>
             ';
-
-        }else if($nat == "vietnam"){
-            $data["sd"] ="";
+        } else if ($nat == "vietnam") {
+            $data["sd"] = "";
             $sales["ICE"] = 1032603;
             $sales["HEV"] = 5100;
             $sales["BEV"] = 10327;
@@ -375,8 +374,8 @@ class LandingController extends BaseController
             $data["volNewCarSum"] = "1048040";
             $data["volStockUIO"] = "12250892";
 
-            
-            $data['tableData1'] ='
+
+            $data['tableData1'] = '
             <tr style="height: 33.33%;">
                         <td>VOL HEV Sales</td>
                         <td>0</td>
@@ -541,10 +540,8 @@ class LandingController extends BaseController
                             <td>3,619,830</td>
                         </tr>
             ';
-
-
-        }else if($nat == "thailand"){
-            $data["sd"] ='
+        } else if ($nat == "thailand") {
+            $data["sd"] = '
             <p>Data Source</p>
             <ol type="A">
                 <li>Population
@@ -587,7 +584,7 @@ class LandingController extends BaseController
                 </li>
             </ol>
             ';
-                
+
             $sales["ICE"] = 806194;
             $sales["HEV"] = 63568;
             $sales["BEV"] = 9901;
@@ -611,8 +608,8 @@ class LandingController extends BaseController
             $data["volPhev"] = "10";
             $data["volNewCarSum"] = "1048040";
             $data["volStockUIO"] = "12250892";
-            
-            $data['tableData1'] ='
+
+            $data['tableData1'] = '
             <tr style="height: 33.33%;">
                         <td>VOL HEV Sales</td>
                         <td>12077</td>
@@ -777,9 +774,9 @@ class LandingController extends BaseController
                             <td>12300127</td>
                         </tr>
             ';
-        }else if($nat == "malaysia"){
-            $data["sd"] ="";
-                
+        } else if ($nat == "malaysia") {
+            $data["sd"] = "";
+
             $sales["ICE"] = 3006138;
             $sales["HEV"] = 30762;
             $sales["BEV"] = 8618;
@@ -804,7 +801,7 @@ class LandingController extends BaseController
             $data["volNewCarSum"] = "N/a";
             $data["volStockUIO"] = "N/a";
 
-            $data['tableData1'] ='
+            $data['tableData1'] = '
             <tr style="height: 33.33%;">
                         <td>VOL HEV Sales</td>
                         <td>0</td>
@@ -968,9 +965,9 @@ class LandingController extends BaseController
                             <td>0</td>
                         </tr>
             ';
-        }else if($nat == "laos"){
-            $data["sd"] ="";
-                
+        } else if ($nat == "laos") {
+            $data["sd"] = "";
+
             $sales["ICE"] = 25224;
             $sales["HEV"] = 63;
             $sales["BEV"] = 1697;
@@ -995,7 +992,7 @@ class LandingController extends BaseController
             $data["volNewCarSum"] = "N/a";
             $data["volStockUIO"] = "N/a";
 
-            $data['tableData1'] ='
+            $data['tableData1'] = '
             <tr style="height: 33.33%;">
                         <td>VOL HEV Sales</td>
                         <td>0</td>
@@ -1160,9 +1157,8 @@ class LandingController extends BaseController
                             <td>177295</td>
                         </tr>
             ';
-        } 
-        else {
-            $data["sd"] ="";    
+        } else {
+            $data["sd"] = "";
             $sales["ICE"] = "N/a";
             $sales["HEV"] = "N/a";
             $sales["BEV"] = "N/a";
@@ -1187,7 +1183,7 @@ class LandingController extends BaseController
             $data["volNewCarSum"] = "N/a";
             $data["volStockUIO"] = "N/a";
 
-            $data['tableData1'] ='
+            $data['tableData1'] = '
             <tr style="height: 33.33%;">
                         <td>VOL HEV Sales</td>
                         <td>0</td>
@@ -1354,25 +1350,26 @@ class LandingController extends BaseController
             ';
         }
 
-        
+
         $data["sales"] = $sales;
         $data["stock"] = $stock;
 
         return view('/landingpage/summary', $data);
     }
 
-    public function summaryMobile($cat, $nat){
+    public function summaryMobile($cat, $nat)
+    {
 
-            if($nat == "indonesia"){
-                $data["nat"] = $nat;   //negara
-                $data["cat"] = $cat;   
-                $data["population"] = "275,773,800";
-                $data["ttlland"] = "1,892,556";
-                $data["totalRoad"] = "548,097";
-                $data["GDP"] = "4,778";
-                $data["PPP"] = "1,214.92";
-                $data["GDPppp"] = "12,410";
-                $data['tableData1'] ='
+        if ($nat == "indonesia") {
+            $data["nat"] = $nat;   //negara
+            $data["cat"] = $cat;
+            $data["population"] = "275,773,800";
+            $data["ttlland"] = "1,892,556";
+            $data["totalRoad"] = "548,097";
+            $data["GDP"] = "4,778";
+            $data["PPP"] = "1,214.92";
+            $data["GDPppp"] = "12,410";
+            $data['tableData1'] = '
                 <tr style="height: 33.33%;">
                             <td>VOL HEV Sales</td>
                             <td>0</td>
@@ -1455,7 +1452,7 @@ class LandingController extends BaseController
                         </tr>
                 ';
 
-                $data['tableData2'] = '
+            $data['tableData2'] = '
                 <tr style="height: 33.33%;">
                                 <td>HEV Vehicle Stock</td>
                                 <td>0</td>
@@ -1538,7 +1535,7 @@ class LandingController extends BaseController
                             </tr>
                 ';
 
-                $data["sd"] ='
+            $data["sd"] = '
                 <p>Data Source</p>
                 <ol type="A">
                     <li>Population
@@ -1581,18 +1578,17 @@ class LandingController extends BaseController
                     </li>
                 </ol>
                 ';
-                return view('/landingpage/summary/nations/indonesia', $data);
-            }
-            else if($nat == "thailand"){
-                $data["nat"] = $nat;   //negara
-                $data["cat"] = $cat;   
-                $data["population"] = "99,474";
-                $data["ttlland"] = "33,1345";
-                $data["totalRoad"] = "649,422";
-                $data["GDP"] = "4,123";
-                $data["PPP"] = "6,908";
-                $data["GDPppp"] = "14,024";
-                $data['tableData1'] ='
+            return view('/landingpage/summary/nations/indonesia', $data);
+        } else if ($nat == "thailand") {
+            $data["nat"] = $nat;   //negara
+            $data["cat"] = $cat;
+            $data["population"] = "99,474";
+            $data["ttlland"] = "33,1345";
+            $data["totalRoad"] = "649,422";
+            $data["GDP"] = "4,123";
+            $data["PPP"] = "6,908";
+            $data["GDPppp"] = "14,024";
+            $data['tableData1'] = '
                     <tr style="height: 33.33%;">
                                 <td>VOL HEV Sales</td>
                                 <td>0</td>
@@ -1675,7 +1671,7 @@ class LandingController extends BaseController
                             </tr>
                     ';
 
-                $data['tableData2'] = '
+            $data['tableData2'] = '
                 <tr style="height: 33.33%;">
                                 <td>HEV Vehicle Stock</td>
                                 <td>0</td>
@@ -1758,7 +1754,7 @@ class LandingController extends BaseController
                             </tr>
                 ';
 
-                $data["sd"] ='
+            $data["sd"] = '
                 <p>Data Source</p>
                 <ol type="A">
                     <li>Population
@@ -1801,18 +1797,17 @@ class LandingController extends BaseController
                     </li>
                 </ol>
                 ';
-                return view('/landingpage/summary/nations/thailand', $data);
-            }
-            else if($nat == "malaysia"){
-                $data["nat"] = $nat;   //negara
-                $data["cat"] = $cat;   
-                $data["population"] = "99,474";
-                $data["ttlland"] = "33,1345";
-                $data["totalRoad"] = "649,422";
-                $data["GDP"] = "4,123";
-                $data["PPP"] = "6,908";
-                $data["GDPppp"] = "14,024";
-                $data['tableData1'] ='
+            return view('/landingpage/summary/nations/thailand', $data);
+        } else if ($nat == "malaysia") {
+            $data["nat"] = $nat;   //negara
+            $data["cat"] = $cat;
+            $data["population"] = "99,474";
+            $data["ttlland"] = "33,1345";
+            $data["totalRoad"] = "649,422";
+            $data["GDP"] = "4,123";
+            $data["PPP"] = "6,908";
+            $data["GDPppp"] = "14,024";
+            $data['tableData1'] = '
                 <tr style="height: 33.33%;">
                             <td>VOL HEV Sales</td>
                             <td>0</td>
@@ -1895,7 +1890,7 @@ class LandingController extends BaseController
                         </tr>
                 ';
 
-                $data['tableData2'] = '
+            $data['tableData2'] = '
                 <tr style="height: 33.33%;">
                                 <td>HEV Vehicle Stock</td>
                                 <td>0</td>
@@ -1978,7 +1973,7 @@ class LandingController extends BaseController
                             </tr>
                 ';
 
-                $data["sd"] ='
+            $data["sd"] = '
                 <p>Data Source</p>
                 <ol type="A">
                     <li>Population
@@ -2021,18 +2016,17 @@ class LandingController extends BaseController
                     </li>
                 </ol>
                 ';
-                return view('/landingpage/summary/nations/malaysia', $data);
-            }
-            else if($nat == "laos"){
-                $data["nat"] = $nat;   //negara
-                $data["cat"] = $cat;   
-                $data["population"] = "99,474";
-                $data["ttlland"] = "33,1345";
-                $data["totalRoad"] = "649,422";
-                $data["GDP"] = "4,123";
-                $data["PPP"] = "6,908";
-                $data["GDPppp"] = "14,024";
-                $data['tableData1'] ='
+            return view('/landingpage/summary/nations/malaysia', $data);
+        } else if ($nat == "laos") {
+            $data["nat"] = $nat;   //negara
+            $data["cat"] = $cat;
+            $data["population"] = "7,633,779";
+            $data["ttlland"] = "236,800";
+            $data["totalRoad"] = "59,646";
+            $data["GDP"] = "1,832.00";
+            $data["PPP"] = "N/A";
+            $data["GDPppp"] = "N/A";
+            $data['tableData1'] = '
                     <tr style="height: 33.33%;">
                                 <td>VOL HEV Sales</td>
                                 <td>0</td>
@@ -2043,11 +2037,11 @@ class LandingController extends BaseController
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>331</td>
-                                <td>1108</td>
-                                <td>2473</td>
-                                <td>5100</td>
-                                <td>0</td>
+                                <td>3</td>
+                                <td>11</td>
+                                <td>157</td>
+                                <td>63</td>
+                                <td>471</td>
                             </tr>
                             <tr style="height: 33.33%;">
                                 <td>VOL BEV Sales</td>
@@ -2058,12 +2052,12 @@ class LandingController extends BaseController
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>118</td>
-                                <td>685</td>
-                                <td>10327</td>
-                                <td>0</td>
+                                <td>65</td>
+                                <td>184</td>
+                                <td>200</td>
+                                <td>283</td>
+                                <td>1786</td>
+                                <td>3152</td>
                             </tr>
                             <tr style="height: 33.33%;">
                                 <td>VOL PHEV Sales</td>
@@ -2075,47 +2069,47 @@ class LandingController extends BaseController
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>20</td>
-                                <td>6</td>
-                                <td>35</td>
-                                <td>10</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
                                 <td>0</td>
                             </tr>
                             <tr style="height: 33.33%;">
                                 <td>VOL ICE Sales</td>
-                                <td>894164</td>
-                                <td>1116230</td>
-                                <td>1229811</td>
-                                <td>1208028</td>
-                                <td>1013518</td>
-                                <td>1062694</td>
-                                <td>1077364</td>
-                                <td>1151308</td>
-                                <td>1029775</td>
-                                <td>531175</td>
-                                <td>884009</td>
-                                <td>1032603</td>
-                                <td>0</td>
+                                <td>135351</td>
+                                <td>144561</td>
+                                <td>150781</td>
+                                <td>137703</td>
+                                <td>140320</td>
+                                <td>132516</td>
+                                <td>128957</td>
+                                <td>125516</td>
+                                <td>128293</td>
+                                <td>109535</td>
+                                <td>106852</td>
+                                <td>150464</td>
+                                <td>109641</td>
                             </tr>
                             <tr style="height: 33.33%;">
                                 <td>TOTAL Sales</td>
-                                <td>894164</td>
-                                <td>1116230</td>
-                                <td>1229811</td>
-                                <td>1208028</td>
-                                <td>1013518</td>
-                                <td>1062694</td>
-                                <td>1077364</td>
-                                <td>1151328</td>
-                                <td>1030112</td>
-                                <td>532436</td>
-                                <td>888202</td>
-                                <td>1043039</td>
-                                <td>0</td>
+                                <td>135351</td>
+                                <td>144561</td>
+                                <td>150781</td>
+                                <td>137703</td>
+                                <td>140320</td>
+                                <td>132516</td>
+                                <td>128987</td>
+                                <td>125581</td>
+                                <td>128480</td>
+                                <td>109746</td>
+                                <td>107292</td>
+                                <td>152313</td>
+                                <td>113264</td>
                             </tr>
                     ';
 
-                $data['tableData2'] = '
+            $data['tableData2'] = '
                 <tr style="height: 33.33%;">
                                 <td>HEV Vehicle Stock</td>
                                 <td>0</td>
@@ -2126,11 +2120,11 @@ class LandingController extends BaseController
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>331</td>
-                                <td>1439</td>
-                                <td>3912</td>
-                                <td>9012</td>
-                                <td>0</td>
+                                <td>3</td>
+                                <td>14</td>
+                                <td>171</td>
+                                <td>234</td>
+                                <td>705</td>
                             </tr>
                             <tr style="height: 33.33%;">
                                 <td>BEV Vehicle Stock</td>
@@ -2140,13 +2134,13 @@ class LandingController extends BaseController
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>118</td>
-                                <td>685</td>
-                                <td>10327</td>
-                                <td>0</td>
+                                <td>30</td>
+                                <td>95</td>
+                                <td>279</td>
+                                <td>479</td>
+                                <td>762</td>
+                                <td>2548</td>
+                                <td>5700</td>
                             </tr>
                             <tr style="height: 33.33%;">
                                 <td>PHEV Vehicle Stock</td>
@@ -2158,47 +2152,47 @@ class LandingController extends BaseController
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
-                                <td>20</td>
-                                <td>26</td>
-                                <td>61</td>
-                                <td>71</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
                                 <td>0</td>
                             </tr>
                             <tr style="height: 33.33%;">
                                 <td>ICE Vehicle Stock</td>
-                                <td>894164</td>
-                                <td>2010394</td>
-                                <td>3240205</td>
-                                <td>4448233</td>
-                                <td>5461751</td>
-                                <td>6524445</td>
-                                <td>7601809</td>
-                                <td>7601809</td>
-                                <td>9782892</td>
-                                <td>10314067</td>
-                                <td>11198076</td>
-                                <td>12230679</td>
-                                <td>0</td>
+                                <td>135351</td>
+                                <td>279912</td>
+                                <td>430693</td>
+                                <td>568396</td>
+                                <td>708716</td>
+                                <td>841232</td>
+                                <td>970189</td>
+                                <td>1095705</td>
+                                <td>1223998</td>
+                                <td>1333533</td>
+                                <td>1440385</td>
+                                <td>1590849</td>
+                                <td>1700490</td>
                             </tr>
                             <tr style="height: 33.33%;">
                                 <td>TOTAL STOCK</td>
-                                <td>894164</td>
-                                <td>2010394</td>
-                                <td>3240205</td>
-                                <td>4448233</td>
-                                <td>5461751</td>
-                                <td>6524445</td>
-                                <td>7601809</td>
-                                <td>8753117</td>
-                                <td>9783243</td>
-                                <td>10315650</td>
-                                <td>11202852</td>
-                                <td>12250892</td>
-                                <td>0</td>
+                                <td>135351</td>
+                                <td>279912</td>
+                                <td>430693</td>
+                                <td>568396</td>
+                                <td>708716</td>
+                                <td>841232</td>
+                                <td>970219</td>
+                                <td>1095800</td>
+                                <td>1224280</td>
+                                <td>1334026</td>
+                                <td>1441318</td>
+                                <td>1593631</td>
+                                <td>1706895</td>
                             </tr>
                 ';
 
-                $data["sd"] ='
+            $data["sd"] = '
                 <p>Data Source</p>
                 <ol type="A">
                     <li>Population
@@ -2241,242 +2235,241 @@ class LandingController extends BaseController
                     </li>
                 </ol>
                 ';
-                return view('/landingpage/summary/nations/laos', $data);
-            }
-            else if($nat == "vietnam"){
-                $data["nat"] = $nat;   //negara
-                $data["cat"] = $cat;   
-                $data["population"] = "99,474";
-                $data["ttlland"] = "33,1345";
-                $data["totalRoad"] = "649,422";
-                $data["GDP"] = "4,123";
-                $data["PPP"] = "6,908";
-                $data["GDPppp"] = "14,024";
-                $data['tableData1'] ='
-                <tr style="height: 33.33%;">
-                            <td>VOL HEV Sales</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>331</td>
-                            <td>1108</td>
-                            <td>2473</td>
-                            <td>5100</td>
-                            <td>0</td>
-                        </tr>
-                        <tr style="height: 33.33%;">
-                            <td>VOL BEV Sales</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>118</td>
-                            <td>685</td>
-                            <td>10327</td>
-                            <td>0</td>
-                        </tr>
-                        <tr style="height: 33.33%;">
-                            <td>VOL PHEV Sales</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>20</td>
-                            <td>6</td>
-                            <td>35</td>
-                            <td>10</td>
-                            <td>0</td>
-                        </tr>
-                        <tr style="height: 33.33%;">
-                            <td>VOL ICE Sales</td>
-                            <td>894164</td>
-                            <td>1116230</td>
-                            <td>1229811</td>
-                            <td>1208028</td>
-                            <td>1013518</td>
-                            <td>1062694</td>
-                            <td>1077364</td>
-                            <td>1151308</td>
-                            <td>1029775</td>
-                            <td>531175</td>
-                            <td>884009</td>
-                            <td>1032603</td>
-                            <td>0</td>
-                        </tr>
-                        <tr style="height: 33.33%;">
-                            <td>TOTAL Sales</td>
-                            <td>894164</td>
-                            <td>1116230</td>
-                            <td>1229811</td>
-                            <td>1208028</td>
-                            <td>1013518</td>
-                            <td>1062694</td>
-                            <td>1077364</td>
-                            <td>1151328</td>
-                            <td>1030112</td>
-                            <td>532436</td>
-                            <td>888202</td>
-                            <td>1043039</td>
-                            <td>0</td>
-                        </tr>
-                ';
+            return view('/landingpage/summary/nations/laos', $data);
+        } else if ($nat == "vietnam") {
+            $data["nat"] = $nat;   //negara
+            $data["cat"] = $cat;
+            $data["population"] = "99,474";
+            $data["ttlland"] = "331,346";
+            $data["totalRoad"] = "649,422";
+            $data["GDP"] = "4,123";
+            $data["PPP"] = "6,908";
+            $data["GDPppp"] = "14,024";
+            $data['tableData1'] = '
+    <tr style="height: 33.33%;">
+                <td>VOL HEV Sales</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr style="height: 33.33%;">
+                <td>VOL BEV Sales</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>85</td>
+                <td>7080</td>
+                <td>34855</td>
+            </tr>
+            <tr style="height: 33.33%;">
+                <td>VOL PHEV Sales</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr style="height: 33.33%;">
+                <td>VOL ICE Sales</td>
+                <td>110938</td>
+                <td>80418</td>
+                <td>96692</td>
+                <td>147588</td>
+                <td>235768</td>
+                <td>308242</td>
+                <td>279369</td>
+                <td>340343</td>
+                <td>400941</td>
+                <td>394836</td>
+                <td>383359</td>
+                <td>455489</td>
+                <td>343827</td>
+            </tr>
+            <tr style="height: 33.33%;">
+                <td>TOTAL Sales</td>
+                <td>110938</td>
+                <td>80418</td>
+                <td>96692</td>
+                <td>147588</td>
+                <td>235768</td>
+                <td>308242</td>
+                <td>279369</td>
+                <td>340343</td>
+                <td>400941</td>
+                <td>394836</td>
+                <td>383444</td>
+                <td>462569</td>
+                <td>378682</td>
+            </tr>
+    ';
 
-                $data['tableData2'] = '
+            $data['tableData2'] = '
+    <tr style="height: 33.33%;">
+                    <td>HEV Vehicle Stock</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
                 <tr style="height: 33.33%;">
-                                <td>HEV Vehicle Stock</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>331</td>
-                                <td>1439</td>
-                                <td>3912</td>
-                                <td>9012</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>BEV Vehicle Stock</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>118</td>
-                                <td>685</td>
-                                <td>10327</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>PHEV Vehicle Stock</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>20</td>
-                                <td>26</td>
-                                <td>61</td>
-                                <td>71</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>ICE Vehicle Stock</td>
-                                <td>894164</td>
-                                <td>2010394</td>
-                                <td>3240205</td>
-                                <td>4448233</td>
-                                <td>5461751</td>
-                                <td>6524445</td>
-                                <td>7601809</td>
-                                <td>7601809</td>
-                                <td>9782892</td>
-                                <td>10314067</td>
-                                <td>11198076</td>
-                                <td>12230679</td>
-                                <td>0</td>
-                            </tr>
-                            <tr style="height: 33.33%;">
-                                <td>TOTAL STOCK</td>
-                                <td>894164</td>
-                                <td>2010394</td>
-                                <td>3240205</td>
-                                <td>4448233</td>
-                                <td>5461751</td>
-                                <td>6524445</td>
-                                <td>7601809</td>
-                                <td>8753117</td>
-                                <td>9783243</td>
-                                <td>10315650</td>
-                                <td>11202852</td>
-                                <td>12250892</td>
-                                <td>0</td>
-                            </tr>
-                ';
+                    <td>BEV Vehicle Stock</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>85</td>
+                    <td>7165</td>
+                    <td>42020</td>
+                </tr>
+                <tr style="height: 33.33%;">
+                    <td>PHEV Vehicle Stock</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr style="height: 33.33%;">
+                    <td>ICE Vehicle Stock</td>
+                    <td>110938</td>
+                    <td>191356</td>
+                    <td>288048</td>
+                    <td>435636</td>
+                    <td>671404</td>
+                    <td>979646</td>
+                    <td>1259015</td>
+                    <td>1599358</td>
+                    <td>2000299</td>
+                    <td>2395135</td>
+                    <td>2778494</td>
+                    <td>3233983</td>
+                    <td>3577810</td>
+                </tr>
+                <tr style="height: 33.33%;">
+                    <td>TOTAL STOCK</td>
+                    <td>110938</td>
+                    <td>191356</td>
+                    <td>288048</td>
+                    <td>435636</td>
+                    <td>671404</td>
+                    <td>979646</td>
+                    <td>1259015</td>
+                    <td>1599358</td>
+                    <td>2,000,299</td>
+                    <td>2395135</td>
+                    <td>2778579</td>
+                    <td>3241148</td>
+                    <td>3619830</td>
+                </tr>
+    ';
 
-                $data["sd"] ='
-                <p>Data Source</p>
-                <ol type="A">
-                    <li>Population
-                        <ol>
-                            <li><a href="https://www.nso.go.th/nsoweb/nso/ebook">https://www.nso.go.th/nsoweb/nso/ebook</a></li>
-                            <li><a href="http://statbbi.nso.go.th/staticreport/page/sector/th/01.aspx">http://statbbi.nso.go.th/staticreport/page/sector/th/01.aspx</a></li>
-                            <li><a href="https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH">https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH</a></li>
-                        </ol>
-                    </li>
-                    <li>Total Land Area
-                        <ol>
-                            <li><a href="https://www.thailand.go.th/page/land-area">https://www.thailand.go.th/page/land-area</a></li>
-                        </ol>
-                    </li>
-                    <li>Total Road Length
-                        <ol>
-                            <li><a href="https://www.otp.go.th/uploads/tiny_uploads/PDF/2566-11/25661106-TransportInfrastructureAnnualReport2022.pdf">https://www.otp.go.th/uploads/tiny_uploads/PDF/2566-11/25661106-TransportInfrastructureAnnualReport2022.pdf</a></li>
-                        </ol>
-                    </li>
-                    <li>GDP per Capita (Current US$)
-                        <ol>
-                            <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TH">https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TH</a></li>
-                        </ol>
-                    </li>
-                    <li>Purchasing Power Parity (PPP)
-                        <ol>
-                            <li><a href="#">not Available</a></li>
-                        </ol>
-                    </li>
-                    <li>GDP per Capita, Purchasing Power Parity (PPP)
-                        <ol>
-                            <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=TH&start=2011">https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=TH&start=2011</a></li>
-                        </ol>
-                    </li>
-                    <li>Public Charging Roadmap
-                        <ol>
-                            <li><a href="https://evat.or.th/ev-information/evat-directory/index">https://evat.or.th/ev-information/evat-directory/index</a></li>
-                            <li><a href="https://data.thaiauto.or.th/tai/dailynews-iframe/11375-%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%A3%E0%B8%96-ev-1,664-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8A%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94.html">https://data.thaiauto.or.th/tai/dailynews-iframe/11375-%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%A3%E0%B8%96-ev-1,664-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8A%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94.html</a></li>
-                        </ol>
-                    </li>
-                </ol>
-                ';
-                return view('/landingpage/summary/nations/vietnam', $data);
-            }
-            else{
-                echo "The nation Still empty";
-            }
+            $data["sd"] = '
+    <p>Data Source</p>
+    <ol type="A">
+        <li>Population
+            <ol>
+                <li><a href="https://www.nso.go.th/nsoweb/nso/ebook">https://www.nso.go.th/nsoweb/nso/ebook</a></li>
+                <li><a href="http://statbbi.nso.go.th/staticreport/page/sector/th/01.aspx">http://statbbi.nso.go.th/staticreport/page/sector/th/01.aspx</a></li>
+                <li><a href="https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH">https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH</a></li>
+            </ol>
+        </li>
+        <li>Total Land Area
+            <ol>
+                <li><a href="https://www.thailand.go.th/page/land-area">https://www.thailand.go.th/page/land-area</a></li>
+            </ol>
+        </li>
+        <li>Total Road Length
+            <ol>
+                <li><a href="https://www.otp.go.th/uploads/tiny_uploads/PDF/2566-11/25661106-TransportInfrastructureAnnualReport2022.pdf">https://www.otp.go.th/uploads/tiny_uploads/PDF/2566-11/25661106-TransportInfrastructureAnnualReport2022.pdf</a></li>
+            </ol>
+        </li>
+        <li>GDP per Capita (Current US$)
+            <ol>
+                <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TH">https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TH</a></li>
+            </ol>
+        </li>
+        <li>Purchasing Power Parity (PPP)
+            <ol>
+                <li><a href="#">not Available</a></li>
+            </ol>
+        </li>
+        <li>GDP per Capita, Purchasing Power Parity (PPP)
+            <ol>
+                <li><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=TH&start=2011">https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD?locations=TH&start=2011</a></li>
+            </ol>
+        </li>
+        <li>Public Charging Roadmap
+            <ol>
+                <li><a href="https://evat.or.th/ev-information/evat-directory/index">https://evat.or.th/ev-information/evat-directory/index</a></li>
+                <li><a href="https://data.thaiauto.or.th/tai/dailynews-iframe/11375-%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%A3%E0%B8%96-ev-1,664-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8A%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94.html">https://data.thaiauto.or.th/tai/dailynews-iframe/11375-%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%88%E0%B8%A3%E0%B8%96-ev-1,664-%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8A%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94.html</a></li>
+            </ol>
+        </li>
+    </ol>
+    ';
+            return view('/landingpage/summary/nations/vietnam', $data);
+        } else {
+            echo "The nation Still empty";
+        }
     }
 
-    public function compare($cat){
-        $data["cat"] = $cat;   
+    public function compare($cat)
+    {
+        $data["cat"] = $cat;
         $data["population"] = "99,474";
         $data["ttlland"] = "33,1345";
         $data["totalRoad"] = "649,422";
         $data["GDP"] = "4,123";
         $data["PPP"] = "6,908";
         $data["GDPppp"] = "14,024";
-        $data['tableData1'] ='
+        $data['tableData1'] = '
             <tr style="height: 33.33%;">
                         <td>VOL HEV Sales</td>
                         <td>0</td>
@@ -2559,7 +2552,7 @@ class LandingController extends BaseController
                     </tr>
             ';
 
-            $data['tableData2'] = '
+        $data['tableData2'] = '
             <tr style="height: 33.33%;">
                             <td>HEV Vehicle Stock</td>
                             <td>0</td>
@@ -2642,7 +2635,7 @@ class LandingController extends BaseController
                         </tr>
             ';
 
-            $data["sd"] ='
+        $data["sd"] = '
             <p>Data Source</p>
             <ol type="A">
                 <li>Population

@@ -152,7 +152,7 @@
                     <canvas id="chartIndonesiaRoadLength"></canvas>
                 </div>
 
-                <h1 style="font-size:12px; margin-left:12px">Population (In Million)</h1>
+                <h1 style="font-size:12px; margin-left:12px">Population (In Thousand)</h1>
                 <div class="chart-parent">
                     <canvas id="chartIndonesiaPopulation"></canvas>
                 </div>
@@ -343,7 +343,7 @@
             </section>
 
             
-            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
+            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
             <div class="chart-parent ml-chart">
                 <canvas id="chartHistoricalIndonesiaICEVechicleSales"></canvas>
             </div>
@@ -527,7 +527,7 @@
 
             </section>
                     
-            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
+            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
             <div class="chart-parent ml-chart">
                 <canvas id="totalSales"></canvas>
             </div>
@@ -1039,11 +1039,13 @@ switch (window.location.pathname.split('/')[2]) {
           "chartIndonesiaRoadLength"
         );
         const chartIndonesiaRoadLengthDataPoints = [
-          492398, 501969, 508000, 517753, 529073, 537838, 539353, 542310, 544474,
-          548366, 546116, 548097,
+          300848, 326000, 334845, 357222, 360216, 368779, 370664, 630564, 635279,
+          639993, 644708, 649422,
         ];
         const chartIndonesiaRoadLengthData = {
-          labels: labels,
+          labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018',
+            '2019', '2020', '2021', '2022', '2023'
+          ],
           datasets: [
             {
               label: "Indonesia Road Length",
@@ -1103,11 +1105,13 @@ switch (window.location.pathname.split('/')[2]) {
           "chartIndonesiaPopulation"
         );
         const chartIndonesiaPopulationDataPoints = [
-          241911000, 245425000, 248818000, 252165000, 255462000, 258705000, 261891000,
-          264161600, 266911900, 270203917, 272682500, 275773800,
+          88146, 89203, 90191, 91204, 92229, 93251, 94286,
+          95385, 96484, 97583, 98506, 99474,
         ];
         const chartIndonesiaPopulationData = {
-          labels: labels,
+          labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018',
+            '2019', '2020', '2021', '2022', '2023'
+          ],
           datasets: [
             {
               label: "Indonesia Populations",
@@ -1154,7 +1158,6 @@ switch (window.location.pathname.split('/')[2]) {
                   display: true,
                 },
                 suggestedMin: 0,
-                suggestedMax: 400000000,
               },
             },
           },
@@ -1168,10 +1171,12 @@ switch (window.location.pathname.split('/')[2]) {
         );
         
         const chartIndonesiaRoadGDPperCapitalDataPoints = [
-          3614, 3668, 3603, 3477, 3323, 3559, 3840, 3903, 4151, 3896, 4334, 4778,
+          1958, 2192, 2369, 2559, 2596, 2757, 2983, 3250, 3464, 3551, 3720, 4123, 
         ];
         const chartIndonesiaRoadGDPperCapitalData = {
-          labels: labels,
+          labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018',
+            '2019', '2020', '2021', '2022', '2023'
+          ],
           datasets: [
             {
               label: "Indonesia Road GDP per Capital",
@@ -1234,7 +1239,7 @@ switch (window.location.pathname.split('/')[2]) {
           "chartIndonesiaVehicleSales"
         );
 
-        const chartIndonesiaVehicleSalesDataPoints = [1032603, 5100, 10327, 10];
+        const chartIndonesiaVehicleSalesDataPoints = [343827, 0, 34855, 0];
         
         const chartIndonesiaVehicleSalesData = {
           labels: ["ICE", "HEV", "BEV", "PHEV"],
@@ -1302,7 +1307,7 @@ switch (window.location.pathname.split('/')[2]) {
           "chartIndonesiaVehicleStock"
         );
 
-        const chartIndonesiaVehicleStockDataPoints = [12230679, 9012, 11130, 71];
+        const chartIndonesiaVehicleStockDataPoints = [3577810, 0, 42020, 0];
         
         const chartIndonesiaVehicleStockData = {
           labels: ["ICE", "HEV", "BEV", "PHEV"],
@@ -1368,22 +1373,22 @@ switch (window.location.pathname.split('/')[2]) {
         const vehicleStockData = {
             labels: [
                 '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
-                '2019', '2020', '2021', '2022'
+                '2019', '2020', '2021', '2022', '2023'
             ],
             datasets: [
                 {
                     label: 'HEV',
-                    data: [12077, 28179, 44354, 53455, 61084, 70661, 82605, 102661, 129108, 157483, 191822, 255390],
+                    data: [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                     backgroundColor: 'rgba(65, 133, 250, 1.0)'
                 },
                 {
                     label: 'BEV',
-                    data: [9, 16, 29, 35, 49, 51, 89, 241, 989, 2395, 4385, 14286],
+                    data: [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 7080, 34855],
                     backgroundColor: 'rgba(233, 67, 56, 1.0)'
                 },
                 {
                     label: 'PHEV',
-                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1091, 8151, 19482],
+                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                     backgroundColor: 'rgba(240, 193, 9, 1.0)'
                 }
             ]
@@ -1427,22 +1432,22 @@ switch (window.location.pathname.split('/')[2]) {
       const vehicleSalesData = {
         labels: [
             '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
-            '2019', '2020', '2021', '2022'
+            '2019', '2020', '2021', '2022', '2023'
         ],
         datasets: [
             {
                 label: 'HEV',
-                data: [12077, 28179, 44354, 53455, 61084, 70661, 82605, 102661, 129108, 157483, 191822, 255390],
+                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 backgroundColor: 'rgba(65, 133, 250, 1.0)'
             },
             {
                 label: 'BEV',
-                data: [9, 16, 29, 35, 49, 51, 89, 241, 989, 2395, 4385, 14286],
+                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 7165, 42020],
                 backgroundColor: 'rgba(233, 67, 56, 1.0)'
             },
             {
                 label: 'PHEV',
-                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1091, 8151, 19482],
+                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 backgroundColor: 'rgba(240, 193, 9, 1.0)'
             }
         ]
@@ -1488,14 +1493,14 @@ switch (window.location.pathname.split('/')[2]) {
           const totalvehicleSalesData = {
               labels: [
                   '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
-                  '2019', '2020', '2021', '2022'
+                  '2019', '2020', '2021', '2022', '2023'
               ],
               datasets: [
                   {
                       label: 'Vehicle Sales (Indonesia)',
                       data: [
-                          894164, 1116230, 1229811, 1208028, 1013518, 1062694, 
-                          1077364, 1151308, 1030126, 532407, 887202, 1048040
+                        110938, 80418, 96692, 147588, 235768, 308242, 279369, 340343,
+                        400941, 394836, 383444, 462569, 378682 
                       ],
                       backgroundColor: 'rgba(65, 133, 250, 1.0)',
                       borderColor: 'rgba(65, 133, 250, 1.0)',
@@ -1536,14 +1541,14 @@ switch (window.location.pathname.split('/')[2]) {
           const vehicletotalStockDataIndonesia = {
           labels: [
           '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
-          '2019', '2020', '2021', '2022'
+          '2019', '2020', '2021', '2022', '2023'
           ],
           datasets: [
           {
               label: 'Vehicle Stock (Indonesia)',
               data: [
-                  894164, 2010394, 3240205, 4448233, 5461751, 6524445, 
-                  7601809, 8753117, 9783243, 10315650, 11202852, 12250892
+                110938, 191356, 288048, 435636, 671404, 979646, 1259015, 1599358, 2000299, 
+                2395135, 2778579, 3241148, 3619830 
               ],
               backgroundColor: 'rgba(65, 133, 250, 1.0)',
               borderColor: 'rgba(65, 133, 250, 1.0)',
@@ -1584,12 +1589,12 @@ switch (window.location.pathname.split('/')[2]) {
                 );
         
         const chartHistoricalIndonesiaICEVechicleSalesDataPoints = [
-          894164, 1116230, 1229811, 1208028, 1013518, 1062694, 1077364, 1151308,
-          1029775, 531175, 884009, 1032603,
+          110938, 80418, 96692, 147588, 235768, 308242, 279369, 340343, 400941, 394836, 383359, 455489, 343827
         ];
         
         const chartHistoricalIndonesiaICEVechicleSalesData = {
-          labels: labels,
+          labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
+          '2019', '2020', '2021', '2022', '2023'],
           datasets: [
             {
               label: "ICE Vehicle Sales",
@@ -1613,7 +1618,7 @@ switch (window.location.pathname.split('/')[2]) {
               y: {
                 ticks: {
                   callback: function (value, index, ticks) {
-                    return String(value).commarize(1e3, "million");
+                    return String(value).commarize(1e3, "thousand");
                   },
                 },
               },
@@ -1632,12 +1637,13 @@ switch (window.location.pathname.split('/')[2]) {
         );
         
         const chartHistoricalIndonesiaICEVechicleStockDataPoints = [
-          894164, 2010394, 3240205, 4448233, 5461751, 6524445, 7601809, 8753117,
-          9782892, 10314067, 11198076, 12230679,
+          110938, 191356, 288048, 435636, 671404, 979646, 1259015, 
+        1599358, 2000299, 2395135, 2778494, 3233983, 3577810
         ];
         
         const chartHistoricalIndonesiaICEVechicleStockData = {
-          labels: labels,
+          labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', 
+          '2019', '2020', '2021', '2022', '2023'],
           datasets: [
             {
               label: "ICE Vehicle Stock",
@@ -1677,15 +1683,14 @@ switch (window.location.pathname.split('/')[2]) {
   case 'forcasting':
       const ttlroadl = document.getElementById('ttlroadl').getContext('2d');
       const datattl = [
-          548097, 553578, 559114, 564706, 570354, 
-          576058, 581819, 587638, 593515, 599451, 605446
+          0, 0, 0, 0 ,0, 0 ,0, 0, 0, 0, 0, 0
       ];
               const myChart = new Chart(ttlroadl, {
                   type: 'line',
                   data: {
                       labels: [
                           '2022', '2023', '2024', '2025', '2026', 
-                          '2027', '2028', '2029', '2030', '2031', '2032'
+                          '2027', '2028', '2029', '2030', '2031', '2032', '2033'
                       ],
                       datasets: [{
                           label: 'Total Road Length of Indonesia',
@@ -1733,9 +1738,7 @@ switch (window.location.pathname.split('/')[2]) {
 
               // New data for the chart
               const data6 = [
-                  275773800, 279166800, 282559800, 285952800, 289345800,
-                  292738800, 296131800, 299524800, 302917800, 306310800,
-                  309703800, 313096800
+                0, 0, 0, 0 ,0, 0 ,0, 0, 0, 0, 0, 0
               ];
 
               // Create a dataset with specific opacity for each point;
@@ -1794,9 +1797,7 @@ switch (window.location.pathname.split('/')[2]) {
 
       // New data for chart 7
       const gdppcdata = [
-          4778, 4491.32, 4760.7992, 5046.447152, 5046.447152,
-          5298.76951, 5033.831034, 4731.801172, 4731.801172,
-          4495.211113, 4495.211113, 4764.92378
+        0, 0, 0, 0 ,0, 0 ,0, 0, 0, 0, 0, 0
       ];
 
       // Create a dataset for chart 7
@@ -1858,9 +1859,7 @@ switch (window.location.pathname.split('/')[2]) {
     ];
 
     const salesData = [
-        1032603, 826082.4, 660865.92, 528692.736, 
-        422954.1888, 338363.351, 270690.6808, 216552.5447, 173242.0357, 
-        138593.6286, 110874.9029
+      0, 0, 0, 0 ,0, 0 ,0, 0, 0, 0, 0, 0
     ];
 
     // Define colors with the first color unique
@@ -1914,9 +1913,7 @@ switch (window.location.pathname.split('/')[2]) {
     const iceStock = document.getElementById('icestock').getContext('2d');
 
     const stockData = [
-        12230679, 9784543.2, 7827634.56, 6262107.648, 
-        5009686.118, 4007748.895, 3206199.116, 2564959.293, 
-        2051967.434, 1641573.947, 1313259.158
+      0, 0, 0, 0 ,0, 0 ,0, 0, 0, 0, 0, 0
     ];
 
     // Define colors with the first color unique
@@ -1968,18 +1965,15 @@ switch (window.location.pathname.split('/')[2]) {
 
     // Sales data for HEV, BEV, and PHEV from 2022 to 2032
     const hevSales = [
-        63568, 59119, 53799, 50572, 46021, 
-        43260, 40665, 37819, 34794, 32359, 29771
+      0, 0, 0, 0 ,0, 0 ,0, 0, 0, 0, 0, 0
     ];
 
     const bevSales = [
-        9901, 11486, 13209, 15191, 17470, 
-        20440, 23711, 27505, 29431, 30903, 33376
+      0, 0, 0, 0 ,0, 0 ,0, 0, 0, 0, 0, 0
     ];
 
     const phevSales = [
-        11331, 15751, 21894, 28682, 38434, 
-        53424, 74260, 98024, 102926, 110131, 116739
+      0, 0, 0, 0 ,0, 0 ,0, 0, 0, 0, 0, 0
     ];
 
     // Define colors for each vehicle type in RGBA format
@@ -2057,18 +2051,15 @@ switch (window.location.pathname.split('/')[2]) {
       const hbpstock = document.getElementById('hbpstock').getContext('2d');
 
     const hevStock = [
-        255390, 229851, 197672, 169998, 149599, 
-        130152, 115836, 98461, 85662, 75383, 66338
+      0, 0, 0, 0 ,0, 0 ,0, 0, 0, 0, 0, 0
     ];
 
     const bevStock = [
-        14286, 17287, 19881, 23261, 26751, 
-        32637, 39818, 48977, 58283, 70523, 83923
+      0, 0, 0, 0 ,0, 0 ,0, 0, 0, 0, 0, 0
     ];
 
     const phevStock = [
-        19482, 25522, 34455, 45826, 64157, 
-        87896, 117781, 162538, 170665, 182612, 195395
+      0, 0, 0, 0 ,0, 0 ,0, 0, 0, 0, 0, 0
     ];
 
     // Define colors for each vehicle type
@@ -2146,10 +2137,7 @@ switch (window.location.pathname.split('/')[2]) {
     const vsales = document.getElementById('vsales').getContext('2d');
 
     const salesData8 = [
-        1048040, 1048040, 901314.4, 
-        766117.24, 766117.24, 689505.516, 
-        765351.1228, 872500.2799, 1003375.322, 
-        1003375.322, 1003375.322
+      0, 0, 0, 0 ,0, 0 ,0, 0, 0, 0, 0, 0
     ];
 
     // Define colors with the first color unique
@@ -2202,10 +2190,7 @@ switch (window.location.pathname.split('/')[2]) {
 
     // Sales data for Chart 9
     const salesData9 = [
-        12250892, 13475981, 14508411, 
-        15540841, 16573271, 17605701, 
-        18638131, 19670561, 20702991, 
-        21735421, 22767851
+      0, 0, 0, 0 ,0, 0 ,0, 0, 0, 0, 0, 0
     ];
 
 
@@ -2221,7 +2206,7 @@ switch (window.location.pathname.split('/')[2]) {
             labels: foreyear,
             datasets: [{
                 label: 'Vehicle Sales (Indonesia)',
-                data: foreyear,
+                data: salesData9,
                 backgroundColor: backgroundColors9, // Set individual colors
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1,
