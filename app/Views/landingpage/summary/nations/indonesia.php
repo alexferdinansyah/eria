@@ -10,7 +10,7 @@
           <p class="mb-0">Indonesia</p>
         </div>
         <div class="hidden-on-mobile pb-4 m-0 flex align-items-center gap-2">
-          <img style="width:120px;" src="<?= base_url('assets/images/nations/flags/indonesia.svg'); ?>" alt="">    
+          <img style="width:80px;" src="<?= base_url('assets/images/nations/flags/indonesia.svg'); ?>" alt="">    
           <h2 class="mb-0">Indonesia</h2>
         </div>
         <div class="d-flex flex-row gap-1 align-items-start">
@@ -1034,6 +1034,16 @@
 <?= $this->section('script') ?>
 <script>
   const nations ="<?= $nat ?>" 
+
+  const userAgent = navigator.userAgent.toLowerCase();
+  const isMobile = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/.test(userAgent);
+
+  if (isMobile) {
+    console.log("You are on a mobile device");
+  } else {
+    console.log("You are on a desktop device");
+  }
+
         
         function commarize(min, scale = "default") {
           min = min || 1e3;
@@ -1296,6 +1306,14 @@ switch (window.location.pathname.split('/')[2]) {
                 borderWidth: 0,
               },
             },
+            layout: {
+              padding: {
+                top: !isMobile ? 50 : 0,
+                bottom: !isMobile ? 50 : 0,
+                left: !isMobile ? 50 : 0,
+                right: !isMobile ? 50 : 0
+              }
+            },
             responsive: true,
             plugins: {
               legend: {
@@ -1365,6 +1383,14 @@ switch (window.location.pathname.split('/')[2]) {
               },
             },
             responsive: true,
+            layout: {
+              padding: {
+                top: !isMobile ? 50 : 0,
+                bottom: !isMobile ? 50 : 0,
+                left: !isMobile ? 50 : 0,
+                right: !isMobile ? 50 : 0
+              }
+            },
             plugins: {
               legend: {
                 position: "right",

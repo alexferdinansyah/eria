@@ -15,7 +15,7 @@
         </div>
         <div class="d-flex flex-row gap-1 align-items-start">
             <a class="bg-white text-decoration-none border-white <?= $cat == 'econometric' ? 'pb-1' : '' ?>" href="<?= base_url('summarymobile/econometric/laos') ?>">
-                <p class="text-black program-text text-center m-0">Econometric</p>
+                <p class="text-black program-text text-center m-0">Summaries</p>
             </a>
             <a class="bg-white text-decoration-none border-white <?= $cat == 'historical' ? 'pb-1' : '' ?>" href="<?= base_url('summarymobile/historical/laos') ?>">
                 <p class="text-black program-text m-0">Historical</p>
