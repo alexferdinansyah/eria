@@ -3,997 +3,1032 @@
 <?= $this->section('content') ?>
 
 <?= $this->section('header') ?>
-<div class="banners">
-  <img src="<?= base_url('assets/images/nations/flags/vietnam.svg'); ?>" alt="">    
-    <h2>Vietnam</h2>
-</div>
-<div class="low-banner">
-    <p class="<?= $cat == 'econometric'? 'foc' :'' ?>">Summary</p>
-    <p class="<?= $cat == 'historical'? 'foc' :'' ?>">Historical</p>
-    <p class="<?= $cat == 'forcasting'? 'foc' :'' ?>">Forcasting</p>
-
-</div>
-
+<header class="header-program">
+    <div class="flex-column">
+        <div class="show-on-mobile pb-4 m-0 flex align-items-center gap-2">
+          <img style="width:60px;" src="<?= base_url('assets/images/nations/flags/vietnam.svg'); ?>" alt="">    
+          <p class="mb-0">Vietnam</p>
+        </div>
+        <div class="hidden-on-mobile pb-4 m-0 flex align-items-center gap-2">
+          <img style="width:120px;" src="<?= base_url('assets/images/nations/flags/vietnam.svg'); ?>" alt="">    
+          <h2 class="mb-0">Vietnam</h2>
+        </div>
+        <div class="d-flex flex-row gap-1 align-items-start">
+            <a class="bg-white text-decoration-none border-white <?= $cat == 'econometric' ? 'pb-1' : '' ?>" href="<?= base_url('summarymobile/econometric/vietnam') ?>">
+                <p class="text-black program-text text-center m-0">Econometric</p>
+            </a>
+            <a class="bg-white text-decoration-none border-white <?= $cat == 'historical' ? 'pb-1' : '' ?>" href="<?= base_url('summarymobile/historical/vietnam') ?>">
+                <p class="text-black program-text m-0">Historical</p>
+            </a>
+            <a class="bg-white text-decoration-none border-white <?= $cat == 'forcasting' ? 'pb-1' : '' ?>" href="<?= base_url('summarymobile/forcasting/vietnam') ?>">
+                <p class="text-black program-text m-0">Forcasting</p>
+            </a>
+        </div>
+    </div>
+</header>
 <?= $this->endSection(); ?>
 
 
 <div class="row">
-    <div class="summary-wrapper">
-        <?php if($cat == 'econometric'): ?>   
-              <!-- econometric start -->
-                  <div class="row row-cols-1 row-cols-md-2 justify-content-evenly mb-4">
-                      <div class="content-summary">
-                          <section class="container-sum">
-                              <div>
-                                  <p>Population</p>
-                                  <p><?= $population ?></p>
-                              </div>
-                              <div>
-                                  <p>Total Land Area - Km²</p>
-                                  <p><?= $ttlland ?></p>
-                              </div>
-                              <div>
-                                  <p>Total Road Length - Km</p>
-                                  <p><?= $totalRoad ?></p>
-                              </div>
-                          </section>
-                          <section class="container-sum">
-                              <div>
-                                  <p>GDP Per Capita - US$</p>
-                                  <p><?= $GDP ?></p>
-                              </div>
-                              <div>
-                                  <p>Purchasing Power Parity (PPP) - US$</p>
-                                  <p><?= $PPP ?></p>
-                              </div>
-                          </section>
-                          <section class="container-sum">
-                              <div>
-                                  <p>GDP Per Capita Purchasing Power Parity (PPP) - US$</p>
-                                  <p><?= $GDPppp ?></p>
-                              </div>
-                          </section>
-                      </div>
-                      <img class="img-map" src="<?= base_url('assets/images/nations/maps/indonesia.svg') ?>" alt="">
-
-                  </div>
-
-                <h1 style="font-size:12px; margin-left:12px">Road Length, Population, & GDP Per Capita</h1>
-                <p style="font-size:10px; margin-left:12px; ">Total number of Road Length, Population, & GDP Per Capita</p>
-
-                <section class="bar-dropdown">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
-                        alt="Menu Icon" class="menuIcon">
-                    <div class="bar-dropdown-menu" id="dropdownMenu1">
-                        <div class="back-btn">
-                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                        </div>
-                        <a class="compare" href="#">Compare</a>
-                        <a href="#">Download CV</a>
-                        <a href="#">print Chart</a>
-                    </div>
-
-                    <div class="bar-dropdown-menu">
-                        <div class="back-btn">
-                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                        </div>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
-                            <span>Brunei</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
-                            <span>Singapore</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
-                            <span>Cambodia</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
-                            <span>Laos</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
-                            <span>Malaysia</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
-                            <span>Myanmar</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
-                            <span>philippines</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
-                            <span>Thailand</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
-                            <span>Vietnam</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <button onclick="gotoCompare()" class="show-btn">Show</button>
-                        
-                    </div>
-
-                
-                </section>
-
-                <h1 style="font-size:12px; margin-left:12px">Total Road Lenght (In Million)</h1>
-                <div class="chart-parent">
-                    <canvas id="chartIndonesiaRoadLength"></canvas>
-                </div>
-
-                <h1 style="font-size:12px; margin-left:12px">Population (In Thousand)</h1>
-                <div class="chart-parent">
-                    <canvas id="chartIndonesiaPopulation"></canvas>
-                </div>
-
-                <h1 style="font-size:12px; margin-left:12px">GDP Per Capita Current  US$(In Thousand)</h1>
-                <div class="chart-parent">
-                    <canvas id="chartIndonesiaRoadGDPperCapital"></canvas>
-                </div>
-
-                <h1 style="font-size:12px; margin-left:12px">Current Sales & Stock Data</h1>
-            <p style="font-size:10px; margin-left:12px; ">Total of number Current Sales & Stock Data</p>
-            
-            <section class="bar-dropdown">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
-                    alt="Menu Icon" class="menuIcon">
-                <div class="bar-dropdown-menu">
-                    <div class="back-btn">
-                        <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                    </div>
-                    <a class="compare" href="#">Compare</a>
-                    <a href="#">Download CV</a>
-                    <a href="#">print Chart</a>
-                </div>
-
-                <div class="bar-dropdown-menu">
-                        <div class="back-btn">
-                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                        </div>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
-                            <span>Brunei</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
-                            <span>Singapore</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
-                            <span>Laos</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
-                            <span>Malaysia</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
-                            <span>Myanmar</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
-                            <span>philippines</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
-                            <span>Thailand</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
-                            <span>Vietnam</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <button class="show-btn">Show</button>
-                        
-                    </div>
-
-            
-            </section>
-
-            <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
-            <div class="chart-parent">
-                <canvas style="margin-left:12px;" id="chartIndonesiaVehicleSales"></canvas>
+  <div class="summary-wrapper">
+    <?php if ($cat == 'econometric'): ?>
+      <!-- econometric start -->
+      <div class="row row-cols-1 row-cols-md-2 justify-content-evenly mb-4">
+        <div class="content-summary">
+          <section class="container-sum">
+            <div>
+              <p>Population</p>
+              <p><?= $population ?></p>
             </div>
-
-            <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
-            <div  class="chart-parent">
-                <canvas style="margin-left:12px;" id="chartIndonesiaVehicleStock"></canvas>
+            <div>
+              <p>Total Land Area - Km²</p>
+              <p><?= $ttlland ?></p>
             </div>
-                      
-        <?php endif; ?>
-        <!-- econometric end -->
-
-        <!-- historical start -->
-        <?php if($cat == 'historical'): ?>               
-
-            <h1 style="font-size:14px; margin:12px">ICE Vechicle Sales and Stock</h1>
-            <p style="font-size:10px; margin-left:12px; ">Total number of ICE Vehicle Sales and Stock</p>
-
-            <section class="bar-dropdown">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
-                    alt="Menu Icon" class="menuIcon">
-                <div class="bar-dropdown-menu">
-                    <div class="back-btn">
-                        <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                    </div>
-                    <a class="compare" href="#">Compare</a>
-                    <a href="#">Download CV</a>
-                    <a href="#">print Chart</a>
-                </div>
-
-                <div class="bar-dropdown-menu">
-                        <div class="back-btn">
-                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                        </div>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
-                            <span>Brunei</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
-                            <span>Singapore</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
-                            <span>Laos</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
-                            <span>Malaysia</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
-                            <span>Myanmar</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
-                            <span>philippines</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
-                            <span>Thailand</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
-                            <span>Vietnam</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <button class="show-btn">Show</button>
-                        
-                    </div>
-
-            
-            </section>
-
-            
-            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
-            <div class="chart-parent ml-chart">
-                <canvas id="chartHistoricalIndonesiaICEVechicleSales"></canvas>
+            <div>
+              <p>Total Road Length - Km</p>
+              <p><?= $totalRoad ?></p>
             </div>
-
-            <h1 style="font-size:12px; margin-left:12px">Stock Data (In Million)</h1>
-            <div class="chart-parent ml-chart">
-                <canvas id="chartHistoricalIndonesiaICEVechicleStock"></canvas>
+          </section>
+          <section class="container-sum">
+            <div>
+              <p>GDP Per Capita - US$</p>
+              <p><?= $GDP ?></p>
             </div>
-
-            <h1 style="font-size:12px; margin-left:12px">HEV, BEV, PHEV Vechicle Sales & Stock</h1>
-            <p style="font-size:10px; margin-left:12px; ">Total number of PHEV, BEV, HEV Vehicle Sales</p>
-            
-            <section class="bar-dropdown">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
-                    alt="Menu Icon" class="menuIcon">
-                <div class="bar-dropdown-menu">
-                    <div class="back-btn">
-                        <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                    </div>
-                    <a class="compare" href="#">Compare</a>
-                    <a href="#">Download CV</a>
-                    <a href="#">print Chart</a>
-                </div>
-
-                <div class="bar-dropdown-menu">
-                        <div class="back-btn">
-                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                        </div>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
-                            <span>Brunei</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
-                            <span>Singapore</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
-                            <span>Laos</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
-                            <span>Malaysia</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
-                            <span>Myanmar</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
-                            <span>philippines</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
-                            <span>Thailand</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
-                            <span>Vietnam</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <button class="show-btn">Show</button>
-                        
-                  </div>
-
-            
-            </section>
-            
-            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
-            <div class="chart-parent ml-chart">
-                <canvas id="chart1"></canvas>
+            <div>
+              <p>Purchasing Power Parity (PPP) - US$</p>
+              <p><?= $PPP ?></p>
             </div>
-            
-            <h1 style="font-size:12px; margin-left:12px">Stock Data (In Thousand)</h1>
-            <div class="chart-parent ml-chart">
-                <canvas id="chart2"></canvas>
+          </section>
+          <section class="container-sum">
+            <div>
+              <p>GDP Per Capita Purchasing Power Parity (PPP) - US$</p>
+              <p><?= $GDPppp ?></p>
             </div>
+          </section>
+        </div>
+        <img class="img-map" src="<?= base_url('assets/images/nations/maps/Vietnam.svg') ?>" alt="">
 
-            
-            <h1 style="font-size:12px; margin-left:12px">Total of Histroical Vechicle Sales & Stock</h1>
-            <p style="font-size:10px; margin-left:12px; ">Total number of Vehicle Sales & Stock</p>
-            
-            <section class="bar-dropdown">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
-                    alt="Menu Icon" class="menuIcon">
-                <div class="bar-dropdown-menu">
-                    <div class="back-btn">
-                        <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                    </div>
-                    <a class="compare" href="#">Compare</a>
-                    <a href="#">Download CV</a>
-                    <a href="#">print Chart</a>
-                </div>
+      </div>
 
-                <div class="bar-dropdown-menu">
-                        <div class="back-btn">
-                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                        </div>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
-                            <span>Brunei</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
-                            <span>Singapore</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
-                            <span>Laos</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
-                            <span>Malaysia</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
-                            <span>Myanmar</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
-                            <span>philippines</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
-                            <span>Thailand</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
-                            <span>Vietnam</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <button class="show-btn">Show</button>
-                        
-                  </div>
+      <h1 class="sum">Road Length, Population, & GDP Per Capita</h1>
+      <p class="sump">Total number of Road Length, Population, & GDP Per Capita</p>
 
-            </section>
-                    
-            <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
-            <div class="chart-parent ml-chart">
-                <canvas id="totalSales"></canvas>
+      <section class="bar-dropdown">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
+          alt="Menu Icon" class="menuIcon">
+        <div class="bar-dropdown-menu" id="dropdownMenu1">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a class="compare" href="#">Compare</a>
+          <a href="#">Download CV</a>
+          <a href="#">print Chart</a>
+        </div>
+
+        <div class="bar-dropdown-menu">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+              <span>Brunei</span>
             </div>
-            
-                    
-            <h1 style="font-size:12px; margin-left:12px">Stock Data (in Million)</h1>
-            <div class="chart-parent ml-chart">
-                <canvas id="totalStock"></canvas>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+              <span>Singapore</span>
             </div>
-
-            <div class="table-con p-2">
-                    <table class="table">
-                        <thead style="font-size:12px;">
-                            <tr>
-                                <th style="height: 40px; padding: 8px 50px">Type</th>
-                                <th>2011</th>
-                                <th>2012</th>
-                                <th>2013</th>
-                                <th>2014</th>
-                                <th>2015</th>
-                                <th>2016</th>
-                                <th>2017</th>
-                                <th>2018</th>
-                                <th>2019</th>
-                                <th>2020</th>
-                                <th>2021</th>
-                                <th>2022</th>
-                                <th>2023</th>
-                            </tr>
-                        </thead>
-                        <tbody style="font-size:12px;">
-                            <?= $tableData1 ?>
-                        </tbody>
-                    </table>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/cambodia.svg') ?>" alt="">
+              <span>Cambodia</span>
             </div>
-            <div class="table-con p-2">
-                    <table class="table">
-                        <thead style="font-size:12px;">
-                            <tr>
-                                <th style="height: 40px; padding: 8px 50px">Type</th>
-                                <th>2011</th>
-                                <th>2012</th>
-                                <th>2013</th>
-                                <th>2014</th>
-                                <th>2015</th>
-                                <th>2016</th>
-                                <th>2017</th>
-                                <th>2018</th>
-                                <th>2019</th>
-                                <th>2020</th>
-                                <th>2021</th>
-                                <th>2022</th>
-                                <th>2023</th>
-                            </tr>
-                        </thead>
-                        <tbody style="font-size:12px;">
-                            <?= $tableData2 ?>
-                        </tbody>
-                    </table>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+              <span>Laos</span>
             </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+              <span>Malaysia</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+              <span>Myanmar</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+              <span>philippines</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+              <span>Thailand</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+              <span>Vietnam</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <button onclick="gotoCompare()" class="show-btn">Show</button>
 
-        <?php endif; ?>
-        <!-- historical end -->
+        </div>
 
-        <!-- forcasting start -->
-        <?php if($cat == 'forcasting'): ?>   
-                <h1 style="font-size:14px; margin:12px">Road Length, Population, & GDP Per Capita</h1>
-                <p style="font-size:10px; margin-left:12px; ">Total number of Road Length, Population, & GDP Per Capita</p>
+      </section>
 
-                <section class="bar-dropdown">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
-                        alt="Menu Icon" class="menuIcon">
-                    <div class="bar-dropdown-menu" id="dropdownMenu1">
-                        <div class="back-btn">
-                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                        </div>
-                        <a class="compare" href="#">Compare</a>
-                        <a href="#">Download CV</a>
-                        <a href="#">print Chart</a>
-                    </div>
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Total Road Lenght (In Million)</h1>
+          <div class="chart-parent">
+            <canvas id="chartIndonesiaRoadLength"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Population (In Million)</h1>
+          <div class="chart-parent">
+            <canvas id="chartIndonesiaPopulation"></canvas>
+          </div>
+        </section>
+      </div>
 
-                    <div class="bar-dropdown-menu">
-                        <div class="back-btn">
-                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                        </div>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
-                            <span>Brunei</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
-                            <span>Singapore</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
-                            <span>Laos</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
-                            <span>Malaysia</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
-                            <span>Myanmar</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
-                            <span>philippines</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
-                            <span>Thailand</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
-                            <span>Vietnam</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <button class="show-btn">Show</button>
-                        
-                    </div>
+      <h1 class="sum">GDP Per Capita Current US$(In Million)</h1>
+      <div class="chart-parent">
+        <canvas id="chartIndonesiaRoadGDPperCapital"></canvas>
+      </div>
 
-                
-                </section>
+      <h1 class="sum">Current Sales & Stock Data</h1>
+      <p class="sump">Total of number Current Sales & Stock Data</p>
 
-                <h1 style="font-size:12px; margin-left:12px">Total Road Lenght (In Thousand)</h1>
-                <div class="chart-parent">
-                    <canvas style="margin-left:12px;" id="ttlroadl"></canvas>
-                </div>
-                
-                <h1 style="font-size:12px; margin-left:12px">Population (in million)</h1>
-                <div class="chart-parent">
-                    <canvas style="margin-left:12px;" id="ppln"></canvas>
-                </div>
+      <section class="bar-dropdown">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
+          alt="Menu Icon" class="menuIcon">
+        <div class="bar-dropdown-menu">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a class="compare" href="#">Compare</a>
+          <a href="#">Download CV</a>
+          <a href="#">print Chart</a>
+        </div>
 
-                <h1 style="font-size:12px; margin-left:12px">GDP Per Capita Current  US$(In Thousand)</h1>
-                <div class="chart-parent">
-                    <canvas style="margin-left:12px;" id="gdppc"></canvas>
-                </div>
+        <div class="bar-dropdown-menu">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+              <span>Brunei</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+              <span>Singapore</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+              <span>Laos</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+              <span>Malaysia</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+              <span>Myanmar</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+              <span>philippines</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+              <span>Thailand</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+              <span>Vietnam</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <button class="show-btn">Show</button>
 
-                <h1 style="font-size:12px; margin:12px">ICE Vechicle Sales and Stock</h1>
-                <p style="font-size:10px; margin-left:12px; ">Total number of ICE Vehicle Sales and Stock</p>
-
-                <section class="bar-dropdown">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
-                        alt="Menu Icon" class="menuIcon">
-                    <div class="bar-dropdown-menu" id="dropdownMenu1">
-                        <div class="back-btn">
-                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                        </div>
-                        <a class="compare" href="#">Compare</a>
-                        <a href="#">Download CV</a>
-                        <a href="#">print Chart</a>
-                    </div>
-
-                    <div class="bar-dropdown-menu">
-                        <div class="back-btn">
-                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                        </div>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
-                            <span>Brunei</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
-                            <span>Singapore</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
-                            <span>Laos</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
-                            <span>Malaysia</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
-                            <span>Myanmar</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
-                            <span>philippines</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
-                            <span>Thailand</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
-                            <span>Vietnam</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <button class="show-btn">Show</button>
-                        
-                    </div>
-
-                
-                </section>
-
-                 
-                <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
-                <div class="chart-parent ml-chart">
-                    <canvas id="icesales"></canvas>
-                </div>
-
-                <h1 style="font-size:12px; margin-left:12px">Stock Data (In Million)</h1>
-                <div class="chart-parent ml-chart">
-                    <canvas id="icestock"></canvas>
-                </div>
-
-                
-                <h1 style="font-size:12px; margin:12px">HEV, BEV, PHEV Vechicle Sales & Stock</h1>
-                <p style="font-size:10px; margin-left:12px; ">Total number of PHEV, BEV, HEV Vehicle Sales</p>
-
-                <section class="bar-dropdown">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
-                        alt="Menu Icon" class="menuIcon">
-                    <div class="bar-dropdown-menu" id="dropdownMenu1">
-                        <div class="back-btn">
-                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                        </div>
-                        <a class="compare" href="#">Compare</a>
-                        <a href="#">Download CV</a>
-                        <a href="#">print Chart</a>
-                    </div>
-
-                    <div class="bar-dropdown-menu">
-                        <div class="back-btn">
-                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                        </div>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
-                            <span>Brunei</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
-                            <span>Singapore</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
-                            <span>Laos</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
-                            <span>Malaysia</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
-                            <span>Myanmar</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
-                            <span>philippines</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
-                            <span>Thailand</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
-                            <span>Vietnam</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <button class="show-btn">Show</button>
-                        
-                    </div>
-
-                
-                </section>
-
-                 
-                <h1 style="font-size:12px; margin-left:12px">Sales Data (in Thousand)</h1>
-                <div class="chart-parent ml-chart">
-                    <canvas id="hbpsales"></canvas>
-                </div>
-
-                <h1 style="font-size:12px; margin-left:12px">Stock Data (In Thousand)</h1>
-                <div class="chart-parent ml-chart">
-                    <canvas id="hbpstock"></canvas>
-                </div>
+        </div>
 
 
-                <h1 style="font-size:12px; margin:12px">Total of Histroical Vechicle Sales & Stock</h1>
-                <p style="font-size:10px; margin-left:12px; ">Total number of Vehicle Sales & Stock</p>
-                <section class="bar-dropdown">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" 
-                        alt="Menu Icon" class="menuIcon">
-                    <div class="bar-dropdown-menu" id="dropdownMenu1">
-                        <div class="back-btn">
-                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                        </div>
-                        <a class="compare" href="#">Compare</a>
-                        <a href="#">Download CV</a>
-                        <a href="#">print Chart</a>
-                    </div>
+      </section>
 
-                    <div class="bar-dropdown-menu">
-                        <div class="back-btn">
-                            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
-                        </div>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
-                            <span>Brunei</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
-                            <span>Singapore</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
-                            <span>Laos</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
-                            <span>Malaysia</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
-                            <span>Myanmar</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
-                            <span>philippines</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
-                            <span>Thailand</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <a href="#">
-                          <div class="left">
-                            <img  src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
-                            <span>Vietnam</span>
-                          </div>
-                            <input type="checkbox" name="" id="">
-                        </a>
-                        <button class="show-btn">Show</button>
-                        
-                    </div>
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Sales Data</h1>
+          <div class="chart-parent">
+            <canvas style="margin-left:12px;" id="chartIndonesiaVehicleSales"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Stock Data</h1>
+          <div class="chart-parent">
+            <canvas style="margin-left:12px;" id="chartIndonesiaVehicleStock"></canvas>
+          </div>
+        </section>
+      </div>
 
-                
-                </section>
+    <?php endif; ?>
+    <!-- econometric end -->
 
-                 
-                <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
-                <div class="chart-parent ml-chart">
-                    <canvas id="vsales"></canvas>
-                </div>
+    <!-- historical start -->
+    <?php if ($cat == 'historical'): ?>
 
-                <h1 style="font-size:12px; margin-left:12px">Stock Data (In Million)</h1>
-                <div class="chart-parent ml-chart">
-                    <canvas id="vstock"></canvas>
-                </div>
-        <?php endif; ?>
-        <!-- forcasting end -->
-        
+      <h1 class="sum">ICE Vechicle Sales and Stock</h1>
+      <p class="sump">Total number of ICE Vehicle Sales and Stock</p>
 
-<?= $this->endSection(); ?>
+      <section class="bar-dropdown">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
+          alt="Menu Icon" class="menuIcon">
+        <div class="bar-dropdown-menu">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a class="compare" href="#">Compare</a>
+          <a href="#">Download CV</a>
+          <a href="#">print Chart</a>
+        </div>
+
+        <div class="bar-dropdown-menu">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+              <span>Brunei</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+              <span>Singapore</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+              <span>Laos</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+              <span>Malaysia</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+              <span>Myanmar</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+              <span>philippines</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+              <span>Thailand</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+              <span>Vietnam</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <button class="show-btn">Show</button>
+
+        </div>
+
+
+      </section>
+
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Sales Data (In Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="chartHistoricalIndonesiaICEVechicleSales"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Stock Data (In Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="chartHistoricalIndonesiaICEVechicleStock"></canvas>
+          </div>
+        </section>
+      </div>
+
+      <h1 class="sum">HEV, BEV, PHEV Vechicle Sales & Stock</h1>
+      <p class="sump">Total number of PHEV, BEV, HEV Vehicle Sales</p>
+
+      <section class="bar-dropdown">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
+          alt="Menu Icon" class="menuIcon">
+        <div class="bar-dropdown-menu">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a class="compare" href="#">Compare</a>
+          <a href="#">Download CV</a>
+          <a href="#">print Chart</a>
+        </div>
+
+        <div class="bar-dropdown-menu">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+              <span>Brunei</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+              <span>Singapore</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+              <span>Laos</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+              <span>Malaysia</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+              <span>Myanmar</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+              <span>philippines</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+              <span>Thailand</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+              <span>Vietnam</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <button class="show-btn">Show</button>
+
+        </div>
+
+
+      </section>
+
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Sales Data (In Thousand)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="chart1"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Stock Data (In Thousand)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="chart2"></canvas>
+          </div>
+        </section>
+      </div>
+
+      <h1 class="sum">Total of Histroical Vechicle Sales & Stock</h1>
+      <p class="sump">Total number of Vehicle Sales & Stock</p>
+
+      <section class="bar-dropdown">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
+          alt="Menu Icon" class="menuIcon">
+        <div class="bar-dropdown-menu">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a class="compare" href="#">Compare</a>
+          <a href="#">Download CV</a>
+          <a href="#">print Chart</a>
+        </div>
+
+        <div class="bar-dropdown-menu">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+              <span>Brunei</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+              <span>Singapore</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+              <span>Laos</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+              <span>Malaysia</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+              <span>Myanmar</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+              <span>philippines</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+              <span>Thailand</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+              <span>Vietnam</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <button class="show-btn">Show</button>
+
+        </div>
+
+      </section>
+
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Sales Data (In Thousand)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="totalSales"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Stock Data (in Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="totalStock"></canvas>
+          </div>
+        </section>
+      </div>
+
+      <div class="table-con p-md-4 p-2">
+        <table class="table">
+          <thead style="font-size:12px;">
+            <tr>
+              <th style="height: 40px; padding: 8px 50px">Type</th>
+              <th>2011</th>
+              <th>2012</th>
+              <th>2013</th>
+              <th>2014</th>
+              <th>2015</th>
+              <th>2016</th>
+              <th>2017</th>
+              <th>2018</th>
+              <th>2019</th>
+              <th>2020</th>
+              <th>2021</th>
+              <th>2022</th>
+              <th>2023</th>
+            </tr>
+          </thead>
+          <tbody style="font-size:12px;">
+            <?= $tableData1 ?>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-con p-md-4 p-2">
+        <table class="table">
+          <thead style="font-size:12px;">
+            <tr>
+              <th style="height: 40px; padding: 8px 50px">Type</th>
+              <th>2011</th>
+              <th>2012</th>
+              <th>2013</th>
+              <th>2014</th>
+              <th>2015</th>
+              <th>2016</th>
+              <th>2017</th>
+              <th>2018</th>
+              <th>2019</th>
+              <th>2020</th>
+              <th>2021</th>
+              <th>2022</th>
+              <th>2023</th>
+            </tr>
+          </thead>
+          <tbody style="font-size:12px;">
+            <?= $tableData2 ?>
+          </tbody>
+        </table>
+      </div>
+
+    <?php endif; ?>
+    <!-- historical end -->
+
+    <!-- forcasting start -->
+    <?php if ($cat == 'forcasting'): ?>
+      <h1 class="sum">Road Length, Population, & GDP Per Capita</h1>
+      <p class="sump">Total number of Road Length, Population, & GDP Per Capita</p>
+
+      <section class="bar-dropdown">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
+          alt="Menu Icon" class="menuIcon">
+        <div class="bar-dropdown-menu" id="dropdownMenu1">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a class="compare" href="#">Compare</a>
+          <a href="#">Download CV</a>
+          <a href="#">print Chart</a>
+        </div>
+
+        <div class="bar-dropdown-menu">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+              <span>Brunei</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+              <span>Singapore</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+              <span>Laos</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+              <span>Malaysia</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+              <span>Myanmar</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+              <span>philippines</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+              <span>Thailand</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+              <span>Vietnam</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <button class="show-btn">Show</button>
+
+        </div>
+
+
+      </section>
+      
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Total Road Lenght (In Million)</h1>
+          <div class="chart-parent">
+            <canvas style="margin-left:12px;" id="ttlroadl"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Population (in million)</h1>
+          <div class="chart-parent">
+            <canvas style="margin-left:12px;" id="ppln"></canvas>
+          </div>
+        </section>
+      </div>
+
+      <h1 class="sum">GDP Per Capita Current US$(In Thousand)</h1>
+      <div class="chart-parent">
+        <canvas style="margin-left:12px;" id="gdppc"></canvas>
+      </div>
+
+      <h1 class="sum">ICE Vechicle Sales and Stock</h1>
+      <p class="sump">Total number of ICE Vehicle Sales and Stock</p>
+
+      <section class="bar-dropdown">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
+          alt="Menu Icon" class="menuIcon">
+        <div class="bar-dropdown-menu" id="dropdownMenu1">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a class="compare" href="#">Compare</a>
+          <a href="#">Download CV</a>
+          <a href="#">print Chart</a>
+        </div>
+
+        <div class="bar-dropdown-menu">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+              <span>Brunei</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+              <span>Singapore</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+              <span>Laos</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+              <span>Malaysia</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+              <span>Myanmar</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+              <span>philippines</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+              <span>Thailand</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+              <span>Vietnam</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <button class="show-btn">Show</button>
+
+        </div>
+
+
+      </section>
+
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Sales Data (In Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="icesales"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Stock Data (In Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="icestock"></canvas>
+          </div> 
+        </section>
+      </div>
+
+      <h1 class="sum">HEV, BEV, PHEV Vechicle Sales & Stock</h1>
+      <p class="sump">Total number of PHEV, BEV, HEV Vehicle Sales</p>
+
+      <section class="bar-dropdown">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
+          alt="Menu Icon" class="menuIcon">
+        <div class="bar-dropdown-menu" id="dropdownMenu1">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a class="compare" href="#">Compare</a>
+          <a href="#">Download CV</a>
+          <a href="#">print Chart</a>
+        </div>
+
+        <div class="bar-dropdown-menu">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+              <span>Brunei</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+              <span>Singapore</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+              <span>Laos</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+              <span>Malaysia</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+              <span>Myanmar</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+              <span>philippines</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+              <span>Thailand</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+              <span>Vietnam</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <button class="show-btn">Show</button>
+
+        </div>
+
+
+      </section>
+
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Sales Data (in Thousand)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="hbpsales"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Stock Data (In Thousand)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="hbpstock"></canvas>
+          </div>
+        </section>
+      </div>
+
+
+      <h1 class="sum">Total of Histroical Vechicle Sales & Stock</h1>
+      <p class="sump">Total number of Vehicle Sales & Stock</p>
+      <section class="bar-dropdown">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
+          alt="Menu Icon" class="menuIcon">
+        <div class="bar-dropdown-menu" id="dropdownMenu1">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a class="compare" href="#">Compare</a>
+          <a href="#">Download CV</a>
+          <a href="#">print Chart</a>
+        </div>
+
+        <div class="bar-dropdown-menu">
+          <div class="back-btn">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/night-hunting/android-arrow-back.png" alt="Back Icon">
+          </div>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/brunei.svg') ?>" alt="">
+              <span>Brunei</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/singapore.svg') ?>" alt="">
+              <span>Singapore</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/laos.svg') ?>" alt="">
+              <span>Laos</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/malaysia.svg') ?>" alt="">
+              <span>Malaysia</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/myanmar.svg') ?>" alt="">
+              <span>Myanmar</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/philippines.svg') ?>" alt="">
+              <span>philippines</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/thailand.svg') ?>" alt="">
+              <span>Thailand</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <a href="#">
+            <div class="left">
+              <img src="<?= base_url('assets/images/nations/flags/vietnam.svg') ?>" alt="">
+              <span>Vietnam</span>
+            </div>
+            <input type="checkbox" name="" id="">
+          </a>
+          <button class="show-btn">Show</button>
+
+        </div>
+
+
+      </section>
+
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Sales Data (In Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="vsales"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Stock Data (In Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="vstock"></canvas>
+          </div>
+        </section>
+      </div>
+
+    <?php endif; ?>
+    <!-- forcasting end -->
+
+
+    <?= $this->endSection(); ?>
 
 <?= $this->section('script') ?>
 <script>
   const nations ="<?= $nat ?>" 
-        const lowbanner = document.getElementsByClassName("low-banner");
-
-        Array.from(lowbanner[0].getElementsByTagName("p")).forEach((p, i) => {
-          p.addEventListener('click', () => {
-            if (i == 0) {
-              window.location.href = `${origin}/summarymobile/econometric/${nations}`              
-            }
-            else if(i == 1){
-              window.location.href = `${origin}/summarymobile/historical/${nations}`
-            }
-            else{
-              window.location.href = `${origin}/summarymobile/forcasting/${nations}`
-            }
-          })
-        })
         
         function commarize(min, scale = "default") {
           min = min || 1e3;
@@ -1524,7 +1559,7 @@ switch (window.location.pathname.split('/')[2]) {
                       y: {
                         ticks: {
                           callback: function (value, index, ticks) {
-                            return String(value).commarize(1e3, "million");
+                            return String(value).commarize(1e3, "thousand");
                           },
                         },
                           beginAtZero: true,

@@ -3,17 +3,6 @@
 <?= $this->section('content') ?>
 
 <?= $this->section('header') ?>
-<!-- <div class="banners">
-  <img src="<?= base_url('assets/images/nations/flags/indonesia.svg'); ?>" alt="">    
-    <h2>Indonesia</h2>
-</div>
-<div class="low-banner ">
-    <p class="<?= $cat == 'econometric'? 'foc' :'' ?>">Summary</p>
-    <p class="<?= $cat == 'historical'? 'foc' :'' ?>">Historical</p>
-    <p class="<?= $cat == 'forcasting'? 'foc' :'' ?>">Forcasting</p>
-
-</div> -->
-<?= $this->section('header') ?>
 <header class="header-program">
     <div class="flex-column">
         <div class="show-on-mobile pb-4 m-0 flex align-items-center gap-2">
@@ -37,9 +26,6 @@
         </div>
     </div>
 </header>
-<?= $this->endSection(); ?>
-
-
 <?= $this->endSection(); ?>
 
 
@@ -1465,7 +1451,7 @@ switch (window.location.pathname.split('/')[2]) {
                     y: {
                       ticks: {
                         callback: function (value, index, ticks) {
-                          return String(value).commarize();
+                          return String(value).commarize(1e3,"thousand");
                         },
                       },
                         stacked: true,
@@ -1526,7 +1512,7 @@ switch (window.location.pathname.split('/')[2]) {
                         beginAtZero: true,
                         ticks: {
                           callback: function (value, index, ticks) {
-                            return String(value).commarize();
+                            return String(value).commarize(1e3,"thousand");
                           },
                         },
                     }

@@ -573,10 +573,6 @@ margin-bottom: 6px;
     padding: 0;
   }
 
-  .ml-chart{
-    margin-left: 12px;
-  }
-
   .chart-parent {
     /* background-color: blue; */
     width: 350px !important;
@@ -1858,3 +1854,7 @@ img {
       border-radius: 12px;
       margin: 20px;
     }
+    
+  .ml-chart{
+    margin-left: 12px;
+  }

@@ -3,17 +3,29 @@
 <?= $this->section('content') ?>
 
 <?= $this->section('header') ?>
-<div class="banners">
-  <img src="<?= base_url('assets/images/nations/flags/thailand.svg'); ?>" alt="">
-  <h2>Thailand</h2>
-</div>
-<div class="low-banner">
-  <p class="<?= $cat == 'econometric' ? 'foc' : '' ?>">Summary</p>
-  <p class="<?= $cat == 'historical' ? 'foc' : '' ?>">Historical</p>
-  <p class="<?= $cat == 'forcasting' ? 'foc' : '' ?>">Forcasting</p>
-
-</div>
-
+<header class="header-program">
+    <div class="flex-column">
+        <div class="show-on-mobile pb-4 m-0 flex align-items-center gap-2">
+          <img style="width:60px;" src="<?= base_url('assets/images/nations/flags/thailand.svg'); ?>" alt="">    
+          <p class="mb-0">Thailand</p>
+        </div>
+        <div class="hidden-on-mobile pb-4 m-0 flex align-items-center gap-2">
+          <img style="width:120px;" src="<?= base_url('assets/images/nations/flags/thailand.svg'); ?>" alt="">    
+          <h2 class="mb-0">Thailand</h2>
+        </div>
+        <div class="d-flex flex-row gap-1 align-items-start">
+            <a class="bg-white text-decoration-none border-white <?= $cat == 'econometric' ? 'pb-1' : '' ?>" href="<?= base_url('summarymobile/econometric/thailand') ?>">
+                <p class="text-black program-text text-center m-0">Econometric</p>
+            </a>
+            <a class="bg-white text-decoration-none border-white <?= $cat == 'historical' ? 'pb-1' : '' ?>" href="<?= base_url('summarymobile/historical/thailand') ?>">
+                <p class="text-black program-text m-0">Historical</p>
+            </a>
+            <a class="bg-white text-decoration-none border-white <?= $cat == 'forcasting' ? 'pb-1' : '' ?>" href="<?= base_url('summarymobile/forcasting/thailand') ?>">
+                <p class="text-black program-text m-0">Forcasting</p>
+            </a>
+        </div>
+    </div>
+</header>
 <?= $this->endSection(); ?>
 
 
@@ -54,12 +66,12 @@
             </div>
           </section>
         </div>
-        <img class="img-map" src="<?= base_url('assets/images/nations/maps/Thailand.svg') ?>" alt="">
+        <img class="img-map" src="<?= base_url('assets/images/nations/maps/thailand.svg') ?>" alt="">
 
       </div>
 
-      <h1 style="font-size:12px; margin-left:12px">Road Length, Population, & GDP Per Capita</h1>
-      <p style="font-size:10px; margin-left:12px; ">Total number of Road Length, Population, & GDP Per Capita</p>
+      <h1 class="sum">Road Length, Population, & GDP Per Capita</h1>
+      <p class="sump">Total number of Road Length, Population, & GDP Per Capita</p>
 
       <section class="bar-dropdown">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
@@ -144,26 +156,30 @@
 
         </div>
 
-
       </section>
 
-      <h1 style="font-size:12px; margin-left:12px">Total Road Lenght (In Million)</h1>
-      <div class="chart-parent">
-        <canvas id="chartThailandRoadLength"></canvas>
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Total Road Lenght (In Million)</h1>
+          <div class="chart-parent">
+            <canvas id="chartThailandRoadLength"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Population (In Million)</h1>
+          <div class="chart-parent">
+            <canvas id="chartThailandPopulation"></canvas>
+          </div>
+        </section>
       </div>
 
-      <h1 style="font-size:12px; margin-left:12px">Population (In Million)</h1>
-      <div class="chart-parent">
-        <canvas id="chartThailandPopulation"></canvas>
-      </div>
-
-      <h1 style="font-size:12px; margin-left:12px">GDP Per Capita Current US$(In Thousand)</h1>
+      <h1 class="sum">GDP Per Capita Current US$(In Million)</h1>
       <div class="chart-parent">
         <canvas id="chartThailandRoadGDPperCapital"></canvas>
       </div>
 
-      <h1 style="font-size:12px; margin-left:12px">Current Sales & Stock Data</h1>
-      <p style="font-size:10px; margin-left:12px; ">Total of number Current Sales & Stock Data</p>
+      <h1 class="sum">Current Sales & Stock Data</h1>
+      <p class="sump">Total of number Current Sales & Stock Data</p>
 
       <section class="bar-dropdown">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
@@ -244,14 +260,19 @@
 
       </section>
 
-      <h1 style="font-size:12px; margin-left:12px">Sales Data</h1>
-      <div class="chart-parent">
-        <canvas style="margin-left:12px;" id="chartThailandVehicleSales"></canvas>
-      </div>
-
-      <h1 style="font-size:12px; margin-left:12px">Stock Data</h1>
-      <div class="chart-parent">
-        <canvas style="margin-left:12px;" id="chartThailandVehicleStock"></canvas>
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Sales Data</h1>
+          <div class="chart-parent">
+            <canvas style="margin-left:12px;" id="chartThailandVehicleSales"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Stock Data</h1>
+          <div class="chart-parent">
+            <canvas style="margin-left:12px;" id="chartThailandVehicleStock"></canvas>
+          </div>
+        </section>
       </div>
 
     <?php endif; ?>
@@ -260,8 +281,8 @@
     <!-- historical start -->
     <?php if ($cat == 'historical'): ?>
 
-      <h1 style="font-size:14px; margin:12px">ICE Vechicle Sales and Stock</h1>
-      <p style="font-size:10px; margin-left:12px; ">Total number of ICE Vehicle Sales and Stock</p>
+      <h1 class="sum">ICE Vechicle Sales and Stock</h1>
+      <p class="sump">Total number of ICE Vehicle Sales and Stock</p>
 
       <section class="bar-dropdown">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
@@ -342,19 +363,23 @@
 
       </section>
 
-
-      <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
-      <div class="chart-parent ml-chart">
-        <canvas id="chartHistoricalThailandICEVechicleSales"></canvas>
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Sales Data (In Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="chartHistoricalThailandICEVechicleSales"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Stock Data (In Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="chartHistoricalThailandICEVechicleStock"></canvas>
+          </div>
+        </section>
       </div>
 
-      <h1 style="font-size:12px; margin-left:12px">Stock Data (In Million)</h1>
-      <div class="chart-parent ml-chart">
-        <canvas id="chartHistoricalThailandICEVechicleStock"></canvas>
-      </div>
-
-      <h1 style="font-size:12px; margin-left:12px">HEV, BEV, PHEV Vechicle Sales & Stock</h1>
-      <p style="font-size:10px; margin-left:12px; ">Total number of PHEV, BEV, HEV Vehicle Sales</p>
+      <h1 class="sum">HEV, BEV, PHEV Vechicle Sales & Stock</h1>
+      <p class="sump">Total number of PHEV, BEV, HEV Vehicle Sales</p>
 
       <section class="bar-dropdown">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
@@ -435,19 +460,23 @@
 
       </section>
 
-      <h1 style="font-size:12px; margin-left:12px">Sales Data (In Thousand)</h1>
-      <div class="chart-parent ml-chart">
-        <canvas id="chart1"></canvas>
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Sales Data (In Thousand)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="chart1"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Stock Data (In Thousand)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="chart2"></canvas>
+          </div>
+        </section>
       </div>
 
-      <h1 style="font-size:12px; margin-left:12px">Stock Data (In Thousand)</h1>
-      <div class="chart-parent ml-chart">
-        <canvas id="chart2"></canvas>
-      </div>
-
-
-      <h1 style="font-size:12px; margin-left:12px">Total of Histroical Vechicle Sales & Stock</h1>
-      <p style="font-size:10px; margin-left:12px; ">Total number of Vehicle Sales & Stock</p>
+      <h1 class="sum">Total of Histroical Vechicle Sales & Stock</h1>
+      <p class="sump">Total number of Vehicle Sales & Stock</p>
 
       <section class="bar-dropdown">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
@@ -527,18 +556,22 @@
 
       </section>
 
-      <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
-      <div class="chart-parent ml-chart">
-        <canvas id="totalSales"></canvas>
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Sales Data (In Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="totalSales"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Stock Data (in Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="totalStock"></canvas>
+          </div>
+        </section>
       </div>
 
-
-      <h1 style="font-size:12px; margin-left:12px">Stock Data (in Million)</h1>
-      <div class="chart-parent ml-chart">
-        <canvas id="totalStock"></canvas>
-      </div>
-
-      <div class="table-con p-2">
+      <div class="table-con p-md-4 p-2">
         <table class="table">
           <thead style="font-size:12px;">
             <tr>
@@ -563,7 +596,7 @@
           </tbody>
         </table>
       </div>
-      <div class="table-con p-2">
+      <div class="table-con p-md-4 p-2">
         <table class="table">
           <thead style="font-size:12px;">
             <tr>
@@ -594,8 +627,8 @@
 
     <!-- forcasting start -->
     <?php if ($cat == 'forcasting'): ?>
-      <h1 style="font-size:14px; margin:12px">Road Length, Population, & GDP Per Capita</h1>
-      <p style="font-size:10px; margin-left:12px; ">Total number of Road Length, Population, & GDP Per Capita</p>
+      <h1 class="sum">Road Length, Population, & GDP Per Capita</h1>
+      <p class="sump">Total number of Road Length, Population, & GDP Per Capita</p>
 
       <section class="bar-dropdown">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
@@ -675,24 +708,29 @@
 
 
       </section>
-
-      <h1 style="font-size:12px; margin-left:12px">Total Road Lenght (In Thousand)</h1>
-      <div class="chart-parent">
-        <canvas style="margin-left:12px;" id="ttlroadl"></canvas>
+      
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Total Road Lenght (In Million)</h1>
+          <div class="chart-parent">
+            <canvas style="margin-left:12px;" id="ttlroadl"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Population (in million)</h1>
+          <div class="chart-parent">
+            <canvas style="margin-left:12px;" id="ppln"></canvas>
+          </div>
+        </section>
       </div>
 
-      <h1 style="font-size:12px; margin-left:12px">Population (in million)</h1>
-      <div class="chart-parent">
-        <canvas style="margin-left:12px;" id="ppln"></canvas>
-      </div>
-
-      <h1 style="font-size:12px; margin-left:12px">GDP Per Capita Current US$(In Thousand)</h1>
+      <h1 class="sum">GDP Per Capita Current US$(In Thousand)</h1>
       <div class="chart-parent">
         <canvas style="margin-left:12px;" id="gdppc"></canvas>
       </div>
 
-      <h1 style="font-size:12px; margin:12px">ICE Vechicle Sales and Stock</h1>
-      <p style="font-size:10px; margin-left:12px; ">Total number of ICE Vehicle Sales and Stock</p>
+      <h1 class="sum">ICE Vechicle Sales and Stock</h1>
+      <p class="sump">Total number of ICE Vehicle Sales and Stock</p>
 
       <section class="bar-dropdown">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
@@ -773,20 +811,23 @@
 
       </section>
 
-
-      <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
-      <div class="chart-parent ml-chart">
-        <canvas id="icesales"></canvas>
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Sales Data (In Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="icesales"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Stock Data (In Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="icestock"></canvas>
+          </div> 
+        </section>
       </div>
 
-      <h1 style="font-size:12px; margin-left:12px">Stock Data (In Million)</h1>
-      <div class="chart-parent ml-chart">
-        <canvas id="icestock"></canvas>
-      </div>
-
-
-      <h1 style="font-size:12px; margin:12px">HEV, BEV, PHEV Vechicle Sales & Stock</h1>
-      <p style="font-size:10px; margin-left:12px; ">Total number of PHEV, BEV, HEV Vehicle Sales</p>
+      <h1 class="sum">HEV, BEV, PHEV Vechicle Sales & Stock</h1>
+      <p class="sump">Total number of PHEV, BEV, HEV Vehicle Sales</p>
 
       <section class="bar-dropdown">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
@@ -867,20 +908,24 @@
 
       </section>
 
-
-      <h1 style="font-size:12px; margin-left:12px">Sales Data (in Thousand)</h1>
-      <div class="chart-parent ml-chart">
-        <canvas id="hbpsales"></canvas>
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Sales Data (in Thousand)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="hbpsales"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Stock Data (In Thousand)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="hbpstock"></canvas>
+          </div>
+        </section>
       </div>
 
-      <h1 style="font-size:12px; margin-left:12px">Stock Data (In Thousand)</h1>
-      <div class="chart-parent ml-chart">
-        <canvas id="hbpstock"></canvas>
-      </div>
 
-
-      <h1 style="font-size:12px; margin:12px">Total of Histroical Vechicle Sales & Stock</h1>
-      <p style="font-size:10px; margin-left:12px; ">Total number of Vehicle Sales & Stock</p>
+      <h1 class="sum">Total of Histroical Vechicle Sales & Stock</h1>
+      <p class="sump">Total number of Vehicle Sales & Stock</p>
       <section class="bar-dropdown">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
           alt="Menu Icon" class="menuIcon">
@@ -960,16 +1005,21 @@
 
       </section>
 
-
-      <h1 style="font-size:12px; margin-left:12px">Sales Data (In Million)</h1>
-      <div class="chart-parent ml-chart">
-        <canvas id="vsales"></canvas>
+      <div class="row">
+        <section class="col-md-6">
+          <h1 class="sum">Sales Data (In Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="vsales"></canvas>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <h1 class="sum">Stock Data (In Million)</h1>
+          <div class="chart-parent ml-chart">
+            <canvas id="vstock"></canvas>
+          </div>
+        </section>
       </div>
 
-      <h1 style="font-size:12px; margin-left:12px">Stock Data (In Million)</h1>
-      <div class="chart-parent ml-chart">
-        <canvas id="vstock"></canvas>
-      </div>
     <?php endif; ?>
     <!-- forcasting end -->
 
@@ -979,19 +1029,6 @@
     <?= $this->section('script') ?>
     <script>
       const nations = "<?= $nat ?>"
-      const lowbanner = document.getElementsByClassName("low-banner");
-
-      Array.from(lowbanner[0].getElementsByTagName("p")).forEach((p, i) => {
-        p.addEventListener('click', () => {
-          if (i == 0) {
-            window.location.href = `${origin}/summarymobile/econometric/${nations}`
-          } else if (i == 1) {
-            window.location.href = `${origin}/summarymobile/historical/${nations}`
-          } else {
-            window.location.href = `${origin}/summarymobile/forcasting/${nations}`
-          }
-        })
-      })
 
       function commarize(min, scale = "default") {
         min = min || 1e3;
